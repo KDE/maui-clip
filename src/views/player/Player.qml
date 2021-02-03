@@ -82,8 +82,7 @@ Maui.Page
 
     footBar.visible: true
 
-    footerColumn: [
-        Maui.TagsBar
+    footer: Maui.TagsBar
         {
             id: tagBar
             visible: root.visibility !== Window.FullScreen
@@ -97,88 +96,7 @@ Maui.Page
 
             list.strict: true
             list.urls:  [control.url]
-        },
-
-        Maui.ToolBar
-        {
-            enabled: player.playbackState !== MediaPlayer.StoppedState
-            position: ToolBar.Footer
-            width: parent.width
-            leftContent: Label
-            {
-                text: Maui.FM.formatTime((player.duration - player.position)/1000)
-            }
-
-            rightContent: Label
-            {
-                text: Maui.FM.formatTime(player.duration/1000)
-            }
-
-            middleContent: Slider
-            {
-                id: _slider
-                enabled: control.playing || control.paused
-                Layout.fillWidth: true
-                implicitWidth: 0
-                orientation: Qt.Horizontal
-                from: 0
-                to: 1000
-                value: (1000 * player.position) / player.duration
-
-                onMoved: player.seek((_slider.value / 1000) * player.duration)
-            }
         }
-    ]
 
-    footBar.leftContent: ToolButton
-    {
-        visible: !Kirigami.Settings.isMobile
-        icon.name: "view-fullscreen"
-        onClicked: toogleFullscreen()
-        checked: fullScreen
-    }
 
-    footBar.rightContent: [
-        ToolButton
-        {
-            icon.name: "view-split-top-bottom"
-            checked: _playlist.visible
-            onClicked: _playlist.visible = !_playlist.visible
-        },
-
-        Maui.Badge
-        {
-            text: _playlist.list.count
-        }
-    ]
-
-    footBar.middleContent:[
-
-        Maui.ToolActions
-        {
-            expanded: true
-            checkable: false
-            autoExclusive: false
-
-            Action
-            {
-                icon.name: "media-skip-backward"
-                onTriggered: playPrevious()
-            }
-
-            Action
-            {
-                enabled: player.playbackState !== MediaPlayer.StoppedState
-                icon.width: Maui.Style.iconSizes.big
-                icon.height: Maui.Style.iconSizes.big
-                icon.name: player.playbackState === MediaPlayer.PlayingState ? "media-playback-pause" : "media-playback-start"
-                onTriggered: player.playbackState === MediaPlayer.PlayingState ? player.pause() : player.play()
-            }
-
-            Action
-            {
-                icon.name: "media-skip-forward"
-                onTriggered: playNext()
-            }
-        }]
 }

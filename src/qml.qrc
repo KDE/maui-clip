@@ -13,6 +13,7 @@
         <file>views/ItemMenu.qml</file>
         <file>views/ListDelegate.qml</file>
         <file>assets/clip.svg</file>
+        <file>views/FloatingVideo.qml</file>
     </qresource>
     <qresource prefix="/img">
         <file>assets/tag.svg</file>

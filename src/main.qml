@@ -3,6 +3,7 @@ import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.3
 import QtQuick.Window 2.13
 import QtMultimedia 5.8
+import QtQml 2.14
 
 import org.kde.mauikit 1.2 as Maui
 import org.kde.kirigami 2.8 as Kirigami
@@ -20,22 +21,26 @@ Maui.ApplicationWindow
 {
     id: root
 
-    floatingHeader: _appViews.currentIndex === 0 && _playerView.player.playing && (_playerView.orientation === Qt.Vertical || !_playerView.playlist.visible)
+    title: _playerView.currentVideo.label
+
+    floatingHeader: _appViews.currentIndex === 0 && _playerView.player.playing && !_playlist.visible
     autoHideHeader: _appViews.currentIndex === 0 && _playerView.player.playing
 
     property bool selectionMode : false
 
     readonly property var views : ({player: 0, collection: 1, tags: 2})
     property alias dialog : dialogLoader.item
+    property alias player: _playerView.player
 
-    floatingFooter: true
+
+//    floatingFooter: true
     flickable: _appViews.currentItem ? _appViews.currentItem.flickable || null : null
 
     headBar.visible: root.visibility !== Window.FullScreen
 
     onIsPortraitChanged:
     {
-        if(!isPortrait)           
+        if(!isPortrait)
         {
             root.showFullScreen()
         }
@@ -53,6 +58,13 @@ Maui.ApplicationWindow
         {
             id: tagsList
         }
+    }
+
+    headBar.farLeftContent: ToolButton
+    {
+        visible: !root.isWide
+        onClicked: sideBar.open()
+        icon.name: "love"
     }
 
     mainMenu: [
@@ -155,55 +167,195 @@ Maui.ApplicationWindow
 
     Loader { id: dialogLoader }
 
-    Maui.AppViews
+    sideBar: Maui.AbstractSideBar
     {
-        id: _appViews
+        visible: true
+        preferredWidth: Kirigami.Units.gridUnit * 16
+        collapsed: !isWide
+        collapsible: true
+
+
+//        Binding on visible
+//        {
+//            restoreMode: Binding.RestoreValue
+//            value: _playlist.list.count > 0 && root.visibility !== Window.FullScreen
+//        }
+
+        Playlist
+        {
+            id: _playlist
+            anchors.fill: parent
+        }
+    }
+
+    Maui.Page
+    {
+        id: _mainPage
         anchors.fill: parent
+        floatingFooter: true
+        headBar.visible: false
+        flickable: _appViews.currentItem.flickable || _appViews.currentItem.item.flickable
 
-        PlayerView
+        Maui.AppViews
         {
-            id: _playerView
-            Maui.AppView.title: i18n("Player")
-            Maui.AppView.iconName: "quickview"
+            id: _appViews
+            anchors.fill: parent
+
+            PlayerView
+            {
+                id: _playerView
+                Maui.AppView.title: i18n("Player")
+                Maui.AppView.iconName: "quickview"
+            }
+
+            CollectionView
+            {
+                id: _collectionView
+                Maui.AppView.title: i18n("Collection")
+                Maui.AppView.iconName: "folder-videos"
+            }
+
+            TagsView
+            {
+                id: _tagsView
+                Maui.AppView.title: i18n("Tags")
+                Maui.AppView.iconName: "tag"
+            }
         }
 
-        CollectionView
+        footer: SelectionBar
         {
-            id: _collectionView
-            Maui.AppView.title: i18n("Collection")
-            Maui.AppView.iconName: "folder-videos"
+            id: selectionBar
+            anchors.horizontalCenter: parent.horizontalCenter
+            width: Math.min(parent.width-(Maui.Style.space.medium*2), implicitWidth)
+            padding: Maui.Style.space.big
+            maxListHeight: _appViews.height - Maui.Style.space.medium
         }
 
-        TagsView
-        {
-            id: _tagsView
-            Maui.AppView.title: i18n("Tags")
-            Maui.AppView.iconName: "tag"
-        }
     }
 
-    page.footerColumn: SelectionBar
+
+    page.footerColumn: Maui.ToolBar
     {
-        id: selectionBar
-        anchors.horizontalCenter: parent.horizontalCenter
-        width: Math.min(parent.width-(Maui.Style.space.medium*2), implicitWidth)
-        padding: Maui.Style.space.big
-        maxListHeight: _appViews.height - Maui.Style.space.medium
-    }
+        preferredHeight: Maui.Style.rowHeight
 
-    footBar.preferredHeight: 64
-    footBar.visible:  _appViews.currentIndex !== views.player && !_playerView.player.stopped
-    footBar.middleContent: [
+        enabled: player.playbackState !== MediaPlayer.StoppedState
+        position: ToolBar.Footer
+        width: parent.width
+        leftContent: Label
+        {
+            text: Maui.FM.formatTime((player.video.duration - player.video.position)/1000)
+        }
 
-        ShaderEffectSource
+        rightContent: Label
+        {
+            text: Maui.FM.formatTime(player.video.duration/1000)
+        }
+
+
+        middleContent:  Item
         {
             Layout.fillHeight: true
-            Layout.preferredWidth: sourceItem.width * (height /  sourceItem.height)
-            hideSource: visible
-            live: true
-            textureSize: Qt.size(width,height)
-            sourceItem: _playerView.player.video
+            Layout.fillWidth: true
+
+            Label
+            {
+                anchors.fill: parent
+                visible: text.length
+                verticalAlignment: Qt.AlignVCenter
+                horizontalAlignment: Qt.AlignHCenter
+                text: root.title
+                elide: Text.ElideMiddle
+                wrapMode: Text.NoWrap
+                color: Kirigami.Theme.textColor
+            }
+        }
+
+        background: Slider
+        {
+            id: _slider
+            z: parent.z+1
+            padding: 0
+            enabled: control.playing || control.paused
+
+            orientation: Qt.Horizontal
+            from: 0
+            to: 1000
+            value: (1000 * player.video.position) / player.video.duration
+
+            onMoved: player.video.seek((_slider.value / 1000) * player.video.duration)
+
+            spacing: 0
+            focus: true
+
+            Maui.Separator
+            {
+                anchors.top: parent.top
+                anchors.left: parent.left
+                anchors.right: parent.right
+                position: Qt.Horizontal
+            }
+
+
+            background: Rectangle
+            {
+                implicitWidth: _slider.width
+                implicitHeight: _slider.height
+                width: _slider.availableWidth
+                height: implicitHeight
+                color: "transparent"
+                opacity: 0.4
+
+                Rectangle
+                {
+                    width: _slider.visualPosition * parent.width
+                    height: _slider.height
+                    color: Kirigami.Theme.highlightColor
+                }
+            }
+
+            handle: Rectangle
+            {
+                x: _slider.leftPadding + _slider.visualPosition
+                   * (_slider.availableWidth - width)
+                y: 0
+                implicitWidth: Maui.Style.iconSizes.medium
+                implicitHeight: _slider.height
+                color: _slider.pressed ? Qt.lighter(Kirigami.Theme.highlightColor, 1.2) : "transparent"
+            }
+        }
+    }
+
+
+    footBar.rightContent: ToolButton
+    {
+        visible: !Kirigami.Settings.isMobile
+        icon.name: "view-fullscreen"
+        onClicked: toogleFullscreen()
+        checked: fullScreen
+    }
+
+    footBar.leftContent: [
+        ToolButton
+        {
+            icon.name: "view-split-left-right"
+            checked: root.sideBar.visible
+            onClicked: sideBar.position === 1 ? sideBar.close() : sideBar.open()
         },
+
+        Maui.Badge
+        {
+            text: _playlist.list.count
+        }
+    ]
+
+
+    FloatingVideo
+    {
+        visible: _appViews.currentIndex !== views.player && !_playerView.player.stopped
+    }
+
+    footBar.middleContent: [
 
         Maui.ToolActions
         {
@@ -219,11 +371,11 @@ Maui.ApplicationWindow
 
             Action
             {
-                enabled: _playerView.player.video.playbackState !== MediaPlayer.StoppedState
+                enabled: player.video.playbackState !== MediaPlayer.StoppedState
                 icon.width: Maui.Style.iconSizes.big
                 icon.height: Maui.Style.iconSizes.big
-                icon.name: _playerView.player.video.playbackState === MediaPlayer.PlayingState ? "media-playback-pause" : "media-playback-start"
-                onTriggered: _playerView.player.video.playbackState === MediaPlayer.PlayingState ? _playerView.player.video.pause() : _playerView.player.video.play()
+                icon.name: player.video.playbackState === MediaPlayer.PlayingState ? "media-playback-pause" : "media-playback-start"
+                onTriggered: player.video.playbackState === MediaPlayer.PlayingState ? player.video.pause() : player.video.play()
             }
 
             Action
@@ -231,7 +383,7 @@ Maui.ApplicationWindow
                 icon.name: "media-skip-forward"
                 onTriggered: playNext()
             }
-        },
+        }/*,
 
         Maui.ListItemTemplate
         {
@@ -240,7 +392,7 @@ Maui.ApplicationWindow
             //            Layout.preferredWidth: 500
             label1.text: _playerView.currentVideo.label
             label2.text: _playerView.currentVideo.path
-        }
+        }*/
     ]
 
     Connections
@@ -249,15 +401,15 @@ Maui.ApplicationWindow
         function onOpenUrls(urls)
         {
             for(var url of urls)
-                _playerView.playlist.list.append(url)
+                _playlist.list.append(url)
         }
     }
 
     function playNext()
     {
-        if(_playerView.playlist.list.count > 0)
+        if(_playlist.list.count > 0)
         {
-            const next = _playerView.currentVideoIndex+1 >= _playerView.playlist.list.count ? 0 : _playerView.currentVideoIndex+1
+            const next = _playerView.currentVideoIndex+1 >= _playlist.list.count ? 0 : _playerView.currentVideoIndex+1
 
             playAt(next)
         }
@@ -265,9 +417,9 @@ Maui.ApplicationWindow
 
     function playPrevious()
     {
-        if(_playerView.playlist.list.count > 0)
+        if(_playlist.list.count > 0)
         {
-            const previous = _playerView.currentVideoIndex-1 >= 0 ? _playerView.currentVideoIndex-1 : _playerView.playlist.list.count-1
+            const previous = _playerView.currentVideoIndex-1 >= 0 ? _playerView.currentVideoIndex-1 : _playlist.list.count-1
 
             playAt(previous)
         }
@@ -276,23 +428,23 @@ Maui.ApplicationWindow
     function play(item)
     {
         queue(item)
-        playAt(_playerView.playlist.list.count-1)
+        playAt(_playlist.list.count-1)
     }
 
     //Index of the video in the playlist
     function playAt(index)
     {
-        if((index < _playerView.playlist.list.count) && (index > -1))
+        if((index < _playlist.list.count) && (index > -1))
         {
 //            _appViews.currentIndex = views.player
             _playerView.currentVideoIndex = index
-            _playerView.currentVideo = _playerView.playlist.model.get(index)
+            _playerView.currentVideo = _playlist.model.get(index)
         }
     }
 
     function playItems(items)
     {
-        _playerView.playlist.list.clear()
+        _playlist.list.clear()
         for(var item of items)
         {
             queue(item)
@@ -310,7 +462,7 @@ Maui.ApplicationWindow
 
     function queue(item)
     {
-        _playerView.playlist.append(item)
+        _playlist.append(item)
     }
 
     function toogleFullscreen()
