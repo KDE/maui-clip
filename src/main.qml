@@ -23,6 +23,8 @@ Maui.ApplicationWindow
 
     title: _playerView.currentVideo.label
 
+    altHeader: Kirigami.Settings.isMobile
+
     floatingHeader: _appViews.currentIndex === 0 && _playerView.player.playing && !_playlist.visible
     autoHideHeader: _appViews.currentIndex === 0 && _playerView.player.playing
 
@@ -348,7 +350,6 @@ Maui.ApplicationWindow
             text: _playlist.list.count
         }
     ]
-
 
     FloatingVideo
     {
