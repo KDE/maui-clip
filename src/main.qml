@@ -35,7 +35,7 @@ Maui.ApplicationWindow
     property alias player: _playerView.player
 
 
-//    floatingFooter: true
+    //    floatingFooter: true
     flickable: _appViews.currentItem ? _appViews.currentItem.flickable || null : null
 
     headBar.visible: root.visibility !== Window.FullScreen
@@ -60,13 +60,6 @@ Maui.ApplicationWindow
         {
             id: tagsList
         }
-    }
-
-    headBar.farLeftContent: ToolButton
-    {
-        visible: !root.isWide
-        onClicked: sideBar.open()
-        icon.name: "love"
     }
 
     mainMenu: [
@@ -177,11 +170,11 @@ Maui.ApplicationWindow
         collapsible: true
 
 
-//        Binding on visible
-//        {
-//            restoreMode: Binding.RestoreValue
-//            value: _playlist.list.count > 0 && root.visibility !== Window.FullScreen
-//        }
+        //        Binding on visible
+        //        {
+        //            restoreMode: Binding.RestoreValue
+        //            value: _playlist.list.count > 0 && root.visibility !== Window.FullScreen
+        //        }
 
         Playlist
         {
@@ -337,19 +330,12 @@ Maui.ApplicationWindow
         checked: fullScreen
     }
 
-    footBar.leftContent: [
-        ToolButton
-        {
-            icon.name: "view-split-left-right"
-            checked: root.sideBar.visible
-            onClicked: sideBar.position === 1 ? sideBar.close() : sideBar.open()
-        },
-
-        Maui.Badge
-        {
-            text: _playlist.list.count
-        }
-    ]
+    footBar.leftContent: ToolButton
+    {
+        icon.name: "view-split-left-right"
+        checked: root.sideBar.visible
+        onClicked: sideBar.position === 1 ? sideBar.close() : sideBar.open()
+    }
 
     FloatingVideo
     {
@@ -437,7 +423,7 @@ Maui.ApplicationWindow
     {
         if((index < _playlist.list.count) && (index > -1))
         {
-//            _appViews.currentIndex = views.player
+            //            _appViews.currentIndex = views.player
             _playerView.currentVideoIndex = index
             _playerView.currentVideo = _playlist.model.get(index)
         }
