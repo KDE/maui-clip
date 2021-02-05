@@ -26,14 +26,13 @@ Maui.ApplicationWindow
     altHeader: Kirigami.Settings.isMobile
 
     floatingHeader: _appViews.currentIndex === 0 && _playerView.player.playing && !_playlist.visible
-    autoHideHeader: _appViews.currentIndex === 0 && _playerView.player.playing
+//    autoHideHeader: _appViews.currentIndex === 0 && _playerView.player.playing
 
     property bool selectionMode : false
 
     readonly property var views : ({player: 0, collection: 1, tags: 2})
     property alias dialog : dialogLoader.item
     property alias player: _playerView.player
-
 
     //    floatingFooter: true
     flickable: _appViews.currentItem ? _appViews.currentItem.flickable || null : null
@@ -62,25 +61,23 @@ Maui.ApplicationWindow
         }
     }
 
-    mainMenu: [
-        Action
+    headBar.rightContent: ToolButton
+    {
+        text: i18n("Open")
+        icon.name: "folder-open"
+        onClicked:
         {
-            text: i18n("Open")
-            icon.name: "folder-open"
-            onTriggered:
+            dialogLoader.sourceComponent= fmDialogComponent
+            dialog.mode = dialog.modes.OPEN
+            dialog.settings.filterType= Maui.FMList.VIDEO
+            dialog.settings.onlyDirs= false
+            dialog.callback = function(paths)
             {
-                dialogLoader.sourceComponent= fmDialogComponent
-                dialog.mode = dialog.modes.OPEN
-                dialog.settings.filterType= Maui.FMList.VIDEO
-                dialog.settings.onlyDirs= false
-                dialog.callback = function(paths)
-                {
-                    Clip.Clip.openVideos(paths)
-                };
-                dialog.open()
-            }
+                Clip.Clip.openVideos(paths)
+            };
+            dialog.open()
         }
-    ]
+    }
 
     DropArea
     {
@@ -229,12 +226,13 @@ Maui.ApplicationWindow
 
     }
 
+    footBar.visible: player.video.playbackState !== MediaPlayer.StoppedState
 
     page.footerColumn: Maui.ToolBar
     {
+        visible: player.video.playbackState !== MediaPlayer.StoppedState && _appViews.currentIndex === views.player
         preferredHeight: Maui.Style.rowHeight
 
-        enabled: player.playbackState !== MediaPlayer.StoppedState
         position: ToolBar.Footer
         width: parent.width
         leftContent: Label
@@ -324,10 +322,8 @@ Maui.ApplicationWindow
 
     footBar.rightContent: ToolButton
     {
-        visible: !Kirigami.Settings.isMobile
         icon.name: "view-fullscreen"
         onClicked: toogleFullscreen()
-        checked: fullScreen
     }
 
     footBar.leftContent: ToolButton

@@ -57,6 +57,8 @@ Maui.ListBrowser
 
         onClicked:
         {
+            control.currentIndex = index
+
             if(selectionMode || (mouse.button == Qt.LeftButton && (mouse.modifiers & Qt.ControlModifier)))
             {
                 control.currentView.itemsSelected([index])
@@ -68,6 +70,8 @@ Maui.ListBrowser
 
         onDoubleClicked:
         {
+            control.currentIndex = index
+
             if(!Maui.Handy.singleClick && !selectionMode)
             {
                 playAt(index)
@@ -76,11 +80,13 @@ Maui.ListBrowser
 
         onPressAndHold:
         {
+            control.currentIndex = index
             _menu.popup()
         }
 
         onRightClicked:
         {
+            control.currentIndex = index
             _menu.popup()
         }
     }

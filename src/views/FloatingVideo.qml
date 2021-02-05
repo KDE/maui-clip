@@ -38,7 +38,7 @@ Item
 
         drag.minimumY: 0
         drag.maximumY: root.height - control.height
-        //        onClicked: sideBar.visible ? sideBar.close() : sideBar.open()
+        onClicked: _appViews.currentIndex = views.player
         //        onDoubleClicked: toggleFocusView()
 
 
