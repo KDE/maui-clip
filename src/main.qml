@@ -65,6 +65,7 @@ Maui.ApplicationWindow
     {
         text: i18n("Open")
         icon.name: "folder-open"
+        display: isWide ? ToolButton.TextBesideIcon : ToolButton.IconOnly
         onClicked:
         {
             dialogLoader.sourceComponent= fmDialogComponent
