@@ -26,7 +26,7 @@ Maui.ApplicationWindow
     altHeader: Kirigami.Settings.isMobile
 
     floatingHeader: _appViews.currentIndex === 0 && _playerView.player.playing && !_playlist.visible
-//    autoHideHeader: _appViews.currentIndex === 0 && _playerView.player.playing
+    //    autoHideHeader: _appViews.currentIndex === 0 && _playerView.player.playing
 
     property bool selectionMode : false
 
@@ -61,24 +61,7 @@ Maui.ApplicationWindow
         }
     }
 
-    headBar.rightContent: ToolButton
-    {
-        text: i18n("Open")
-        icon.name: "folder-open"
-        display: isWide ? ToolButton.TextBesideIcon : ToolButton.IconOnly
-        onClicked:
-        {
-            dialogLoader.sourceComponent= fmDialogComponent
-            dialog.mode = dialog.modes.OPEN
-            dialog.settings.filterType= Maui.FMList.VIDEO
-            dialog.settings.onlyDirs= false
-            dialog.callback = function(paths)
-            {
-                Clip.Clip.openVideos(paths)
-            };
-            dialog.open()
-        }
-    }
+    //    headBar.rightContent:
 
     DropArea
     {
@@ -227,7 +210,7 @@ Maui.ApplicationWindow
 
     }
 
-    footBar.visible: player.video.playbackState !== MediaPlayer.StoppedState
+    //    footBar.visible: player.video.playbackState !== MediaPlayer.StoppedState
 
     page.footerColumn: Maui.ToolBar
     {
@@ -321,11 +304,31 @@ Maui.ApplicationWindow
     }
 
 
-    footBar.rightContent: ToolButton
-    {
-        icon.name: "view-fullscreen"
-        onClicked: toogleFullscreen()
-    }
+    footBar.rightContent: [ToolButton
+        {
+            visible: !Kirigami.Settings.isMobile
+            icon.name: "view-fullscreen"
+            onClicked: toogleFullscreen()
+        },
+
+        ToolButton
+        {
+            text: i18n("Open")
+            icon.name: "folder-open"
+            display: isWide ? ToolButton.TextBesideIcon : ToolButton.IconOnly
+            onClicked:
+            {
+                dialogLoader.sourceComponent= fmDialogComponent
+                dialog.mode = dialog.modes.OPEN
+                dialog.settings.filterType= Maui.FMList.VIDEO
+                dialog.settings.onlyDirs= false
+                dialog.callback = function(paths)
+                {
+                    Clip.Clip.openVideos(paths)
+                };
+                dialog.open()
+            }
+        }]
 
     footBar.leftContent: ToolButton
     {
