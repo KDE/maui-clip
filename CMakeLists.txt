@@ -6,7 +6,7 @@
 cmake_minimum_required(VERSION 3.14)
 
 set(CLIP_VERSION 1.1.0)
-project(clip VERSION ${CLIP_VERSION})
+project(clip VERSION ${CLIP_VERSION} LANGUAGES CXX)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOUIC ON)
@@ -53,6 +53,10 @@ set(clipSRCS
     src/models/tagsmodel.cpp
     src/models/playlistmodel.cpp
     src/utils/clip.cpp
+    src/backends/mpv/mpvobject.cpp
+    src/backends/mpv/track.cpp
+    src/backends/mpv/tracksmodel.cpp
+    src/backends/mpv/subtitlesfoldersmodel.cpp
     )
 
 set(clipHDRS
@@ -60,6 +64,12 @@ set(clipHDRS
     src/models/tagsmodel.h
     src/models/playlistmodel.h
     src/utils/clip.h
+    src/backends/mpv/mpvobject.h
+    src/backends/mpv/track.h
+    src/backends/mpv/tracksmodel.h
+    src/backends/mpv/subtitlesfoldersmodel.h
+    src/backends/mpv/qthelper.h
+
     )
 
 set(clipASSETS
@@ -94,7 +104,9 @@ endif()
 target_compile_definitions(${PROJECT_NAME}
     PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
 
-target_link_libraries(${PROJECT_NAME} MauiKit Qt5::Sql Qt5::Quick Qt5::Qml Qt5::Svg KF5::CoreAddons KF5::I18n)
+target_compile_options(${PROJECT_NAME} PRIVATE -fexceptions)
+
+target_link_libraries(${PROJECT_NAME} MauiKit Qt5::Sql Qt5::Quick Qt5::Qml Qt5::Svg KF5::CoreAddons KF5::I18n mpv)
 
 if(UNIX AND NOT APPLE AND NOT ANDROID)
     install (TARGETS ${PROJECT_NAME} ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
