@@ -24,6 +24,16 @@ class MpvObject : public QQuickFramebufferObject
     Q_PROPERTY(TracksModel* audioTracksModel READ audioTracksModel NOTIFY audioTracksModelChanged)
     Q_PROPERTY(TracksModel* subtitleTracksModel READ subtitleTracksModel NOTIFY subtitleTracksModelChanged)
 
+    Q_PROPERTY(QUrl url
+               READ url
+               WRITE setUrl
+               NOTIFY urlChanged)
+
+    Q_PROPERTY(bool autoPlay
+               READ autoPlay
+               WRITE setAutoPlay
+               NOTIFY autoPlayChanged)
+
     Q_PROPERTY(QString mediaTitle
                READ mediaTitle
                NOTIFY mediaTitleChanged)
@@ -168,10 +178,21 @@ public:
     Q_INVOKABLE QVariant getProperty(const QString &name);
     Q_INVOKABLE QVariant command(const QVariant &params);
 
+    QUrl url() const;
+
+    bool autoPlay() const;
+
 public slots:
     static void mpvEvents(void *ctx);
     void eventHandler();
     int setProperty(const QString &name, const QVariant &value);
+
+    void setUrl(QUrl url);
+
+    void setAutoPlay(bool autoPlay);
+
+    void play();
+    void stop();
 
 signals:
     void mediaTitleChanged();
@@ -198,6 +219,10 @@ signals:
 //    void playlistModelChanged();
 //    void youtubePlaylistLoaded();
 
+    void urlChanged(QUrl url);
+
+    void autoPlayChanged(bool autoPlay);
+
 private:
     TracksModel *audioTracksModel() const;
     TracksModel *subtitleTracksModel() const;
@@ -211,6 +236,9 @@ private:
     QString m_file;
 
     void loadTracks();
+
+    QUrl m_url;
+    bool m_autoPlay;
 };
 
 class MpvRenderer : public QQuickFramebufferObject::Renderer
