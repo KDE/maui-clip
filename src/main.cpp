@@ -9,16 +9,16 @@
 #include <QApplication>
 #endif
 
+#include <KI18n/KLocalizedString>
+
 #include <MauiKit/mauiapp.h>
 
 #include "clip_version.h"
 
+#include "src/backends/mpv/mpvobject.h"
 #include "src/models/videosmodel.h"
 #include "src/models/tagsmodel.h"
-
 #include "src/utils/clip.h"
-
-#include <KI18n/KLocalizedString>
 
 #define CLIP_URI "org.maui.clip"
 
@@ -73,6 +73,9 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     QApplication app(argc, argv);
 #endif
 
+    // Qt sets the locale in the QGuiApplication constructor, but libmpv
+    // requires the LC_NUMERIC category to be set to "C", so change it back.
+    std::setlocale(LC_NUMERIC, "C");
     app.setOrganizationName("Maui");
     app.setWindowIcon(QIcon(":/img/assets/clip.svg"));
 
@@ -116,9 +119,12 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
     }, Qt::QueuedConnection);
 
+    qmlRegisterType<MpvObject>("mpv", 1, 0, "MpvObject");
+
     qmlRegisterType<VideosModel>(CLIP_URI, 1, 0, "Videos");
     qmlRegisterType<TagsModel>(CLIP_URI, 1, 0, "Tags");
     qmlRegisterSingletonInstance<Clip>(CLIP_URI, 1, 0, "Clip", Clip::instance ());
+//    qRegisterMetaType<TracksModel*>();
 
     engine.load(url);
 
