@@ -9,7 +9,6 @@ import org.kde.mauikit 1.2 as Maui
 import org.kde.kirigami 2.8 as Kirigami
 
 import org.maui.clip 1.0 as Clip
-import mpv 1.0
 
 import TagsList 1.0
 
@@ -173,20 +172,10 @@ Maui.ApplicationWindow
         headBar.visible: false
         flickable: _appViews.currentItem.flickable || _appViews.currentItem.item.flickable
 
-
-
         Maui.AppViews
         {
             id: _appViews
             anchors.fill: parent
-
-            MpvObject
-            {
-                id: _mpv
-                Maui.AppView.title: i18n("Mpv")
-
-
-            }
 
             PlayerView
             {
@@ -337,10 +326,7 @@ Maui.ApplicationWindow
                 dialog.settings.onlyDirs= false
                 dialog.callback = function(paths)
                 {
-//                    Clip.Clip.openVideos(paths)
-
-                    _mpv.command(["loadfile", paths[0].replace("file://", "")])
-
+                    Clip.Clip.openVideos(paths)
                 };
                 dialog.open()
             }
@@ -355,7 +341,7 @@ Maui.ApplicationWindow
 
     FloatingVideo
     {
-        visible: _appViews.currentIndex !== views.player && !_playerView.player.stopped
+        visible: _appViews.currentIndex !== views.player && _playerView.player.playing
     }
 
     footBar.middleContent: [

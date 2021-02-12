@@ -533,6 +533,20 @@ void MpvObject::loadTracks()
     emit subtitleTracksModelChanged();
 }
 
+void MpvObject::play()
+{
+    if(!m_url.isEmpty() && m_url.isValid())
+   {
+        qDebug() << "request play file" << m_url;
+         command(QStringList{"loadfile", m_url.toLocalFile()});
+    }
+}
+
+void MpvObject::stop()
+{
+
+}
+
 TracksModel *MpvObject::subtitleTracksModel() const
 {
     return m_subtitleTracksModel;
@@ -590,6 +604,30 @@ int MpvObject::setProperty(const QString &name, const QVariant &value)
     return mpv::qt::set_property(mpv, name, value);
 }
 
+void MpvObject::setUrl(QUrl url)
+{
+    if (m_url == url)
+        return;
+
+    m_url = url;
+
+    if(m_autoPlay)
+    {
+        this->play();
+    }
+
+    emit urlChanged(m_url);
+}
+
+void MpvObject::setAutoPlay(bool autoPlay)
+{
+    if (m_autoPlay == autoPlay)
+        return;
+
+    m_autoPlay = autoPlay;
+    emit autoPlayChanged(m_autoPlay);
+}
+
 QVariant MpvObject::getProperty(const QString &name)
 {
     auto value = mpv::qt::get_property(mpv, name);
@@ -599,4 +637,14 @@ QVariant MpvObject::getProperty(const QString &name)
 QVariant MpvObject::command(const QVariant &params)
 {
     return mpv::qt::command(mpv, params);
+}
+
+QUrl MpvObject::url() const
+{
+    return m_url;
+}
+
+bool MpvObject::autoPlay() const
+{
+    return m_autoPlay;
 }
