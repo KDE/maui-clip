@@ -7,7 +7,6 @@
         <file>views/SelectionBar.qml</file>
         <file>views/tags/TagsView.qml</file>
         <file>views/player/Playlist.qml</file>
-        <file>views/CollageDelegate.qml</file>
         <file>views/tags/TagsGrid.qml</file>
         <file>views/BrowserLayout.qml</file>
         <file>views/ItemMenu.qml</file>
@@ -22,5 +21,7 @@
         <file>assets/view-media-video.svg</file>
         <file>assets/media-playlist-append.svg</file>
         <file>assets/clip.svg</file>
+        <file>assets/media-playback-start.svg</file>
+        <file>assets/help-feedback.svg</file>
     </qresource>
 </RCC>

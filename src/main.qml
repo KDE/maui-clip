@@ -19,6 +19,7 @@ import "views/player"
 import "views/collection"
 import "views/tags"
 import "views/settings"
+import "views/youtube"
 
 Maui.ApplicationWindow
 {
@@ -66,6 +67,8 @@ Maui.ApplicationWindow
         property string subtitlesPath
         property font font
         property bool playerTagBar: true
+        property string youtubeKey: "AIzaSyDMLmTSEN7i6psE2tHdaG6hy3ljWKXIYBk"
+        property int youtubeQueryLimit : 50
     }
 
 
@@ -114,15 +117,15 @@ Maui.ApplicationWindow
         {
             if(drop.urls)
             {
-                VIEWER.openExternalPics(drop.urls, 0)
+                Clip.Clip.openVideos(drop.urls)
             }
         }
 
         onExited:
         {
-            if(swipeView.currentIndex === views.viewer)
+            if(_appViews.currentIndex === views.player)
             {
-                swipeView.goBack()
+                _appViews.goBack()
             }
         }
 
@@ -133,7 +136,7 @@ Maui.ApplicationWindow
                 return
             }
 
-            swipeView.currentIndex = views.viewer
+            _appViews.currentIndex = views.player
         }
     }
 
@@ -145,13 +148,12 @@ Maui.ApplicationWindow
 
     SettingsDialog { id: _settingsDialog}
 
-    Maui.Dialog
+    Maui.NewDialog
     {
         id: _openUrlDialog
         title: i18n("Open URL")
-        entryField: true
         textEntry.placeholderText: "URL"
-
+        message: i18n("Enter any remote location, like YouTube video URLs, or form other services supported by MPV.")
         onAccepted: player.url = textEntry.text
     }
 
@@ -205,18 +207,46 @@ Maui.ApplicationWindow
         collapsed: !isWide
         collapsible: true
 
-
-        //        Binding on visible
-        //        {
-        //            restoreMode: Binding.RestoreValue
-        //            value: _playlist.list.count > 0 && root.visibility !== Window.FullScreen
-        //        }
-
-        Playlist
+        onContentDropped:
         {
-            id: _playlist
-            anchors.fill: parent
+            console.log(drop.urls)
         }
+
+        Maui.Page
+        {
+            anchors.fill: parent
+            title: i18n("Now playing")
+            showTitle: true
+
+            headBar.visible: true
+            headerBackground.color: "transparent"
+
+            headBar.rightContent: ToolButton
+            {
+                icon.name: "edit-delete"
+                onClicked:
+                {
+                    player.stop()
+                    listModel.list.clear()
+                    root.sync = false
+                    root.syncPlaylist = ""
+                }
+            }
+
+            headBar.leftContent:  ToolButton
+            {
+                icon.name: "document-save"
+                onClicked: saveList()
+            }
+
+            Playlist
+            {
+                id: _playlist
+                anchors.fill: parent
+            }
+        }
+
+
     }
 
     Maui.Page
@@ -251,6 +281,13 @@ Maui.ApplicationWindow
                 id: _tagsView
                 Maui.AppView.title: i18n("Tags")
                 Maui.AppView.iconName: "tag"
+            }
+
+            YouTubeView
+            {
+                id: _youtubeView
+                Maui.AppView.title: i18n("Online")
+                Maui.AppView.iconName: "folder-cloud"
             }
         }
 

@@ -20,9 +20,10 @@ VideosModel::VideosModel(QObject *parent) : MauiList(parent)
 {
 	qDebug()<< "CREATING GALLERY LIST";
 
-	connect(m_fileLoader, &FMH::FileLoader::finished,[](FMH::MODEL_LIST items)
+    connect(m_fileLoader, &FMH::FileLoader::finished,[this](FMH::MODEL_LIST items)
 	{
 		qDebug() << "Items finished" << items.size();
+        emit this->filesChanged();
 	});
 
 	connect(m_fileLoader, &FMH::FileLoader::itemsReady,[this](FMH::MODEL_LIST items)
@@ -130,6 +131,11 @@ int VideosModel::limit() const
 	return m_limit;
 }
 
+QStringList VideosModel::files() const
+{
+    return FMH::modelToList(this->list, FMH::MODEL_KEY::URL);
+}
+
 void VideosModel::scan(const QList<QUrl> &urls, const bool &recursive, const int &limit)
 {
 	this->scanTags (extractTags (urls), limit);
@@ -214,11 +220,11 @@ void VideosModel::append(const QVariantMap &item)
 	emit this->postItemAppended();
 }
 
-void VideosModel::append(const QString &url)
+void VideosModel::appendUrl(const QString &url)
 {
-	emit this->preItemAppended();
-	this->list << FMH::getFileInfoModel(QUrl::fromUserInput (url));
-	emit this->postItemAppended();
+    emit this->preItemAppended();
+    this->list << FMH::getFileInfoModel(QUrl::fromUserInput (url));
+    emit this->postItemAppended();
 }
 
 void VideosModel::clear()

@@ -13,6 +13,7 @@ Maui.AltBrowser
     id: control
     property alias list : _collectionList
     property alias listModel : _collectionModel
+    property alias searchField:  _searchField
 
     signal itemClicked(var item)
     signal itemRightClicked(var item)
@@ -27,10 +28,10 @@ Maui.AltBrowser
     viewType: control.width < Kirigami.Units.gridUnit * 30 ? Maui.AltBrowser.ViewType.List : Maui.AltBrowser.ViewType.Grid
 
     //    Binding on viewType
-//    {
-//        value: control.width < Kirigami.Units.gridUnit * 30 ? Maui.AltBrowser.ViewType.List : Maui.AltBrowser.ViewType.Grid
-//        restoreMode: Binding.RestoreBinding
-//    }
+    //    {
+    //        value: control.width < Kirigami.Units.gridUnit * 30 ? Maui.AltBrowser.ViewType.List : Maui.AltBrowser.ViewType.Grid
+    //        restoreMode: Binding.RestoreBinding
+    //    }
 
     Connections
     {
@@ -69,6 +70,7 @@ Maui.AltBrowser
 
     headBar.middleContent: Maui.TextField
     {
+        id: _searchField
         enabled: _collectionList.count > 0
         Layout.fillWidth: true
         placeholderText: i18n("Search") + " " + _collectionList.count + " videos"
@@ -99,7 +101,6 @@ Maui.AltBrowser
             onTriggered: control.viewType= Maui.AltBrowser.ViewType.Grid
         }
     }
-
 
     model: Maui.BaseModel
     {
@@ -134,7 +135,7 @@ Maui.AltBrowser
                 control.currentView.itemsSelected([index])
             }else if(Maui.Handy.singleClick)
             {
-                control.itemClicked(model)
+                control.itemClicked(listModel.get(index))
             }
         }
 
@@ -143,7 +144,7 @@ Maui.AltBrowser
             control.currentIndex = index
             if(!Maui.Handy.singleClick && !selectionMode)
             {
-                control.itemClicked(model)
+                control.itemClicked(listModel.get(index))
             }
         }
 
@@ -153,14 +154,14 @@ Maui.AltBrowser
                 return
 
             control.currentIndex = index
-            control.itemRightClicked(index)
+            control.itemRightClicked(listModel.get(index))
             _menu.popup()
         }
 
         onRightClicked:
         {
             control.currentIndex = index
-            control.itemRightClicked(index)
+            control.itemRightClicked(listModel.get(index))
             _menu.popup()
         }
 
@@ -170,13 +171,13 @@ Maui.AltBrowser
 
             function onUriRemoved(uri)
             {
-                if(uri === model.path)
+                if(uri === model.url)
                     _listDelegate.checked = false
             }
 
             function onUriAdded(uri)
             {
-                if(uri === model.path)
+                if(uri === model.url)
                     _listDelegate.checked = true
             }
 
@@ -187,39 +188,39 @@ Maui.AltBrowser
         }
     }
 
-gridDelegate: Item
-{
-    property bool isCurrentItem : GridView.isCurrentItem
-    height: control.gridView.cellHeight
-    width: control.gridView.cellWidth
-
-    Maui.GridBrowserDelegate
+    gridDelegate: Item
     {
-        id: delegate
+        property bool isCurrentItem : GridView.isCurrentItem
+        height: control.gridView.cellHeight
+        width: control.gridView.cellWidth
 
-        iconSizeHint: height * 0.6
-        label1.text: model.label
-        imageSource: "image://thumbnailer/"+model.path
-        template.imageHeight: height
-        template.imageWidth: width
-        template.fillMode: Image.PreserveAspectFit
+        Maui.GridBrowserDelegate
+        {
+            id: delegate
 
-        anchors.centerIn: parent
-        height: control.gridView.cellHeight - 15
-        width: control.gridView.itemSize - 20
-        padding: Maui.Style.space.tiny
-        isCurrentItem: parent.isCurrentItem
-        tooltipText: model.path
-        checkable: root.selectionMode
-        checked: (selectionBar ? selectionBar.contains(model.path) : false)
-        draggable: true
-        opacity: model.hidden == "true" ? 0.5 : 1
+            iconSizeHint: height * 0.6
+            label1.text: model.label
+            imageSource: model.thumbnail
+            template.imageHeight: height
+            template.imageWidth: width
+            template.fillMode: Image.PreserveAspectFit
 
-        Drag.keys: ["text/uri-list"]
-        Drag.mimeData: Drag.active ?
-                           {
-                               "text/uri-list": control.filterSelectedItems(model.path)
-                           } : {}
+            anchors.centerIn: parent
+            height: control.gridView.cellHeight - 15
+            width: control.gridView.itemSize - 20
+            padding: Maui.Style.space.tiny
+            isCurrentItem: parent.isCurrentItem
+            tooltipText: model.url
+            checkable: root.selectionMode
+            checked: (selectionBar ? selectionBar.contains(model.url) : false)
+            draggable: true
+            opacity: model.hidden == "true" ? 0.5 : 1
+
+            Drag.keys: ["text/uri-list"]
+            Drag.mimeData: Drag.active ?
+                               {
+                                   "text/uri-list": control.filterSelectedItems(model.url)
+                               } : {}
 
         onClicked:
         {
@@ -229,7 +230,7 @@ gridDelegate: Item
                 control.currentView.itemsSelected([index])
             }else if(Maui.Handy.singleClick)
             {
-               control.itemClicked(model)
+                control.itemClicked(listModel.get(index))
             }
         }
 
@@ -238,24 +239,24 @@ gridDelegate: Item
             control.currentIndex = index
             if(!Maui.Handy.singleClick && !selectionMode)
             {
-                control.itemClicked(model)
+                control.itemClicked(listModel.get(index))
             }
         }
 
         onPressAndHold:
         {
             if(!Maui.Handy.isTouch)
-            return
+                return
 
             control.currentIndex = index
-            control.itemRightClicked(model)
+            control.itemRightClicked(listModel.get(index))
             _menu.popup()
         }
 
         onRightClicked:
         {
             control.currentIndex = index
-            control.itemRightClicked(model)
+            control.itemRightClicked(listModel.get(index))
             _menu.popup()
         }
 
@@ -268,7 +269,7 @@ gridDelegate: Item
         onContentDropped:
         {
             //                _dropMenu.urls = drop.urls.join(",")
-            //                _dropMenu.target = model.path
+            //                _dropMenu.target = model.url
             //                _dropMenu.popup()
         }
 
@@ -278,13 +279,13 @@ gridDelegate: Item
 
             function onUriRemoved(uri)
             {
-                if(uri === model.path)
+                if(uri === model.url)
                     delegate.checked = false
             }
 
             function onUriAdded(uri)
             {
-                if(uri === model.path)
+                if(uri === model.url)
                     delegate.checked = true
             }
 
@@ -294,18 +295,17 @@ gridDelegate: Item
             }
         }
     }
-
 }
 
-function filterSelectedItems(path)
+function filterSelectedItems(url)
 {
-    if(selectionBar && selectionBar.count > 0 && selectionBar.contains(path))
+    if(selectionBar && selectionBar.count > 0 && selectionBar.contains(url))
     {
         const uris = selectionBox.uris
         return uris.join("\n")
     }
 
-    return path
+    return url
 }
 
 }

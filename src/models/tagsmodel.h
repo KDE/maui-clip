@@ -1,13 +1,8 @@
 #ifndef TAGSMODEL_H
 #define TAGSMODEL_H
 
-#ifdef STATIC_MAUIKIT
-#include "fmh.h"
-#include "mauilist.h"
-#else
 #include <MauiKit/fmh.h>
 #include <MauiKit/mauilist.h>
-#endif
 
 class TagsModel : public MauiList
 {
@@ -23,7 +18,8 @@ private:
     void setList();
 
     FMH::MODEL_LIST tags();
-    static FMH::MODEL packPlaylist(const QString &playlist);
+
+    void packPreviewImages(FMH::MODEL &tag);
 };
 
 #endif // TAGSMODEL_H

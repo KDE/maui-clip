@@ -29,8 +29,8 @@ Item
         {
             visible: player.stopped && player.video.status === MediaPlayer.NoMedia
             emojiSize: Maui.Style.iconSizes.huge
-            emoji: "qrc:/img/assets/view-media-video.svg"
-            title: i18n("No Videos!")
+            emoji: "qrc:/img/assets/media-playback-start.svg"
+            title: i18n("Nothing Here!")
             body: i18n("Open a new video to start playing or add it to the playlist.")
         }
     }
