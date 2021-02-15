@@ -67,7 +67,7 @@ Maui.AltBrowser
                 control.currentView.itemsSelected([index])
             }else if(Maui.Handy.singleClick)
             {
-                play(model)
+                play(_youtubeModel.get(index))
             }
         }
 
@@ -76,7 +76,7 @@ Maui.AltBrowser
             control.currentIndex = index
             if(!Maui.Handy.singleClick && !selectionMode)
             {
-                play(model)
+                play(_youtubeModel.get(index))
             }
         }
 
@@ -140,7 +140,7 @@ Maui.AltBrowser
                 control.currentView.itemsSelected([index])
             }else if(Maui.Handy.singleClick)
             {
-                play(model)
+                play(_youtubeModel.get(index))
             }
         }
 
