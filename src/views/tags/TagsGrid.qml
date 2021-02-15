@@ -3,8 +3,8 @@ import QtQml 2.14
 import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.3
 
-import org.kde.mauikit 1.2 as Maui
-import org.kde.kirigami 2.8 as Kirigami
+import org.kde.mauikit 1.3 as Maui
+import org.kde.kirigami 2.14 as Kirigami
 
 import org.maui.clip 1.0 as Clip
 
@@ -14,7 +14,10 @@ Maui.AltBrowser
 {
     id: control
 
-    gridView.itemSize: 180
+    gridView.itemSize: Math.min(260, Math.max(140, Math.floor(width* 0.3)))
+    gridView.itemHeight: gridView.itemSize
+
+    headBar.visible: false
 
     holder.visible: _tagsList.count === 0
     holder.emojiSize: Maui.Style.iconSizes.huge
@@ -80,25 +83,29 @@ Maui.AltBrowser
         }
     }
 
-    gridDelegate: CollageDelegate
+    gridDelegate: Maui.CollageItem
     {
         id: _delegate
         property string tag : model.tag
         property url tagUrl : "tags:///"+model.tag
-        height: control.gridView.cellHeight - Maui.Style.space.medium
-        width: control.gridView.cellWidth- Maui.Style.space.medium
+
+        height: control.gridView.cellHeight
+        width: control.gridView.cellWidth
+
         isCurrentItem: GridView.isCurrentItem
 
-        contentWidth: control.gridView.itemSize - 10
-        contentHeight: control.gridView.cellHeight - 20
+        images: model.preview.split(",")
 
-        list.urls: tagUrl
+        cb: function(url)
+        {
+            return "image://thumbnailer/"+url
+        }
 
         template.label1.text: model.tag
         template.iconSource: model.icon
         template.iconVisible: true
 
-        onClicked:
+           onClicked:
         {
             control.currentIndex = index
             if(Maui.Handy.singleClick)

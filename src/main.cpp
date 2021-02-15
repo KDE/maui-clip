@@ -18,6 +18,8 @@
 #include "src/backends/mpv/mpvobject.h"
 #include "src/models/videosmodel.h"
 #include "src/models/tagsmodel.h"
+#include "src/models/youtubemodel.h"
+
 #include "src/utils/clip.h"
 
 #define CLIP_URI "org.maui.clip"
@@ -83,7 +85,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     MauiApp::instance()->setHandleAccounts(false);
 
     KLocalizedString::setApplicationDomain("clip");
-    KAboutData about(QStringLiteral("clip"), i18n("Clip"), CLIP_VERSION_STRING, i18n("Video collection manager and player."),
+    KAboutData about(QStringLiteral("clip"), i18n("Clip"), CLIP_VERSION_STRING, i18n("Video collection manager and MPV player."),
                      KAboutLicense::LGPL_V3, i18n("© 2019-%1 Nitrux Development Team", QString::number(QDate::currentDate().year())));
     about.addAuthor(i18n("Camilo Higuita"), i18n("Developer"), QStringLiteral("milo.h@aol.com"));
     about.setHomepage("https://mauikit.org");
@@ -123,6 +125,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
     qmlRegisterType<VideosModel>(CLIP_URI, 1, 0, "Videos");
     qmlRegisterType<TagsModel>(CLIP_URI, 1, 0, "Tags");
+    qmlRegisterType<YouTubeModel>(CLIP_URI, 1, 0, "YouTube");
     qmlRegisterSingletonInstance<Clip>(CLIP_URI, 1, 0, "Clip", Clip::instance ());
     qRegisterMetaType<TracksModel*>();
 

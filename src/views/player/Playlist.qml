@@ -98,7 +98,9 @@ Maui.ListBrowser
 
     function append(item)
     {
-        control.list.append(item.url)
+        console.log("Queue item<<" , item, item.url)
+
+        control.list.append(item)
     }
 }
 

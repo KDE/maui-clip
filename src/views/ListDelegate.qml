@@ -12,22 +12,22 @@ Maui.ListBrowserDelegate
 
     isCurrentItem: ListView.isCurrentItem
     draggable: true
-    tooltipText: model.path
+    tooltipText: model.url
     checkable: root.selectionMode
-    checked: (selectionBar ? selectionBar.contains(model.path) : false)
+    checked: (selectionBar ? selectionBar.contains(model.url) : false)
 
     Drag.keys: ["text/uri-list"]
     Drag.mimeData: Drag.active ?
                        {
-                           "text/uri-list": filterSelectedItems(model.path)
+                           "text/uri-list": filterSelectedItems(model.url)
                        } : {}
 
 iconSizeHint: height * 0.9
 label1.text: model.label
-label2.text: model.path
+label2.text: model.url
 label3.text: model.mime
 label4.text: Qt.formatDateTime(new Date(model.modified), "d MMM yyyy")
-imageSource: "image://thumbnailer/"+model.path
+imageSource: model.thumbnail
 template.fillMode: Image.PreserveAspectCrop
 
 }

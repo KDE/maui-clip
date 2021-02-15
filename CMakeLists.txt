@@ -52,6 +52,7 @@ set(clipSRCS
     src/models/videosmodel.cpp
     src/models/tagsmodel.cpp
     src/models/playlistmodel.cpp
+    src/models/youtubemodel.cpp
     src/utils/clip.cpp
     src/backends/mpv/mpvobject.cpp
     src/backends/mpv/track.cpp
@@ -64,6 +65,7 @@ set(clipHDRS
     src/models/videosmodel.h
     src/models/tagsmodel.h
     src/models/playlistmodel.h
+    src/models/youtubemodel.h
     src/utils/clip.h
     src/backends/mpv/mpvobject.h
     src/backends/mpv/track.h

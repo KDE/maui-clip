@@ -28,6 +28,7 @@ class VideosModel : public MauiList
     Q_PROPERTY(bool autoScan READ autoScan WRITE setAutoScan NOTIFY autoScanChanged)
     Q_PROPERTY(bool autoReload READ autoReload WRITE setAutoReload NOTIFY autoReloadChanged)
     Q_PROPERTY(int limit READ limit WRITE setlimit NOTIFY limitChanged)
+    Q_PROPERTY(QStringList files READ files NOTIFY filesChanged FINAL)
 
 public:
     explicit VideosModel(QObject *parent = nullptr);
@@ -49,7 +50,7 @@ public:
     bool recursive() const;
 
     int limit() const;
-
+    QStringList files() const;
 
 private:
     FMH::FileLoader *m_fileLoader;
@@ -60,7 +61,7 @@ private:
     bool m_autoReload;
     bool m_autoScan;
 
-    FMH::MODEL_LIST list = {};
+    FMH::MODEL_LIST list;
 
     void scan(const QList<QUrl> &urls, const bool &recursive = true, const int &limit = CINEMA_QUERY_MAX_LIMIT);
     void scanTags(const QList<QUrl> &urls, const int &limit = CINEMA_QUERY_MAX_LIMIT);
@@ -73,6 +74,7 @@ private:
 
     int m_limit = CINEMA_QUERY_MAX_LIMIT;
     QList<QUrl> extractTags(const QList<QUrl> &urls);
+
 signals:
     void urlsChanged();
     void foldersChanged();
@@ -83,12 +85,14 @@ signals:
 
     void limitChanged(int limit);
 
+    void filesChanged();
+
 public slots:
     bool remove(const int &index);
     bool deleteAt(const int &index);
 
     void append(const QVariantMap &item);
-    void append(const QString &url);
+    void appendUrl(const QString &url);
     //    void appendAt(const QString &url, const int &pos);
 
     void clear();

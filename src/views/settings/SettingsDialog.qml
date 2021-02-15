@@ -14,7 +14,7 @@ Maui.SettingsDialog
 
     Maui.SettingsSection
     {
-//        alt: true
+        //        alt: true
         title: i18n("General")
         description: i18n("Configure the app behavior.")
 
@@ -59,11 +59,11 @@ Maui.SettingsDialog
 
     Maui.SettingsSection
     {
-//        alt: false
+        //        alt: false
         title: i18n("Collection")
         description: i18n("Sorting order and behavior.")
 
-          Maui.SettingTemplate
+        Maui.SettingTemplate
         {
             label1.text: i18n("Sorting by")
             label2.text: i18n("Change the sorting key.")
@@ -180,9 +180,11 @@ Maui.SettingsDialog
         {
             label1.text: i18n("Preferred Language")
             label2.text: i18n("Preferred language if avaliable.")
+            wide: false
 
             Maui.TextField
             {
+                Layout.fillWidth: true
                 text: settings.preferredLanguage
                 onAccepted: settings.preferredLanguage = text
             }
@@ -196,15 +198,16 @@ Maui.SettingsDialog
 
         Maui.SettingTemplate
         {
-            label1.text: i18n("Subtitles Path")
+            label1.text: i18n("Directory")
             label2.text: i18n("Folder path containing the subtitle files.")
+            wide: false
 
             Maui.TextField
             {
+                Layout.fillWidth: true
                 text: settings.subtitlesPath
                 onAccepted: settins.subtitlesPath = text
-
-               actions.data: ToolButton
+                actions.data: ToolButton
                 {
                     icon.name: "folder-open"
                     onClicked:
@@ -260,11 +263,21 @@ Maui.SettingsDialog
         {
             label1.text: i18n("Key")
             label2.text: i18n("Personal key for unlimitless browsing.")
+            wide: false
 
             Maui.TextField
             {
+                Layout.fillWidth: true
                 text: settings.youtubeKey
                 onAccepted: settings.youtubeKey = text
+            }
+
+            template.leftLabels.data: Label
+            {
+                Layout.fillWidth: true
+                text: i18n("<a href='https://console.developers.google.com/apis/credentials'>Get your personal key.</a>")
+
+                onLinkActivated: Qt.openUrlExternally(link)
             }
         }
     }
@@ -289,7 +302,7 @@ Maui.SettingsDialog
                 model: Clip.Clip.sourcesModel
                 delegate: Maui.ListDelegate
                 {
-                    width: parent.width
+                    width: ListView.view.width
                     implicitHeight: Maui.Style.rowHeight * 1.5
                     leftPadding: 0
                     rightPadding: 0
@@ -298,38 +311,36 @@ Maui.SettingsDialog
                     template.label1.text: modelData.label
                     template.label2.text: modelData.path
                     onClicked: _sourcesList.currentIndex = index
+
+                    template.content: ToolButton
+                    {
+                        icon.name: "edit-clear"
+                        flat: true
+                        onClicked:
+                        {
+                            confirmationDialog.url = modelData.url
+                            confirmationDialog.open()
+                        }
+                    }
                 }
             }
 
-            RowLayout
+            Button
             {
                 Layout.fillWidth: true
-                Button
-                {
-                    Layout.fillWidth: true
-                    text: i18n("Remove")
-                    onClicked:
-                    {
-                        confirmationDialog.url = _sourcesList.model[_sourcesList.currentIndex].path
-                        confirmationDialog.open()
-                    }
-                }
+                text: i18n("Add")
+                flat: true
 
-                Button
+                onClicked:
                 {
-                    Layout.fillWidth: true
-                    text: i18n("Add")
-                    onClicked:
+                    dialogLoader.sourceComponent = fmDialogComponent
+                    dialog.settings.onlyDirs = true
+                    dialog.mode = dialog.modes.OPEN
+                    dialog.callback = function(urls)
                     {
-                        dialogLoader.sourceComponent = fmDialogComponent
-                        dialog.settings.onlyDirs = true
-                        dialog.mode = dialog.modes.OPEN
-                        dialog.callback = function(urls)
-                        {
-                            Clip.Clip.addSources(urls)
-                        }
-                        dialog.open()
+                        Clip.Clip.addSources(urls)
                     }
+                    dialog.open()
                 }
             }
         }
