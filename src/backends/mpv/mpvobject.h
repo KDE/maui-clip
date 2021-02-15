@@ -15,6 +15,8 @@
 //#include "playlistmodel.h"
 #include "tracksmodel.h"
 
+#include <QMediaPlayer>
+
 class MpvRenderer;
 class Track;
 
@@ -24,15 +26,28 @@ class MpvObject : public QQuickFramebufferObject
     Q_PROPERTY(TracksModel* audioTracksModel READ audioTracksModel NOTIFY audioTracksModelChanged)
     Q_PROPERTY(TracksModel* subtitleTracksModel READ subtitleTracksModel NOTIFY subtitleTracksModelChanged)
 
-    Q_PROPERTY(QUrl url
-               READ url
-               WRITE setUrl
-               NOTIFY urlChanged)
+    Q_PROPERTY(QUrl source
+               READ source
+               WRITE setSource
+               NOTIFY sourceChanged)
 
     Q_PROPERTY(bool autoPlay
                READ autoPlay
                WRITE setAutoPlay
                NOTIFY autoPlayChanged)
+
+    Q_PROPERTY(QMediaPlayer::State playbackState
+               READ getPlaybackState
+               NOTIFY playbackStateChanged)
+
+    Q_PROPERTY(QMediaPlayer::MediaStatus status
+               READ getStatus
+               NOTIFY statusChanged)
+
+    Q_PROPERTY(bool hardwareDecoding
+               READ hardwareDecoding
+               WRITE setHardwareDecoding
+               NOTIFY hardwareDecodingChanged)
 
     Q_PROPERTY(QString mediaTitle
                READ mediaTitle
@@ -50,11 +65,6 @@ class MpvObject : public QQuickFramebufferObject
     Q_PROPERTY(double remaining
                READ remaining
                NOTIFY remainingChanged)
-
-    Q_PROPERTY(bool pause
-               READ pause
-               WRITE setPause
-               NOTIFY pauseChanged)
 
     Q_PROPERTY(int volume
                READ volume
@@ -128,9 +138,6 @@ class MpvObject : public QQuickFramebufferObject
     double remaining();
     double duration();
 
-    bool pause();
-    void setPause(bool value);
-
     int volume();
     void setVolume(int value);
 
@@ -174,25 +181,35 @@ public:
     virtual ~MpvObject();
     virtual Renderer *createRenderer() const;
 
-    Q_INVOKABLE void getYouTubePlaylist(const QString &path);
     Q_INVOKABLE QVariant getProperty(const QString &name);
     Q_INVOKABLE QVariant command(const QVariant &params);
 
-    QUrl url() const;
+    QUrl source() const;
 
     bool autoPlay() const;
+
+    QMediaPlayer::State getPlaybackState() const;
+
+    QMediaPlayer::MediaStatus getStatus() const;
+
+    bool hardwareDecoding() const;
 
 public slots:
     static void mpvEvents(void *ctx);
     void eventHandler();
     int setProperty(const QString &name, const QVariant &value);
 
-    void setUrl(QUrl url);
+    void setSource(QUrl url);
 
     void setAutoPlay(bool autoPlay);
 
     void play();
     void stop();
+    void pause();
+
+    void seek(const double &value);
+
+    void setHardwareDecoding(bool hardwareDecoding);
 
 signals:
     void mediaTitleChanged();
@@ -200,7 +217,12 @@ signals:
     void durationChanged();
     void remainingChanged();
     void volumeChanged();
-    void pauseChanged();
+
+    void paused();
+    void playing();
+    void stopped();
+    void error(QString error);
+
     void chapterChanged();
     void audioIdChanged();
     void subtitleIdChanged();
@@ -219,9 +241,15 @@ signals:
 //    void playlistModelChanged();
 //    void youtubePlaylistLoaded();
 
-    void urlChanged(QUrl url);
+    void sourceChanged(QUrl url);
 
     void autoPlayChanged(bool autoPlay);
+    
+    void playbackStateChanged(QMediaPlayer::State playbackState);
+
+    void statusChanged(QMediaPlayer::MediaStatus  status);
+
+    void hardwareDecodingChanged(bool hardwareDecoding);
 
 private:
     TracksModel *audioTracksModel() const;
@@ -236,9 +264,15 @@ private:
     QString m_file;
 
     void loadTracks();
+    void playUrl();
+    void setPlaybackState(const QMediaPlayer::State &state);
+    void setStatus(const QMediaPlayer::MediaStatus  &status);
 
-    QUrl m_url;
+    QUrl m_source;
     bool m_autoPlay;
+    QMediaPlayer::State m_playbackState;
+    QMediaPlayer::MediaStatus  m_status = QMediaPlayer::NoMedia;
+    bool m_hardwareDecoding = true;
 };
 
 class MpvRenderer : public QQuickFramebufferObject::Renderer

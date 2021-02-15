@@ -13,11 +13,11 @@ Maui.Page
 {
     id: control
     property alias video : _mpv
-    property alias url : _mpv.url
+    property alias url : _mpv.source
 
-    readonly property bool playing : !_mpv.pause
-    readonly property bool paused : _mpv.pause
-    readonly property bool stopped : true
+    readonly property bool playing : _mpv.playbackState === MediaPlayer.PlayingState
+    readonly property bool paused : _mpv.playbackState === MediaPlayer.PausedState
+    readonly property bool stopped :  _mpv.playbackState === MediaPlayer.StoppedState
 
     headBar.visible: false
     floatingFooter: player.visible && !_playlist.visible
@@ -43,71 +43,154 @@ Maui.Page
     //        }
     //    }
 
+    Maui.Dialog
+    {
+        id: _subtitlesDialog
+        title: i18n("Subtitles")
+
+        Repeater
+        {
+            model: _mpv.subtitleTracksModel
+
+            Maui.ListBrowserDelegate
+            {
+                Layout.fillWidth: true
+                label1.text: model.text
+                label2.text: model.language
+            }
+        }
+    }
+
+    Maui.Dialog
+    {
+        id: _audioTracksDialog
+        title: i18n("Audio Tracks")
+
+        Repeater
+        {
+            model: _mpv.audioTracksModel
+
+            Maui.ListBrowserDelegate
+            {
+                Layout.fillWidth: true
+                label1.text: model.text
+                label2.text: model.language
+            }
+        }
+    }
 
     MpvObject
     {
         id: _mpv
         anchors.fill: parent
-         autoPlay: true
+        autoPlay: true
+        hardwareDecoding: settings.hardwareDecoding
+        onEndOfFile: playNext()
+
+        BusyIndicator
+        {
+            Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
+            Kirigami.Theme.inherit: false
+
+            anchors.centerIn: parent
+            running: _mpv.status === MediaPlayer.Loading
+        }
+
+        Label
+        {
+            color: "orange"
+            text: _mpv.status +"/"+ MediaPlayer.NoMedia
+        }
+
+        Row
+        {
+            visible: !control.stopped
+            anchors.right: parent.right
+            anchors.bottom: parent.bottom
+
+            Maui.Badge
+            {
+                Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
+                Kirigami.Theme.inherit: false
+
+                text: "CC"
+
+                onClicked: _subtitlesDialog.open()
+
+            }
+
+            Maui.Badge
+            {
+                Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
+                Kirigami.Theme.inherit: false
+
+                text: "Audio"
+
+                onClicked: _audioTracksDialog.open()
+
+            }
+        }
     }
 
 
-//    Video
-//    {
-//        id: player
-//        visible: !control.stopped
-//        anchors.fill: parent
-//        autoLoad: true
-//        autoPlay: true
-//        focus: true
-//        Keys.onSpacePressed: player.playbackState == MediaPlayer.PlayingState ? player.pause() : player.play()
-//        Keys.onLeftPressed: player.seek(player.position - 5000)
-//        Keys.onRightPressed: player.seek(player.position + 5000)
 
-//        RowLayout
-//        {
-//            anchors.fill: parent
 
-//            MouseArea
-//            {
-//                Layout.fillWidth: true
-//                Layout.fillHeight: true
-//                onDoubleClicked: player.seek(player.position - 5000)
-//            }
+    //    Video
+    //    {
+    //        id: player
+    //        visible: !control.stopped
+    //        anchors.fill: parent
+    //        autoLoad: true
+    //        autoPlay: true
+    //        focus: true
+    //        Keys.onSpacePressed: player.playbackState == MediaPlayer.PlayingState ? player.pause() : player.play()
+    //        Keys.onLeftPressed: player.seek(player.position - 5000)
+    //        Keys.onRightPressed: player.seek(player.position + 5000)
 
-//            MouseArea
-//            {
-//                Layout.fillWidth: true
-//                Layout.fillHeight: true
-//                onClicked: player.playbackState === MediaPlayer.PlayingState ? player.pause() : player.play()
-//            }
+    //        RowLayout
+    //        {
+    //            anchors.fill: parent
 
-//            MouseArea
-//            {
-//                Layout.fillWidth: true
-//                Layout.fillHeight: true
-//                onDoubleClicked: player.seek(player.position + 5000)
-//            }
-//        }
-//    }
+    //            MouseArea
+    //            {
+    //                Layout.fillWidth: true
+    //                Layout.fillHeight: true
+    //                onDoubleClicked: player.seek(player.position - 5000)
+    //            }
+
+    //            MouseArea
+    //            {
+    //                Layout.fillWidth: true
+    //                Layout.fillHeight: true
+    //                onClicked: player.playbackState === MediaPlayer.PlayingState ? player.pause() : player.play()
+    //            }
+
+    //            MouseArea
+    //            {
+    //                Layout.fillWidth: true
+    //                Layout.fillHeight: true
+    //                onDoubleClicked: player.seek(player.position + 5000)
+    //            }
+    //        }
+    //    }
 
     footBar.visible: true
 
     footer: Maui.TagsBar
+    {
+        id: tagBar
+        visible: root.visibility !== Window.FullScreen && settings.playerTagBar
+        position: ToolBar.Footer
+        width: parent.width
+        allowEditMode: true
+        onTagsEdited:
         {
-            id: tagBar
-            visible: root.visibility !== Window.FullScreen
-            position: ToolBar.Footer
-            width: parent.width
-            allowEditMode: true
-            onTagsEdited:
-            {
-                tagBar.list.updateToUrls(tags)
-            }
-
-            list.strict: true
-            list.urls:  [control.url]
+            tagBar.list.updateToUrls(tags)
         }
+
+        list.strict: true
+        list.urls:  [control.url]
+    }
 
 
 }

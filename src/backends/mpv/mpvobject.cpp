@@ -95,19 +95,19 @@ MpvObject::MpvObject(QQuickItem * parent)
     , mpv_gl(nullptr)
     , m_audioTracksModel(new TracksModel)
     , m_subtitleTracksModel(new TracksModel)
-//    , m_playlistModel(new PlayListModel)
+    //    , m_playlistModel(new PlayListModel)
 {
     if (!mpv)
         throw std::runtime_error("could not create mpv context");
 
-//    setProperty("terminal", "yes");
-//    setProperty("msg-level", "all=v");
+    //    setProperty("terminal", "yes");
+    //    setProperty("msg-level", "all=v");
 
-//    if (PlaybackSettings::useHWDecoding()) {
-//        setProperty("hwdec", "yes");
-//    } else {
+    if (m_hardwareDecoding) {
+        setProperty("hwdec", "yes");
+    } else {
         setProperty("hwdec", "no");
-//    }
+    }
 
     setProperty("screenshot-template", "%x/screenshots/%n");
     setProperty("sub-auto", "exact");
@@ -150,6 +150,21 @@ MpvObject::MpvObject(QQuickItem * parent)
             m_secondsWatched << pos;
             setWatchPercentage(m_secondsWatched.count() * 100 / duration);
         }
+    });
+
+    connect(this, &MpvObject::paused, [this]()
+    {
+        this->setPlaybackState(QMediaPlayer::PausedState);
+    });
+
+    connect(this, &MpvObject::playing, [this]()
+    {
+        this->setPlaybackState(QMediaPlayer::PlayingState);
+    });
+
+    connect(this, &MpvObject::stopped, [this]()
+    {
+        this->setPlaybackState(QMediaPlayer::StoppedState);
     });
 }
 
@@ -198,20 +213,6 @@ double MpvObject::remaining()
 double MpvObject::duration()
 {
     return getProperty("duration").toDouble();
-}
-
-bool MpvObject::pause()
-{
-    return getProperty("pause").toBool();
-}
-
-void MpvObject::setPause(bool value)
-{
-    if (value == pause()) {
-        return;
-    }
-    setProperty("pause", value);
-    emit pauseChanged();
 }
 
 int MpvObject::volume()
@@ -393,14 +394,40 @@ void MpvObject::eventHandler()
             break;
         }
         switch (event->event_id) {
-        case MPV_EVENT_FILE_LOADED: {
-            emit fileLoaded();
+
+        case MPV_EVENT_START_FILE:
+            //               clearTrackState();
+            //               emit sourceChanged();
+            setStatus(QMediaPlayer::LoadingMedia);
+            break;
+
+        case MPV_EVENT_SEEK:
+            setStatus(QMediaPlayer::BufferingMedia);
+            break;
+
+        case MPV_EVENT_PLAYBACK_RESTART: {
+            bool paused = this->getProperty("pause").toBool();
+            if (paused)
+                emit this->paused();
+            else
+                emit this->playing();
             break;
         }
+
+        case MPV_EVENT_FILE_LOADED: {
+            emit fileLoaded();
+            setStatus(QMediaPlayer::LoadedMedia);
+            emit this->playing();
+            break;
+        }
+
         case MPV_EVENT_END_FILE: {
             auto prop = (mpv_event_end_file *)event->data;
-            if (prop->reason == MPV_END_FILE_REASON_EOF) {
+            if (prop->reason == MPV_END_FILE_REASON_EOF ||
+                    prop ->reason == MPV_END_FILE_REASON_ERROR) {
                 emit endOfFile();
+                setStatus(QMediaPlayer::EndOfMedia);
+                emit this->stopped();
             }
             break;
         }
@@ -428,9 +455,27 @@ void MpvObject::eventHandler()
                     emit volumeChanged();
                 }
             } else if (strcmp(prop->name, "pause") == 0) {
+
                 if (prop->format == MPV_FORMAT_FLAG) {
-                    emit pauseChanged();
+                    int pause = *(int *)prop->data;
+                    bool paused = pause == 1;
+                    if (paused)
+                        emit this->paused();
+                    else {
+                        if(this->getProperty("core-idle").toBool())
+                        {
+                            emit this->stopped();
+                            setStatus(QMediaPlayer::NoMedia);
+                        }
+                        else
+                        {
+                            emit this->playing();
+                            emit this->stopped();
+                            setStatus(QMediaPlayer::LoadedMedia);
+                        }
+                    }
                 }
+
             } else if (strcmp(prop->name, "chapter") == 0) {
                 if (prop->format == MPV_FORMAT_INT64) {
                     emit chapterChanged();
@@ -470,6 +515,21 @@ void MpvObject::eventHandler()
             }
             break;
         }
+
+        case MPV_EVENT_LOG_MESSAGE: {
+            struct mpv_event_log_message *msg = (struct mpv_event_log_message *)event->data;
+            qDebug() << "[" << msg->prefix << "] " << msg->level << ": " << msg->text;
+
+            if (msg->log_level == MPV_LOG_LEVEL_ERROR) {
+                //                    lastErrorString = QString::fromUtf8(msg->text);
+                emit error(QString::fromUtf8(msg->text));
+                setStatus(QMediaPlayer::InvalidMedia);
+
+            }
+
+            break;
+        }
+
         default: ;
             // Ignore uninteresting or unknown events.
         }
@@ -527,6 +587,9 @@ void MpvObject::loadTracks()
         }
     }
     m_subtitleTracksModel->setTracks(m_subtitleTracks);
+
+    qDebug() << "Audio tracks"  << m_audioTracks << m_audioTracks.size();
+
     m_audioTracksModel->setTracks(m_audioTracks);
 
     emit audioTracksModelChanged();
@@ -535,16 +598,38 @@ void MpvObject::loadTracks()
 
 void MpvObject::play()
 {
-    if(!m_url.isEmpty() && m_url.isValid())
-   {
-        qDebug() << "request play file" << m_url;
-         command(QStringList{"loadfile", m_url.toLocalFile()});
-    }
+    this->setProperty("pause", false);
 }
 
 void MpvObject::stop()
 {
+    this->command({});
+}
 
+void MpvObject::pause()
+{
+    this->setProperty("pause", true);
+}
+
+void MpvObject::seek(const double &value)
+{
+    command(QStringList() << "seek" << QString::number(value) << "absolute");
+}
+
+void MpvObject::setHardwareDecoding(bool hardwareDecoding)
+{
+    if (m_hardwareDecoding == hardwareDecoding)
+        return;
+
+    m_hardwareDecoding = hardwareDecoding;
+
+    if (m_hardwareDecoding) {
+        setProperty("hwdec", "yes");
+    } else {
+        setProperty("hwdec", "no");
+    }
+
+    emit hardwareDecodingChanged(m_hardwareDecoding);
 }
 
 TracksModel *MpvObject::subtitleTracksModel() const
@@ -557,66 +642,24 @@ TracksModel *MpvObject::audioTracksModel() const
     return m_audioTracksModel;
 }
 
-void MpvObject::getYouTubePlaylist(const QString &path)
-{
-//    m_playlistModel->clear();
-
-    // use youtube-dl to get the required playlist info as json
-//    auto ytdlProcess = new QProcess();
-//    ytdlProcess->setProgram("youtube-dl");
-//    ytdlProcess->setArguments(QStringList() << "-J" << "--flat-playlist" << path);
-//    ytdlProcess->start();
-
-//    QObject::connect(ytdlProcess, (void (QProcess::*)(int,QProcess::ExitStatus))&QProcess::finished,
-//                     this, [=](int, QProcess::ExitStatus) {
-//        // use the json to populate the playlist model
-//        using Playlist = std::map<int, std::shared_ptr<PlayListItem>>;
-//        Playlist m_playList;
-
-//        QString json = ytdlProcess->readAllStandardOutput();
-//        QJsonObject obj;
-//        QJsonValue entries = QJsonDocument::fromJson(json.toUtf8())["entries"];
-
-//        QString playlistFileContent;
-
-//        for (int i = 0; i < entries.toArray().size(); ++i) {
-//            auto url = QString("https://youtu.be/%1").arg(entries[i]["id"].toString());
-//            auto title = entries[i]["title"].toString();
-//            auto duration = entries[i]["duration"].toDouble();
-
-//            auto video = std::make_shared<PlayListItem>(url, i);
-//            video->setMediaTitle(title);
-//            video->setDuration(Application::formatTime(duration));
-//            m_playList.emplace(i, video);
-
-//            playlistFileContent += QString("%1,%2,%3\n").arg(url).arg(title).arg(QString::number(duration));
-//        }
-
-//        // save playlist to disk
-//        m_playlistModel->setPlayList(m_playList);
-
-//        emit youtubePlaylistLoaded();
-//    });
-}
-
 int MpvObject::setProperty(const QString &name, const QVariant &value)
 {
     return mpv::qt::set_property(mpv, name, value);
 }
 
-void MpvObject::setUrl(QUrl url)
+void MpvObject::setSource(QUrl url)
 {
-    if (m_url == url)
+    if (m_source == url)
         return;
 
-    m_url = url;
+    m_source = url;
 
     if(m_autoPlay)
     {
-        this->play();
+        this->playUrl();
     }
 
-    emit urlChanged(m_url);
+    emit sourceChanged(m_source);
 }
 
 void MpvObject::setAutoPlay(bool autoPlay)
@@ -639,12 +682,55 @@ QVariant MpvObject::command(const QVariant &params)
     return mpv::qt::command(mpv, params);
 }
 
-QUrl MpvObject::url() const
+QUrl MpvObject::source() const
 {
-    return m_url;
+    return m_source;
 }
 
 bool MpvObject::autoPlay() const
 {
     return m_autoPlay;
+}
+
+void MpvObject::setPlaybackState(const QMediaPlayer::State &state)
+{
+    m_playbackState = state;
+    emit this->playbackStateChanged(m_playbackState);
+}
+
+void MpvObject::setStatus(const QMediaPlayer::MediaStatus  &status)
+{
+    m_status = status;
+    emit this->statusChanged(m_status);
+}
+
+QMediaPlayer::State MpvObject::getPlaybackState() const
+{
+    return m_playbackState;
+}
+
+QMediaPlayer::MediaStatus MpvObject::getStatus() const
+{
+    return m_status;
+}
+
+bool MpvObject::hardwareDecoding() const
+{
+    return m_hardwareDecoding;
+}
+
+void MpvObject::playUrl()
+{
+    if(!m_source.isEmpty() && m_source.isValid())
+    {
+        qDebug() << "request play file" << m_source;
+
+        if(m_source.isLocalFile())
+            command(QStringList{"loadfile", m_source.toLocalFile()});
+        else
+            command(QStringList{"loadfile", m_source.toString()});
+    }
+
+    if (m_playbackState == QMediaPlayer::PausedState)
+        play();
 }

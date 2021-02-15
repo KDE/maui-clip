@@ -67,6 +67,53 @@ Item
         }
     }
 
+    Slider
+           {
+               id: _slider
+               padding: 0
+               height: Maui.Style.iconSizes.small
+               anchors.left: parent.left
+               anchors.right: parent.right
+               anchors.bottom: parent.bottom
+               orientation: Qt.Horizontal
+               from: 0
+               to: player.video.duration
+               value: player.video.position
+
+               onMoved: player.video.seek( _slider.value )
+
+               //            onToChanged: value = player.video.position
+
+               spacing: 0
+               focus: true
+
+               background: Rectangle
+               {
+                   implicitWidth: _slider.width
+                   implicitHeight: _slider.height
+                   width: _slider.availableWidth
+                   height: implicitHeight
+                   color: "transparent"
+                   opacity: 1
+
+                   Rectangle
+                   {
+                       width: _slider.visualPosition * parent.width
+                       height: _slider.height
+                       color: Kirigami.Theme.highlightColor
+                   }
+               }
+
+               handle: Rectangle
+               {
+                   x: _slider.leftPadding + _slider.visualPosition
+                      * (_slider.availableWidth - width)
+                   y: 0
+                   implicitWidth: Maui.Style.iconSizes.medium
+                   implicitHeight: _slider.height
+                   color: _slider.pressed ? Qt.lighter(Kirigami.Theme.highlightColor, 1.2) : "transparent"
+               }
+           }
 
 
     layer.enabled: true

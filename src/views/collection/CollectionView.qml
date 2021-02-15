@@ -19,6 +19,5 @@ BrowserLayout
     onItemClicked:
     {
         play(item)
-    }
-
+    }    
 }
