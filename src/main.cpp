@@ -124,7 +124,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterType<VideosModel>(CLIP_URI, 1, 0, "Videos");
     qmlRegisterType<TagsModel>(CLIP_URI, 1, 0, "Tags");
     qmlRegisterSingletonInstance<Clip>(CLIP_URI, 1, 0, "Clip", Clip::instance ());
-//    qRegisterMetaType<TracksModel*>();
+    qRegisterMetaType<TracksModel*>();
 
     engine.load(url);
 

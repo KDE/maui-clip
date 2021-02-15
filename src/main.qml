@@ -5,6 +5,8 @@ import QtQuick.Window 2.13
 import QtMultimedia 5.8
 import QtQml 2.14
 
+import Qt.labs.settings 1.0
+
 import org.kde.mauikit 1.2 as Maui
 import org.kde.kirigami 2.8 as Kirigami
 
@@ -16,6 +18,7 @@ import "views"
 import "views/player"
 import "views/collection"
 import "views/tags"
+import "views/settings"
 
 Maui.ApplicationWindow
 {
@@ -50,6 +53,46 @@ Maui.ApplicationWindow
             root.showNormal()
         }
     }
+
+    Settings
+    {
+        id: settings
+        property int volumeStep: 5
+        property string colorScheme: "Breeze"
+        property string sortBy: "date"
+        property int sortOrder: Qt.AscendingOrder
+        property bool hardwareDecoding: true
+        property string preferredLanguage: "eng"
+        property string subtitlesPath
+        property font font
+        property bool playerTagBar: true
+    }
+
+
+    mainMenu: [
+
+        Action
+        {
+            text: i18n("Open URL")
+            icon.name: "filename-space-amarok"
+
+            onTriggered:
+            {
+                _openUrlDialog.open()
+            }
+        },
+
+        Action
+        {
+            text: i18n("Settings")
+            icon.name: "settings-configure"
+
+            onTriggered:
+            {
+                _settingsDialog.open()
+            }
+        }
+    ]
 
     /***MODELS****/
     Maui.BaseModel
@@ -98,6 +141,18 @@ Maui.ApplicationWindow
     {
         id: shareDialogComponent
         Maui.ShareDialog {}
+    }
+
+    SettingsDialog { id: _settingsDialog}
+
+    Maui.Dialog
+    {
+        id: _openUrlDialog
+        title: i18n("Open URL")
+        entryField: true
+        textEntry.placeholderText: "URL"
+
+        onAccepted: player.url = textEntry.text
     }
 
     Component
@@ -210,27 +265,24 @@ Maui.ApplicationWindow
 
     }
 
-
-
     //    footBar.visible: player.video.playbackState !== MediaPlayer.StoppedState
 
     page.footerColumn: Maui.ToolBar
     {
-        visible: player.video.playbackState !== MediaPlayer.StoppedState && _appViews.currentIndex === views.player
+        visible: _appViews.currentIndex === views.player && !player.stopped
         preferredHeight: Maui.Style.rowHeight
 
         position: ToolBar.Footer
         width: parent.width
         leftContent: Label
         {
-            text: Maui.FM.formatTime((player.video.duration - player.video.position)/1000)
+            text: Maui.FM.formatTime(player.video.position)
         }
 
         rightContent: Label
         {
-            text: Maui.FM.formatTime(player.video.duration/1000)
+            text: Maui.FM.formatTime(player.video.duration)
         }
-
 
         middleContent:  Item
         {
@@ -255,14 +307,16 @@ Maui.ApplicationWindow
             id: _slider
             z: parent.z+1
             padding: 0
-            enabled: control.playing || control.paused
+            //            enabled: player.playing || player.paused
 
             orientation: Qt.Horizontal
             from: 0
-            to: 1000
-            value: (1000 * player.video.position) / player.video.duration
+            to: player.video.duration
+            value: player.video.position
 
-            onMoved: player.video.seek((_slider.value / 1000) * player.video.duration)
+            onMoved: player.video.seek( _slider.value )
+
+            //            onToChanged: value = player.video.position
 
             spacing: 0
             focus: true
@@ -330,7 +384,49 @@ Maui.ApplicationWindow
                 };
                 dialog.open()
             }
-        }]
+        },
+
+        ToolButton
+        {
+            icon.name: _volumeSlider.value === 0 ? "player-volume-muted" : "player-volume"
+            onPressAndHold :
+            {
+                player.video.volume = player.video.volume === 0 ? 100 : 0
+            }
+
+            onClicked:
+            {
+                _sliderPopup.visible ? _sliderPopup.close() : _sliderPopup.open()
+            }
+
+            Popup
+            {
+                id: _sliderPopup
+                height: 150
+                width: parent.width
+                y: -150
+                x: 0
+                //                            closePolicy: Popup.CloseOnEscape | Popup.CloseOnPress
+                Slider
+                {
+                    id: _volumeSlider
+                    visible: true
+                    height: parent.height
+                    width: 20
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    from: 0
+                    to: 100
+                    value: player.video.volume
+                    orientation: Qt.Vertical
+
+                    onMoved:
+                    {
+                        player.video.volume = value
+                    }
+                }
+            }
+        }
+    ]
 
     footBar.leftContent: ToolButton
     {
@@ -341,7 +437,7 @@ Maui.ApplicationWindow
 
     FloatingVideo
     {
-        visible: _appViews.currentIndex !== views.player && _playerView.player.playing
+        visible: _appViews.currentIndex !== views.player && !_playerView.player.stopped
     }
 
     footBar.middleContent: [
@@ -360,11 +456,11 @@ Maui.ApplicationWindow
 
             Action
             {
-                enabled: player.video.playbackState !== MediaPlayer.StoppedState
+                enabled: !player.stopped
                 icon.width: Maui.Style.iconSizes.big
                 icon.height: Maui.Style.iconSizes.big
-                icon.name: player.video.playbackState === MediaPlayer.PlayingState ? "media-playback-pause" : "media-playback-start"
-                onTriggered: player.video.playbackState === MediaPlayer.PlayingState ? player.video.pause() : player.video.play()
+                icon.name: player.playing ? "media-playback-pause" : "media-playback-start"
+                onTriggered: player.paused ? player.video.play() : player.video.pause()
             }
 
             Action

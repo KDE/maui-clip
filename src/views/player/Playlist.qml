@@ -1,4 +1,5 @@
 import QtQuick 2.14
+import QtQml 2.14
 import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.3
 import org.kde.mauikit 1.2 as Maui
@@ -20,7 +21,11 @@ Maui.ListBrowser
     holder.title: i18n("No Videos!")
     holder.body: i18n("Add videos to the playlist.")
 
-    currentIndex: currentVideoIndex
+    Binding on currentIndex
+    {
+        value: _playerView.currentVideoIndex
+        restoreMode: Binding.RestoreBindingOrValue
+    }
 
     topMargin: Maui.Style.contentMargins
     spacing: Maui.Style.space.big
@@ -78,17 +83,17 @@ Maui.ListBrowser
             }
         }
 
-        onPressAndHold:
-        {
-            control.currentIndex = index
-            _menu.popup()
-        }
+        //        onPressAndHold:
+        //        {
+        //            control.currentIndex = index
+        //            _menu.popup()
+        //        }
 
-        onRightClicked:
-        {
-            control.currentIndex = index
-            _menu.popup()
-        }
+        //        onRightClicked:
+        //        {
+        //            control.currentIndex = index
+        //            _menu.popup()
+        //        }
     }
 
     function append(item)

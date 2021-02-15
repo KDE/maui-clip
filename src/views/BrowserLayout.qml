@@ -104,8 +104,8 @@ Maui.AltBrowser
     model: Maui.BaseModel
     {
         id: _collectionModel
-        sortOrder: Qt.DescendingOrder
-        sort: "modified"
+        sortOrder: settings.sortOrder
+        sort: settings.sortBy
         recursiveFilteringEnabled: true
         sortCaseSensitivity: Qt.CaseInsensitive
         filterCaseSensitivity: Qt.CaseInsensitive

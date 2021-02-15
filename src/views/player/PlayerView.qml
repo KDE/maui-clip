@@ -2,8 +2,9 @@ import QtQuick 2.14
 import QtQuick.Window 2.13
 import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.3
-import org.kde.mauikit 1.2 as Maui
+import org.kde.mauikit 1.3 as Maui
 import org.kde.kirigami 2.8 as Kirigami
+import QtMultimedia 5.8
 
 Item
 {
@@ -26,7 +27,7 @@ Item
 
         Maui.Holder
         {
-            visible: player.stopped
+            visible: player.stopped && player.video.status === MediaPlayer.NoMedia
             emojiSize: Maui.Style.iconSizes.huge
             emoji: "qrc:/img/assets/view-media-video.svg"
             title: i18n("No Videos!")

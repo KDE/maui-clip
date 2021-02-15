@@ -22,7 +22,7 @@ set(REQUIRED_KF5_VERSION 5.60)
 find_package(ECM ${REQUIRED_KF5_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake" ${ECM_MODULE_PATH})
 
-find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS Qml Quick Sql Svg QuickControls2 Concurrent)
+find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS Qml Quick Sql Svg QuickControls2 Concurrent Multimedia)
 find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED COMPONENTS I18n CoreAddons)
 
 if(ANDROID)
@@ -57,6 +57,7 @@ set(clipSRCS
     src/backends/mpv/track.cpp
     src/backends/mpv/tracksmodel.cpp
     src/backends/mpv/subtitlesfoldersmodel.cpp
+    src/controllers/youtube.cpp
     )
 
 set(clipHDRS
@@ -69,7 +70,7 @@ set(clipHDRS
     src/backends/mpv/tracksmodel.h
     src/backends/mpv/subtitlesfoldersmodel.h
     src/backends/mpv/qthelper.h
-
+    src/controllers/youtube.h
     )
 
 set(clipASSETS
@@ -106,7 +107,7 @@ target_compile_definitions(${PROJECT_NAME}
 
 target_compile_options(${PROJECT_NAME} PRIVATE -fexceptions)
 
-target_link_libraries(${PROJECT_NAME} MauiKit Qt5::Sql Qt5::Quick Qt5::Qml Qt5::Svg KF5::CoreAddons KF5::I18n mpv)
+target_link_libraries(${PROJECT_NAME} MauiKit Qt5::Sql Qt5::Quick Qt5::Qml Qt5::Svg Qt5::Multimedia KF5::CoreAddons KF5::I18n mpv)
 
 if(UNIX AND NOT APPLE AND NOT ANDROID)
     install (TARGETS ${PROJECT_NAME} ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

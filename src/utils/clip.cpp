@@ -1,8 +1,12 @@
 #include "clip.h"
 #include <QDesktopServices>
 
+#include <MauiKit/fmstatic.h>
+
 Clip::Clip(QObject *parent) : QObject(parent)
 {
+    //create a screenshots folder
+    FMStatic::createDir(FMH::PicturesPath, "screenshots");
 }
 
 QVariantList Clip::sourcesModel() const
