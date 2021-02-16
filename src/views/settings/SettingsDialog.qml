@@ -179,7 +179,7 @@ Maui.SettingsDialog
         Maui.SettingTemplate
         {
             label1.text: i18n("Preferred Language")
-            label2.text: i18n("Preferred language if avaliable.")
+            label2.text: i18n("Preferred language if available.")
             wide: false
 
             Maui.TextField
@@ -262,7 +262,7 @@ Maui.SettingsDialog
         Maui.SettingTemplate
         {
             label1.text: i18n("Key")
-            label2.text: i18n("Personal key for unlimitless browsing.")
+            label2.text: i18n("Personal key for limitless browsing.")
             wide: false
 
             Maui.TextField
@@ -351,8 +351,8 @@ Maui.SettingsDialog
         id: confirmationDialog
         property string url : ""
 
-        title : "Remove source"
-        message : "Are you sure you want to remove the source: \n "+url
+        title : i18n("Remove source")
+        message : i18n("Are you sure you want to remove the source: \n %1", url)
         template.iconSource: "emblem-warning"
         page.margins: Maui.Style.space.big
 

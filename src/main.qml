@@ -153,7 +153,7 @@ Maui.ApplicationWindow
         id: _openUrlDialog
         title: i18n("Open URL")
         textEntry.placeholderText: "URL"
-        message: i18n("Enter any remote location, like YouTube video URLs, or form other services supported by MPV.")
+        message: i18n("Enter any remote location, like YouTube video URLs, or from other services supported by MPV.")
         onAccepted: player.url = textEntry.text
     }
 

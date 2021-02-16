@@ -73,7 +73,7 @@ Maui.AltBrowser
         id: _searchField
         enabled: _collectionList.count > 0
         Layout.fillWidth: true
-        placeholderText: i18n("Search") + " " + _collectionList.count + " videos"
+        placeholderText: i18np("Search %1 video", "Search %1 videos", _collectionList.count)
         onAccepted: _collectionModel.filter = text
         onCleared: _collectionModel.filter = ""
     }

@@ -113,7 +113,7 @@ Maui.Page
                 Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
                 Kirigami.Theme.inherit: false
 
-                text: "CC"
+                text: i18nc("Complementary Color", "CC")
 
                 onClicked: _subtitlesDialog.open()
 
@@ -124,7 +124,7 @@ Maui.Page
                 Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
                 Kirigami.Theme.inherit: false
 
-                text: "Audio"
+                text: i18n("Audio")
 
                 onClicked: _audioTracksDialog.open()
 
