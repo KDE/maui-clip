@@ -15,6 +15,8 @@ Maui.Page
     property alias video : _mpv
     property alias url : _mpv.source
 
+    property bool editing: false
+
     readonly property bool playing : _mpv.playbackState === MediaPlayer.PlayingState
     readonly property bool paused : _mpv.playbackState === MediaPlayer.PausedState
     readonly property bool stopped :  _mpv.playbackState === MediaPlayer.StoppedState
@@ -79,100 +81,243 @@ Maui.Page
         }
     }
 
-    MpvObject
+    ColumnLayout
     {
-        id: _mpv
         anchors.fill: parent
-        autoPlay: true
-        hardwareDecoding: settings.hardwareDecoding
-        onEndOfFile: playNext()
 
-        BusyIndicator
+        MpvObject
         {
-            Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
-            Kirigami.Theme.inherit: false
+            id: _mpv
+            Layout.fillWidth: true
+            Layout.fillHeight: true
 
-            anchors.centerIn: parent
-            running: _mpv.status === MediaPlayer.Loading
-        }
+            autoPlay: true
+            hardwareDecoding: settings.hardwareDecoding
+            onEndOfFile: playNext()
 
-        Label
-        {
-            color: "orange"
-            text: _mpv.status +"/"+ MediaPlayer.NoMedia
-        }
+            //            visible: !control.stopped
 
-        Row
-        {
-            visible: !control.stopped
-            anchors.right: parent.right
-            anchors.bottom: parent.bottom
+            Keys.onSpacePressed: player.playbackState == MediaPlayer.PlayingState ? player.pause() : player.play()
+            Keys.onLeftPressed: player.seek(player.position - 50)
+            Keys.onRightPressed: player.seek(player.position + 50)
 
-            Maui.Badge
+            BusyIndicator
             {
                 Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
                 Kirigami.Theme.inherit: false
 
-                text: i18nc("Complementary Color", "CC")
-
-                onClicked: _subtitlesDialog.open()
-
+                anchors.centerIn: parent
+                running: _mpv.status === MediaPlayer.Loading
             }
 
-            Maui.Badge
+            Label
             {
-                Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
-                Kirigami.Theme.inherit: false
+                color: "orange"
+                text: _mpv.status +"/"+ MediaPlayer.NoMedia
+            }
 
-                text: i18n("Audio")
+            Row
+            {
+                visible: !control.stopped
+                anchors.right: parent.right
+                anchors.bottom: parent.bottom
 
-                onClicked: _audioTracksDialog.open()
 
+                Maui.Badge
+                {
+                    Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
+                    Kirigami.Theme.inherit: false
+
+                    text: "Corrections"
+
+                    onClicked: control.editing = !control.editing
+
+                }
+
+                Maui.Badge
+                {
+                    Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
+                    Kirigami.Theme.inherit: false
+
+                    text: "Subtitles"
+                    onClicked: _subtitlesDialog.open()
+
+                }
+
+                Maui.Badge
+                {
+                    Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
+                    Kirigami.Theme.inherit: false
+
+                    text: "Audio"
+                    onClicked: _audioTracksDialog.open()
+                }
+            }
+
+            RowLayout
+            {
+                anchors.fill: parent
+
+                MouseArea
+                {
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+                    onDoubleClicked: player.seek(player.position - 5)
+                }
+
+                MouseArea
+                {
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+                    onClicked: player.playbackState === MediaPlayer.PlayingState ? player.pause() : player.play()
+                }
+
+                MouseArea
+                {
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+                    onDoubleClicked: player.seek(player.position + 5)
+                }
+            }
+        }
+
+        Maui.Page
+        {
+            id: _editingView
+
+            visible: control.editing
+
+            //            Kirigami.Theme.colorSet: control.Kirigami.Theme.colorSet
+            Kirigami.Theme.inherit: true
+
+            implicitHeight: _editingColumn.implicitHeight + header.height + (margins *2)
+            Layout.fillWidth: true
+            margins: Maui.Style.space.medium
+
+            headBar.farLeftContent: ToolButton
+            {
+                icon.name: "go-previous"
+                onClicked: control.editing = !control.editing
+            }
+
+            headBar.farRightContent: ToolButton
+            {
+                icon.name: "view-refresh"
+
+                onClicked:
+                {
+                    _saturation.value = 0
+                    _gamma.value = 0
+                    _contrast.value = 0
+                }
+            }
+
+            //            headerBackground.opacity: 0
+            //            headBar.Kirigami.Theme.backgroundColor: "#333"
+            //            headBar.Kirigami.Theme.textColor: "#fafafa"
+
+            showTitle: true
+            title: i18n("Corrections")
+
+            Column
+            {
+                id: _editingColumn
+                anchors.fill: parent
+
+                spacing: Maui.Style.space.medium
+
+
+                Column
+                {
+                    width: parent.width
+
+                    Maui.ListItemTemplate
+                    {
+                        width: parent.width
+                        label1.text: i18n("Saturation")
+                        label3.text: _saturation.value
+                        rightLabels.visible: true
+                    }
+
+                    Slider
+                    {
+                        id: _saturation
+                        width: parent.width
+
+                        wheelEnabled: true
+
+                        from: -100
+                        to: 100
+
+                        value : 0
+
+                        stepSize: 5
+                        onValueChanged: _mpv.saturation = value
+                    }
+                }
+
+
+                Column
+                {
+                    width: parent.width
+
+                    Maui.ListItemTemplate
+                    {
+                        width: parent.width
+                        label1.text: i18n("Contrast")
+                        label3.text: _contrast.value
+                        rightLabels.visible: true
+                    }
+
+                    Slider
+                    {
+                        id: _contrast
+                        width: parent.width
+
+                        wheelEnabled: true
+
+                        from: -100
+                        to: 100
+
+                        value : 0
+
+                        stepSize: 5
+                        onValueChanged: _mpv.contrast = value
+                    }
+                }
+
+
+                Column
+                {
+                    width: parent.width
+
+                    Maui.ListItemTemplate
+                    {
+                        width: parent.width
+                        label1.text: i18n("Gamma")
+                        label3.text: _gamma.value
+                        rightLabels.visible: true
+                    }
+
+                    Slider
+                    {
+                        id: _gamma
+                        width: parent.width
+
+                        wheelEnabled: true
+
+                        from: -100
+                        to: 100
+
+                        value : 0
+
+                        stepSize: 5
+                        onValueChanged: _mpv.gamma = value
+                    }
+                }
             }
         }
     }
-
-
-
-
-    //    Video
-    //    {
-    //        id: player
-    //        visible: !control.stopped
-    //        anchors.fill: parent
-    //        autoLoad: true
-    //        autoPlay: true
-    //        focus: true
-    //        Keys.onSpacePressed: player.playbackState == MediaPlayer.PlayingState ? player.pause() : player.play()
-    //        Keys.onLeftPressed: player.seek(player.position - 5000)
-    //        Keys.onRightPressed: player.seek(player.position + 5000)
-
-    //        RowLayout
-    //        {
-    //            anchors.fill: parent
-
-    //            MouseArea
-    //            {
-    //                Layout.fillWidth: true
-    //                Layout.fillHeight: true
-    //                onDoubleClicked: player.seek(player.position - 5000)
-    //            }
-
-    //            MouseArea
-    //            {
-    //                Layout.fillWidth: true
-    //                Layout.fillHeight: true
-    //                onClicked: player.playbackState === MediaPlayer.PlayingState ? player.pause() : player.play()
-    //            }
-
-    //            MouseArea
-    //            {
-    //                Layout.fillWidth: true
-    //                Layout.fillHeight: true
-    //                onDoubleClicked: player.seek(player.position + 5000)
-    //            }
-    //        }
-    //    }
 
     footBar.visible: true
 

@@ -90,7 +90,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     about.addAuthor(i18n("Camilo Higuita"), i18n("Developer"), QStringLiteral("milo.h@aol.com"));
     about.setHomepage("https://mauikit.org");
     about.setProductName("maui/clip");
-    about.setBugAddress("https://invent.kde.org/maui/buho/-/issues");
+    about.setBugAddress("https://invent.kde.org/maui/clip/-/issues");
     about.setOrganizationDomain(CLIP_URI);
     about.setProgramLogo(app.windowIcon());
 
