@@ -29,7 +29,7 @@ Maui.SelectionBar
             anchors.fill: parent
             label1.text: model.label
             label2.text: model.path
-            imageSource: "image://thumbnailer/"+model.path
+            imageSource: model.thumbnail
             iconSizeHint: height * 0.9
             checkable: true
             checked: true
