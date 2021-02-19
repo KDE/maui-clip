@@ -465,12 +465,17 @@ Maui.ApplicationWindow
         }
     ]
 
-    footBar.leftContent: ToolButton
+    footBar.farLeftContent: ToolButton
     {
-        icon.name: "view-split-left-right"
-        checked: root.sideBar.visible
-        onClicked: sideBar.position === 1 ? sideBar.close() : sideBar.open()
+        icon.name: root.sideBar.visible ? "sidebar-collapse" : "sidebar-expand"
+        onClicked: root.sideBar.toggle()
+
+        ToolTip.delay: 1000
+        ToolTip.timeout: 5000
+        ToolTip.visible: hovered
+        ToolTip.text: i18n("Toogle SideBar")
     }
+
 
     FloatingVideo
     {
