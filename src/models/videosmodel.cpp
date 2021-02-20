@@ -194,8 +194,16 @@ QList<QUrl> VideosModel::extractTags(const QList<QUrl> & urls)
 
 bool VideosModel::remove(const int &index)
 {
-	Q_UNUSED (index)
-	return false;
+    if (index >= this->list.size() || index < 0)
+        return false;
+
+    const auto index_ = this->mappedIndex(index);
+
+    emit this->preItemRemoved(index_);
+    this->list.removeAt(index_);
+    emit this->postItemRemoved();
+
+    return true;
 }
 
 bool VideosModel::deleteAt(const int &index)

@@ -49,11 +49,41 @@ Maui.ListBrowser
         model: control.model
     }
 
-    delegate: ListDelegate
+    delegate: Maui.ListBrowserDelegate
     {
         id: _listDelegate
         width: ListView.view.width
         implicitHeight: Maui.Style.rowHeight * 1.5
+
+
+        isCurrentItem: ListView.isCurrentItem
+        draggable: true
+        tooltipText: model.url
+
+        iconSizeHint: height * 0.9
+        label1.text: model.label
+        //        label2.text: model.mime
+        label2.text: Qt.formatDateTime(new Date(model.modified), "d MMM yyyy")
+        imageSource: model.thumbnail
+        template.fillMode: Image.PreserveAspectCrop
+
+        ToolButton
+        {
+            Layout.fillHeight: true
+            Layout.preferredWidth: implicitWidth
+            visible: (Maui.Handy.isTouch ? true : _listDelegate.hovered)
+            icon.name: "edit-clear"
+            onClicked:
+            {
+                if(index === _playerView.currentVideoIndex)
+                    player.video.stop()
+
+                _collectionList.remove(index)
+            }
+
+            opacity: _listDelegate.hovered ? 0.8 : 0.6
+        }
+
 
         onToggled:
         {

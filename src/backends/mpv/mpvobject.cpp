@@ -603,7 +603,8 @@ void MpvObject::play()
 
 void MpvObject::stop()
 {
-    this->command({});
+    this->command(QStringList () << "stop" << "");
+    emit this->stopped();
 }
 
 void MpvObject::pause()
