@@ -307,7 +307,7 @@ Maui.ApplicationWindow
     page.footerColumn: Maui.ToolBar
     {
         visible: _appViews.currentIndex === views.player && !player.stopped
-        preferredHeight: Maui.Style.rowHeight
+        preferredHeight: Maui.Style.rowHeightAlt
 
         position: ToolBar.Footer
         width: parent.width
