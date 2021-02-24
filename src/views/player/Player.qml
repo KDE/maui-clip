@@ -110,12 +110,6 @@ Maui.Page
                 running: _mpv.status === MediaPlayer.Loading
             }
 
-            Label
-            {
-                color: "orange"
-                text: _mpv.status +"/"+ MediaPlayer.NoMedia
-            }
-
             Row
             {
                 visible: !control.stopped
