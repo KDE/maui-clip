@@ -528,7 +528,7 @@ Maui.ApplicationWindow
         function onOpenUrls(urls)
         {
             for(var url of urls)
-                _playlist.list.append(url)
+                _playlist.list.appendUrl(url)
         }
     }
 
