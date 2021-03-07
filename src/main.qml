@@ -529,6 +529,8 @@ Maui.ApplicationWindow
         {
             for(var url of urls)
                 _playlist.list.appendUrl(url)
+
+            playAt(_playlist.count - urls.length)
         }
     }
 
