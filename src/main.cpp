@@ -13,14 +13,14 @@
 
 #include <MauiKit/mauiapp.h>
 
-#include "clip_version.h"
+#include "../clip_version.h"
 
-#include "src/backends/mpv/mpvobject.h"
-#include "src/models/videosmodel.h"
-#include "src/models/tagsmodel.h"
-#include "src/models/youtubemodel.h"
+#include "backends/mpv/mpvobject.h"
+#include "models/videosmodel.h"
+#include "models/tagsmodel.h"
+#include "models/youtubemodel.h"
 
-#include "src/utils/clip.h"
+#include "utils/clip.h"
 
 #define CLIP_URI "org.maui.clip"
 
@@ -86,7 +86,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
     KLocalizedString::setApplicationDomain("clip");
     KAboutData about(QStringLiteral("clip"), i18n("Clip"), CLIP_VERSION_STRING, i18n("Video collection manager and MPV player."),
-                     KAboutLicense::LGPL_V3, i18n("© 2019-%1 Nitrux Development Team", QString::number(QDate::currentDate().year())));
+                     KAboutLicense::LGPL_V3, i18n("© 2019-%1 Nitrux Development Team", QString::number(QDate::currentDate().year())), i18n("Built from ") + QString(GIT_BRANCH) + " " + QString(GIT_COMMIT_HASH));
     about.addAuthor(i18n("Camilo Higuita"), i18n("Developer"), QStringLiteral("milo.h@aol.com"));
     about.setHomepage("https://mauikit.org");
     about.setProductName("maui/clip");

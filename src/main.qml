@@ -344,17 +344,12 @@ Maui.ApplicationWindow
             id: _slider
             z: parent.z+1
             padding: 0
-            //            enabled: player.playing || player.paused
-
             orientation: Qt.Horizontal
             from: 0
             to: player.video.duration
             value: player.video.position
 
             onMoved: player.video.seek( _slider.value )
-
-            //            onToChanged: value = player.video.position
-
             spacing: 0
             focus: true
 
@@ -365,7 +360,6 @@ Maui.ApplicationWindow
                 anchors.right: parent.right
                 edge: Qt.TopEdge
             }
-
 
             background: Rectangle
             {
@@ -379,7 +373,7 @@ Maui.ApplicationWindow
                 Rectangle
                 {
                     width: _slider.visualPosition * parent.width
-                    height: _slider.height
+                     height: _slider.pressed ? _slider.height : 5
                     color: Kirigami.Theme.highlightColor
                 }
             }

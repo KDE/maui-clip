@@ -1,5 +1,5 @@
 #include "youtubemodel.h"
-#include "src/controllers/youtube.h"
+#include "controllers/youtube.h"
 
 YouTubeModel::YouTubeModel(QObject *parent) : MauiList(parent)
   , m_yt(new YouTube(this))

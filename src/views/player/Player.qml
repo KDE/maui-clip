@@ -319,7 +319,6 @@ Maui.Page
     {
         id: tagBar
         visible: root.visibility !== Window.FullScreen && settings.playerTagBar
-        position: ToolBar.Footer
         width: parent.width
         allowEditMode: true
         onTagsEdited:

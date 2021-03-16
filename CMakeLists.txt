@@ -45,52 +45,31 @@ endif()
 include(KDECompilerSettings NO_POLICY_SCOPE)
 include(KDEClangFormat)
 include(ECMSetupVersion)
+include(ECMSourceVersionControl)
 include(FeatureSummary)
 
-set(clipSRCS
-    src/main.cpp
-    src/models/videosmodel.cpp
-    src/models/tagsmodel.cpp
-    src/models/playlistmodel.cpp
-    src/models/youtubemodel.cpp
-    src/utils/clip.cpp
-    src/backends/mpv/mpvobject.cpp
-    src/backends/mpv/track.cpp
-    src/backends/mpv/tracksmodel.cpp
-    src/backends/mpv/subtitlesfoldersmodel.cpp
-    src/controllers/youtube.cpp
-    )
+if(${ECM_SOURCE_UNDER_VERSION_CONTROL})
+execute_process(
+  COMMAND git rev-parse --abbrev-ref HEAD
+  WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+  OUTPUT_VARIABLE GIT_BRANCH
+  OUTPUT_STRIP_TRAILING_WHITESPACE
+)
 
-set(clipHDRS
-    src/models/videosmodel.h
-    src/models/tagsmodel.h
-    src/models/playlistmodel.h
-    src/models/youtubemodel.h
-    src/utils/clip.h
-    src/backends/mpv/mpvobject.h
-    src/backends/mpv/track.h
-    src/backends/mpv/tracksmodel.h
-    src/backends/mpv/subtitlesfoldersmodel.h
-    src/backends/mpv/qthelper.h
-    src/controllers/youtube.h
-    )
+# Get the latest abbreviated commit hash of the working branch
+execute_process(
+  COMMAND git log -1 --format=%h
+  WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+  OUTPUT_VARIABLE GIT_COMMIT_HASH
+  OUTPUT_STRIP_TRAILING_WHITESPACE
+)
 
-set(clipASSETS
-    src/qml.qrc
-    )
+add_definitions(-DGIT_COMMIT_HASH="${GIT_COMMIT_HASH}")
+add_definitions(-DGIT_BRANCH="${GIT_BRANCH}")
 
-if(ANDROID)
-    add_library(${PROJECT_NAME} SHARED
-        ${clipSRCS}
-        ${clipHDRS}
-        ${clipASSETS}
-        )
 else()
-    add_executable(${PROJECT_NAME}
-        ${clipSRCS}
-        ${clipHDRS}
-        ${clipASSETS}
-        )
+    add_definitions(-DGIT_COMMIT_HASH="${CLIP_VERSION}")
+    add_definitions(-DGIT_BRANCH="Stable")
 endif()
 
 ecm_setup_version(${CLIP_VERSION}
@@ -98,24 +77,9 @@ ecm_setup_version(${CLIP_VERSION}
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/clip_version.h"
     )
 
-if (ANDROID)
-    target_link_libraries(${PROJECT_NAME} Qt5::AndroidExtras Qt5::QuickControls2)
-elseif(UNIX)
-    target_link_libraries(${PROJECT_NAME} KF5::ConfigCore KF5::KIOCore KF5::KIOFileWidgets KF5::KIONTLM KF5::KIOWidgets)
-endif()
+add_subdirectory(src)
 
-target_compile_definitions(${PROJECT_NAME}
-    PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
+feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
-target_compile_options(${PROJECT_NAME} PRIVATE -fexceptions)
-
-target_link_libraries(${PROJECT_NAME} MauiKit Qt5::Sql Qt5::Quick Qt5::Qml Qt5::Svg Qt5::Multimedia KF5::CoreAddons KF5::I18n mpv)
-
-if(UNIX AND NOT APPLE AND NOT ANDROID)
-    install (TARGETS ${PROJECT_NAME} ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
-    install(FILES src/org.maui.clip.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
-    #TODO: port to ecm_install_icons()
-    install(FILES src/assets/clip.svg DESTINATION ${KDE_INSTALL_ICONDIR}/hicolor/scalable/apps)
-endif()
-
-#qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
+file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES *.cpp *.h)
+kde_clang_format(${ALL_CLANG_FORMAT_SOURCE_FILES})
