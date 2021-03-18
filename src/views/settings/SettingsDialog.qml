@@ -207,10 +207,10 @@ Maui.SettingsDialog
                 Layout.fillWidth: true
                 text: settings.subtitlesPath
                 onAccepted: settins.subtitlesPath = text
-                actions.data: ToolButton
+                actions: Action
                 {
                     icon.name: "folder-open"
-                    onClicked:
+                    onTriggered:
                     {
                         dialogLoader.sourceComponent = fmDialogComponent
                         dialog.mode = dialog.modes.OPEN
