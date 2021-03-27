@@ -17,8 +17,6 @@ Maui.AltBrowser
     gridView.itemSize: Math.min(260, Math.max(140, Math.floor(width* 0.3)))
     gridView.itemHeight: gridView.itemSize
 
-    headBar.visible: false
-
     holder.visible: _tagsList.count === 0
     holder.emojiSize: Maui.Style.iconSizes.huge
     holder.emoji: "qrc:/img/assets/tag.svg"
@@ -31,16 +29,16 @@ Maui.AltBrowser
         restoreMode: Binding.RestoreBinding
     }
 
-    Maui.FloatingButton
+    headBar.middleContent: Maui.TextField
     {
-        z: parent.z + 1
-        anchors.right: parent.right
-        anchors.bottom: parent.bottom
-        anchors.margins: height
-        height: Maui.Style.toolBarHeight
+        Layout.fillWidth: true
+        Layout.maximumWidth: 500
+        placeholderText: i18n("Filter")
+    }
 
+    headBar.rightContent: ToolButton
+    {
         icon.name: "list-add"
-        icon.color: Kirigami.Theme.highlightedTextColor
         onClicked: newTagDialog.open()
     }
 
