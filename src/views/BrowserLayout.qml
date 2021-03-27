@@ -155,14 +155,14 @@ Maui.AltBrowser
 
             control.currentIndex = index
             control.itemRightClicked(listModel.get(index))
-            _menu.popup()
+            _menu.open()
         }
 
         onRightClicked:
         {
             control.currentIndex = index
             control.itemRightClicked(listModel.get(index))
-            _menu.popup()
+            _menu.open()
         }
 
         Connections
@@ -250,14 +250,14 @@ Maui.AltBrowser
 
             control.currentIndex = index
             control.itemRightClicked(listModel.get(index))
-            _menu.popup()
+            _menu.open()
         }
 
         onRightClicked:
         {
             control.currentIndex = index
             control.itemRightClicked(listModel.get(index))
-            _menu.popup()
+            _menu.open()
         }
 
         onToggled:
