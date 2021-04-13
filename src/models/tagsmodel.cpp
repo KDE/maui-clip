@@ -1,7 +1,7 @@
 #include "tagsmodel.h"
 
-#include <MauiKit/fmstatic.h>
-#include <MauiKit/tagging.h>
+#include <MauiKit/FileBrowsing/fmstatic.h>
+#include <MauiKit/FileBrowsing/tagging.h>
 
 TagsModel::TagsModel(QObject *parent) : MauiList(parent)
 {
@@ -63,7 +63,7 @@ FMH::MODEL_LIST TagsModel::tags()
 
 void TagsModel::packPreviewImages(FMH::MODEL &tag)
 {
-    const auto urls = FMStatic::getTagUrls(tag[FMH::MODEL_KEY::TAG], {}, true, 4);
+    const auto urls = Tagging::getInstance()->getTagUrls(tag[FMH::MODEL_KEY::TAG], {}, true, 4);
     tag[FMH::MODEL_KEY::PREVIEW] = QUrl::toStringList(urls).join(",");
 }
 

@@ -2,6 +2,8 @@
 #include <QCommandLineParser>
 #include <QIcon>
 #include <QFileInfo>
+#include <QDate>
+#include <QDirIterator>
 
 #ifdef Q_OS_ANDROID
 #include <QGuiApplication>
@@ -11,9 +13,8 @@
 
 #include <KI18n/KLocalizedString>
 
-#include <MauiKit/mauiapp.h>
-
-#include "../clip_version.h"
+#include <MauiKit/Core/mauiapp.h>
+#include <MauiKit/FileBrowsing/fmstatic.h>
 
 #include "backends/mpv/mpvobject.h"
 #include "models/videosmodel.h"
@@ -21,6 +22,7 @@
 #include "models/youtubemodel.h"
 
 #include "utils/clip.h"
+#include "../clip_version.h"
 
 #define CLIP_URI "org.maui.clip"
 
@@ -30,7 +32,7 @@ static const  QList<QUrl>  getFolderVideos(const QString &path)
 
     if (QFileInfo(path).isDir())
     {
-        QDirIterator it(path, FMH::FILTER_LIST[FMH::FILTER_TYPE::IMAGE], QDir::Files, QDirIterator::Subdirectories);
+        QDirIterator it(path, FMStatic::FILTER_LIST[FMStatic::FILTER_TYPE::IMAGE], QDir::Files, QDirIterator::Subdirectories);
         while (it.hasNext())
             urls << QUrl::fromLocalFile(it.next());
 

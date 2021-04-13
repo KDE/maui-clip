@@ -1,15 +1,9 @@
 #include "videosmodel.h"
 #include <QFileSystemWatcher>
 
-#ifdef STATIC_MAUIKIT
-#include "tagging.h"
-#include "fmstatic.h"
-#include "fileloader.h"
-#else
-#include <MauiKit/tagging.h>
-#include <MauiKit/fmstatic.h>
-#include <MauiKit/fileloader.h>
-#endif
+#include <MauiKit/FileBrowsing/tagging.h>
+#include <MauiKit/FileBrowsing/fmstatic.h>
+#include <MauiKit/FileBrowsing/fileloader.h>
 
 VideosModel::VideosModel(QObject *parent) : MauiList(parent)
   , m_fileLoader(new FMH::FileLoader())
@@ -139,7 +133,7 @@ QStringList VideosModel::files() const
 void VideosModel::scan(const QList<QUrl> &urls, const bool &recursive, const int &limit)
 {
 	this->scanTags (extractTags (urls), limit);
-	m_fileLoader->requestPath(urls, recursive, FMH::FILTER_LIST[FMH::FILTER_TYPE::VIDEO]);
+    m_fileLoader->requestPath(urls, recursive, FMStatic::FILTER_LIST[FMStatic::FILTER_TYPE::VIDEO]);
 }
 
 void VideosModel::scanTags(const QList<QUrl> & urls, const int & limit)
@@ -153,7 +147,7 @@ void VideosModel::scanTags(const QList<QUrl> & urls, const int & limit)
 		{
 			const auto url = QUrl(item.toMap ().value ("url").toString());
 			if(FMH::fileExists(url))
-				res << FMH::getFileInfoModel(url);
+                res << FMStatic::getFileInfoModel(url);
 		}
 	}
 
@@ -183,7 +177,7 @@ QList<QUrl> VideosModel::extractTags(const QList<QUrl> & urls)
 	QList<QUrl> res;
 	return std::accumulate(urls.constBegin (), urls.constEnd (), res, [](QList<QUrl> &list, const QUrl &url)
 	{
-		if(FMH::getPathType (url) == FMH::PATHTYPE_KEY::TAGS_PATH)
+        if(FMStatic::getPathType (url) == FMStatic::PATHTYPE_KEY::TAGS_PATH)
 		{
 			list << url;
 		}
@@ -231,7 +225,7 @@ void VideosModel::append(const QVariantMap &item)
 void VideosModel::appendUrl(const QString &url)
 {
     emit this->preItemAppended();
-    this->list << FMH::getFileInfoModel(QUrl::fromUserInput (url));
+    this->list << FMStatic::getFileInfoModel(QUrl::fromUserInput (url));
     emit this->postItemAppended();
 }
 

@@ -1,8 +1,12 @@
 import QtQuick 2.14
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.14
+
 import org.kde.kirigami 2.2 as Kirigami
-import org.kde.mauikit 1.2 as Maui
+
+import org.mauikit.controls 1.2 as Maui
+import org.mauikit.filebrowsing 1.3 as FB
+
 import org.maui.clip 1.0 as Clip
 
 import ".."
@@ -15,18 +19,9 @@ StackView
     property string currentTag : ""
     property Flickable flickable : currentItem.flickable
 
-    Maui.NewDialog
+    FB.NewTagDialog
     {
         id: newTagDialog
-        title: i18n("New tag")
-        message: i18n("Create a new tag to organize your collection")
-        acceptButton.text : i18n("Add")
-        onFinished:
-        {
-            tagsList.insert(text)
-        }
-
-        onRejected: close()
     }
 
     initialItem: TagsGrid

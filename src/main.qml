@@ -7,12 +7,12 @@ import QtQml 2.14
 
 import Qt.labs.settings 1.0
 
-import org.kde.mauikit 1.2 as Maui
 import org.kde.kirigami 2.8 as Kirigami
 
-import org.maui.clip 1.0 as Clip
+import org.mauikit.controls 1.2 as Maui
+import org.mauikit.filebrowsing 1.2 as FB
 
-import TagsList 1.0
+import org.maui.clip 1.0 as Clip
 
 import "views"
 import "views/player"
@@ -101,7 +101,7 @@ Maui.ApplicationWindow
     Maui.BaseModel
     {
         id: tagsModel
-        list: TagsList
+        list: FB.TagsListModel
         {
             id: tagsList
         }
@@ -160,7 +160,7 @@ Maui.ApplicationWindow
     Component
     {
         id: tagsDialogComponent
-        Maui.TagsDialog
+        FB.TagsDialog
         {
             onTagsReady: composerList.updateToUrls(tags)
             composerList.strict: false
@@ -170,10 +170,10 @@ Maui.ApplicationWindow
     Component
     {
         id: fmDialogComponent
-        Maui.FileDialog
+        FB.FileDialog
         {
             mode: modes.SAVE
-            settings.filterType: Maui.FMList.IMAGE
+            settings.filterType: FB.FMList.IMAGE
             settings.onlyDirs: false
         }
     }
@@ -192,7 +192,7 @@ Maui.ApplicationWindow
         onAccepted:
         {
             for(var url of selectionBox.uris)
-                Maui.FM.removeFile(url)
+                FB.FM.removeFile(url)
             selectionBox.clear()
             close()
         }
@@ -313,12 +313,12 @@ Maui.ApplicationWindow
         width: parent.width
         leftContent: Label
         {
-            text: Maui.FM.formatTime(player.video.position)
+            text: Maui.Handy.formatTime(player.video.position)
         }
 
         rightContent: Label
         {
-            text: Maui.FM.formatTime(player.video.duration)
+            text: Maui.Handy.formatTime(player.video.duration)
         }
 
         middleContent:  Item
@@ -407,7 +407,7 @@ Maui.ApplicationWindow
             {
                 dialogLoader.sourceComponent= fmDialogComponent
                 dialog.mode = dialog.modes.OPEN
-                dialog.settings.filterType= Maui.FMList.VIDEO
+                dialog.settings.filterType= FB.FMList.VIDEO
                 dialog.settings.onlyDirs= false
                 dialog.callback = function(paths)
                 {

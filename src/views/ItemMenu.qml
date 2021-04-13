@@ -1,7 +1,10 @@
 import QtQuick 2.14
 import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.3
-import org.kde.mauikit 1.3 as Maui
+
+import org.mauikit.controls 1.3 as Maui
+import org.mauikit.filebrowsing 1.2 as FB
+
 import org.kde.kirigami 2.8 as Kirigami
 
 Maui.ContextualMenu
@@ -12,17 +15,7 @@ Maui.ContextualMenu
     property int index : -1
     property Maui.BaseModel model : null
 
-    onOpened: isFav = Maui.FM.isFav(control.model.get(index).url)
-
-    MenuItem
-    {
-        text: i18n("Play")
-        icon.name: "media-playback-start"
-        onTriggered:
-        {
-            play(model.get(index))
-        }
-    }
+    onOpened: isFav = FB.Tagging.isFav(control.model.get(index).url)
 
     MenuItem
     {
@@ -54,7 +47,7 @@ Maui.ContextualMenu
     {
         text: i18n(isFav ? "UnFav it": "Fav it")
         icon.name: "love"
-        onTriggered: Maui.FM.toggleFav(control.model.get(index).url)
+        onTriggered: FB.Tagging.toggleFav(control.model.get(index).url)
     }
 
     MenuItem
@@ -78,25 +71,6 @@ Maui.ContextualMenu
             dialogLoader.sourceComponent = shareDialogComponent
             dialog.urls= [control.model.get(index).url]
             dialog.open()
-        }
-    }
-
-    MenuItem
-    {
-        text: i18n("Export")
-        icon.name: "document-save-as"
-        onTriggered:
-        {
-            var pic = control.model.get(index).url
-            dialogLoader.sourceComponent= fmDialogComponent
-            dialog.mode = dialog.modes.SAVE
-            dialog.suggestedFileName= Maui.FM.getFileInfo(control.model.get(index).url).label
-            dialog.show(function(paths)
-            {
-                for(var i in paths)
-                    Maui.FM.copy(pic, paths[i])
-            });
-            close()
         }
     }
 

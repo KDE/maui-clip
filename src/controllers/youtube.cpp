@@ -27,7 +27,7 @@
 #include <QJsonDocument>
 #include <QVariantMap>
 
-#include <MauiKit/downloader.h>
+#include <MauiKit/FileBrowsing/downloader.h>
 
 YouTube::YouTube(QObject *parent) : QObject(parent)
 {

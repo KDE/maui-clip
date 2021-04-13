@@ -1,8 +1,11 @@
 #ifndef CLIP_H
 #define CLIP_H
 
-#include <MauiKit/utils.h>
-#include <MauiKit/fmh.h>
+#include <QDebug>
+
+#include <MauiKit/Core/utils.h>
+#include <MauiKit/Core/fmh.h>
+#include <MauiKit/FileBrowsing/fmstatic.h>
 
 class Clip : public QObject
 {
@@ -39,7 +42,7 @@ class Clip : public QObject
 
 		inline static const QStringList getSourcePaths()
 		{
-				static const QStringList defaultSources  = {FMH::VideosPath, FMH::DownloadsPath};
+                static const QStringList defaultSources  = {FMStatic::VideosPath, FMStatic::DownloadsPath};
 				const auto sources = UTIL::loadSettings("Sources", "Settings", defaultSources).toStringList();
 				qDebug()<< "SOURCES" << sources;
 				return sources;

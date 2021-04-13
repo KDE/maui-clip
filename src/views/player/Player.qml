@@ -4,7 +4,10 @@ import QtQuick.Layouts 1.3
 import QtQuick.Window 2.13
 
 import QtMultimedia 5.8
-import org.kde.mauikit 1.3 as Maui
+
+import org.mauikit.controls 1.3 as Maui
+import org.mauikit.filebrowsing 1.2 as FB
+
 import org.kde.kirigami 2.14 as Kirigami
 
 import mpv 1.0
@@ -315,7 +318,7 @@ Maui.Page
 
     footBar.visible: true
 
-    footer: Maui.TagsBar
+    footer: FB.TagsBar
     {
         id: tagBar
         visible: root.visibility !== Window.FullScreen && settings.playerTagBar

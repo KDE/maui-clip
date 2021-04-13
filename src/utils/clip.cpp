@@ -1,12 +1,12 @@
 #include "clip.h"
 #include <QDesktopServices>
 
-#include <MauiKit/fmstatic.h>
+#include <MauiKit/FileBrowsing/fmstatic.h>
 
 Clip::Clip(QObject *parent) : QObject(parent)
 {
     //create a screenshots folder
-    FMStatic::createDir(FMH::PicturesPath, "screenshots");
+    FMStatic::createDir(FMStatic::PicturesPath, "screenshots");
 }
 
 QVariantList Clip::sourcesModel() const
@@ -15,7 +15,7 @@ QVariantList Clip::sourcesModel() const
 	const auto sources = getSourcePaths();
 	return std::accumulate(sources.constBegin(), sources.constEnd(), res, [](QVariantList &res, const QString &url)
 	{
-		res << FMH::getDirInfo(url);
+        res << FMStatic::getDirInfo(url);
 		return res;
 	});
 }
@@ -39,7 +39,7 @@ void Clip::refreshCollection()
 void Clip::showInFolder(const QStringList &urls)
 {
 	for(const auto &url : urls)
-		QDesktopServices::openUrl(FMH::fileDir(url));
+        QDesktopServices::openUrl(FMStatic::fileDir(url));
 }
 
 void Clip::addSources(const QStringList &paths)

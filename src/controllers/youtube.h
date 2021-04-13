@@ -5,7 +5,8 @@
 #include <QMap>
 #include <QUrl>
 #include <QVariant>
-#include <MauiKit/fmh.h>
+
+#include <MauiKit/Core/fmh.h>
 
 class YouTube : public QObject
 {
