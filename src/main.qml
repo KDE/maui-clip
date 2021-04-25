@@ -261,6 +261,7 @@ Maui.ApplicationWindow
         {
             id: _appViews
             anchors.fill: parent
+            maxViews: 3
 
             PlayerView
             {
