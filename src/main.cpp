@@ -87,7 +87,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     MauiApp::instance()->setHandleAccounts(false);
 
     KLocalizedString::setApplicationDomain("clip");
-    KAboutData about(QStringLiteral("clip"), i18n("Clip"), CLIP_VERSION_STRING, i18n("Video collection manager and MPV player."),
+    KAboutData about(QStringLiteral("clip"), i18n("Clip"), CLIP_VERSION_STRING, i18n("Browse and play your videos."),
                      KAboutLicense::LGPL_V3, i18n("© 2019-%1 Nitrux Development Team", QString::number(QDate::currentDate().year())), QString(GIT_BRANCH) + "/" + QString(GIT_COMMIT_HASH));
     about.addAuthor(i18n("Camilo Higuita"), i18n("Developer"), QStringLiteral("milo.h@aol.com"));
     about.setHomepage("https://mauikit.org");
