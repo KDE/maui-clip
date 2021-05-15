@@ -179,7 +179,7 @@ class MpvObject : public QQuickFramebufferObject
 public:
     MpvObject(QQuickItem * parent = 0);
     virtual ~MpvObject();
-    virtual Renderer *createRenderer() const;
+    virtual Renderer *createRenderer() const override;
 
     Q_INVOKABLE QVariant getProperty(const QString &name);
     Q_INVOKABLE QVariant command(const QVariant &params);
@@ -285,9 +285,9 @@ public:
 
     // This function is called when a new FBO is needed.
     // This happens on the initial frame.
-    QOpenGLFramebufferObject * createFramebufferObject(const QSize &size);
+    QOpenGLFramebufferObject * createFramebufferObject(const QSize &size) override final;
 
-    void render();
+    void render() override final;
 };
 
 #endif // MPVOBJECT_H
