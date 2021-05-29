@@ -84,7 +84,6 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     app.setWindowIcon(QIcon(":/img/assets/clip.svg"));
 
     MauiApp::instance()->setIconName("qrc:/img/assets/clip.svg");
-    MauiApp::instance()->setHandleAccounts(false);
 
     KLocalizedString::setApplicationDomain("clip");
     KAboutData about(QStringLiteral("clip"), i18n("Clip"), CLIP_VERSION_STRING, i18n("Browse and play your videos."),

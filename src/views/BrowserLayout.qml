@@ -186,18 +186,17 @@ Maui.AltBrowser
         {
             id: delegate
 
-            iconSizeHint: height * 0.6
+            iconSizeHint: Maui.Style.iconSizes.big
             label1.text: model.label
             imageSource: model.thumbnail
-            template.imageHeight: height
-            template.imageWidth: width
+            iconSource: model.icon
             template.fillMode: Image.PreserveAspectFit
 
             anchors.centerIn: parent
             height: control.gridView.cellHeight - 15
             width: control.gridView.itemSize - 20
             padding: Maui.Style.space.tiny
-            isCurrentItem: parent.isCurrentItem
+            isCurrentItem: parent.isCurrentItem || checked
             tooltipText: model.url
             checkable: root.selectionMode
             checked: (selectionBar ? selectionBar.contains(model.url) : false)

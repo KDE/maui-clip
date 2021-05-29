@@ -22,12 +22,13 @@ Maui.ListBrowserDelegate
                            "text/uri-list": filterSelectedItems(model.url)
                        } : {}
 
-iconSizeHint: height * 0.9
+iconSizeHint: Maui.Style.iconSizes.big
 label1.text: model.label
 label2.text: model.url
 label3.text: model.mime
 label4.text: Qt.formatDateTime(new Date(model.modified), "d MMM yyyy")
 imageSource: model.thumbnail
+iconSource: model.icon
 template.fillMode: Image.PreserveAspectCrop
 
 }

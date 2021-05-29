@@ -112,8 +112,6 @@ Maui.AltBrowser
             iconSizeHint: height * 0.6
             label1.text: model.label
             imageSource: model.thumbnail
-            template.imageHeight: height
-            template.imageWidth: width
             template.fillMode: Image.PreserveAspectFit
 
             anchors.centerIn: parent

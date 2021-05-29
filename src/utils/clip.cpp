@@ -15,7 +15,7 @@ QVariantList Clip::sourcesModel() const
 	const auto sources = getSourcePaths();
 	return std::accumulate(sources.constBegin(), sources.constEnd(), res, [](QVariantList &res, const QString &url)
 	{
-        res << FMStatic::getDirInfo(url);
+	res << FMStatic::getFileInfo(url);
 		return res;
 	});
 }
@@ -38,7 +38,7 @@ void Clip::refreshCollection()
 
 void Clip::showInFolder(const QStringList &urls)
 {
-	for(const auto &url : urls)
+        for(const auto &url : urls)
         QDesktopServices::openUrl(FMStatic::fileDir(url));
 }
 
