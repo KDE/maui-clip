@@ -27,8 +27,6 @@ Maui.ListBrowser
         restoreMode: Binding.RestoreBindingOrValue
     }
 
-    topMargin: Maui.Style.contentMargins
-    spacing: Maui.Style.space.big
 
     model: Maui.BaseModel
     {
