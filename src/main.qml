@@ -218,7 +218,7 @@ Maui.ApplicationWindow
             title: i18n("Now playing")
             showTitle: true
 
-            headBar.visible: true
+            headBar.visible: _playlist.count > 0
             headerBackground.color: "transparent"
 
             headBar.rightContent: ToolButton
@@ -245,8 +245,6 @@ Maui.ApplicationWindow
                 anchors.fill: parent
             }
         }
-
-
     }
 
     Maui.Page
@@ -267,7 +265,7 @@ Maui.ApplicationWindow
             {
                 id: _playerView
                 Maui.AppView.title: i18n("Player")
-                Maui.AppView.iconName: "quickview"
+                Maui.AppView.iconName: "media-playback-start"
             }
 
             CollectionView
@@ -390,7 +388,6 @@ Maui.ApplicationWindow
             }
         }
     }
-
 
     footBar.rightContent: [ToolButton
         {
@@ -526,6 +523,14 @@ Maui.ApplicationWindow
                 _playlist.list.appendUrl(url)
 
             playAt(_playlist.count - urls.length)
+        }
+    }
+
+    Component.onCompleted:
+    {
+        if(!_playerView.player.playing)
+        {
+            _appViews.currentIndex = views.collection
         }
     }
 

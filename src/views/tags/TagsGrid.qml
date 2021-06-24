@@ -14,8 +14,8 @@ Maui.AltBrowser
 {
     id: control
 
-    gridView.itemSize: Math.min(260, Math.max(140, Math.floor(width* 0.3)))
-    gridView.itemHeight: gridView.itemSize
+    gridView.itemSize: Math.min(200, Math.max(100, Math.floor(width* 0.3)))
+    gridView.itemHeight: gridView.itemSize + Maui.Style.rowHeight
 
     holder.visible: _tagsList.count === 0
     holder.emojiSize: Maui.Style.iconSizes.huge
@@ -81,43 +81,45 @@ Maui.AltBrowser
         }
     }
 
-    gridDelegate: Maui.CollageItem
+    gridDelegate: Item
     {
-        id: _delegate
-        property string tag : model.tag
-        property url tagUrl : "tags:///"+model.tag
+        height: GridView.view.cellHeight
+        width: GridView.view.cellWidth
 
-        height: control.gridView.cellHeight
-        width: control.gridView.cellWidth
-
-        isCurrentItem: GridView.isCurrentItem
-
-        images: model.preview.split(",")
-
-        cb: function(url)
+        Maui.CollageItem
         {
-            return "image://thumbnailer/"+url
-        }
+            width: control.gridView.itemSize - Maui.Style.space.medium
+            height: control.gridView.itemHeight  - Maui.Style.space.medium
 
-        template.label1.text: model.tag
-        template.iconSource: model.icon
-        template.iconVisible: true
+            isCurrentItem: parent.GridView.isCurrentItem
 
-           onClicked:
-        {
-            control.currentIndex = index
-            if(Maui.Handy.singleClick)
+            images: model.preview.split(",")
+
+            cb: function(url)
             {
-                populateGrid(model.tag)
+                return "image://thumbnailer/"+url
             }
-        }
 
-        onDoubleClicked:
-        {
-            control.currentIndex = index
-            if(!Maui.Handy.singleClick)
+            template.label1.text: model.tag
+            template.iconSource: model.icon
+            template.iconVisible: true
+
+            onClicked:
             {
-                populateGrid(model.tag)
+                control.currentIndex = index
+                if(Maui.Handy.singleClick)
+                {
+                    populateGrid(model.tag)
+                }
+            }
+
+            onDoubleClicked:
+            {
+                control.currentIndex = index
+                if(!Maui.Handy.singleClick)
+                {
+                    populateGrid(model.tag)
+                }
             }
         }
 

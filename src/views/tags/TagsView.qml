@@ -14,7 +14,6 @@ import ".."
 StackView
 {
     id: control
-    clip: true
 
     property string currentTag : ""
     property Flickable flickable : currentItem.flickable
@@ -35,7 +34,7 @@ StackView
 
         BrowserLayout
         {
-
+            showTitle: false
             title: control.currentTag
             list.urls : ["tags:///"+currentTag]
             list.recursive: false

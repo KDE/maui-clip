@@ -1,5 +1,4 @@
 import QtQuick 2.14
-import QtQml 2.14
 import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.3
 
@@ -18,6 +17,7 @@ Maui.AltBrowser
     signal itemClicked(var item)
     signal itemRightClicked(var item)
 
+    headBar.forceCenterMiddleContent: false
     gridView.itemSize: 180
 
     enableLassoSelection: true
@@ -26,12 +26,6 @@ Maui.AltBrowser
     holder.emojiSize: Maui.Style.iconSizes.huge
 
     viewType: control.width < Kirigami.Units.gridUnit * 30 ? Maui.AltBrowser.ViewType.List : Maui.AltBrowser.ViewType.Grid
-
-    //    Binding on viewType
-    //    {
-    //        value: control.width < Kirigami.Units.gridUnit * 30 ? Maui.AltBrowser.ViewType.List : Maui.AltBrowser.ViewType.Grid
-    //        restoreMode: Binding.RestoreBinding
-    //    }
 
     Connections
     {
@@ -77,18 +71,7 @@ Maui.AltBrowser
         placeholderText: i18np("Search %1 video", "Search %1 videos", _collectionList.count)
         onAccepted: _collectionModel.filter = text
         onCleared: _collectionModel.filter = ""
-    }
-
-    headBar.leftContent: ToolButton
-    {
-        enabled: _collectionList.count > 0
-       icon.name: control.viewType === Maui.AltBrowser.ViewType.List ? "view-list-icons" : "view-list-details"
-
-        onClicked:
-        {
-            control.viewType =  control.viewType === Maui.AltBrowser.ViewType.List ? Maui.AltBrowser.ViewType.Grid : Maui.AltBrowser.ViewType.List
-        }
-    }
+    }    
 
     model: Maui.BaseModel
     {
@@ -143,14 +126,14 @@ Maui.AltBrowser
 
             control.currentIndex = index
             control.itemRightClicked(listModel.get(index))
-            _menu.open()
+            _menu.show()
         }
 
         onRightClicked:
         {
             control.currentIndex = index
             control.itemRightClicked(listModel.get(index))
-            _menu.open()
+            _menu.show()
         }
 
         Connections
@@ -237,14 +220,14 @@ Maui.AltBrowser
 
             control.currentIndex = index
             control.itemRightClicked(listModel.get(index))
-            _menu.open()
+            _menu.show()
         }
 
         onRightClicked:
         {
             control.currentIndex = index
             control.itemRightClicked(listModel.get(index))
-            _menu.open()
+            _menu.show()
         }
 
         onToggled:
