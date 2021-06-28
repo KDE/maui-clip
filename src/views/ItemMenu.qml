@@ -124,7 +124,7 @@ Maui.ContextualMenu
             onRejected: close()
             onAccepted:
             {
-                control.model.list.deleteAt(control.index)
+                control.model.list.deleteAt(model.mappedToSource(control.index))
                 close()
             }
         }

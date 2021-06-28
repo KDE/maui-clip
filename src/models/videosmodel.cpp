@@ -191,10 +191,8 @@ bool VideosModel::remove(const int &index)
     if (index >= this->list.size() || index < 0)
         return false;
 
-    const auto index_ = this->mappedIndex(index);
-
-    emit this->preItemRemoved(index_);
-    this->list.removeAt(index_);
+    emit this->preItemRemoved(index);
+    this->list.removeAt(index);
     emit this->postItemRemoved();
 
     return true;
@@ -205,10 +203,8 @@ bool VideosModel::deleteAt(const int &index)
 	if(index >= this->list.size() || index < 0)
 		return false;
 
-	const auto index_ = this->mappedIndex(index);
-
-	emit this->preItemRemoved(index_);
-	auto item = this->list.takeAt(index_);
+    emit this->preItemRemoved(index);
+    auto item = this->list.takeAt(index);
 	FMStatic::removeFiles ({item[FMH::MODEL_KEY::URL]});
 	emit this->postItemRemoved();
 
