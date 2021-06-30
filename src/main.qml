@@ -1,9 +1,11 @@
 import QtQuick 2.14
+import QtQml 2.14
+
 import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.3
 import QtQuick.Window 2.13
+
 import QtMultimedia 5.8
-import QtQml 2.14
 
 import Qt.labs.settings 1.0
 
@@ -71,10 +73,9 @@ Maui.ApplicationWindow
         property int youtubeQueryLimit : 50
     }
 
-
     mainMenu: [
 
-        Action
+        MenuItem
         {
             text: i18n("Open URL")
             icon.name: "filename-space-amarok"
@@ -85,7 +86,7 @@ Maui.ApplicationWindow
             }
         },
 
-        Action
+        MenuItem
         {
             text: i18n("Settings")
             icon.name: "settings-configure"
@@ -94,20 +95,15 @@ Maui.ApplicationWindow
             {
                 _settingsDialog.open()
             }
+        },
+
+        MenuItem
+        {
+            text: i18n("About")
+            icon.name: "documentinfo"
+            onTriggered: root.about()
         }
     ]
-
-    /***MODELS****/
-    Maui.BaseModel
-    {
-        id: tagsModel
-        list: FB.TagsListModel
-        {
-            id: tagsList
-        }
-    }
-
-    //    headBar.rightContent:
 
     DropArea
     {
@@ -298,7 +294,6 @@ Maui.ApplicationWindow
             padding: Maui.Style.space.big
             maxListHeight: _appViews.height - Maui.Style.space.medium
         }
-
     }
 
     //    footBar.visible: player.video.playbackState !== MediaPlayer.StoppedState
@@ -467,7 +462,6 @@ Maui.ApplicationWindow
         ToolTip.visible: hovered
         ToolTip.text: i18n("Toogle SideBar")
     }
-
 
     FloatingVideo
     {
