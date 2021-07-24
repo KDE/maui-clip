@@ -1,6 +1,7 @@
 import QtQuick 2.14
-import QtQuick.Controls 2.14
 import QtQml 2.14
+
+import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.3
 
 import org.kde.kirigami 2.7 as Kirigami
@@ -48,7 +49,7 @@ Maui.SettingsDialog
         {
             label1.text: i18n("Color Scheme")
 
-            ComboBox
+            Maui.ComboBox
             {
                 model: 20
                 displayText: modelData
@@ -231,7 +232,7 @@ Maui.SettingsDialog
         {
             label1.text: i18n("Font Family")
 
-            ComboBox
+            Maui.ComboBox
             {
                 Layout.fillWidth: true
                 model: Qt.fontFamilies()

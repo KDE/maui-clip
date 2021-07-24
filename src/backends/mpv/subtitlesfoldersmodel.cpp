@@ -8,15 +8,13 @@
 #include "subtitlesfoldersmodel.h"
 //#include "subtitlessettings.h"
 
-#include <KConfig>
-#include <KConfigDialog>
-#include <KConfigGroup>
+
 
 SubtitlesFoldersModel::SubtitlesFoldersModel(QObject *parent)
     : QAbstractListModel(parent)
 {
-    m_config = KSharedConfig::openConfig("georgefb/haruna.conf");
-    m_list = m_config->group("Subtitles").readPathEntry("Folders", QStringList());
+//    m_config = KSharedConfig::openConfig("georgefb/haruna.conf");
+//    m_list = m_config->group("Subtitles").readPathEntry("Folders", QStringList());
 }
 
 int SubtitlesFoldersModel::rowCount(const QModelIndex &parent) const
@@ -62,8 +60,8 @@ void SubtitlesFoldersModel::deleteFolder(int row)
     beginRemoveRows(QModelIndex(), row, row);
     m_list.removeAt(row);
     endRemoveRows();
-    m_config->group("Subtitles").writePathEntry("Folders", m_list);
-    m_config->sync();
+//    m_config->group("Subtitles").writePathEntry("Folders", m_list);
+//    m_config->sync();
 }
 
 void SubtitlesFoldersModel::addFolder()

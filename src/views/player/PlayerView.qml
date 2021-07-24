@@ -27,6 +27,7 @@ Item
 
         Maui.Holder
         {
+            anchors.fill: parent
             visible: player.stopped && player.video.status === MediaPlayer.NoMedia
             emojiSize: Maui.Style.iconSizes.huge
             emoji: "qrc:/img/assets/media-playback-start.svg"

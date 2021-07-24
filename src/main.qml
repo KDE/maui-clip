@@ -73,7 +73,10 @@ Maui.ApplicationWindow
         property int youtubeQueryLimit : 50
     }
 
-    mainMenu: [
+    headBar.leftContent: Maui.ToolButtonMenu
+    {
+        icon.name: "application-menu"
+
 
         MenuItem
         {
@@ -84,7 +87,7 @@ Maui.ApplicationWindow
             {
                 _openUrlDialog.open()
             }
-        },
+        }
 
         MenuItem
         {
@@ -95,7 +98,7 @@ Maui.ApplicationWindow
             {
                 _settingsDialog.open()
             }
-        },
+        }
 
         MenuItem
         {
@@ -103,7 +106,7 @@ Maui.ApplicationWindow
             icon.name: "documentinfo"
             onTriggered: root.about()
         }
-    ]
+    }
 
     DropArea
     {
@@ -215,7 +218,7 @@ Maui.ApplicationWindow
             showTitle: true
 
             headBar.visible: _playlist.count > 0
-            headerBackground.color: "transparent"
+            headBar.background: null
 
             headBar.rightContent: ToolButton
             {
@@ -367,7 +370,7 @@ Maui.ApplicationWindow
                 Rectangle
                 {
                     width: _slider.visualPosition * parent.width
-                     height: _slider.pressed ? _slider.height : 5
+                    height: _slider.pressed ? _slider.height : 5
                     color: Kirigami.Theme.highlightColor
                 }
             }

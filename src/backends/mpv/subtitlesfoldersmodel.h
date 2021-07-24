@@ -8,7 +8,6 @@
 #define SUBTITLESFOLDERSMODEL_H
 
 #include <QAbstractListModel>
-#include <KSharedConfig>
 
 class SubtitlesFoldersModel : public QAbstractListModel
 {
@@ -29,7 +28,7 @@ public slots:
 
 private:
     QStringList m_list;
-    KSharedConfig::Ptr m_config;
+//    KSharedConfig::Ptr m_config;
 };
 
 #endif // SUBTITLESFOLDERSMODEL_H
