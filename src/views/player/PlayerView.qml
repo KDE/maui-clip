@@ -15,15 +15,11 @@ Item
     property var currentVideo : ({})
     property int currentVideoIndex : -1
 
-    onCurrentVideoChanged:
-    {
-        url = currentVideo.url
-    }
-
     Player
     {
         id: _player
         anchors.fill: parent
+        url: currentVideo.url
 
         Maui.Holder
         {
@@ -35,5 +31,4 @@ Item
             body: i18n("Open a new video to start playing or add it to the playlist.")
         }
     }
-
 }
