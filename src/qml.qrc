@@ -11,7 +11,6 @@
         <file>views/BrowserLayout.qml</file>
         <file>views/ItemMenu.qml</file>
         <file>views/ListDelegate.qml</file>
-        <file>assets/clip.svg</file>
         <file>views/FloatingVideo.qml</file>
         <file>views/settings/SettingsDialog.qml</file>
         <file>views/youtube/YouTubeView.qml</file>

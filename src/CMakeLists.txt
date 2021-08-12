@@ -61,7 +61,7 @@ target_link_libraries(${PROJECT_NAME} MauiKit MauiKit::FileBrowsing Qt5::Quick Q
 
 if(UNIX AND NOT APPLE AND NOT ANDROID)
     install (TARGETS ${PROJECT_NAME} ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
-    install(FILES org.maui.clip.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
+    install(FILES org.kde.clip.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
     #TODO: port to ecm_install_icons()
     install(FILES assets/clip.svg DESTINATION ${KDE_INSTALL_ICONDIR}/hicolor/scalable/apps)
 endif()

@@ -25,16 +25,12 @@ VideosModel::VideosModel(QObject *parent) : MauiList(parent)
 		emit this->preListChanged();
 		this-> list << items;
 		emit this->postListChanged();
-		emit countChanged(); //TODO this is a bug from mauimodel not changing the count right //TODO
+        emit this->countChanged();
 	});
 
 	connect(m_fileLoader, &FMH::FileLoader::itemReady,[this](FMH::MODEL item)
 	{
 		this->insertFolder(item[FMH::MODEL_KEY::SOURCE]);
-
-//        emit this->preItemAppended();
-//        this->list.append(item);
-//        emit this->postItemAppended();
 	});
 
 	connect(m_watcher, &QFileSystemWatcher::directoryChanged, [this](QString dir)
@@ -216,6 +212,7 @@ void VideosModel::append(const QVariantMap &item)
 	emit this->preItemAppended();
 	this->list << FMH::toModel (item);
 	emit this->postItemAppended();
+    emit this->countChanged();
 }
 
 void VideosModel::appendUrl(const QString &url)
@@ -223,6 +220,7 @@ void VideosModel::appendUrl(const QString &url)
     emit this->preItemAppended();
     this->list << FMStatic::getFileInfoModel(QUrl::fromUserInput (url));
     emit this->postItemAppended();
+    emit this->countChanged();
 }
 
 void VideosModel::clear()
