@@ -27,7 +27,6 @@ Maui.ListBrowser
         restoreMode: Binding.RestoreBindingOrValue
     }
 
-
     model: Maui.BaseModel
     {
         id: _collectionModel
@@ -65,10 +64,10 @@ Maui.ListBrowser
         imageSource: model.thumbnail
         template.fillMode: Image.PreserveAspectCrop
 
-        ToolButton
+        AbstractButton
         {
             Layout.fillHeight: true
-            Layout.preferredWidth: implicitWidth
+            Layout.preferredWidth: Maui.Style.rowHeight
             visible: (Maui.Handy.isTouch ? true : _listDelegate.hovered)
             icon.name: "edit-clear"
             onClicked:
@@ -79,9 +78,16 @@ Maui.ListBrowser
                 _collectionList.remove(index)
             }
 
+
+            Kirigami.Icon
+            {
+                anchors.centerIn: parent
+                height: Maui.Style.iconSizes.small
+                width: height
+                source: parent.icon.name
+            }
             opacity: _listDelegate.hovered ? 0.8 : 0.6
         }
-
 
         onToggled:
         {
