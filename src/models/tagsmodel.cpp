@@ -63,7 +63,7 @@ FMH::MODEL_LIST TagsModel::tags()
 
 void TagsModel::packPreviewImages(FMH::MODEL &tag)
 {
-    const auto urls = Tagging::getInstance()->getTagUrls(tag[FMH::MODEL_KEY::TAG], {}, true, 4);
+    const auto urls = Tagging::getInstance()->getTagUrls(tag[FMH::MODEL_KEY::TAG], {}, true, 4, "video");
     tag[FMH::MODEL_KEY::PREVIEW] = QUrl::toStringList(urls).join(",");
 }
 

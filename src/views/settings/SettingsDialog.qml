@@ -31,31 +31,6 @@ Maui.SettingsDialog
                 onValueChanged: settings.volumeStep = value
             }
         }
-
-        Maui.SettingTemplate
-        {
-            label1.text: i18n("Player Tag Bar")
-            label2.text: i18n("Display tags bar to quickly tag videos being played.")
-
-            Switch
-            {
-                checkable: true
-                checked:  settings.playerTagBar
-                onToggled: settings.playerTagBar = !settings.playerTagBar
-            }
-        }
-
-        Maui.SettingTemplate
-        {
-            label1.text: i18n("Color Scheme")
-
-            Maui.ComboBox
-            {
-                model: 20
-                displayText: modelData
-                onAccepted: settings.colorScheme = currentText
-            }
-        }
     }
 
     Maui.SettingsSection
@@ -331,7 +306,6 @@ Maui.SettingsDialog
             {
                 Layout.fillWidth: true
                 text: i18n("Add")
-                flat: true
 
                 onClicked:
                 {

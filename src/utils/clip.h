@@ -9,68 +9,71 @@
 
 class Clip : public QObject
 {
-		Q_OBJECT
-		Q_PROPERTY(QVariantList sourcesModel READ sourcesModel NOTIFY sourcesChanged FINAL)
-		Q_PROPERTY(QStringList sources READ sources NOTIFY sourcesChanged FINAL)
+    Q_OBJECT
+    Q_PROPERTY(QVariantList sourcesModel READ sourcesModel NOTIFY sourcesChanged FINAL)
+    Q_PROPERTY(QStringList sources READ sources NOTIFY sourcesChanged FINAL)
+    Q_PROPERTY(bool mpvAvailable READ available CONSTANT FINAL)
 
-	public:
-        static Clip * instance()
-		{
-            static Clip clip;
-            return &clip;
-		}
+public:
+    static Clip * instance()
+    {
+        static Clip clip;
+        return &clip;
+    }
 
-        Clip(const Clip &) = delete;
-        Clip &operator=(const Clip &) = delete;
-        Clip(Clip &&) = delete;
-        Clip &operator=(Clip &&) = delete;
+    Clip(const Clip &) = delete;
+    Clip &operator=(const Clip &) = delete;
+    Clip(Clip &&) = delete;
+    Clip &operator=(Clip &&) = delete;
 
-	public slots:
-		QVariantList sourcesModel() const;
-		QStringList sources() const;
+    bool available() const;
 
-		void addSources(const QStringList &paths);
-		void removeSources(const QString &path);
+public slots:
+    QVariantList sourcesModel() const;
+    QStringList sources() const;
 
-		void openVideos(const QList<QUrl> &urls);
-		void refreshCollection();
-		/*File actions*/
-		static void showInFolder(const QStringList &urls);
+    void addSources(const QStringList &paths);
+    void removeSources(const QString &path);
 
-	private:
-        explicit Clip(QObject* parent = nullptr);
+    void openVideos(const QList<QUrl> &urls);
+    void refreshCollection();
+    /*File actions*/
+    static void showInFolder(const QStringList &urls);
 
-		inline static const QStringList getSourcePaths()
-		{
-                static const QStringList defaultSources  = {FMStatic::VideosPath, FMStatic::DownloadsPath};
-				const auto sources = UTIL::loadSettings("Sources", "Settings", defaultSources).toStringList();
-				qDebug()<< "SOURCES" << sources;
-				return sources;
-		}
+private:
+    explicit Clip(QObject* parent = nullptr);
 
-		inline static void saveSourcePath(QStringList const& paths)
-		{
-				auto sources = getSourcePaths();
+    inline static const QStringList getSourcePaths()
+    {
+        static const QStringList defaultSources  = {FMStatic::VideosPath, FMStatic::DownloadsPath};
+        const auto sources = UTIL::loadSettings("Sources", "Settings", defaultSources).toStringList();
+        qDebug()<< "SOURCES" << sources;
+        return sources;
+    }
 
-				sources << paths;
-				sources.removeDuplicates();
+    inline static void saveSourcePath(QStringList const& paths)
+    {
+        auto sources = getSourcePaths();
 
-				qDebug()<< "Saving new sources" << sources;
-				UTIL::saveSettings("Sources", sources, "Settings");
-		}
+        sources << paths;
+        sources.removeDuplicates();
 
-		inline static void removeSourcePath(const QString &path)
-		{
-				auto sources = getSourcePaths();
-				sources.removeOne(path);
+        qDebug()<< "Saving new sources" << sources;
+        UTIL::saveSettings("Sources", sources, "Settings");
+    }
 
-				UTIL::saveSettings("Sources", sources, "Settings");
-		}
+    inline static void removeSourcePath(const QString &path)
+    {
+        auto sources = getSourcePaths();
+        sources.removeOne(path);
 
-	signals:
-		void refreshViews(QVariantMap tables);
-		void openUrls(QStringList urls);
-		void sourcesChanged();
+        UTIL::saveSettings("Sources", sources, "Settings");
+    }
+
+signals:
+    void refreshViews(QVariantMap tables);
+    void openUrls(QStringList urls);
+    void sourcesChanged();
 };
 
 #endif // CLIP_H

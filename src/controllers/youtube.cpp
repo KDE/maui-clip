@@ -18,12 +18,8 @@
 
 #include "youtube.h"
 
-#include <QtNetwork>
 #include <QUrl>
-#include <QNetworkAccessManager>
-#include <QDomDocument>
-#include <QNetworkReply>
-#include <QNetworkRequest>
+#include <QJsonObject>
 #include <QJsonDocument>
 #include <QVariantMap>
 

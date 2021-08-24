@@ -1,10 +1,9 @@
 #ifndef YOUTUBE_H
 #define YOUTUBE_H
+
 #include <QObject>
-#include <QWidget>
-#include <QMap>
 #include <QUrl>
-#include <QVariant>
+#include <QByteArray>
 
 #include <MauiKit/Core/fmh.h>
 

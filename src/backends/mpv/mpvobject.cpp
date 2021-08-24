@@ -191,9 +191,10 @@ QString MpvObject::mediaTitle()
 {
     return getProperty("media-title").toString();
 }
+
 double MpvObject::position()
 {
-    return getProperty("time-pos").toDouble();
+    return getProperty("time-pos").toDouble()*1000;
 }
 
 void MpvObject::setPosition(double value)
@@ -212,7 +213,7 @@ double MpvObject::remaining()
 
 double MpvObject::duration()
 {
-    return getProperty("duration").toDouble();
+    return getProperty("duration").toDouble()*1000;
 }
 
 int MpvObject::volume()
@@ -614,7 +615,7 @@ void MpvObject::pause()
 
 void MpvObject::seek(const double &value)
 {
-    command(QStringList() << "seek" << QString::number(value) << "absolute");
+    command(QStringList() << "seek" << QString::number(value/1000) << "absolute");
 }
 
 void MpvObject::setHardwareDecoding(bool hardwareDecoding)

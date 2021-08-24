@@ -137,11 +137,6 @@ Maui.ApplicationWindow
         }
     }
 
-    Component
-    {
-        id: shareDialogComponent
-        Maui.ShareDialog {}
-    }
 
     SettingsDialog { id: _settingsDialog}
 
@@ -224,13 +219,11 @@ Maui.ApplicationWindow
                 onClicked:
                 {
                     player.stop()
-                    listModel.list.clear()
-                    root.sync = false
-                    root.syncPlaylist = ""
+                    _playlist.list.clear()
                 }
             }
 
-            headBar.leftContent:  ToolButton
+            headBar.leftContent: ToolButton
             {
                 icon.name: "document-save"
                 onClicked: saveList()
@@ -279,12 +272,12 @@ Maui.ApplicationWindow
                 Maui.AppView.iconName: "tag"
             }
 
-            YouTubeView
-            {
-                id: _youtubeView
-                Maui.AppView.title: i18n("Online")
-                Maui.AppView.iconName: "folder-cloud"
-            }
+//            YouTubeView
+//            {
+//                id: _youtubeView
+//                Maui.AppView.title: i18n("Online")
+//                Maui.AppView.iconName: "folder-cloud"
+//            }
         }
 
         footer: SelectionBar
@@ -308,12 +301,12 @@ Maui.ApplicationWindow
         width: parent.width
         leftContent: Label
         {
-            text: Maui.Handy.formatTime(player.video.position)
+            text: Maui.Handy.formatTime(player.video.position/1000)
         }
 
         rightContent: Label
         {
-            text: Maui.Handy.formatTime(player.video.duration)
+            text: Maui.Handy.formatTime(player.video.duration/1000)
         }
 
         middleContent:  Item
@@ -348,12 +341,11 @@ Maui.ApplicationWindow
             spacing: 0
             focus: true
 
-            Maui.Separator
+            Kirigami.Separator
             {
                 anchors.top: parent.top
-                anchors.left: parent.left
-                anchors.right: parent.right
-                edge: Qt.TopEdge
+                width: parent.width
+                height: 0.5
             }
 
             background: Rectangle
@@ -409,47 +401,6 @@ Maui.ApplicationWindow
                 };
                 dialog.open()
             }
-        },
-
-        ToolButton
-        {
-            icon.name: _volumeSlider.value === 0 ? "player-volume-muted" : "player-volume"
-            onPressAndHold :
-            {
-                player.video.volume = player.video.volume === 0 ? 100 : 0
-            }
-
-            onClicked:
-            {
-                _sliderPopup.visible ? _sliderPopup.close() : _sliderPopup.open()
-            }
-
-            Popup
-            {
-                id: _sliderPopup
-                height: 150
-                width: parent.width
-                y: -150
-                x: 0
-                //                            closePolicy: Popup.CloseOnEscape | Popup.CloseOnPress
-                Slider
-                {
-                    id: _volumeSlider
-                    visible: true
-                    height: parent.height
-                    width: 20
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    from: 0
-                    to: 100
-                    value: player.video.volume
-                    orientation: Qt.Vertical
-
-                    onMoved:
-                    {
-                        player.video.volume = value
-                    }
-                }
-            }
         }
     ]
 
@@ -485,7 +436,7 @@ Maui.ApplicationWindow
 
             Action
             {
-                enabled: !player.stopped
+//                enabled: !player.stopped
                 icon.width: Maui.Style.iconSizes.big
                 icon.height: Maui.Style.iconSizes.big
                 icon.name: player.playing ? "media-playback-pause" : "media-playback-start"

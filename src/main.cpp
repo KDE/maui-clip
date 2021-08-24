@@ -1,28 +1,34 @@
-#include <QQmlApplicationEngine>
 #include <QCommandLineParser>
-#include <QIcon>
-#include <QFileInfo>
+
 #include <QDate>
 #include <QDirIterator>
 
-#ifdef Q_OS_ANDROID
-#include <QGuiApplication>
-#else
-#include <QApplication>
-#endif
+#include <QFileInfo>
+#include <QIcon>
+
+#include <QQmlApplicationEngine>
 
 #include <KI18n/KLocalizedString>
 
 #include <MauiKit/Core/mauiapp.h>
 #include <MauiKit/FileBrowsing/fmstatic.h>
 
+#ifdef MPV_AVAILABLE
 #include "backends/mpv/mpvobject.h"
+#endif
+
 #include "models/videosmodel.h"
 #include "models/tagsmodel.h"
 #include "models/youtubemodel.h"
 
 #include "utils/clip.h"
 #include "../clip_version.h"
+
+#ifdef Q_OS_ANDROID
+#include <QGuiApplication>
+#else
+#include <QApplication>
+#endif
 
 #define CLIP_URI "org.maui.clip"
 
@@ -65,9 +71,7 @@ static const QList<QUrl> openFiles(const QStringList &files)
 Q_DECL_EXPORT int main(int argc, char *argv[])
 {
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
-    QCoreApplication::setAttribute(Qt::AA_DontCreateNativeWidgetSiblings);
     QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
-    QCoreApplication::setAttribute(Qt::AA_DisableSessionManager, true);
 
 #ifdef Q_OS_ANDROID
     QGuiApplication app(argc, argv);
@@ -77,9 +81,12 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     QApplication app(argc, argv);
 #endif
 
+#ifdef MPV_AVAILABLE
     // Qt sets the locale in the QGuiApplication constructor, but libmpv
     // requires the LC_NUMERIC category to be set to "C", so change it back.
     std::setlocale(LC_NUMERIC, "C");
+#endif
+
     app.setOrganizationName("Maui");
     app.setWindowIcon(QIcon(":/img/assets/clip.svg"));
 
@@ -122,13 +129,18 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
     }, Qt::QueuedConnection);
 
-    qmlRegisterType<MpvObject>("mpv", 1, 0, "MpvObject");
-
     qmlRegisterType<VideosModel>(CLIP_URI, 1, 0, "Videos");
     qmlRegisterType<TagsModel>(CLIP_URI, 1, 0, "Tags");
     qmlRegisterType<YouTubeModel>(CLIP_URI, 1, 0, "YouTube");
     qmlRegisterSingletonInstance<Clip>(CLIP_URI, 1, 0, "Clip", Clip::instance ());
+
+#ifdef MPV_AVAILABLE
     qRegisterMetaType<TracksModel*>();
+    qmlRegisterType<MpvObject>("mpv", 1, 0, "MpvObject");
+    qmlRegisterType(QUrl("qrc:/views/player/MPVPlayer.qml"), CLIP_URI, 1, 0, "Video");
+#else
+    qmlRegisterType(QUrl("qrc:/views/player/Player.qml"), CLIP_URI, 1, 0, "Video");
+#endif
 
     engine.load(url);
 

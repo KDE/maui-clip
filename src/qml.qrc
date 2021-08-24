@@ -2,7 +2,7 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>views/player/PlayerView.qml</file>
-        <file>views/player/Player.qml</file>
+        <file>views/player/MPVPlayer.qml</file>
         <file>views/collection/CollectionView.qml</file>
         <file>views/SelectionBar.qml</file>
         <file>views/tags/TagsView.qml</file>
@@ -14,6 +14,7 @@
         <file>views/FloatingVideo.qml</file>
         <file>views/settings/SettingsDialog.qml</file>
         <file>views/youtube/YouTubeView.qml</file>
+        <file>views/player/Player.qml</file>
     </qresource>
     <qresource prefix="/img">
         <file>assets/tag.svg</file>

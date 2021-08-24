@@ -5,7 +5,7 @@
 
 cmake_minimum_required(VERSION 3.16)
 
-set(CLIP_VERSION 2.0.0)
+set(CLIP_VERSION 2.1.0)
 project(clip VERSION ${CLIP_VERSION} LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
@@ -28,7 +28,7 @@ endif()
 find_package(ECM ${REQUIRED_KF5_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake" ${ECM_MODULE_PATH})
 
-find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS Qml Quick Xml Multimedia)
+find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS Qml Quick Multimedia)
 find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED COMPONENTS I18n CoreAddons)
 
 if(ANDROID)
@@ -52,6 +52,14 @@ include(KDEClangFormat)
 include(ECMSetupVersion)
 include(ECMSourceVersionControl)
 include(FeatureSummary)
+
+if(ANDROID OR APPLE OR WIN32)
+    set(IS_MPV_AVAILABLE OFF)
+else()
+    set(IS_MPV_AVAILABLE ON)
+endif()
+
+option (MPV_AVAILABLE "Use MPV library if it is avalibale, otherwise use default fallback implementation from QtMultimedia" ${IS_MPV_AVAILABLE})
 
 if(${ECM_SOURCE_UNDER_VERSION_CONTROL})
 execute_process(

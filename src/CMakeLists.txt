@@ -1,4 +1,14 @@
 
+if(${MPV_AVAILABLE})
+    set(mpvSRCS
+        backends/mpv/mpvobject.cpp
+        backends/mpv/track.cpp
+        backends/mpv/tracksmodel.cpp
+        backends/mpv/subtitlesfoldersmodel.cpp
+        backends/mpv/qthelper.h
+        )
+endif()
+
 set(clipSRCS
     main.cpp
     models/videosmodel.cpp
@@ -6,10 +16,6 @@ set(clipSRCS
     models/playlistmodel.cpp
     models/youtubemodel.cpp
     utils/clip.cpp
-    backends/mpv/mpvobject.cpp
-    backends/mpv/track.cpp
-    backends/mpv/tracksmodel.cpp
-    backends/mpv/subtitlesfoldersmodel.cpp
     controllers/youtube.cpp
     )
 
@@ -19,11 +25,6 @@ set(clipHDRS
     models/playlistmodel.h
     models/youtubemodel.h
     utils/clip.h
-    backends/mpv/mpvobject.h
-    backends/mpv/track.h
-    backends/mpv/tracksmodel.h
-    backends/mpv/subtitlesfoldersmodel.h
-    backends/mpv/qthelper.h
     controllers/youtube.h
     )
 
@@ -36,15 +37,16 @@ if(ANDROID)
         ${clipSRCS}
         ${clipHDRS}
         ${clipASSETS}
+        ${mpvSRCS}
         )
 else()
     add_executable(${PROJECT_NAME}
         ${clipSRCS}
         ${clipHDRS}
         ${clipASSETS}
+        ${mpvSRCS}
         )
 endif()
-
 
 if (ANDROID)
     target_link_libraries(${PROJECT_NAME} Qt5::AndroidExtras Qt5::QuickControls2)
@@ -57,7 +59,13 @@ target_compile_definitions(${PROJECT_NAME}
 
 target_compile_options(${PROJECT_NAME} PRIVATE -fexceptions)
 
-target_link_libraries(${PROJECT_NAME} MauiKit MauiKit::FileBrowsing Qt5::Quick Qt5::Xml Qt5::Qml Qt5::Multimedia KF5::CoreAddons KF5::I18n mpv)
+if(${MPV_AVAILABLE})
+    target_link_libraries(${PROJECT_NAME} mpv)
+    add_definitions(-DMPV_AVAILABLE)
+    target_compile_definitions(${PROJECT_NAME} PUBLIC MPV_AVAILABLE)
+endif()
+
+target_link_libraries(${PROJECT_NAME} MauiKit MauiKit::FileBrowsing Qt5::Quick Qt5::Qml Qt5::Multimedia KF5::CoreAddons KF5::I18n)
 
 if(UNIX AND NOT APPLE AND NOT ANDROID)
     install (TARGETS ${PROJECT_NAME} ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

@@ -17,6 +17,7 @@ Maui.AltBrowser
     gridView.itemSize: Math.min(200, Math.max(100, Math.floor(width* 0.3)))
     gridView.itemHeight: gridView.itemSize + Maui.Style.rowHeight
 
+    headBar.forceCenterMiddleContent: root.isWide
     holder.visible: _tagsList.count === 0
     holder.emojiSize: Maui.Style.iconSizes.huge
     holder.emoji: "qrc:/img/assets/tag.svg"
