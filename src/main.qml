@@ -26,10 +26,9 @@ Maui.ApplicationWindow
     id: root
 
     title: _playerView.currentVideo.label
+    headBar.visible: false
 
-    altHeader: Kirigami.Settings.isMobile
 
-    floatingHeader: _appViews.currentIndex === 0 && _playerView.player.playing && !_playlist.visible
     //    autoHideHeader: _appViews.currentIndex === 0 && _playerView.player.playing
 
     property bool selectionMode : false
@@ -39,9 +38,7 @@ Maui.ApplicationWindow
     property alias player: _playerView.player
 
     //    floatingFooter: true
-    flickable: _appViews.currentItem ? _appViews.currentItem.flickable || null : null
 
-    headBar.visible: root.visibility !== Window.FullScreen
 
     onIsPortraitChanged:
     {
@@ -69,41 +66,6 @@ Maui.ApplicationWindow
         property bool playerTagBar: true
         property string youtubeKey: "AIzaSyDMLmTSEN7i6psE2tHdaG6hy3ljWKXIYBk"
         property int youtubeQueryLimit : 50
-    }
-
-    headBar.leftContent: Maui.ToolButtonMenu
-    {
-        icon.name: "application-menu"
-
-
-        MenuItem
-        {
-            text: i18n("Open URL")
-            icon.name: "filename-space-amarok"
-
-            onTriggered:
-            {
-                _openUrlDialog.open()
-            }
-        }
-
-        MenuItem
-        {
-            text: i18n("Settings")
-            icon.name: "settings-configure"
-
-            onTriggered:
-            {
-                _settingsDialog.open()
-            }
-        }
-
-        MenuItem
-        {
-            text: i18n("About")
-            icon.name: "documentinfo"
-            onTriggered: root.about()
-        }
     }
 
     DropArea
@@ -237,48 +199,82 @@ Maui.ApplicationWindow
         }
     }
 
-    Maui.Page
+
+    Maui.AppViews
     {
-        id: _mainPage
+        id: _appViews
         anchors.fill: parent
+        maxViews: 4
         floatingFooter: true
-        headBar.visible: false
         flickable: _appViews.currentItem.flickable || _appViews.currentItem.item.flickable
+        headBar.visible: root.visibility !== Window.FullScreen
 
-        Maui.AppViews
+        altHeader: Kirigami.Settings.isMobile
+
+        floatingHeader: _appViews.currentIndex === 0 && _playerView.player.playing && !_playlist.visible
+
+        headBar.leftContent: Maui.ToolButtonMenu
         {
-            id: _appViews
-            anchors.fill: parent
-            maxViews: 4
+            icon.name: "application-menu"
 
-            PlayerView
+
+            MenuItem
             {
-                id: _playerView
-                Maui.AppView.title: i18n("Player")
-                Maui.AppView.iconName: "media-playback-start"
+                text: i18n("Open URL")
+                icon.name: "filename-space-amarok"
+
+                onTriggered:
+                {
+                    _openUrlDialog.open()
+                }
             }
 
-            CollectionView
+            MenuItem
             {
-                id: _collectionView
-                Maui.AppView.title: i18n("Collection")
-                Maui.AppView.iconName: "folder-videos"
+                text: i18n("Settings")
+                icon.name: "settings-configure"
+
+                onTriggered:
+                {
+                    _settingsDialog.open()
+                }
             }
 
-            TagsView
+            MenuItem
             {
-                id: _tagsView
-                Maui.AppView.title: i18n("Tags")
-                Maui.AppView.iconName: "tag"
+                text: i18n("About")
+                icon.name: "documentinfo"
+                onTriggered: root.about()
             }
-
-//            YouTubeView
-//            {
-//                id: _youtubeView
-//                Maui.AppView.title: i18n("Online")
-//                Maui.AppView.iconName: "folder-cloud"
-//            }
         }
+
+        PlayerView
+        {
+            id: _playerView
+            Maui.AppView.title: i18n("Player")
+            Maui.AppView.iconName: "media-playback-start"
+        }
+
+        CollectionView
+        {
+            id: _collectionView
+            Maui.AppView.title: i18n("Collection")
+            Maui.AppView.iconName: "folder-videos"
+        }
+
+        TagsView
+        {
+            id: _tagsView
+            Maui.AppView.title: i18n("Tags")
+            Maui.AppView.iconName: "tag"
+        }
+
+        //            YouTubeView
+        //            {
+        //                id: _youtubeView
+        //                Maui.AppView.title: i18n("Online")
+        //                Maui.AppView.iconName: "folder-cloud"
+        //            }
 
         footer: SelectionBar
         {
@@ -309,7 +305,7 @@ Maui.ApplicationWindow
             text: Maui.Handy.formatTime(player.video.duration/1000)
         }
 
-        middleContent:  Item
+        middleContent: Item
         {
             Layout.fillHeight: true
             Layout.fillWidth: true
@@ -436,7 +432,7 @@ Maui.ApplicationWindow
 
             Action
             {
-//                enabled: !player.stopped
+                //                enabled: !player.stopped
                 icon.width: Maui.Style.iconSizes.big
                 icon.height: Maui.Style.iconSizes.big
                 icon.name: player.playing ? "media-playback-pause" : "media-playback-start"

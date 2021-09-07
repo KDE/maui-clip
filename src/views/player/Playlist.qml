@@ -64,10 +64,10 @@ Maui.ListBrowser
         imageSource: model.thumbnail
         template.fillMode: Image.PreserveAspectCrop
 
-        AbstractButton
+        ToolButton
         {
             Layout.fillHeight: true
-            Layout.preferredWidth: Maui.Style.rowHeight
+            Layout.preferredWidth: implicitWidth
             visible: (Maui.Handy.isTouch ? true : _listDelegate.hovered)
             icon.name: "edit-clear"
             onClicked:
@@ -78,16 +78,9 @@ Maui.ListBrowser
                 _collectionList.remove(index)
             }
 
-
-            Kirigami.Icon
-            {
-                anchors.centerIn: parent
-                height: Maui.Style.iconSizes.small
-                width: height
-                source: parent.icon.name
-            }
             opacity: _listDelegate.hovered ? 0.8 : 0.6
         }
+
 
         onToggled:
         {
