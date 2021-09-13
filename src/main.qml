@@ -208,6 +208,7 @@ Maui.ApplicationWindow
         floatingFooter: true
         flickable: _appViews.currentItem.flickable || _appViews.currentItem.item.flickable
         headBar.visible: root.visibility !== Window.FullScreen
+        showCSDControls: true
 
         altHeader: Kirigami.Settings.isMobile
 
