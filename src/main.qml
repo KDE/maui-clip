@@ -27,8 +27,6 @@ Maui.ApplicationWindow
 
     title: _playerView.currentVideo.label
     headBar.visible: false
-
-
     //    autoHideHeader: _appViews.currentIndex === 0 && _playerView.player.playing
 
     property bool selectionMode : false
@@ -38,7 +36,13 @@ Maui.ApplicationWindow
     property alias player: _playerView.player
 
     //    floatingFooter: true
-
+    Maui.WindowBlur
+    {
+        view: root
+        geometry: Qt.rect(root.x, root.y, root.width, root.height)
+        windowRadius: root.background.radius
+        enabled: !Kirigami.Settings.isMobile
+    }
 
     onIsPortraitChanged:
     {
@@ -166,6 +170,12 @@ Maui.ApplicationWindow
             console.log(drop.urls)
         }
 
+        background: Rectangle
+        {
+            color: Kirigami.Theme.backgroundColor
+            opacity: 0.2
+        }
+
         Maui.Page
         {
             anchors.fill: parent
@@ -174,6 +184,11 @@ Maui.ApplicationWindow
 
             headBar.visible: _playlist.count > 0
             headBar.background: null
+            background: Rectangle
+            {
+                color: Kirigami.Theme.backgroundColor
+                opacity: 0.2
+            }
 
             headBar.rightContent: ToolButton
             {
@@ -198,7 +213,6 @@ Maui.ApplicationWindow
             }
         }
     }
-
 
     Maui.AppViews
     {
