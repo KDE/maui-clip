@@ -232,7 +232,6 @@ Maui.ApplicationWindow
         {
             icon.name: "application-menu"
 
-
             MenuItem
             {
                 text: i18n("Open URL")

@@ -1,9 +1,8 @@
 import QtQuick 2.14
 import QtQuick.Controls 2.14
-import QtQuick.Layouts 1.3
 
 import org.mauikit.controls 1.3 as Maui
-import org.mauikit.filebrowsing 1.2 as FB
+import org.mauikit.filebrowsing 1.3 as FB
 
 import org.kde.kirigami 2.8 as Kirigami
 
@@ -15,7 +14,51 @@ Maui.ContextualMenu
     property int index : -1
     property Maui.BaseModel model : null
 
-    onOpened: isFav = FB.Tagging.isFav(control.model.get(index).url)
+    onOpened: control.isFav = FB.Tagging.isFav(control.model.get(index).url)
+
+
+    Maui.MenuItemActionRow
+    {
+        Action
+        {
+            text: i18n(isFav ? "UnFav it": "Fav it")
+            icon.name: "love"
+            onTriggered: FB.Tagging.toggleFav(control.model.get(index).url)
+        }
+
+        Action
+        {
+            text: i18n("Tags")
+            icon.name: "tag"
+            onTriggered:
+            {
+                dialogLoader.sourceComponent = tagsDialogComponent
+                dialog.composerList.urls = [control.model.get(index).url]
+                dialog.open()
+            }
+        }
+
+        Action
+        {
+            text: i18n("Info")
+            icon.name: "documentinfo"
+            onTriggered:
+            {
+                getFileInfo(control.model.get(index).url)
+                close()
+            }
+        }
+
+        Action
+        {
+            text: i18n("Share")
+            icon.name: "document-share"
+            onTriggered:
+            {
+                Maui.Platform.shareFiles([control.model.get(index).url])
+            }
+        }
+    }
 
     MenuItem
     {
@@ -42,55 +85,14 @@ Maui.ContextualMenu
         }
     }
 
-
     MenuItem
     {
-        text: i18n(isFav ? "UnFav it": "Fav it")
-        icon.name: "love"
-        onTriggered: FB.Tagging.toggleFav(control.model.get(index).url)
-    }
-
-    MenuItem
-    {
-        text: i18n("Tags")
-        icon.name: "tag"
-        onTriggered:
-        {
-            dialogLoader.sourceComponent = tagsDialogComponent
-            dialog.composerList.urls = [control.model.get(index).url]
-            dialog.open()
-        }
-    }
-
-    MenuItem
-    {
-        text: i18n("Share")
-        icon.name: "document-share"
-        onTriggered:
-        {
-           Maui.Platform.shareFiles([control.model.get(index).url])
-        }
-    }
-
-    MenuItem
-    {
-        visible: !Maui.Handy.isAndroid
+        enabled: !Maui.Handy.isAndroid
         text: i18n("Show in folder")
         icon.name: "folder-open"
         onTriggered:
         {
-//            Pix.Collection.showInFolder([control.model.get(index).url])
-            close()
-        }
-    }
-
-    MenuItem
-    {
-        text: i18n("Info")
-        icon.name: "documentinfo"
-        onTriggered:
-        {
-            getFileInfo(control.model.get(index).url)
+            //            Pix.Collection.showInFolder([control.model.get(index).url])
             close()
         }
     }
