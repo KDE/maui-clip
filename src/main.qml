@@ -27,7 +27,7 @@ Maui.ApplicationWindow
 
     title: _playerView.currentVideo.label
     headBar.visible: false
-    //    autoHideHeader: _appViews.currentIndex === 0 && _playerView.player.playing
+    autoHideHeader: _appViews.currentIndex === views.player && _playerView.player.playing && !Kirigami.Settings.isMobile
 
     property bool selectionMode : false
 
@@ -35,7 +35,6 @@ Maui.ApplicationWindow
     property alias dialog : dialogLoader.item
     property alias player: _playerView.player
 
-    //    floatingFooter: true
     Maui.WindowBlur
     {
         view: root
@@ -72,47 +71,57 @@ Maui.ApplicationWindow
         property int youtubeQueryLimit : 50
     }
 
-    DropArea
+    Loader
     {
-        id: _dropArea
         anchors.fill: parent
-        onDropped:
-        {
-            if(drop.urls)
-            {
-                Clip.Clip.openVideos(drop.urls)
-            }
-        }
 
-        onExited:
+        asynchronous: true
+        sourceComponent:  DropArea
         {
-            if(_appViews.currentIndex === views.player)
+            onDropped:
             {
-                _appViews.goBack()
-            }
-        }
-
-        onEntered:
-        {
-            if(drag.source)
-            {
-                return
+                if(drop.urls)
+                {
+                    Clip.Clip.openVideos(drop.urls)
+                }
             }
 
-            _appViews.currentIndex = views.player
+            onExited:
+            {
+                if(_appViews.currentIndex === views.player)
+                {
+                    _appViews.goBack()
+                }
+            }
+
+            onEntered:
+            {
+                if(drag.source)
+                {
+                    return
+                }
+
+                _appViews.currentIndex = views.player
+            }
         }
     }
 
-
-    SettingsDialog { id: _settingsDialog}
-
-    Maui.NewDialog
+    Component
     {
-        id: _openUrlDialog
-        title: i18n("Open URL")
-        textEntry.placeholderText: "URL"
-        message: i18n("Enter any remote location, like YouTube video URLs, or from other services supported by MPV.")
-        onAccepted: player.url = textEntry.text
+        id: _settingsDialogComponent
+        SettingsDialog {}
+    }
+
+    Component
+    {
+        id: _openUrlDialogComponent
+        Maui.NewDialog
+        {
+            title: i18n("Open URL")
+            textEntry.placeholderText: "URL"
+            message: i18n("Enter any remote location, like YouTube video URLs, or from other services supported by MPV.")
+            onAccepted: player.url = textEntry.text
+        }
     }
 
     Component
@@ -136,23 +145,26 @@ Maui.ApplicationWindow
         }
     }
 
-    Maui.Dialog
+    Component
     {
-        id: removeDialog
+        id: removeDialogComponent
 
-        title: i18n("Delete files?")
-        acceptButton.text: i18n("Accept")
-        rejectButton.text: i18n("Cancel")
-        message: i18n("Are sure you want to delete %1 files", String(selectionBar.count))
-        page.margins: Maui.Style.space.big
-        template.iconSource: "emblem-warning"
-        onRejected: close()
-        onAccepted:
+        Maui.Dialog
         {
-            for(var url of selectionBox.uris)
-                FB.FM.removeFile(url)
-            selectionBox.clear()
-            close()
+            title: i18n("Delete files?")
+            acceptButton.text: i18n("Accept")
+            rejectButton.text: i18n("Cancel")
+            message: i18n("Are sure you want to delete %1 files", String(selectionBar.count))
+            page.margins: Maui.Style.space.big
+            template.iconSource: "emblem-warning"
+            onRejected: close()
+            onAccepted:
+            {
+                for(var url of selectionBox.uris)
+                    FB.FM.removeFile(url)
+                selectionBox.clear()
+                close()
+            }
         }
     }
 
@@ -168,12 +180,6 @@ Maui.ApplicationWindow
         onContentDropped:
         {
             console.log(drop.urls)
-        }
-
-        background: Rectangle
-        {
-            color: Kirigami.Theme.backgroundColor
-            opacity: 0.2
         }
 
         Maui.Page
@@ -232,16 +238,16 @@ Maui.ApplicationWindow
         {
             icon.name: "application-menu"
 
-            MenuItem
-            {
-                text: i18n("Open URL")
-                icon.name: "filename-space-amarok"
+            //            MenuItem
+            //            {
+            //                text: i18n("Open URL")
+            //                icon.name: "filename-space-amarok"
 
-                onTriggered:
-                {
-                    _openUrlDialog.open()
-                }
-            }
+            //                onTriggered:
+            //                {
+            //                    _openUrlDialog.open()
+            //                }
+            //            }
 
             MenuItem
             {
@@ -250,7 +256,8 @@ Maui.ApplicationWindow
 
                 onTriggered:
                 {
-                    _settingsDialog.open()
+                    dialogLoader.sourceComponent = _settingsDialogComponent
+                    dialog.open()
                 }
             }
 
@@ -269,18 +276,18 @@ Maui.ApplicationWindow
             Maui.AppView.iconName: "media-playback-start"
         }
 
-        CollectionView
+        Maui.AppViewLoader
         {
-            id: _collectionView
             Maui.AppView.title: i18n("Collection")
             Maui.AppView.iconName: "folder-videos"
+            CollectionView {}
         }
 
-        TagsView
+        Maui.AppViewLoader
         {
-            id: _tagsView
             Maui.AppView.title: i18n("Tags")
             Maui.AppView.iconName: "tag"
+            TagsView {}
         }
 
         //            YouTubeView
@@ -302,87 +309,93 @@ Maui.ApplicationWindow
 
     //    footBar.visible: player.video.playbackState !== MediaPlayer.StoppedState
 
-    page.footerColumn: Maui.ToolBar
+    page.footerColumn: Loader
     {
-        visible: _appViews.currentIndex === views.player && !player.stopped
-        preferredHeight: Maui.Style.rowHeightAlt
-
-        position: ToolBar.Footer
+        active: _appViews.currentIndex === views.player && !player.stopped
         width: parent.width
-        leftContent: Label
-        {
-            text: Maui.Handy.formatTime(player.video.position/1000)
-        }
+        asynchronous: true
+        visible: active
 
-        rightContent: Label
+        sourceComponent: Maui.ToolBar
         {
-            text: Maui.Handy.formatTime(player.video.duration/1000)
-        }
+            preferredHeight: Maui.Style.rowHeightAlt
 
-        middleContent: Item
-        {
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-
-            Label
+            position: ToolBar.Footer
+            leftContent: Label
             {
-                anchors.fill: parent
-                visible: text.length
-                verticalAlignment: Qt.AlignVCenter
-                horizontalAlignment: Qt.AlignHCenter
-                text: root.title
-                elide: Text.ElideMiddle
-                wrapMode: Text.NoWrap
-                color: Kirigami.Theme.textColor
-            }
-        }
-
-        background: Slider
-        {
-            id: _slider
-            z: parent.z+1
-            padding: 0
-            orientation: Qt.Horizontal
-            from: 0
-            to: player.video.duration
-            value: player.video.position
-
-            onMoved: player.video.seek( _slider.value )
-            spacing: 0
-            focus: true
-
-            Kirigami.Separator
-            {
-                anchors.top: parent.top
-                width: parent.width
-                height: 0.5
+                text: Maui.Handy.formatTime(player.video.position/1000)
             }
 
-            background: Rectangle
+            rightContent: Label
             {
-                implicitWidth: _slider.width
-                implicitHeight: _slider.height
-                width: _slider.availableWidth
-                height: implicitHeight
-                color: "transparent"
-                opacity: 0.4
+                text: Maui.Handy.formatTime(player.video.duration/1000)
+            }
 
-                Rectangle
+            middleContent: Item
+            {
+                Layout.fillHeight: true
+                Layout.fillWidth: true
+
+                Label
                 {
-                    width: _slider.visualPosition * parent.width
-                    height: _slider.pressed ? _slider.height : 5
-                    color: Kirigami.Theme.highlightColor
+                    anchors.fill: parent
+                    visible: text.length
+                    verticalAlignment: Qt.AlignVCenter
+                    horizontalAlignment: Qt.AlignHCenter
+                    text: root.title
+                    elide: Text.ElideMiddle
+                    wrapMode: Text.NoWrap
+                    color: Kirigami.Theme.textColor
                 }
             }
 
-            handle: Rectangle
+            background: Slider
             {
-                x: _slider.leftPadding + _slider.visualPosition
-                   * (_slider.availableWidth - width)
-                y: 0
-                implicitWidth: Maui.Style.iconSizes.medium
-                implicitHeight: _slider.height
-                color: _slider.pressed ? Qt.lighter(Kirigami.Theme.highlightColor, 1.2) : "transparent"
+                id: _slider
+                z: parent.z+1
+                padding: 0
+                orientation: Qt.Horizontal
+                from: 0
+                to: player.video.duration
+                value: player.video.position
+
+                onMoved: player.video.seek( _slider.value )
+                spacing: 0
+                focus: true
+
+                Kirigami.Separator
+                {
+                    anchors.top: parent.top
+                    width: parent.width
+                    height: 0.5
+                }
+
+                background: Rectangle
+                {
+                    implicitWidth: _slider.width
+                    implicitHeight: _slider.height
+                    width: _slider.availableWidth
+                    height: implicitHeight
+                    color: "transparent"
+                    opacity: 0.4
+
+                    Rectangle
+                    {
+                        width: _slider.visualPosition * parent.width
+                        height: _slider.pressed ? _slider.height : 5
+                        color: Kirigami.Theme.highlightColor
+                    }
+                }
+
+                handle: Rectangle
+                {
+                    x: _slider.leftPadding + _slider.visualPosition
+                       * (_slider.availableWidth - width)
+                    y: 0
+                    implicitWidth: Maui.Style.iconSizes.medium
+                    implicitHeight: _slider.height
+                    color: _slider.pressed ? Qt.lighter(Kirigami.Theme.highlightColor, 1.2) : "transparent"
+                }
             }
         }
     }
@@ -425,9 +438,12 @@ Maui.ApplicationWindow
         ToolTip.text: i18n("Toogle SideBar")
     }
 
-    FloatingVideo
+    Loader
     {
-        visible: _appViews.currentIndex !== views.player && !_playerView.player.stopped
+        visible: active
+        active: _appViews.currentIndex !== views.player && !_playerView.player.stopped
+        asynchronous: true
+        sourceComponent: FloatingVideo {}
     }
 
     footBar.middleContent: [
@@ -458,16 +474,7 @@ Maui.ApplicationWindow
                 icon.name: "media-skip-forward"
                 onTriggered: playNext()
             }
-        }/*,
-
-        Maui.ListItemTemplate
-        {
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-            //            Layout.preferredWidth: 500
-            label1.text: _playerView.currentVideo.label
-            label2.text: _playerView.currentVideo.path
-        }*/
+        }
     ]
 
     Connections

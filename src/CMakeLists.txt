@@ -1,5 +1,5 @@
 
-if(${MPV_AVAILABLE})
+if(MPV_AVAILABLE)
     set(mpvSRCS
         backends/mpv/mpvobject.cpp
         backends/mpv/track.cpp
@@ -28,22 +28,25 @@ set(clipHDRS
     controllers/youtube.h
     )
 
-set(clipASSETS
-    qml.qrc
-    )
+if(QUICK_COMPILER)
+    qtquick_compiler_add_resources(clip_QML_QRC qml.qrc)
+else()
+    qt5_add_resources(clip_QML_QRC qml.qrc)
+endif()
+
 
 if(ANDROID)
     add_library(${PROJECT_NAME} SHARED
         ${clipSRCS}
         ${clipHDRS}
-        ${clipASSETS}
+        ${clip_QML_QRC}
         ${mpvSRCS}
         )
 else()
     add_executable(${PROJECT_NAME}
         ${clipSRCS}
         ${clipHDRS}
-        ${clipASSETS}
+        ${clip_QML_QRC}
         ${mpvSRCS}
         )
 endif()
@@ -59,7 +62,7 @@ target_compile_definitions(${PROJECT_NAME}
 
 target_compile_options(${PROJECT_NAME} PRIVATE -fexceptions)
 
-if(${MPV_AVAILABLE})
+if(MPV_AVAILABLE)
     target_link_libraries(${PROJECT_NAME} mpv)
     add_definitions(-DMPV_AVAILABLE)
     target_compile_definitions(${PROJECT_NAME} PUBLIC MPV_AVAILABLE)

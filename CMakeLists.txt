@@ -25,6 +25,8 @@ if(ANDROID)
     set(ANDROID_ABIS "armeabi-v7a")
 endif()
 
+option(QUICK_COMPILER "Use QtQuick compiler to improve performance" TRUE)
+
 find_package(ECM ${REQUIRED_KF5_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake" ${ECM_MODULE_PATH})
 
@@ -40,6 +42,14 @@ endif()
 find_package(MauiKit REQUIRED)
 find_package(MauiKit REQUIRED COMPONENTS FileBrowsing)
 
+if(QUICK_COMPILER)
+    find_package(Qt5QuickCompiler)
+    set_package_properties(Qt5QuickCompiler PROPERTIES
+        DESCRIPTION "Compile QML at build time"
+        TYPE OPTIONAL
+        )
+endif()
+
 if(UNIX AND NOT APPLE AND NOT ANDROID)
     include(KDEInstallDirs)
     include(KDECMakeSettings)
@@ -53,13 +63,7 @@ include(ECMSetupVersion)
 include(ECMSourceVersionControl)
 include(FeatureSummary)
 
-if(ANDROID OR APPLE OR WIN32)
-    set(IS_MPV_AVAILABLE OFF)
-else()
-    set(IS_MPV_AVAILABLE ON)
-endif()
-
-option (MPV_AVAILABLE "Use MPV library if it is avalibale, otherwise use default fallback implementation from QtMultimedia" ${IS_MPV_AVAILABLE})
+option (MPV_AVAILABLE "Use MPV library if it is avalibale, otherwise use default fallback implementation from QtMultimedia" FALSE)
 
 if(${ECM_SOURCE_UNDER_VERSION_CONTROL})
 execute_process(

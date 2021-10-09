@@ -106,13 +106,16 @@ Maui.ContextualMenu
         Kirigami.Theme.textColor: Kirigami.Theme.negativeTextColor
         onTriggered:
         {
-            removeDialog.open()
-            close()
+            dialogLoader.sourceComponent = removeDialogComponent
+            dialog.open()
         }
+
+        Component
+        {
+            id: removeDialogComponent
 
         Maui.Dialog
         {
-            id: removeDialog
 
             title: i18n("Delete file?")
             acceptButton.text: i18n("Accept")
@@ -127,6 +130,7 @@ Maui.ContextualMenu
                 control.model.list.deleteAt(model.mappedToSource(control.index))
                 close()
             }
+        }
         }
     }
 }

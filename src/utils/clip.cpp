@@ -6,7 +6,9 @@
 Clip::Clip(QObject *parent) : QObject(parent)
 {
     //create a screenshots folder
+#ifdef MPV_AVAILABLE
     FMStatic::createDir(FMStatic::PicturesPath, "screenshots");
+#endif
 }
 
 bool Clip::available() const
