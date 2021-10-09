@@ -6,7 +6,7 @@
 #include <MauiKit/FileBrowsing/fileloader.h>
 
 VideosModel::VideosModel(QObject *parent) : MauiList(parent)
-  , m_fileLoader(new FMH::FileLoader())
+  , m_fileLoader(new FMH::FileLoader(this))
   , m_watcher (new QFileSystemWatcher(this))
   , m_autoReload(true)
   , m_autoScan(true)
@@ -44,11 +44,6 @@ VideosModel::VideosModel(QObject *parent) : MauiList(parent)
     {
         qDebug()<< "File changed" << file;
     });
-}
-
-VideosModel::~VideosModel()
-{
-    delete m_fileLoader;
 }
 
 const FMH::MODEL_LIST &VideosModel::items() const

@@ -26,7 +26,6 @@ class VideosModel : public MauiList
 
 public:
     explicit VideosModel(QObject *parent = nullptr);
-    ~VideosModel();
 
     const FMH::MODEL_LIST &items() const override final;
 
