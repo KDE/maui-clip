@@ -15,10 +15,9 @@ Video
 
     readonly property bool playing : control.playbackState === MediaPlayer.PlayingState
     readonly property bool paused : control.playbackState === MediaPlayer.PausedState
-    readonly property bool stopped :  control.playbackState === MediaPlayer.StoppedState
+    readonly property bool stopped : control.playbackState === MediaPlayer.StoppedState
 
     source: currentVideo.url
     autoPlay: true
-
 }
 

@@ -20,7 +20,7 @@ Clip.Video
     property int currentVideoIndex : -1
 
     Keys.enabled: true
-    Keys.onSpacePressed: player.playbackState == MediaPlayer.PlayingState ? player.pause() : player.play()
+    Keys.onSpacePressed: player.playbackState === MediaPlayer.PlayingState ? player.pause() : player.play()
     Keys.onLeftPressed: player.seek(player.position - 50)
     Keys.onRightPressed: player.seek(player.position + 50)
 
@@ -28,14 +28,19 @@ Clip.Video
     Kirigami.Theme.backgroundColor: "#333"
     Kirigami.Theme.textColor: "#fafafa"
 
-    Maui.Holder
+    Loader
     {
         anchors.fill: parent
-        visible: control.stopped && control.status === MediaPlayer.NoMedia
-        emojiSize: Maui.Style.iconSizes.huge
-        emoji: "qrc:/img/assets/media-playback-start.svg"
-        title: i18n("Nothing Here!")
-        body: i18n("Open a new video to start playing or add it to the playlist.")
+        active: control.stopped && control.status === MediaPlayer.NoMedia
+        visible: active
+        asynchronous: true
+        sourceComponent: Maui.Holder
+        {
+            emojiSize: Maui.Style.iconSizes.huge
+            emoji: "qrc:/img/assets/media-playback-start.svg"
+            title: i18n("Nothing Here!")
+            body: i18n("Open a new video to start playing or add it to the playlist.")
+        }
     }
 
     BusyIndicator
@@ -47,31 +52,36 @@ Clip.Video
         running: control.status === MediaPlayer.Loading
     }
 
-
-    RowLayout
+    Loader
     {
         anchors.fill: parent
+        asynchronous: true
+        active: !control.stopped
 
-        MouseArea
+        sourceComponent: RowLayout
         {
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-            onDoubleClicked: player.seek(player.position - 5)
-        }
 
-        MouseArea
-        {
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-            onClicked: player.playbackState === MediaPlayer.PlayingState ? player.pause() : player.play()
-            onDoubleClicked: root.toggleFullScreen()
-        }
+            MouseArea
+            {
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                onDoubleClicked: player.seek(player.position - 5)
+            }
 
-        MouseArea
-        {
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-            onDoubleClicked: player.seek(player.position + 5)
+            MouseArea
+            {
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                onClicked: player.playbackState === MediaPlayer.PlayingState ? player.pause() : player.play()
+                onDoubleClicked: root.toggleFullScreen()
+            }
+
+            MouseArea
+            {
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                onDoubleClicked: player.seek(player.position + 5)
+            }
         }
     }
 }
