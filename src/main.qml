@@ -152,15 +152,10 @@ Maui.ApplicationWindow
 
     sideBar: Maui.AbstractSideBar
     {
-        visible: _playlist.count > 0
+        enabled: _playlist.count > 0
         preferredWidth: Kirigami.Units.gridUnit * 16
         collapsed: !isWide
         collapsible: true
-
-        onContentDropped:
-        {
-            console.log(drop.urls)
-        }
 
         Maui.Page
         {
@@ -205,7 +200,6 @@ Maui.ApplicationWindow
         id: _stackView
         anchors.fill: parent
 
-
         initialItem: Maui.Page
         {
             Maui.AppView.title: i18n("Player")
@@ -218,7 +212,6 @@ Maui.ApplicationWindow
                 id: _playerView
                 anchors.fill: parent
             }
-
 
             BusyIndicator
             {
@@ -291,7 +284,7 @@ Maui.ApplicationWindow
             headBar.leftContent: ToolButton
             {
                 text: i18n("Collection")
-                icon.name: "go-previous"
+                icon.name: "folder-videos"
                 onClicked: _stackView.push(_appViewsComponent)
             }
 
@@ -299,7 +292,6 @@ Maui.ApplicationWindow
             {
                 text: i18n("Open")
                 icon.name: "folder-open"
-                display: isWide ? ToolButton.TextBesideIcon : ToolButton.IconOnly
                 onClicked: root.openFileDialog()
             }
 
@@ -376,7 +368,7 @@ Maui.ApplicationWindow
                             Rectangle
                             {
                                 width: _slider.visualPosition * parent.width
-                                height: _slider.pressed ? _slider.height : 5
+                                height: _slider.pressed ? _slider.height : 2
                                 color: Kirigami.Theme.highlightColor
                             }
                         }
@@ -406,7 +398,7 @@ Maui.ApplicationWindow
             {
                 icon.name: root.sideBar.visible ? "sidebar-collapse" : "sidebar-expand"
                 onClicked: root.sideBar.toggle()
-
+                checked: root.sideBar.visible
                 ToolTip.delay: 1000
                 ToolTip.timeout: 5000
                 ToolTip.visible: hovered
@@ -597,6 +589,11 @@ Maui.ApplicationWindow
         {
             _playerView.currentVideoIndex = index
             _playerView.currentVideo = _playlist.model.get(index)
+
+            if(Kirigami.Settings.isMobile)
+            {
+                _stackView.pop()
+            }
         }
     }
 
