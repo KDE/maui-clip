@@ -28,61 +28,6 @@ Clip.Video
     Kirigami.Theme.backgroundColor: "#333"
     Kirigami.Theme.textColor: "#fafafa"
 
-    Loader
-    {
-        anchors.fill: parent
-        active: control.stopped && control.status === MediaPlayer.NoMedia
-        visible: active
-        asynchronous: true
-        sourceComponent: Maui.Holder
-        {
-            emojiSize: Maui.Style.iconSizes.huge
-            emoji: "qrc:/img/assets/media-playback-start.svg"
-            title: i18n("Nothing Here!")
-            body: i18n("Open a new video to start playing or add it to the playlist.")
-        }
-    }
 
-    BusyIndicator
-    {
-        Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
-        Kirigami.Theme.inherit: false
-
-        anchors.centerIn: parent
-        running: control.status === MediaPlayer.Loading
-    }
-
-    Loader
-    {
-        anchors.fill: parent
-        asynchronous: true
-        active: !control.stopped
-
-        sourceComponent: RowLayout
-        {
-
-            MouseArea
-            {
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-                onDoubleClicked: player.seek(player.position - 5)
-            }
-
-            MouseArea
-            {
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-                onClicked: player.playbackState === MediaPlayer.PlayingState ? player.pause() : player.play()
-                onDoubleClicked: root.toggleFullScreen()
-            }
-
-            MouseArea
-            {
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-                onDoubleClicked: player.seek(player.position + 5)
-            }
-        }
-    }
 }
 

@@ -11,7 +11,7 @@ Maui.SelectionBar
 {
     id: control
 
-    visible: count > 0 && _appViews.currentIndex !== views.player
+    visible: count > 0
     onExitClicked:
     {
         selectionMode = false
