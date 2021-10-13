@@ -74,6 +74,7 @@ Maui.ApplicationWindow
         anchors.fill: parent
 
         asynchronous: true
+
         sourceComponent:  DropArea
         {
             onDropped:
@@ -152,7 +153,7 @@ Maui.ApplicationWindow
 
     sideBar: Maui.AbstractSideBar
     {
-        enabled: _playlist.count > 0
+        enabled: _playlist.count > 1
         preferredWidth: Kirigami.Units.gridUnit * 16
         collapsed: !isWide
         collapsible: true
@@ -204,6 +205,7 @@ Maui.ApplicationWindow
         {
             Maui.AppView.title: i18n("Player")
             Maui.AppView.iconName: "media-playback-start"
+            headBar.visible: !_playerHolderLoader.active
 
             showCSDControls: true
 
@@ -253,12 +255,13 @@ Maui.ApplicationWindow
 
             Loader
             {
+                id: _playerHolderLoader
                 anchors.fill: parent
                 active: _playerView.stopped && _playerView.status === MediaPlayer.NoMedia
                 asynchronous: true
+                visible: active
                 sourceComponent: Maui.Holder
                 {
-                    visible: true
                     emoji: "qrc:/img/assets/media-playback-start.svg"
                     title: i18n("Nothing Here!")
                     body: i18n("Open a new video from your collection or file system.")
@@ -283,7 +286,7 @@ Maui.ApplicationWindow
             headBar.leftContent: ToolButton
             {
                 text: i18n("Collection")
-                icon.name: "folder-videos"
+                icon.name: "go-previous"
                 onClicked: _stackView.push(_appViewsComponent)
             }
 
