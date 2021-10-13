@@ -227,7 +227,6 @@ Maui.ApplicationWindow
 
                 sourceComponent: RowLayout
                 {
-
                     MouseArea
                     {
                         Layout.fillWidth: true
@@ -386,23 +385,33 @@ Maui.ApplicationWindow
                 }
             }
 
-            footBar.rightContent: [ToolButton
+            footBar.rightContent: Loader
+            {
+                active: !Kirigami.Settings.isMobile
+                visible: active
+                asynchronous: true
+                sourceComponent: ToolButton
                 {
-                    visible: !Kirigami.Settings.isMobile
                     icon.name: "view-fullscreen"
                     onClicked: toggleFullscreen()
                 }
-            ]
+            }
 
-            footBar.farLeftContent: ToolButton
+            footBar.farLeftContent:  Loader
             {
-                icon.name: root.sideBar.visible ? "sidebar-collapse" : "sidebar-expand"
-                onClicked: root.sideBar.toggle()
-                checked: root.sideBar.visible
-                ToolTip.delay: 1000
-                ToolTip.timeout: 5000
-                ToolTip.visible: hovered
-                ToolTip.text: i18n("Toggle SideBar")
+                active: root.sideBar.enabled
+                visible: active
+                asynchronous: true
+                sourceComponent: ToolButton
+                {
+                    icon.name: root.sideBar.visible ? "sidebar-collapse" : "sidebar-expand"
+                    onClicked: root.sideBar.toggle()
+                    checked: root.sideBar.visible
+                    ToolTip.delay: 1000
+                    ToolTip.timeout: 5000
+                    ToolTip.visible: hovered
+                    ToolTip.text: i18n("Toggle SideBar")
+                }
             }
 
             footBar.middleContent: [
