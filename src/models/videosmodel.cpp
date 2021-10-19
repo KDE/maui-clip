@@ -1,6 +1,6 @@
 #include "videosmodel.h"
 #include <QFileSystemWatcher>
-
+#include <QDebug>
 #include <MauiKit/FileBrowsing/tagging.h>
 #include <MauiKit/FileBrowsing/fmstatic.h>
 #include <MauiKit/FileBrowsing/fileloader.h>
