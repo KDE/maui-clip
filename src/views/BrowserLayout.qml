@@ -198,7 +198,6 @@ Maui.AltBrowser
             checkable: root.selectionMode
             checked: (selectionBar ? selectionBar.contains(model.url) : false)
             draggable: true
-            opacity: model.hidden == "true" ? 0.5 : 1
 
             Drag.keys: ["text/uri-list"]
             Drag.mimeData: Drag.active ?
@@ -208,8 +207,7 @@ Maui.AltBrowser
 
         template.iconComponent: Loader
         {
-
-            sourceComponent: preview ? videoComponent : imgComponent
+            sourceComponent: preview && !Kirigami.Settings.isMobile ? videoComponent : imgComponent
 
             Component
             {
