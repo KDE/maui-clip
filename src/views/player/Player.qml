@@ -12,5 +12,9 @@ Video
 
     source: currentVideo.url
     autoPlay: true
+    autoLoad: true
+
+    flushMode: VideoOutput.LastFrame
+
 }
 

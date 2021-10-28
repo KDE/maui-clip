@@ -16,6 +16,7 @@ set(clipSRCS
     models/playlistmodel.cpp
     models/youtubemodel.cpp
     utils/clip.cpp
+    utils/thumbnailer.cpp
     controllers/youtube.cpp
     )
 
@@ -25,6 +26,7 @@ set(clipHDRS
     models/playlistmodel.h
     models/youtubemodel.h
     utils/clip.h
+    utils/thumbnailer.h
     controllers/youtube.h
     )
 

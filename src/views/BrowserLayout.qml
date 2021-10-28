@@ -2,10 +2,11 @@ import QtQuick 2.14
 import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.3
 
-import org.mauikit.controls 1.2 as Maui
+import org.mauikit.controls 1.3 as Maui
 import org.kde.kirigami 2.8 as Kirigami
 
 import org.maui.clip 1.0 as Clip
+import QtMultimedia 5.8
 
 Maui.AltBrowser
 {
@@ -47,11 +48,6 @@ Maui.AltBrowser
             {
                 control.currentView.itemsSelected([index])
             }
-
-            //            if(event.key === Qt.Key_Space)
-            //            {
-            //                getFileInfo(item.url)
-            //            }
         }
     }
 
@@ -71,7 +67,7 @@ Maui.AltBrowser
         placeholderText: i18np("Search %1 video", "Search %1 videos", _collectionList.count)
         onAccepted: _collectionModel.filter = text
         onCleared: _collectionModel.filter = ""
-    }    
+    }
 
     model: Maui.BaseModel
     {
@@ -161,19 +157,37 @@ Maui.AltBrowser
 
     gridDelegate: Item
     {
-        property bool isCurrentItem : GridView.isCurrentItem
-        height: control.gridView.cellHeight
-        width: control.gridView.cellWidth
+        readonly property bool isCurrentItem : GridView.isCurrentItem
+        height: GridView.view.cellHeight
+        width: GridView.view.cellWidth
+
+        property bool preview : false
+
+        Timer
+        {
+            id:  _timer
+            interval: 1500
+            onTriggered: parent.preview = true
+        }
 
         Maui.GridBrowserDelegate
         {
             id: delegate
 
+            onHoveredChanged:
+            {
+                if(hovered)
+                {
+                    _timer.start()
+                }else
+                {
+                    _timer.stop()
+                    preview = false
+                }
+            }
+
             iconSizeHint: Maui.Style.iconSizes.big
             label1.text: model.label
-            imageSource: model.thumbnail
-            iconSource: model.icon
-            template.fillMode: Image.PreserveAspectFit
 
             anchors.centerIn: parent
             height: control.gridView.cellHeight - 15
@@ -191,6 +205,39 @@ Maui.AltBrowser
                                {
                                    "text/uri-list": control.filterSelectedItems(model.url)
                                } : {}
+
+        template.iconComponent: Loader
+        {
+
+            sourceComponent: preview ? videoComponent : imgComponent
+
+            Component
+            {
+                id: videoComponent
+                Video
+                {
+                    autoPlay: true
+                    autoLoad: true
+                    source: model.url
+                    muted: true
+                    fillMode: VideoOutput.PreserveAspectFit
+                    playbackRate: 5.0
+                    loops: 3
+                    flushMode: VideoOutput.LastFrame
+                }
+            }
+
+            Component
+            {
+                id: imgComponent
+                Maui.IconItem
+                {
+                    imageSource: model.thumbnail
+                    iconSource: model.icon
+                    fillMode: Image.PreserveAspectFit
+                }
+            }
+        }
 
         onClicked:
         {

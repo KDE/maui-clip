@@ -20,6 +20,7 @@
 #include "models/videosmodel.h"
 #include "models/tagsmodel.h"
 #include "models/youtubemodel.h"
+#include "utils/thumbnailer.h"
 
 #include "utils/clip.h"
 #include "../clip_version.h"
@@ -134,6 +135,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterType<TagsModel>(CLIP_URI, 1, 0, "Tags");
     qmlRegisterType<YouTubeModel>(CLIP_URI, 1, 0, "YouTube");
     qmlRegisterSingletonInstance<Clip>(CLIP_URI, 1, 0, "Clip", Clip::instance ());
+    engine.addImageProvider("preview", new Thumbnailer());
 
 #ifdef MPV_AVAILABLE
     qRegisterMetaType<TracksModel*>();

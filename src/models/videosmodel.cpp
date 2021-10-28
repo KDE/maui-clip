@@ -5,6 +5,14 @@
 #include <MauiKit/FileBrowsing/fmstatic.h>
 #include <MauiKit/FileBrowsing/fileloader.h>
 
+static FMH::MODEL videoData(const QUrl &url)
+{
+    FMH::MODEL model;
+    model= FMStatic::getFileInfoModel(url);
+    model.insert(FMH::MODEL_KEY::PREVIEW, "image://preview/"+url.toString());
+    return model;
+}
+
 VideosModel::VideosModel(QObject *parent) : MauiList(parent)
   , m_fileLoader(new FMH::FileLoader(this))
   , m_watcher (new QFileSystemWatcher(this))
@@ -14,6 +22,7 @@ VideosModel::VideosModel(QObject *parent) : MauiList(parent)
 {
     qDebug()<< "CREATING GALLERY LIST";
 
+    m_fileLoader->informer = &videoData;
     connect(m_fileLoader, &FMH::FileLoader::finished,[this](FMH::MODEL_LIST items)
     {
         qDebug() << "Items finished" << items.size();

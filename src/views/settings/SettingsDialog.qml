@@ -132,7 +132,7 @@ Maui.SettingsDialog
     {
         title: i18n("Playback")
         description: i18n("Configure the player settings.")
-
+        enabled: Clip.Clip.mpvAvailable
         Maui.SettingTemplate
         {
             label1.text: i18n("Hardware Decoding")
@@ -151,6 +151,7 @@ Maui.SettingsDialog
     {
         title: i18n("Audio")
         description: i18n("Configure the player audio behaviour.")
+        enabled: Clip.Clip.mpvAvailable
 
         Maui.SettingTemplate
         {
@@ -171,6 +172,7 @@ Maui.SettingsDialog
     {
         title: i18n("Subtitles")
         description: i18n("Configure the app UI.")
+        enabled: Clip.Clip.mpvAvailable
 
         Maui.SettingTemplate
         {

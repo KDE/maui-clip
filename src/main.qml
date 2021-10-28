@@ -225,7 +225,7 @@ Maui.ApplicationWindow
             {
                 anchors.fill: parent
                 asynchronous: true
-                active: !control.stopped
+                active: !player.stopped
 
                 sourceComponent: RowLayout
                 {
