@@ -13,6 +13,7 @@ Clip.Video
 {
     id: control
     url: currentVideo.url
+    focus: true
 
     property alias player : control
 
@@ -21,13 +22,11 @@ Clip.Video
 
     Keys.enabled: true
     Keys.onSpacePressed: player.playbackState === MediaPlayer.PlayingState ? player.pause() : player.play()
-    Keys.onLeftPressed: player.seek(player.position - 50)
-    Keys.onRightPressed: player.seek(player.position + 50)
+    Keys.onLeftPressed: player.seek(player.position - 500)
+    Keys.onRightPressed: player.seek(player.position + 500)
 
     Kirigami.Theme.inherit: false
     Kirigami.Theme.backgroundColor: "#333"
     Kirigami.Theme.textColor: "#fafafa"
-
-
 }
 

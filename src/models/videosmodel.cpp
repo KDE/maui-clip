@@ -147,7 +147,7 @@ void VideosModel::scanTags(const QList<QUrl> & urls, const int & limit)
         {
             const auto url = QUrl(item.toMap ().value ("url").toString());
             if(FMH::fileExists(url))
-                res << FMStatic::getFileInfoModel(url);
+                res << videoData(url);
         }
     }
 

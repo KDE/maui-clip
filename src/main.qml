@@ -201,13 +201,110 @@ Maui.ApplicationWindow
         id: _stackView
         anchors.fill: parent
 
-        initialItem: Maui.Page
+        initialItem: Component
         {
+            id: _appViewsComponent
+
+            Maui.AppViews
+            {
+                id: _appViews
+                anchors.fill: parent
+                maxViews: 4
+                floatingFooter: true
+                flickable: _appViews.currentItem.item.flickable
+                showCSDControls: true
+
+                altHeader: Kirigami.Settings.isMobile
+                headBar.rightContent: ToolButton
+                {
+                    text: i18n("Open")
+                    display: isWide ? ToolButton.TextBesideIcon : ToolButton.IconOnly
+                    icon.name: "folder-open"
+                    onClicked: root.openFileDialog()
+                }
+
+                headBar.leftContent: Maui.ToolButtonMenu
+                {
+                    icon.name: "application-menu"
+
+                    MenuItem
+                    {
+                        enabled: Clip.Cip.mpvAvailable
+                        text: i18n("Open URL")
+                        icon.name: "filename-space-amarok"
+
+                        onTriggered:
+                        {
+                            _openUrlDialog.open()
+                        }
+                    }
+
+                    MenuItem
+                    {
+                        text: i18n("Settings")
+                        icon.name: "settings-configure"
+
+                        onTriggered:
+                        {
+                            dialogLoader.sourceComponent = _settingsDialogComponent
+                            dialog.open()
+                        }
+                    }
+
+                    MenuItem
+                    {
+                        text: i18n("About")
+                        icon.name: "documentinfo"
+                        onTriggered: root.about()
+                    }
+                }
+
+                Maui.AppViewLoader
+                {
+                    Maui.AppView.title: i18n("Collection")
+                    Maui.AppView.iconName: "folder-videos"
+                    CollectionView {}
+                }
+
+                Maui.AppViewLoader
+                {
+                    Maui.AppView.title: i18n("Tags")
+                    Maui.AppView.iconName: "tag"
+                    TagsView {}
+                }
+
+                //            YouTubeView
+                //            {
+                //                id: _youtubeView
+                //                Maui.AppView.title: i18n("Online")
+                //                Maui.AppView.iconName: "folder-cloud"
+                //            }
+
+                footer: SelectionBar
+                {
+                    id: selectionBar
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    width: Math.min(parent.width-(Maui.Style.space.medium*2), implicitWidth)
+                    padding: Maui.Style.space.big
+                    maxListHeight: _appViews.height - Maui.Style.space.medium
+                }
+            }
+
+            //    footBar.visible: player.video.playbackState !== MediaPlayer.StoppedState
+        }
+
+
+        Maui.Page
+        {
+            id: _playerPage
+            anchors.fill: parent
+//            visible: StackView.status === StackView.Active
             Maui.AppView.title: i18n("Player")
             Maui.AppView.iconName: "media-playback-start"
             headBar.visible: !_playerHolderLoader.active
 
             showCSDControls: true
+
 
             PlayerView
             {
@@ -276,7 +373,7 @@ Maui.ApplicationWindow
                         Action
                         {
                             text: "Collection"
-                            onTriggered: _stackView.push(_appViewsComponent)
+                            onTriggered: _stackView.pop()
                         }
 
                     ]
@@ -287,14 +384,7 @@ Maui.ApplicationWindow
             {
                 text: i18n("Collection")
                 icon.name: "go-previous"
-                onClicked: _stackView.push(_appViewsComponent)
-            }
-
-            headBar.rightContent: ToolButton
-            {
-                text: i18n("Open")
-                icon.name: "folder-open"
-                onClicked: root.openFileDialog()
+                onClicked: _stackView.pop()
             }
 
             footerColumn: Loader
@@ -449,102 +539,12 @@ Maui.ApplicationWindow
 
         }
 
-        Component
-        {
-            id: _appViewsComponent
-
-            Maui.AppViews
-            {
-                id: _appViews
-                anchors.fill: parent
-                maxViews: 4
-                floatingFooter: true
-                flickable: _appViews.currentItem.item.flickable
-                showCSDControls: true
-
-                altHeader: Kirigami.Settings.isMobile
-
-                headBar.leftContent: Maui.ToolButtonMenu
-                {
-                    icon.name: "application-menu"
-
-                    MenuItem
-                    {
-                        enabled: Clip.Cip.mpvAvailable
-                        text: i18n("Open URL")
-                        icon.name: "filename-space-amarok"
-
-                        onTriggered:
-                        {
-                            _openUrlDialog.open()
-                        }
-                    }
-
-                    MenuItem
-                    {
-                        text: i18n("Settings")
-                        icon.name: "settings-configure"
-
-                        onTriggered:
-                        {
-                            dialogLoader.sourceComponent = _settingsDialogComponent
-                            dialog.open()
-                        }
-                    }
-
-                    MenuItem
-                    {
-                        text: i18n("About")
-                        icon.name: "documentinfo"
-                        onTriggered: root.about()
-                    }
-                }
-
-                headBar.farLeftContent: ToolButton
-                {
-                    icon.name: "go-previous"
-                    onClicked: _stackView.pop()
-                }
-
-                Maui.AppViewLoader
-                {
-                    Maui.AppView.title: i18n("Collection")
-                    Maui.AppView.iconName: "folder-videos"
-                    CollectionView {}
-                }
-
-                Maui.AppViewLoader
-                {
-                    Maui.AppView.title: i18n("Tags")
-                    Maui.AppView.iconName: "tag"
-                    TagsView {}
-                }
-
-                //            YouTubeView
-                //            {
-                //                id: _youtubeView
-                //                Maui.AppView.title: i18n("Online")
-                //                Maui.AppView.iconName: "folder-cloud"
-                //            }
-
-                footer: SelectionBar
-                {
-                    id: selectionBar
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    width: Math.min(parent.width-(Maui.Style.space.medium*2), implicitWidth)
-                    padding: Maui.Style.space.big
-                    maxListHeight: _appViews.height - Maui.Style.space.medium
-                }
-            }
-
-            //    footBar.visible: player.video.playbackState !== MediaPlayer.StoppedState
-        }
     }
 
     Loader
     {
         visible: active
-        active:_stackView.depth === 2 && !_playerView.player.stopped
+        active:_stackView.depth === 1 && !_playerView.player.stopped
         asynchronous: true
         sourceComponent: FloatingVideo {}
     }
@@ -603,10 +603,9 @@ Maui.ApplicationWindow
             _playerView.currentVideoIndex = index
             _playerView.currentVideo = _playlist.model.get(index)
 
-            if(Kirigami.Settings.isMobile)
-            {
-                _stackView.pop()
-            }
+
+                _stackView.push(_playerPage)
+
         }
     }
 

@@ -47,7 +47,6 @@ void TagsModel::setList()
     emit countChanged();
 }
 
-
 FMH::MODEL_LIST TagsModel::tags()
 {
     FMH::MODEL_LIST res;

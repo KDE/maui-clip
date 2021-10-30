@@ -79,7 +79,7 @@ Maui.ContextualMenu
         onTriggered:
         {
             if(Kirigami.Settings.isMobile)
-                selectionMode = true
+                root.selectionMode = true
 
             selectionBar.insert(model.get(index))
         }

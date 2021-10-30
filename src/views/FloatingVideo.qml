@@ -12,8 +12,8 @@ Item
     Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
 
 
-    height: diskBg.height
-    width: diskBg.width
+    implicitHeight: diskBg.height
+    implicitWidth: diskBg.width
 
     x: root.footer.x + Maui.Style.space.medium
     y: parent.height - height - Maui.Style.space.medium
@@ -38,9 +38,7 @@ Item
 
         drag.minimumY: 0
         drag.maximumY: root.height - control.height
-        onClicked: _stackView.pop()
-        //        onDoubleClicked: toggleFocusView()
-
+        onClicked: _stackView.push(_playerPage)
 
         ShaderEffectSource
         {
@@ -68,66 +66,50 @@ Item
     }
 
     Slider
-           {
-               id: _slider
-               padding: 0
-               height: Maui.Style.iconSizes.small
-               anchors.left: parent.left
-               anchors.right: parent.right
-               anchors.bottom: parent.bottom
-               orientation: Qt.Horizontal
-               from: 0
-               to: player.video.duration
-               value: player.video.position
-
-               onMoved: player.video.seek( _slider.value )
-
-               //            onToChanged: value = player.video.position
-
-               spacing: 0
-               focus: true
-
-               background: Rectangle
-               {
-                   implicitWidth: _slider.width
-                   implicitHeight: _slider.height
-                   width: _slider.availableWidth
-                   height: implicitHeight
-                   color: "transparent"
-                   opacity: 1
-
-                   Rectangle
-                   {
-                       width: _slider.visualPosition * parent.width
-                       height: _slider.height
-                       color: Kirigami.Theme.highlightColor
-                   }
-               }
-
-               handle: Rectangle
-               {
-                   x: _slider.leftPadding + _slider.visualPosition
-                      * (_slider.availableWidth - width)
-                   y: 0
-                   implicitWidth: Maui.Style.iconSizes.medium
-                   implicitHeight: _slider.height
-                   color: _slider.pressed ? Qt.lighter(Kirigami.Theme.highlightColor, 1.2) : "transparent"
-               }
-           }
-
-
-    layer.enabled: true
-    layer.effect: OpacityMask
     {
-        maskSource: Item
+        id: _slider
+        padding: 0
+        height: Maui.Style.iconSizes.small
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        orientation: Qt.Horizontal
+        from: 0
+        to: player.video.duration
+        value: player.video.position
+
+        onMoved: player.video.seek( _slider.value )
+
+        //            onToChanged: value = player.video.position
+
+        spacing: 0
+        focus: true
+
+        background: Rectangle
         {
-            width: control.width
-            height: control.height
+            implicitWidth: _slider.width
+            implicitHeight: _slider.height
+            width: _slider.availableWidth
+            height: implicitHeight
+            color: "transparent"
+            opacity: 1
+
             Rectangle
             {
-                anchors.fill: parent
-                radius: Maui.Style.radiusV
+                width: _slider.visualPosition * parent.width
+                height: _slider.height
+                color: Kirigami.Theme.highlightColor
             }
+        }
+
+        handle: Rectangle
+        {
+            x: _slider.leftPadding + _slider.visualPosition
+               * (_slider.availableWidth - width)
+            y: 0
+            implicitWidth: Maui.Style.iconSizes.medium
+            implicitHeight: _slider.height
+            color: _slider.pressed ? Qt.lighter(Kirigami.Theme.highlightColor, 1.2) : "transparent"
         }
     }
 }
