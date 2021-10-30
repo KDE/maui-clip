@@ -2,17 +2,29 @@
 #define THUMBNAILER_H
 
 #include <QQuickImageProvider>
-#include <QAbstractVideoSurface>
-#include <QImage>
+#include <QCache>
+
+#include <utils/ffmpegthumbs/videothumbnailer.h>
+#include <utils/ffmpegthumbs/filmstripfilter.h>
 
 class Surface : public QObject
 {
     Q_OBJECT
+
+    typedef QCache<QString, QImage> ThumbCache;
+
 public:
     Surface(QObject *p = nullptr);
-void request();
+    void request(const QString &path, int width, int);
+
+private:
+    ffmpegthumbnailer::VideoThumbnailer m_Thumbnailer;
+    ffmpegthumbnailer::FilmStripFilter  m_FilmStrip;
+    ThumbCache m_thumbCache;
+
 signals:
     void previewReady(QImage image);
+    void error(QString error);
 };
 
 class AsyncImageResponse : public QQuickImageResponse

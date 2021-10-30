@@ -20,6 +20,9 @@ set(CMAKE_AUTORCC ON)
 set(REQUIRED_QT_VERSION 5.14.0)
 set(REQUIRED_KF5_VERSION 5.60)
 
+# Certain versions of FFMPEG need this to be defined
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D __STDC_CONSTANT_MACROS")
+
 if(ANDROID)
     set(ANDROID_PACKAGE_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/android_files)
     set(ANDROID_ABIS "armeabi-v7a")
@@ -33,9 +36,12 @@ set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake" ${ECM_MODULE_PATH})
 find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS Qml Quick Multimedia)
 find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED COMPONENTS I18n CoreAddons)
 
+find_package(FFmpeg COMPONENTS AVCODEC AVFORMAT SWSCALE)
+find_package(Taglib REQUIRED)
+
 if(ANDROID)
     find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS AndroidExtras QuickControls2)
-elseif(UNIX)
+else()
     find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED COMPONENTS Widgets)
 endif()
 

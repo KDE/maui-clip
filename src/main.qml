@@ -468,16 +468,17 @@ Maui.ApplicationWindow
                 {
                     icon.name: "application-menu"
 
-                    //            MenuItem
-                    //            {
-                    //                text: i18n("Open URL")
-                    //                icon.name: "filename-space-amarok"
+                    MenuItem
+                    {
+                        enabled: Clip.Cip.mpvAvailable
+                        text: i18n("Open URL")
+                        icon.name: "filename-space-amarok"
 
-                    //                onTriggered:
-                    //                {
-                    //                    _openUrlDialog.open()
-                    //                }
-                    //            }
+                        onTriggered:
+                        {
+                            _openUrlDialog.open()
+                        }
+                    }
 
                     MenuItem
                     {

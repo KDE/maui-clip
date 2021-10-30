@@ -1,4 +1,8 @@
 
+include_directories(
+    ${FFMPEG_INCLUDE_DIRS}
+    )
+
 if(MPV_AVAILABLE)
     set(mpvSRCS
         backends/mpv/mpvobject.cpp
@@ -16,18 +20,16 @@ set(clipSRCS
     models/playlistmodel.cpp
     models/youtubemodel.cpp
     utils/clip.cpp
-    utils/thumbnailer.cpp
+
     controllers/youtube.cpp
     )
 
-set(clipHDRS
-    models/videosmodel.h
-    models/tagsmodel.h
-    models/playlistmodel.h
-    models/youtubemodel.h
-    utils/clip.h
-    utils/thumbnailer.h
-    controllers/youtube.h
+set(thumbnailerSRCS
+    utils/thumbnailer.cpp
+    utils/ffmpegthumbs/filmstripfilter.cpp
+    utils/ffmpegthumbs/moviedecoder.cpp
+    utils/ffmpegthumbs/imagewriter.cpp
+    utils/ffmpegthumbs/videothumbnailer.cpp
     )
 
 if(QUICK_COMPILER)
@@ -36,18 +38,16 @@ else()
     qt5_add_resources(clip_QML_QRC qml.qrc)
 endif()
 
-
 if(ANDROID)
     add_library(${PROJECT_NAME} SHARED
         ${clipSRCS}
-        ${clipHDRS}
+        ${thumbnailerSRCS}
         ${clip_QML_QRC}
-        ${mpvSRCS}
         )
 else()
     add_executable(${PROJECT_NAME}
         ${clipSRCS}
-        ${clipHDRS}
+        ${thumbnailerSRCS}
         ${clip_QML_QRC}
         ${mpvSRCS}
         )
@@ -55,7 +55,7 @@ endif()
 
 if (ANDROID)
     target_link_libraries(${PROJECT_NAME} Qt5::AndroidExtras Qt5::QuickControls2)
-elseif(UNIX)
+else()
     target_link_libraries(${PROJECT_NAME} Qt5::Widgets)
 endif()
 
@@ -70,7 +70,7 @@ if(MPV_AVAILABLE)
     target_compile_definitions(${PROJECT_NAME} PUBLIC MPV_AVAILABLE)
 endif()
 
-target_link_libraries(${PROJECT_NAME} MauiKit MauiKit::FileBrowsing Qt5::Quick Qt5::Qml Qt5::Multimedia KF5::CoreAddons KF5::I18n)
+target_link_libraries(${PROJECT_NAME} MauiKit MauiKit::FileBrowsing Qt5::Quick Qt5::Qml Qt5::Multimedia KF5::CoreAddons KF5::I18n  ${AVUTIL_LIBRARIES} ${AVFILTER_LIBRARIES} ${AVFORMAT_LIBRARIES} ${AVCODEC_LIBRARIES} ${SWSCALE_LIBRARIES} Taglib::Taglib)
 
 if(UNIX AND NOT APPLE AND NOT ANDROID)
     install (TARGETS ${PROJECT_NAME} ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

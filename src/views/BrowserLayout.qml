@@ -230,7 +230,7 @@ Maui.AltBrowser
                 id: imgComponent
                 Maui.IconItem
                 {
-                    imageSource: model.thumbnail
+                    imageSource: model.preview
                     iconSource: model.icon
                     fillMode: Image.PreserveAspectFit
                 }
