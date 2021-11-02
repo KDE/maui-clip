@@ -20,7 +20,7 @@ set(clipSRCS
     models/playlistmodel.cpp
     models/youtubemodel.cpp
     utils/clip.cpp
-
+    controllers/lockmanager.cpp
     controllers/youtube.cpp
     )
 
@@ -39,12 +39,21 @@ else()
 endif()
 
 if(ANDROID)
+    list(APPEND clipSRCS
+        controllers/android/androidlockbackend.cpp
+        )
+
     add_library(${PROJECT_NAME} SHARED
         ${clipSRCS}
         ${thumbnailerSRCS}
         ${clip_QML_QRC}
         )
 else()
+    list(APPEND clipSRCS
+          controllers/linux/solidlockbackend.cpp
+       )
+       qt_add_dbus_interface(clipSRCS controllers/linux/org.freedesktop.ScreenSaver.xml screensaverdbusinterface)
+
     add_executable(${PROJECT_NAME}
         ${clipSRCS}
         ${thumbnailerSRCS}
@@ -56,6 +65,7 @@ endif()
 if (ANDROID)
     target_link_libraries(${PROJECT_NAME} Qt5::AndroidExtras Qt5::QuickControls2)
 else()
+    target_link_libraries(${PROJECT_NAME} Qt::DBus)
     target_link_libraries(${PROJECT_NAME} Qt5::Widgets)
 endif()
 
@@ -70,7 +80,7 @@ if(MPV_AVAILABLE)
     target_compile_definitions(${PROJECT_NAME} PUBLIC MPV_AVAILABLE)
 endif()
 
-target_link_libraries(${PROJECT_NAME} MauiKit MauiKit::FileBrowsing Qt5::Quick Qt5::Qml Qt5::Multimedia KF5::CoreAddons KF5::I18n  ${AVUTIL_LIBRARIES} ${AVFILTER_LIBRARIES} ${AVFORMAT_LIBRARIES} ${AVCODEC_LIBRARIES} ${SWSCALE_LIBRARIES} Taglib::Taglib)
+target_link_libraries(${PROJECT_NAME} MauiKit MauiKit::FileBrowsing Qt5::Quick Qt5::Qml Qt5::Multimedia KF5::CoreAddons KF5::I18n ${AVUTIL_LIBRARIES} ${AVFILTER_LIBRARIES} ${AVFORMAT_LIBRARIES} ${AVCODEC_LIBRARIES} ${SWSCALE_LIBRARIES} Taglib::Taglib)
 
 if(UNIX AND NOT APPLE AND NOT ANDROID)
     install (TARGETS ${PROJECT_NAME} ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

@@ -28,5 +28,26 @@ Clip.Video
     Kirigami.Theme.inherit: false
     Kirigami.Theme.backgroundColor: "#333"
     Kirigami.Theme.textColor: "#fafafa"
+
+    Connections
+    {
+        target: control.player
+
+
+        function onPlaybackStateChanged()
+        {
+
+            console.log("Playbakc state changed", control.player.playing, control.player.stopped)
+
+            if(control.player.playing)
+            {
+                Clip.LockManager.setInhibitionOn(i18n("Playing mode"));
+
+            }else
+            {
+                Clip.LockManager.setInhibitionOff();
+            }
+        }
+    }
 }
 

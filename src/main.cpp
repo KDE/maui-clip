@@ -2,13 +2,14 @@
 
 #include <QDate>
 #include <QDirIterator>
-
+#include <QQmlContext>
 #include <QFileInfo>
 #include <QIcon>
 
 #include <QQmlApplicationEngine>
 
 #include <KI18n/KLocalizedString>
+#include "controllers/lockmanager.h"
 
 #include <MauiKit/Core/mauiapp.h>
 #include <MauiKit/FileBrowsing/fmstatic.h>
@@ -90,6 +91,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
     app.setOrganizationName("Maui");
     app.setWindowIcon(QIcon(":/img/assets/clip.svg"));
+    QGuiApplication::setDesktopFileName(QStringLiteral("org.kde.clip"));
 
     MauiApp::instance()->setIconName("qrc:/img/assets/clip.svg");
 
@@ -144,6 +146,10 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 #else
     qmlRegisterType(QUrl("qrc:/views/player/Player.qml"), CLIP_URI, 1, 0, "Video");
 #endif
+
+    qmlRegisterSingletonType<LockManager>(CLIP_URI, 1, 0, "LockManager", [](QQmlEngine*, QJSEngine*) -> QObject* {
+            return new LockManager;
+        });
 
     engine.load(url);
 
