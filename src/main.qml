@@ -479,9 +479,7 @@ Maui.ApplicationWindow
             }
 
             footBar.rightContent: Loader
-            {
-                active: !Kirigami.Settings.isMobile
-                visible: active
+            {                
                 asynchronous: true
                 sourceComponent: ToolButton
                 {
