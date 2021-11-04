@@ -168,98 +168,96 @@ Maui.SettingsDialog
         }
     }
 
-    Maui.SettingsSection
-    {
-        title: i18n("Subtitles")
-        description: i18n("Configure the app UI.")
-        enabled: Clip.Clip.mpvAvailable
+//    Maui.SettingsSection
+//    {
+//        title: i18n("Subtitles")
+//        description: i18n("Configure the app UI.")
+//        enabled: Clip.Clip.mpvAvailable
 
-        Maui.SettingTemplate
-        {
-            label1.text: i18n("Directory")
-            label2.text: i18n("Folder path containing the subtitle files.")
-            wide: false
+//        Maui.SettingTemplate
+//        {
+//            label1.text: i18n("Directory")
+//            label2.text: i18n("Folder path containing the subtitle files.")
+//            wide: false
 
-            Maui.TextField
-            {
-                Layout.fillWidth: true
-                text: settings.subtitlesPath
-                onAccepted: settins.subtitlesPath = text
+//            Maui.TextField
+//            {
+//                Layout.fillWidth: true
+//                text: settings.subtitlesPath
+//                onAccepted: settins.subtitlesPath = text
 
-                Action
-                {
-                    icon.name: "folder-open"
-                    onTriggered:
-                    {
-                        dialogLoader.sourceComponent = fmDialogComponent
-                        dialog.mode = dialog.modes.OPEN
-                        dialog.settings.onlyDirs = true
-                        dialog.callback = function(paths)
-                        {
-                            settings.subtitlesPath = paths[0]
-                        }
+//                Action
+//                {
+//                    icon.name: "folder-open"
+//                    onTriggered:
+//                    {
+//                        dialogLoader.sourceComponent = fmDialogComponent
+//                        dialog.mode = dialog.modes.OPEN
+//                        dialog.settings.onlyDirs = true
+//                        dialog.callback = function(paths)
+//                        {
+//                            settings.subtitlesPath = paths[0]
+//                        }
 
-                        dialog.open()
-                    }
-                }
-            }
-        }
+//                        dialog.open()
+//                    }
+//                }
+//            }
+//        }
 
-        Maui.SettingTemplate
-        {
-            label1.text: i18n("Font Family")
+//        Maui.SettingTemplate
+//        {
+//            label1.text: i18n("Font Family")
 
-            Maui.ComboBox
-            {
-                Layout.fillWidth: true
-                model: Qt.fontFamilies()
-                Component.onCompleted: currentIndex = find(settings.font.family, Qt.MatchExactly)
-                onActivated: settings.font.family = currentText
-            }
-        }
+//            Maui.ComboBox
+//            {
+//                Layout.fillWidth: true
+//                model: Qt.fontFamilies()
+//                Component.onCompleted: currentIndex = find(settings.font.family, Qt.MatchExactly)
+//                onActivated: settings.font.family = currentText
+//            }
+//        }
 
-        Maui.SettingTemplate
-        {
-            label1.text: i18n("Font Size")
+//        Maui.SettingTemplate
+//        {
+//            label1.text: i18n("Font Size")
 
-            SpinBox
-            {
-                from: 0; to : 500
-                value: settings.font.pointSize
-                onValueChanged: settings.font.pointSize = value
-            }
-        }
+//            SpinBox
+//            {
+//                from: 0; to : 500
+//                value: settings.font.pointSize
+//                onValueChanged: settings.font.pointSize = value
+//            }
+//        }
+//    }
 
-    }
+//    Maui.SettingsSection
+//    {
+//        title: i18n("YouTube")
+//        description: i18n("Configure YouTube details.")
 
+//        Maui.SettingTemplate
+//        {
+//            label1.text: i18n("Key")
+//            label2.text: i18n("Personal key for limitless browsing.")
+//            wide: false
 
-    Maui.SettingsSection
-    {
-        title: i18n("YouTube")
-        description: i18n("Configure YouTube details.")
+//            Maui.TextField
+//            {
+//                Layout.fillWidth: true
+//                text: settings.youtubeKey
+//                onAccepted: settings.youtubeKey = text
+//            }
 
-        Maui.SettingTemplate
-        {
-            label1.text: i18n("Key")
-            label2.text: i18n("Personal key for limitless browsing.")
-            wide: false
+//            template.leftLabels.data: Label
+//            {
+//                Layout.fillWidth: true
+//                text: i18n("<a href='https://console.developers.google.com/apis/credentials'>Get your personal key.</a>")
 
-            Maui.TextField
-            {
-                Layout.fillWidth: true
-                text: settings.youtubeKey
-                onAccepted: settings.youtubeKey = text
-            }
-
-            template.leftLabels.data: Label
-            {
-                Layout.fillWidth: true
-                text: i18n("<a href='https://console.developers.google.com/apis/credentials'>Get your personal key.</a>")
-
-                onLinkActivated: Qt.openUrlExternally(link)
-            }
-        }
-    }
+//                onLinkActivated: Qt.openUrlExternally(link)
+//            }
+//        }
+//    }
 
     Maui.SettingsSection
     {
