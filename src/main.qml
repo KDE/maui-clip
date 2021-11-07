@@ -244,11 +244,7 @@ Maui.ApplicationWindow
                         text: i18n("Settings")
                         icon.name: "settings-configure"
 
-                        onTriggered:
-                        {
-                            dialogLoader.sourceComponent = _settingsDialogComponent
-                            dialog.open()
-                        }
+                        onTriggered: openSettingsDialog()
                     }
 
                     MenuItem
@@ -640,6 +636,12 @@ Maui.ApplicationWindow
         {
             Clip.Clip.openVideos(paths)
         };
+        dialog.open()
+    }
+
+    function openSettingsDialog()
+    {
+        dialogLoader.sourceComponent = _settingsDialogComponent
         dialog.open()
     }
 
