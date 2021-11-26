@@ -10,7 +10,7 @@
 
 #if defined(Q_OS_ANDROID)
 #include "android/androidlockbackend.h"
-#elif defined(Q_OS_LINUX)
+#elif (defined Q_OS_LINUX || defined Q_OS_FREEBSD)
 #include "linux/solidlockbackend.h"
 #endif
 
