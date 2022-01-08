@@ -26,6 +26,7 @@ Maui.ApplicationWindow
 
     title: _playerView.currentVideo.label
     headBar.visible: false
+    Maui.App.darkMode: settings.darkMode
 
     property bool selectionMode : false
 
@@ -67,6 +68,7 @@ Maui.ApplicationWindow
         property bool playerTagBar: true
         property string youtubeKey: "AIzaSyDMLmTSEN7i6psE2tHdaG6hy3ljWKXIYBk"
         property int youtubeQueryLimit : 50
+        property bool darkMode: true
     }
 
     Loader
@@ -554,13 +556,19 @@ Maui.ApplicationWindow
         }
     }
 
-    //    Component.onCompleted:
-    //    {
-    //        if(!_playerView.player.playing)
-    //        {
-    //            _stackView.push(_appViewsComponent)
-    //        }
-    //    }
+    Component.onCompleted:
+    {
+        setAndroidStatusBarColor()
+    }
+
+    function setAndroidStatusBarColor()
+    {
+        if(Maui.Handy.isAndroid)
+        {
+            Maui.Android.statusbarColor( Kirigami.Theme.backgroundColor, !Maui.App.darkMode)
+            Maui.Android.navBarColor(headBar.visible ? headBar.Kirigami.Theme.backgroundColor : Kirigami.Theme.backgroundColor, !Maui.App.darkMode)
+        }
+    }
 
     function playNext()
     {

@@ -64,6 +64,8 @@ Maui.AltBrowser
         enabled: _collectionList.count > 0
         Layout.fillWidth: true
         Layout.maximumWidth: 500
+        Layout.alignment: Qt.AlignCenter
+
         placeholderText: i18np("Search %1 video", "Search %1 videos", _collectionList.count)
         onAccepted: _collectionModel.filter = text
         onCleared: _collectionModel.filter = ""
