@@ -58,7 +58,7 @@ Maui.AltBrowser
         model: control.model
     }
 
-    headBar.middleContent: Maui.TextField
+    headBar.middleContent: Maui.SearchField
     {
         id: _searchField
         enabled: _collectionList.count > 0

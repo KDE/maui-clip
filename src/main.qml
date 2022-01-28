@@ -8,7 +8,7 @@ import Qt.labs.settings 1.0
 
 import org.kde.kirigami 2.8 as Kirigami
 
-import org.mauikit.controls 1.2 as Maui
+import org.mauikit.controls 1.3 as Maui
 import org.mauikit.filebrowsing 1.2 as FB
 
 import org.maui.clip 1.0 as Clip
@@ -295,7 +295,7 @@ Maui.ApplicationWindow
         {
             id: _playerPage
             anchors.fill: parent
-//            visible: StackView.status === StackView.Active
+            //            visible: StackView.status === StackView.Active
             Maui.AppView.title: i18n("Player")
             Maui.AppView.iconName: "media-playback-start"
             headBar.visible: !_playerHolderLoader.active
@@ -476,13 +476,59 @@ Maui.ApplicationWindow
             }
 
             footBar.rightContent: Loader
-            {                
+            {
                 asynchronous: true
-                sourceComponent: ToolButton
+                sourceComponent:  Maui.ToolButtonMenu
                 {
-                    icon.name: "view-fullscreen"
-                    onClicked: toggleFullscreen()
+                    z: control.z+999
+
+                    Maui.MenuItemActionRow
+                    {
+
+                        Action
+                        {
+                            icon.name: "edit-share"
+                        }
+
+                        Action
+                        {
+                            icon.name: "edit"
+                        }
+
+                        Action
+                        {
+                            icon.name: "view-fullscreen"
+                            onTriggered: toggleFullscreen()
+                        }
+                    }
+
+                    MenuSeparator{}
+
+
+                    MenuItem
+                    {
+
+                        text: "Corrections"
+
+                        onTriggered: control.editing = !control.editing
+                    }
+
+                    MenuItem
+                    {
+
+                        text: "Subtitles"
+                        onTriggered: _subtitlesDialog.open()
+
+                    }
+
+                    MenuItem
+                    {
+
+                        text: "Audio"
+                        onTriggered: _audioTracksDialog.open()
+                    }
                 }
+
             }
 
             footBar.farLeftContent:  Loader
@@ -506,6 +552,7 @@ Maui.ApplicationWindow
 
                 Maui.ToolActions
                 {
+                    Layout.alignment: Qt.AlignCenter
                     expanded: true
                     checkable: false
                     autoExclusive: false
@@ -605,7 +652,7 @@ Maui.ApplicationWindow
             _playerView.currentVideo = _playlist.model.get(index)
 
 
-                _stackView.push(_playerPage)
+            _stackView.push(_playerPage)
 
         }
     }

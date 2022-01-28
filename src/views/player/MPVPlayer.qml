@@ -61,43 +61,6 @@ MpvObject
         }
     }
 
-    Row
-    {
-        visible: !control.stopped
-        anchors.right: parent.right
-        anchors.bottom: parent.bottom
-
-
-        Maui.Badge
-        {
-            Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
-            Kirigami.Theme.inherit: false
-
-            text: "Corrections"
-
-            onClicked: control.editing = !control.editing
-
-        }
-
-        Maui.Badge
-        {
-            Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
-            Kirigami.Theme.inherit: false
-
-            text: "Subtitles"
-            onClicked: _subtitlesDialog.open()
-
-        }
-
-        Maui.Badge
-        {
-            Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
-            Kirigami.Theme.inherit: false
-
-            text: "Audio"
-            onClicked: _audioTracksDialog.open()
-        }
-    }
 }
 
 

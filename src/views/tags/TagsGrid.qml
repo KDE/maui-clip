@@ -30,9 +30,10 @@ Maui.AltBrowser
         restoreMode: Binding.RestoreBinding
     }
 
-    headBar.middleContent: Maui.TextField
+    headBar.middleContent: Maui.SearchField
     {
         Layout.fillWidth: true
+        Layout.alignment: Qt.AlignCenter
         Layout.maximumWidth: 500
         placeholderText: i18n("Filter")
     }

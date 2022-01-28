@@ -29,6 +29,8 @@ Clip.Video
     Kirigami.Theme.backgroundColor: "#333"
     Kirigami.Theme.textColor: "#fafafa"
 
+
+
     Connections
     {
         target: control.player
