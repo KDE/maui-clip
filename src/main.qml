@@ -484,6 +484,7 @@ Maui.ApplicationWindow
 
                     Maui.MenuItemActionRow
                     {
+                        icon.name: "overflow-menu"
 
                         Action
                         {

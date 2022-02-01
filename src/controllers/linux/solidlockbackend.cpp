@@ -24,6 +24,6 @@ void SolidLockBackend::setInhibitionOff()
 
 void SolidLockBackend::setInhibitionOn(const QString &explanation)
 {
-    m_cookie = m_iface->Inhibit(QStringLiteral("org.kde.itinerary"), explanation);
+    m_cookie = m_iface->Inhibit(QStringLiteral("org.kde.clip"), explanation);
 }
 
