@@ -34,7 +34,7 @@
 
 #define CLIP_URI "org.maui.clip"
 
-static const  QList<QUrl>  getFolderVideos(const QString &path)
+static const  QList<QUrl> getFolderVideos(const QString &path)
 {
     QList<QUrl> urls;
 
@@ -116,22 +116,30 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
     const QStringList args = parser.positionalArguments();
 
-    QList<QUrl> videos;
+    QPair<QString, QList<QUrl>> arguments;
+    arguments.first = "collection";
+
     if(!args.isEmpty())
-        videos = openFiles(args);
+    {
+        arguments.first = "viewer";
+        arguments.second = openFiles(args);
+    }
 
     QQmlApplicationEngine engine;
     const QUrl url(QStringLiteral("qrc:/main.qml"));
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
-                     &app, [url, args, &videos](QObject *obj, const QUrl &objUrl)
+                     &app, [url, &arguments](QObject *obj, const QUrl &objUrl)
     {
         if (!obj && url == objUrl)
             QCoreApplication::exit(-1);
 
-        if(!videos.isEmpty())
-            Clip::instance ()->openVideos(videos);
+        if(!arguments.second.isEmpty())
+            Clip::instance ()->openVideos(arguments.second);
 
     }, Qt::QueuedConnection);
+
+    engine.rootContext()->setContextProperty("initModule", arguments.first);
+    engine.rootContext()->setContextProperty("initData", QUrl::toStringList(arguments.second));
 
     qmlRegisterType<VideosModel>(CLIP_URI, 1, 0, "Videos");
     qmlRegisterType<TagsModel>(CLIP_URI, 1, 0, "Tags");

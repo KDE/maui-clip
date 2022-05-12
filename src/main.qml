@@ -198,12 +198,13 @@ Maui.ApplicationWindow
         }
     }
 
-    StackView
+    Maui.StackView
     {
         id: _stackView
         anchors.fill: parent
+        initialItem: initModule === "viewer" ? _playerPage : _appViewsComponent
 
-        initialItem: Component
+        Component
         {
             id: _appViewsComponent
 
@@ -290,18 +291,15 @@ Maui.ApplicationWindow
             //    footBar.visible: player.video.playbackState !== MediaPlayer.StoppedState
         }
 
-
         Maui.Page
         {
             id: _playerPage
             anchors.fill: parent
-            //            visible: StackView.status === StackView.Active
-            Maui.AppView.title: i18n("Player")
-            Maui.AppView.iconName: "media-playback-start"
+            visible: StackView.status === StackView.Active
+
             headBar.visible: !_playerHolderLoader.active
 
             showCSDControls: true
-
 
             PlayerView
             {
@@ -319,7 +317,7 @@ Maui.ApplicationWindow
             {
                 anchors.fill: parent
                 asynchronous: true
-                active: !player.stopped
+//                active: !player.stopped
 
                 sourceComponent: RowLayout
                 {
@@ -370,9 +368,8 @@ Maui.ApplicationWindow
                         Action
                         {
                             text: "Collection"
-                            onTriggered: _stackView.pop()
+                            onTriggered: toggleViewer()
                         }
-
                     ]
                 }
             }
@@ -381,7 +378,7 @@ Maui.ApplicationWindow
             {
                 text: i18n("Collection")
                 icon.name: "go-previous"
-                onClicked: _stackView.pop()
+                onClicked: toggleViewer()
             }
 
             footerColumn: Loader
@@ -475,17 +472,16 @@ Maui.ApplicationWindow
                 }
             }
 
-            footBar.rightContent: Loader
+            headBar.rightContent: Loader
             {
+                active: Clip.Clip.mpvAvailable
                 asynchronous: true
                 sourceComponent:  Maui.ToolButtonMenu
                 {
-                    z: control.z+999
+                    icon.name: "overflow-menu"
 
                     Maui.MenuItemActionRow
                     {
-                        icon.name: "overflow-menu"
-
                         Action
                         {
                             icon.name: "edit-share"
@@ -505,34 +501,28 @@ Maui.ApplicationWindow
 
                     MenuSeparator{}
 
-
                     MenuItem
                     {
-
                         text: "Corrections"
-
                         onTriggered: control.editing = !control.editing
                     }
 
                     MenuItem
                     {
-
                         text: "Subtitles"
                         onTriggered: _subtitlesDialog.open()
-
                     }
 
                     MenuItem
                     {
-
                         text: "Audio"
                         onTriggered: _audioTracksDialog.open()
                     }
                 }
-
             }
 
-            footBar.farLeftContent:  Loader
+            footBar.visible: root.sideBar.enabled
+            footBar.farLeftContent: Loader
             {
                 active: root.sideBar.enabled
                 visible: active
@@ -560,34 +550,32 @@ Maui.ApplicationWindow
 
                     Action
                     {
+                        enabled: root.sideBar.enabled
                         icon.name: "media-skip-backward"
                         onTriggered: playPrevious()
                     }
 
                     Action
                     {
-                        icon.width: Maui.Style.iconSizes.big
-                        icon.height: Maui.Style.iconSizes.big
                         icon.name: player.playing ? "media-playback-pause" : "media-playback-start"
                         onTriggered: player.paused ? player.video.play() : player.video.pause()
                     }
 
                     Action
                     {
+                        enabled: root.sideBar.enabled
                         icon.name: "media-skip-forward"
                         onTriggered: playNext()
                     }
                 }
             ]
-
         }
-
     }
 
     Loader
     {
         visible: active
-        active:_stackView.depth === 1 && !_playerView.player.stopped
+        active: !_playerPage.visible && !_playerView.player.stopped
         asynchronous: true
         sourceComponent: FloatingVideo {}
     }
@@ -616,6 +604,27 @@ Maui.ApplicationWindow
             Maui.Android.statusbarColor( Kirigami.Theme.backgroundColor, !Maui.App.darkMode)
             Maui.Android.navBarColor(headBar.visible ? headBar.Kirigami.Theme.backgroundColor : Kirigami.Theme.backgroundColor, !Maui.App.darkMode)
         }
+    }
+
+    function toggleViewer()
+    {
+        if(_playerPage.visible)
+        {
+            if(_stackView.depth === 1)
+            {
+                _stackView.replace(_playerPage, _appViewsComponent)
+
+            }else
+            {
+                _stackView.pop()
+            }
+
+        }else
+        {
+            _stackView.push(_playerPage)
+        }
+
+        _stackView.currentItem.forceActiveFocus()
     }
 
     function playNext()
@@ -652,9 +661,10 @@ Maui.ApplicationWindow
             _playerView.currentVideoIndex = index
             _playerView.currentVideo = _playlist.model.get(index)
 
-
-            _stackView.push(_playerPage)
-
+            if(!_playerView.visible)
+            {
+                toggleViewer()
+            }
         }
     }
 

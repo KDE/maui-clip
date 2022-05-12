@@ -11,7 +11,7 @@ Clip::Clip(QObject *parent) : QObject(parent)
 #endif
 }
 
-bool Clip::available() const
+bool Clip::mpvAvailable() const
 {
 #ifdef MPV_AVAILABLE
     return true;
