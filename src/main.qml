@@ -26,7 +26,7 @@ Maui.ApplicationWindow
 
     title: _playerView.currentVideo.label
     headBar.visible: false
-    Maui.App.darkMode: settings.darkMode
+    Maui.App.darkMode: _playerPage.visible ? true :  settings.darkMode
 
     property bool selectionMode : false
 
