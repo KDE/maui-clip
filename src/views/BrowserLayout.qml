@@ -3,7 +3,6 @@ import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.3
 
 import org.mauikit.controls 1.3 as Maui
-import org.kde.kirigami 2.8 as Kirigami
 
 import org.maui.clip 1.0 as Clip
 import QtMultimedia 5.8
@@ -26,7 +25,7 @@ Maui.AltBrowser
     holder.visible: _collectionList.count === 0
     holder.emojiSize: Maui.Style.iconSizes.huge
 
-    viewType: control.width < Kirigami.Units.gridUnit * 30 ? Maui.AltBrowser.ViewType.List : Maui.AltBrowser.ViewType.Grid
+    viewType: control.width < Maui.Style.units.gridUnit * 30 ? Maui.AltBrowser.ViewType.List : Maui.AltBrowser.ViewType.Grid
 
     Connections
     {
@@ -209,7 +208,7 @@ Maui.AltBrowser
 
         template.iconComponent: Loader
         {
-            sourceComponent: preview && !Kirigami.Settings.isMobile ? videoComponent : imgComponent
+            sourceComponent: preview && !Maui.Handy.isMobile ? videoComponent : imgComponent
 
             Component
             {

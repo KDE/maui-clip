@@ -1,16 +1,16 @@
-import QtQuick 2.10
-import QtQuick.Controls 2.10
+import QtQuick 2.15
+import QtQuick.Controls 2.15
+
 import QtQuick.Layouts 1.3
 import QtGraphicalEffects 1.0
-import org.kde.kirigami 2.7 as Kirigami
-import org.mauikit.controls 1.0 as Maui
+
+import org.mauikit.controls 1.3 as Maui
 
 Item
 {
     id: control
-    Kirigami.Theme.inherit: false
-    Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
-
+    Maui.Theme.inherit: false
+    Maui.Theme.colorSet: Maui.Theme.Complementary
 
     implicitHeight: diskBg.height
     implicitWidth: diskBg.width
@@ -22,7 +22,7 @@ Item
     z: parent.z + 1
     ToolTip.delay: 1000
     ToolTip.timeout: 5000
-    ToolTip.visible: _mouseArea.containsMouse && !Kirigami.Settings.isMobile
+    ToolTip.visible: _mouseArea.containsMouse && !Maui.Handy.isMobile
     ToolTip.text: root.title
 
     MouseArea
@@ -98,7 +98,7 @@ Item
             {
                 width: _slider.visualPosition * parent.width
                 height: _slider.height
-                color: Kirigami.Theme.highlightColor
+                color: Maui.Theme.highlightColor
             }
         }
 
@@ -109,7 +109,7 @@ Item
             y: 0
             implicitWidth: Maui.Style.iconSizes.medium
             implicitHeight: _slider.height
-            color: _slider.pressed ? Qt.lighter(Kirigami.Theme.highlightColor, 1.2) : "transparent"
+            color: _slider.pressed ? Qt.lighter(Maui.Theme.highlightColor, 1.2) : "transparent"
         }
     }
 }

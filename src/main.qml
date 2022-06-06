@@ -6,8 +6,6 @@ import QtMultimedia 5.8
 
 import Qt.labs.settings 1.0
 
-import org.kde.kirigami 2.8 as Kirigami
-
 import org.mauikit.controls 1.3 as Maui
 import org.mauikit.filebrowsing 1.2 as FB
 
@@ -26,7 +24,7 @@ Maui.ApplicationWindow
 
     title: _playerView.currentVideo.label
     headBar.visible: false
-    Maui.App.darkMode: _playerPage.visible ? true :  settings.darkMode
+//    Maui.App.darkode: _playerPage.visible ? true :  settings.darkMode
 
     property bool selectionMode : false
 
@@ -39,7 +37,7 @@ Maui.ApplicationWindow
         view: root
         geometry: Qt.rect(root.x, root.y, root.width, root.height)
         windowRadius: root.background.radius
-        enabled: !Kirigami.Settings.isMobile
+        enabled: !Maui.Handy.isMobile
     }
 
     onIsPortraitChanged:
@@ -156,7 +154,7 @@ Maui.ApplicationWindow
     sideBar: Maui.AbstractSideBar
     {
         enabled: _playlist.count > 1
-        preferredWidth: Kirigami.Units.gridUnit * 16
+        preferredWidth: Maui.Style.units.gridUnit * 16
         collapsed: !isWide
         collapsible: true
 
@@ -170,7 +168,7 @@ Maui.ApplicationWindow
             headBar.background: null
             background: Rectangle
             {
-                color: Kirigami.Theme.backgroundColor
+                color: Maui.Theme.backgroundColor
                 opacity: 0.2
             }
 
@@ -217,7 +215,7 @@ Maui.ApplicationWindow
                 flickable: _appViews.currentItem.item.flickable
                 showCSDControls: true
 
-                altHeader: Kirigami.Settings.isMobile
+                altHeader: Maui.Handy.isMobile
                 headBar.rightContent: ToolButton
                 {
                     text: i18n("Open")
@@ -417,7 +415,7 @@ Maui.ApplicationWindow
                             text: root.title
                             elide: Text.ElideMiddle
                             wrapMode: Text.NoWrap
-                            color: Kirigami.Theme.textColor
+                            color: Maui.Theme.textColor
                         }
                     }
 
@@ -435,11 +433,10 @@ Maui.ApplicationWindow
                         spacing: 0
                         focus: true
 
-                        Kirigami.Separator
+                        Maui.Separator
                         {
                             anchors.top: parent.top
                             width: parent.width
-                            height: 0.5
                         }
 
                         background: Rectangle
@@ -455,7 +452,7 @@ Maui.ApplicationWindow
                             {
                                 width: _slider.visualPosition * parent.width
                                 height: _slider.pressed ? _slider.height : 2
-                                color: Kirigami.Theme.highlightColor
+                                color: Maui.Theme.highlightColor
                             }
                         }
 
@@ -466,7 +463,7 @@ Maui.ApplicationWindow
                             y: 0
                             implicitWidth: Maui.Style.iconSizes.medium
                             implicitHeight: _slider.height
-                            color: _slider.pressed ? Qt.lighter(Kirigami.Theme.highlightColor, 1.2) : "transparent"
+                            color: _slider.pressed ? Qt.lighter(Maui.Theme.highlightColor, 1.2) : "transparent"
                         }
                     }
                 }
@@ -601,8 +598,8 @@ Maui.ApplicationWindow
     {
         if(Maui.Handy.isAndroid)
         {
-            Maui.Android.statusbarColor( Kirigami.Theme.backgroundColor, !Maui.App.darkMode)
-            Maui.Android.navBarColor(headBar.visible ? headBar.Kirigami.Theme.backgroundColor : Kirigami.Theme.backgroundColor, !Maui.App.darkMode)
+            Maui.Android.statusbarColor( Maui.Theme.backgroundColor, !Maui.App.darkMode)
+            Maui.Android.navBarColor(headBar.visible ? headBar.Maui.Theme.backgroundColor : Maui.Theme.backgroundColor, !Maui.App.darkMode)
         }
     }
 

@@ -5,7 +5,6 @@ import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.14
 
 import org.mauikit.controls 1.3 as Maui
-import org.kde.kirigami 2.8 as Kirigami
 
 import org.maui.clip 1.0 as Clip
 
@@ -25,9 +24,9 @@ Clip.Video
     Keys.onLeftPressed: player.seek(player.position - 500)
     Keys.onRightPressed: player.seek(player.position + 500)
 
-    Kirigami.Theme.inherit: false
-    Kirigami.Theme.backgroundColor: "#333"
-    Kirigami.Theme.textColor: "#fafafa"
+    Maui.Theme.inherit: false
+    Maui.Theme.backgroundColor: "#333"
+    Maui.Theme.textColor: "#fafafa"
 
     Connections
     {

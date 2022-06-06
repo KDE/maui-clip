@@ -1,11 +1,9 @@
-import QtQuick 2.14
-import QtQuick.Controls 2.14
+import QtQuick 2.15
+import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.3
 
-import org.mauikit.controls 1.2 as Maui
+import org.mauikit.controls 1.3 as Maui
 import org.mauikit.filebrowsing 1.2 as FB
-
-import org.kde.kirigami 2.6 as Kirigami
 
 Maui.SelectionBar
 {
@@ -104,7 +102,7 @@ Maui.SelectionBar
     {
         text: i18n("Remove")
         icon.name: "edit-delete"
-        Kirigami.Theme.textColor: Kirigami.Theme.negativeTextColor
+        Maui.Theme.textColor: Maui.Theme.negativeTextColor
         onTriggered:
         {
             dialogLoader.sourceComponent = removeDialogComponent

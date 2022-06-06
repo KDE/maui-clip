@@ -1,11 +1,9 @@
-import QtQuick 2.14
-import QtQml 2.14
-import QtQuick.Controls 2.14
+import QtQuick 2.15
+import QtQml 2.15
+import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.3
 
 import org.mauikit.controls 1.3 as Maui
-import org.kde.kirigami 2.14 as Kirigami
-
 import org.maui.clip 1.0 as Clip
 
 import ".."
@@ -26,7 +24,7 @@ Maui.AltBrowser
 
     Binding on viewType
     {
-        value: control.width < Kirigami.Units.gridUnit * 30 ? Maui.AltBrowser.ViewType.List : Maui.AltBrowser.ViewType.Grid
+        value: control.width < Maui.Style.units.gridUnit * 30 ? Maui.AltBrowser.ViewType.List : Maui.AltBrowser.ViewType.Grid
         restoreMode: Binding.RestoreBinding
     }
 

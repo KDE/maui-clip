@@ -4,8 +4,6 @@ import QtQuick.Controls 2.14
 import org.mauikit.controls 1.3 as Maui
 import org.mauikit.filebrowsing 1.3 as FB
 
-import org.kde.kirigami 2.8 as Kirigami
-
 Maui.ContextualMenu
 {
     id: control
@@ -78,7 +76,7 @@ Maui.ContextualMenu
         icon.name: "item-select"
         onTriggered:
         {
-            if(Kirigami.Settings.isMobile)
+            if(Maui.Handy.isMobile)
                 root.selectionMode = true
 
             selectionBar.insert(model.get(index))
@@ -103,7 +101,7 @@ Maui.ContextualMenu
     {
         text: i18n("Remove")
         icon.name: "edit-delete"
-        Kirigami.Theme.textColor: Kirigami.Theme.negativeTextColor
+        Maui.Theme.textColor: Maui.Theme.negativeTextColor
         onTriggered:
         {
             dialogLoader.sourceComponent = removeDialogComponent
