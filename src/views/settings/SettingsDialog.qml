@@ -279,7 +279,6 @@ Maui.SettingsDialog
     {
         title: i18n("Sources")
         description: i18n("Add new sources to manage and browse your video collection")
-        lastOne: true
 
         ColumnLayout
         {
