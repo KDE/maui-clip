@@ -23,8 +23,7 @@ Maui.ApplicationWindow
     id: root
 
     title: _playerView.currentVideo.label
-    headBar.visible: false
-//    Maui.App.darkode: _playerPage.visible ? true :  settings.darkMode
+    //    Maui.App.darkode: _playerPage.visible ? true :  settings.darkMode
 
     property bool selectionMode : false
 
@@ -151,14 +150,14 @@ Maui.ApplicationWindow
 
     Loader { id: dialogLoader }
 
-    sideBar: Maui.AbstractSideBar
-    {
-        enabled: _playlist.count > 1
-        preferredWidth: Maui.Style.units.gridUnit * 16
-        collapsed: !isWide
-        collapsible: true
 
-        Maui.Page
+    Maui.SideBarView
+    {
+        id: _sideBarView
+        sideBar.enabled: _playlist.count > 1
+
+
+        sideBarContent:  Maui.Page
         {
             anchors.fill: parent
             title: i18n("Now playing")
@@ -194,378 +193,379 @@ Maui.ApplicationWindow
                 anchors.fill: parent
             }
         }
-    }
 
-    Maui.StackView
-    {
-        id: _stackView
-        anchors.fill: parent
-        initialItem: initModule === "viewer" ? _playerPage : _appViewsComponent
 
-        Component
+        Maui.StackView
         {
-            id: _appViewsComponent
-
-            Maui.AppViews
-            {
-                id: _appViews
-                anchors.fill: parent
-                maxViews: 4
-                floatingFooter: true
-                flickable: _appViews.currentItem.item.flickable
-                showCSDControls: true
-
-                altHeader: Maui.Handy.isMobile
-                headBar.rightContent: ToolButton
-                {
-                    text: i18n("Open")
-                    display: isWide ? ToolButton.TextBesideIcon : ToolButton.IconOnly
-                    icon.name: "folder-open"
-                    onClicked: root.openFileDialog()
-                }
-
-                headBar.leftContent: Maui.ToolButtonMenu
-                {
-                    icon.name: "application-menu"
-
-                    MenuItem
-                    {
-                        enabled: Clip.Cip.mpvAvailable
-                        text: i18n("Open URL")
-                        icon.name: "filename-space-amarok"
-
-                        onTriggered:
-                        {
-                            _openUrlDialog.open()
-                        }
-                    }
-
-                    MenuItem
-                    {
-                        text: i18n("Settings")
-                        icon.name: "settings-configure"
-
-                        onTriggered: openSettingsDialog()
-                    }
-
-                    MenuItem
-                    {
-                        text: i18n("About")
-                        icon.name: "documentinfo"
-                        onTriggered: root.about()
-                    }
-                }
-
-                Maui.AppViewLoader
-                {
-                    Maui.AppView.title: i18n("Collection")
-                    Maui.AppView.iconName: "folder-videos"
-                    CollectionView {}
-                }
-
-                Maui.AppViewLoader
-                {
-                    Maui.AppView.title: i18n("Tags")
-                    Maui.AppView.iconName: "tag"
-                    TagsView {}
-                }
-
-                //            YouTubeView
-                //            {
-                //                id: _youtubeView
-                //                Maui.AppView.title: i18n("Online")
-                //                Maui.AppView.iconName: "folder-cloud"
-                //            }
-
-                footer: SelectionBar
-                {
-                    id: selectionBar
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    width: Math.min(parent.width-(Maui.Style.space.medium*2), implicitWidth)
-                    maxListHeight: _appViews.height - Maui.Style.space.medium
-                }
-            }
-
-            //    footBar.visible: player.video.playbackState !== MediaPlayer.StoppedState
-        }
-
-        Maui.Page
-        {
-            id: _playerPage
+            id: _stackView
             anchors.fill: parent
-            visible: StackView.status === StackView.Active
+            initialItem: initModule === "viewer" ? _playerPage : _appViewsComponent
 
-            headBar.visible: !_playerHolderLoader.active
-
-            showCSDControls: true
-
-            PlayerView
+            Component
             {
-                id: _playerView
-                anchors.fill: parent
-            }
+                id: _appViewsComponent
 
-            BusyIndicator
-            {
-                anchors.centerIn: parent
-                running: _playerView.status === MediaPlayer.Loading
-            }
-
-            Loader
-            {
-                anchors.fill: parent
-                asynchronous: true
-//                active: !player.stopped
-
-                sourceComponent: RowLayout
+                Maui.AppViews
                 {
-                    MouseArea
+                    id: _appViews
+                    anchors.fill: parent
+                    maxViews: 4
+                    floatingFooter: true
+                    flickable: _appViews.currentItem.item.flickable
+                    showCSDControls: true
+
+                    altHeader: Maui.Handy.isMobile
+                    headBar.rightContent: ToolButton
                     {
-                        Layout.fillWidth: true
-                        Layout.fillHeight: true
-                        onDoubleClicked: player.seek(player.position - 5)
+                        text: i18n("Open")
+                        display: isWide ? ToolButton.TextBesideIcon : ToolButton.IconOnly
+                        icon.name: "folder-open"
+                        onClicked: root.openFileDialog()
                     }
 
-                    MouseArea
+                    headBar.leftContent: Maui.ToolButtonMenu
                     {
-                        Layout.fillWidth: true
-                        Layout.fillHeight: true
-                        onClicked: player.playbackState === MediaPlayer.PlayingState ? player.pause() : player.play()
-                        onDoubleClicked: root.toggleFullScreen()
-                    }
+                        icon.name: "application-menu"
 
-                    MouseArea
-                    {
-                        Layout.fillWidth: true
-                        Layout.fillHeight: true
-                        onDoubleClicked: player.seek(player.position + 5)
-                    }
-                }
-            }
-
-            Loader
-            {
-                id: _playerHolderLoader
-                anchors.fill: parent
-                active: _playerView.stopped && _playerView.status === MediaPlayer.NoMedia
-                asynchronous: true
-                visible: active
-                sourceComponent: Maui.Holder
-                {
-                    emoji: "qrc:/img/assets/media-playback-start.svg"
-                    title: i18n("Nothing Here!")
-                    body: i18n("Open a new video from your collection or file system.")
-                    actions: [
-
-                        Action
+                        MenuItem
                         {
-                            text: "Open"
-                            onTriggered: root.openFileDialog()
-                        },
+                            enabled: Clip.Cip.mpvAvailable
+                            text: i18n("Open URL")
+                            icon.name: "filename-space-amarok"
 
-                        Action
-                        {
-                            text: "Collection"
-                            onTriggered: toggleViewer()
-                        }
-                    ]
-                }
-            }
-
-            headBar.leftContent: ToolButton
-            {
-                text: i18n("Collection")
-                icon.name: "go-previous"
-                onClicked: toggleViewer()
-            }
-
-            footerColumn: Loader
-            {
-                active: !player.stopped
-                width: parent.width
-                asynchronous: true
-                visible: active
-
-                sourceComponent: Maui.ToolBar
-                {
-                    preferredHeight: Maui.Style.rowHeightAlt
-
-                    position: ToolBar.Footer
-                    leftContent: Label
-                    {
-                        text: Maui.Handy.formatTime(player.video.position/1000)
-                    }
-
-                    rightContent: Label
-                    {
-                        text: Maui.Handy.formatTime(player.video.duration/1000)
-                    }
-
-                    middleContent: Item
-                    {
-                        Layout.fillHeight: true
-                        Layout.fillWidth: true
-
-                        Label
-                        {
-                            anchors.fill: parent
-                            visible: text.length
-                            verticalAlignment: Qt.AlignVCenter
-                            horizontalAlignment: Qt.AlignHCenter
-                            text: root.title
-                            elide: Text.ElideMiddle
-                            wrapMode: Text.NoWrap
-                            color: Maui.Theme.textColor
-                        }
-                    }
-
-                    background: Slider
-                    {
-                        id: _slider
-                        z: parent.z+1
-                        padding: 0
-                        orientation: Qt.Horizontal
-                        from: 0
-                        to: player.video.duration
-                        value: player.video.position
-
-                        onMoved: player.video.seek( _slider.value )
-                        spacing: 0
-                        focus: true
-
-                        Maui.Separator
-                        {
-                            anchors.top: parent.top
-                            width: parent.width
-                        }
-
-                        background: Rectangle
-                        {
-                            implicitWidth: _slider.width
-                            implicitHeight: _slider.height
-                            width: _slider.availableWidth
-                            height: implicitHeight
-                            color: "transparent"
-                            opacity: 0.4
-
-                            Rectangle
+                            onTriggered:
                             {
-                                width: _slider.visualPosition * parent.width
-                                height: _slider.pressed ? _slider.height : 2
-                                color: Maui.Theme.highlightColor
+                                _openUrlDialog.open()
                             }
                         }
 
-                        handle: Rectangle
+                        MenuItem
                         {
-                            x: _slider.leftPadding + _slider.visualPosition
-                               * (_slider.availableWidth - width)
-                            y: 0
-                            implicitWidth: Maui.Style.iconSizes.medium
-                            implicitHeight: _slider.height
-                            color: _slider.pressed ? Qt.lighter(Maui.Theme.highlightColor, 1.2) : "transparent"
+                            text: i18n("Settings")
+                            icon.name: "settings-configure"
+
+                            onTriggered: openSettingsDialog()
+                        }
+
+                        MenuItem
+                        {
+                            text: i18n("About")
+                            icon.name: "documentinfo"
+                            onTriggered: root.about()
                         }
                     }
+
+                    Maui.AppViewLoader
+                    {
+                        Maui.AppView.title: i18n("Collection")
+                        Maui.AppView.iconName: "folder-videos"
+                        CollectionView {}
+                    }
+
+                    Maui.AppViewLoader
+                    {
+                        Maui.AppView.title: i18n("Tags")
+                        Maui.AppView.iconName: "tag"
+                        TagsView {}
+                    }
+
+                    //            YouTubeView
+                    //            {
+                    //                id: _youtubeView
+                    //                Maui.AppView.title: i18n("Online")
+                    //                Maui.AppView.iconName: "folder-cloud"
+                    //            }
+
+                    footer: SelectionBar
+                    {
+                        id: selectionBar
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        width: Math.min(parent.width-(Maui.Style.space.medium*2), implicitWidth)
+                        maxListHeight: _appViews.height - Maui.Style.space.medium
+                    }
                 }
+
+                //    footBar.visible: player.video.playbackState !== MediaPlayer.StoppedState
             }
 
-            headBar.rightContent: Loader
+            Maui.Page
             {
-                active: Clip.Clip.mpvAvailable
-                asynchronous: true
-                sourceComponent:  Maui.ToolButtonMenu
+                id: _playerPage
+                anchors.fill: parent
+                visible: StackView.status === StackView.Active
+
+                headBar.visible: !_playerHolderLoader.active
+
+                showCSDControls: true
+
+                PlayerView
                 {
-                    icon.name: "overflow-menu"
+                    id: _playerView
+                    anchors.fill: parent
+                }
 
-                    Maui.MenuItemActionRow
+                BusyIndicator
+                {
+                    anchors.centerIn: parent
+                    running: _playerView.status === MediaPlayer.Loading
+                }
+
+                Loader
+                {
+                    anchors.fill: parent
+                    asynchronous: true
+                    //                active: !player.stopped
+
+                    sourceComponent: RowLayout
                     {
-                        Action
+                        MouseArea
                         {
-                            icon.name: "edit-share"
+                            Layout.fillWidth: true
+                            Layout.fillHeight: true
+                            onDoubleClicked: player.seek(player.position - 5)
                         }
 
-                        Action
+                        MouseArea
                         {
-                            icon.name: "edit"
+                            Layout.fillWidth: true
+                            Layout.fillHeight: true
+                            onClicked: player.playbackState === MediaPlayer.PlayingState ? player.pause() : player.play()
+                            onDoubleClicked: root.toggleFullScreen()
                         }
 
-                        Action
+                        MouseArea
                         {
-                            icon.name: "view-fullscreen"
-                            onTriggered: toggleFullscreen()
+                            Layout.fillWidth: true
+                            Layout.fillHeight: true
+                            onDoubleClicked: player.seek(player.position + 5)
                         }
-                    }
-
-                    MenuSeparator{}
-
-                    MenuItem
-                    {
-                        text: "Corrections"
-                        onTriggered: control.editing = !control.editing
-                    }
-
-                    MenuItem
-                    {
-                        text: "Subtitles"
-                        onTriggered: _subtitlesDialog.open()
-                    }
-
-                    MenuItem
-                    {
-                        text: "Audio"
-                        onTriggered: _audioTracksDialog.open()
                     }
                 }
+
+                Loader
+                {
+                    id: _playerHolderLoader
+                    anchors.fill: parent
+                    active: _playerView.stopped && _playerView.status === MediaPlayer.NoMedia
+                    asynchronous: true
+                    visible: active
+                    sourceComponent: Maui.Holder
+                    {
+                        emoji: "qrc:/img/assets/media-playback-start.svg"
+                        title: i18n("Nothing Here!")
+                        body: i18n("Open a new video from your collection or file system.")
+                        actions: [
+
+                            Action
+                            {
+                                text: "Open"
+                                onTriggered: root.openFileDialog()
+                            },
+
+                            Action
+                            {
+                                text: "Collection"
+                                onTriggered: toggleViewer()
+                            }
+                        ]
+                    }
+                }
+
+                headBar.leftContent: ToolButton
+                {
+                    text: i18n("Collection")
+                    icon.name: "go-previous"
+                    onClicked: toggleViewer()
+                }
+
+                footerColumn: Loader
+                {
+                    active: !player.stopped
+                    width: parent.width
+                    asynchronous: true
+                    visible: active
+
+                    sourceComponent: Maui.ToolBar
+                    {
+                        preferredHeight: Maui.Style.rowHeightAlt
+
+                        position: ToolBar.Footer
+                        leftContent: Label
+                        {
+                            text: Maui.Handy.formatTime(player.video.position/1000)
+                        }
+
+                        rightContent: Label
+                        {
+                            text: Maui.Handy.formatTime(player.video.duration/1000)
+                        }
+
+                        middleContent: Item
+                        {
+                            Layout.fillHeight: true
+                            Layout.fillWidth: true
+
+                            Label
+                            {
+                                anchors.fill: parent
+                                visible: text.length
+                                verticalAlignment: Qt.AlignVCenter
+                                horizontalAlignment: Qt.AlignHCenter
+                                text: root.title
+                                elide: Text.ElideMiddle
+                                wrapMode: Text.NoWrap
+                                color: Maui.Theme.textColor
+                            }
+                        }
+
+                        background: Slider
+                        {
+                            id: _slider
+                            z: parent.z+1
+                            padding: 0
+                            orientation: Qt.Horizontal
+                            from: 0
+                            to: player.video.duration
+                            value: player.video.position
+
+                            onMoved: player.video.seek( _slider.value )
+                            spacing: 0
+                            focus: true
+
+                            Maui.Separator
+                            {
+                                anchors.top: parent.top
+                                width: parent.width
+                            }
+
+                            background: Rectangle
+                            {
+                                implicitWidth: _slider.width
+                                implicitHeight: _slider.height
+                                width: _slider.availableWidth
+                                height: implicitHeight
+                                color: "transparent"
+                                opacity: 0.4
+
+                                Rectangle
+                                {
+                                    width: _slider.visualPosition * parent.width
+                                    height: _slider.pressed ? _slider.height : 2
+                                    color: Maui.Theme.highlightColor
+                                }
+                            }
+
+                            handle: Rectangle
+                            {
+                                x: _slider.leftPadding + _slider.visualPosition
+                                   * (_slider.availableWidth - width)
+                                y: 0
+                                implicitWidth: Maui.Style.iconSizes.medium
+                                implicitHeight: _slider.height
+                                color: _slider.pressed ? Qt.lighter(Maui.Theme.highlightColor, 1.2) : "transparent"
+                            }
+                        }
+                    }
+                }
+
+                headBar.rightContent: Loader
+                {
+                    active: Clip.Clip.mpvAvailable
+                    asynchronous: true
+                    sourceComponent:  Maui.ToolButtonMenu
+                    {
+                        icon.name: "overflow-menu"
+
+                        Maui.MenuItemActionRow
+                        {
+                            Action
+                            {
+                                icon.name: "edit-share"
+                            }
+
+                            Action
+                            {
+                                icon.name: "edit"
+                            }
+
+                            Action
+                            {
+                                icon.name: "view-fullscreen"
+                                onTriggered: toggleFullscreen()
+                            }
+                        }
+
+                        MenuSeparator{}
+
+                        MenuItem
+                        {
+                            text: "Corrections"
+                            onTriggered: control.editing = !control.editing
+                        }
+
+                        MenuItem
+                        {
+                            text: "Subtitles"
+                            onTriggered: _subtitlesDialog.open()
+                        }
+
+                        MenuItem
+                        {
+                            text: "Audio"
+                            onTriggered: _audioTracksDialog.open()
+                        }
+                    }
+                }
+
+                footBar.visible: root.sideBar.enabled
+                footBar.farLeftContent: Loader
+                {
+                    active: root.sideBar.enabled
+                    visible: active
+                    asynchronous: true
+                    sourceComponent: ToolButton
+                    {
+                        icon.name: root.sideBar.visible ? "sidebar-collapse" : "sidebar-expand"
+                        onClicked: root.sideBar.toggle()
+                        checked: root.sideBar.visible
+                        ToolTip.delay: 1000
+                        ToolTip.timeout: 5000
+                        ToolTip.visible: hovered
+                        ToolTip.text: i18n("Toggle SideBar")
+                    }
+                }
+
+                footBar.middleContent: [
+
+                    Maui.ToolActions
+                    {
+                        Layout.alignment: Qt.AlignCenter
+                        expanded: true
+                        checkable: false
+                        autoExclusive: false
+
+                        Action
+                        {
+                            enabled: root.sideBar.enabled
+                            icon.name: "media-skip-backward"
+                            onTriggered: playPrevious()
+                        }
+
+                        Action
+                        {
+                            icon.name: player.playing ? "media-playback-pause" : "media-playback-start"
+                            onTriggered: player.paused ? player.video.play() : player.video.pause()
+                        }
+
+                        Action
+                        {
+                            enabled: root.sideBar.enabled
+                            icon.name: "media-skip-forward"
+                            onTriggered: playNext()
+                        }
+                    }
+                ]
             }
-
-            footBar.visible: root.sideBar.enabled
-            footBar.farLeftContent: Loader
-            {
-                active: root.sideBar.enabled
-                visible: active
-                asynchronous: true
-                sourceComponent: ToolButton
-                {
-                    icon.name: root.sideBar.visible ? "sidebar-collapse" : "sidebar-expand"
-                    onClicked: root.sideBar.toggle()
-                    checked: root.sideBar.visible
-                    ToolTip.delay: 1000
-                    ToolTip.timeout: 5000
-                    ToolTip.visible: hovered
-                    ToolTip.text: i18n("Toggle SideBar")
-                }
-            }
-
-            footBar.middleContent: [
-
-                Maui.ToolActions
-                {
-                    Layout.alignment: Qt.AlignCenter
-                    expanded: true
-                    checkable: false
-                    autoExclusive: false
-
-                    Action
-                    {
-                        enabled: root.sideBar.enabled
-                        icon.name: "media-skip-backward"
-                        onTriggered: playPrevious()
-                    }
-
-                    Action
-                    {
-                        icon.name: player.playing ? "media-playback-pause" : "media-playback-start"
-                        onTriggered: player.paused ? player.video.play() : player.video.pause()
-                    }
-
-                    Action
-                    {
-                        enabled: root.sideBar.enabled
-                        icon.name: "media-skip-forward"
-                        onTriggered: playNext()
-                    }
-                }
-            ]
         }
     }
 
