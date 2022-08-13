@@ -56,11 +56,12 @@ Maui.AltBrowser
         }
     }
 
-    listDelegate: Maui.ListDelegate
+    listDelegate: Maui.ListBrowserDelegate
     {
         width: ListView.view.width
-        label: model.tag
-        iconName: model.icon
+        label1.text: model.tag
+        iconSource: model.icon
+        iconSizeHint: Maui.Style.iconSize
 
         onClicked:
         {

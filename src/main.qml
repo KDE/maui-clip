@@ -23,7 +23,7 @@ Maui.ApplicationWindow
     id: root
 
     title: _playerView.currentVideo.label
-    //    Maui.App.darkode: _playerPage.visible ? true :  settings.darkMode
+    Maui.Style.styleType: Maui.Handy.isAndroid ? (appSettings.darkMode ? Maui.Style.Dark : Maui.Style.Light) : undefined
 
     property bool selectionMode : false
 
@@ -155,8 +155,7 @@ Maui.ApplicationWindow
     {
         id: _sideBarView
         sideBar.enabled: _playlist.count > 1
-
-
+        sideBar.preferredWidth: Maui.Style.units.gridUnit * 16
         sideBarContent:  Maui.Page
         {
             anchors.fill: parent
@@ -208,7 +207,6 @@ Maui.ApplicationWindow
                 Maui.AppViews
                 {
                     id: _appViews
-                    anchors.fill: parent
                     maxViews: 4
                     floatingFooter: true
                     flickable: _appViews.currentItem.item.flickable
@@ -291,9 +289,13 @@ Maui.ApplicationWindow
             Maui.Page
             {
                 id: _playerPage
-                anchors.fill: parent
+                height: parent.height
+                width: parent.width
                 visible: StackView.status === StackView.Active
+                autoHideHeader: _playerView.player.playbackState === MediaPlayer.PlayingState
+                autoHideFooter: _playerView.player.playbackState === MediaPlayer.PlayingState
 
+                floatingHeader: autoHideHeader
                 headBar.visible: !_playerHolderLoader.active
 
                 showCSDControls: true
@@ -525,9 +527,9 @@ Maui.ApplicationWindow
                     asynchronous: true
                     sourceComponent: ToolButton
                     {
-                        icon.name: root.sideBar.visible ? "sidebar-collapse" : "sidebar-expand"
-                        onClicked: root.sideBar.toggle()
-                        checked: root.sideBar.visible
+                        icon.name: _sideBarView.sideBar.visible ? "sidebar-collapse" : "sidebar-expand"
+                        onClicked: _sideBarView.sideBar.toggle()
+                        checked: _sideBarView.sideBar.visible
                         ToolTip.delay: 1000
                         ToolTip.timeout: 5000
                         ToolTip.visible: hovered
@@ -598,8 +600,8 @@ Maui.ApplicationWindow
     {
         if(Maui.Handy.isAndroid)
         {
-            Maui.Android.statusbarColor( Maui.Theme.backgroundColor, !Maui.App.darkMode)
-            Maui.Android.navBarColor(headBar.visible ? headBar.Maui.Theme.backgroundColor : Maui.Theme.backgroundColor, !Maui.App.darkMode)
+            Maui.Android.statusbarColor( Maui.Theme.backgroundColor, !settings.darkMode)
+            Maui.Android.navBarColor(Maui.Theme.backgroundColor, !settings.darkMode)
         }
     }
 
