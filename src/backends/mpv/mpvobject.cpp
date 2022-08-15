@@ -22,6 +22,7 @@
 #include <QQuickWindow>
 #include <QStandardPaths>
 #include <QtGlobal>
+#include <cstring>
 
 void on_mpv_redraw(void *ctx)
 {
@@ -73,7 +74,9 @@ QOpenGLFramebufferObject * MpvRenderer::createFramebufferObject(const QSize &siz
     // init mpv_gl:
     if (!obj->mpv_gl)
     {
-        mpv_opengl_init_params gl_init_params{get_proc_address_mpv, nullptr, nullptr};
+        mpv_opengl_init_params gl_init_params;
+        gl_init_params.get_proc_address = get_proc_address_mpv;
+        gl_init_params.get_proc_address_ctx = nullptr;
         mpv_render_param params[]{
             {MPV_RENDER_PARAM_API_TYPE, const_cast<char *>(MPV_RENDER_API_TYPE_OPENGL)},
             {MPV_RENDER_PARAM_OPENGL_INIT_PARAMS, &gl_init_params},
