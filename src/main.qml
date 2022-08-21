@@ -154,6 +154,7 @@ Maui.ApplicationWindow
     Maui.SideBarView
     {
         id: _sideBarView
+        anchors.fill: parent
         sideBar.enabled: _playlist.count > 1
         sideBar.preferredWidth: Maui.Style.units.gridUnit * 16
         sideBarContent:  Maui.Page
