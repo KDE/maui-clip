@@ -48,16 +48,12 @@ Maui.ListBrowser
     {
         id: _listDelegate
         width: ListView.view.width
-        implicitHeight: Maui.Style.rowHeight * 1.5
-
 
         isCurrentItem: ListView.isCurrentItem
         draggable: true
         tooltipText: model.url
 
-        iconSizeHint: height * 0.9
         label1.text: model.label
-        //        label2.text: model.mime
         label2.text: Qt.formatDateTime(new Date(model.modified), "d MMM yyyy")
         imageSource: model.thumbnail
         template.fillMode: Image.PreserveAspectCrop

@@ -5,7 +5,7 @@
 
 cmake_minimum_required(VERSION 3.16)
 
-set(CLIP_VERSION 2.2.0)
+set(CLIP_VERSION 2.2.1)
 project(clip VERSION ${CLIP_VERSION} LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)

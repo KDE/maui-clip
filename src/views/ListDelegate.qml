@@ -7,8 +7,6 @@ Maui.ListBrowserDelegate
 {
     id: control
 
-    implicitHeight: Maui.Style.rowHeight * 2
-
     isCurrentItem: ListView.isCurrentItem
     draggable: true
     tooltipText: model.url
@@ -21,7 +19,7 @@ Maui.ListBrowserDelegate
                            "text/uri-list": filterSelectedItems(model.url)
                        } : {}
 
-iconSizeHint: Maui.Style.iconSizes.big
+//iconSizeHint: Maui.Style.iconSizes.big
 label1.text: model.label
 label2.text: model.url
 label3.text: model.mime
