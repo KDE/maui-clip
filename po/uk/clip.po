@@ -1,0 +1,538 @@
+# Translation of clip.po to Ukrainian
+# Copyright (C) 2020-2021 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Yuri Chornoivan <yurchor@ukr.net>, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: clip\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-21 00:44+0000\n"
+"PO-Revision-Date: 2022-01-09 09:41+0200\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#: src/controllers/YouTube.qml:95
+#, kde-format
+msgid "Custom API Key"
+msgstr "Нетиповий ключ до програмного інтерфейсу"
+
+#: src/controllers/YouTube.qml:114
+#, kde-format
+msgid "Search results"
+msgstr "Результати пошуку"
+
+#: src/controllers/YouTube.qml:209
+#, kde-format
+msgid "No Results!"
+msgstr "Нічого не знайдено!"
+
+#: src/controllers/YouTube.qml:210
+#, kde-format
+msgid "Try with another query"
+msgstr "Спробуйте інший запит"
+
+#: src/controllers/YouTube.qml:249
+#, kde-format
+msgid "Search videos..."
+msgstr "Шукати відео…"
+
+#: src/main.cpp:99
+#, kde-format
+msgid "Clip"
+msgstr "Кліп"
+
+#: src/main.cpp:99
+#, kde-format
+msgid "Browse and play your videos."
+msgstr "Навігація збіркою відео та відтворення відео."
+
+#: src/main.cpp:100
+#, kde-format
+msgid "© 2019-%1 Maui Development Team"
+msgstr "© Команда розробників Maui, 2019–%1"
+
+#: src/main.cpp:101
+#, kde-format
+msgid "Camilo Higuita"
+msgstr "Camilo Higuita"
+
+#: src/main.cpp:101
+#, kde-format
+msgid "Developer"
+msgstr "Розробник"
+
+#: src/main.qml:100 src/main.qml:232
+#, kde-format
+msgid "Open URL"
+msgstr "Відкрити адресу"
+
+#: src/main.qml:102
+#, kde-format
+msgid ""
+"Enter any remote location, like YouTube video URLs, or from other services "
+"supported by MPV."
+msgstr ""
+"Введіть будь-яку віддалену адресу, наприклад адресу відео YouTube або інших "
+"служб, підтримку яких передбачено у MPV."
+
+#: src/main.qml:134
+#, kde-format
+msgid "Delete files?"
+msgstr "Вилучити файли?"
+
+#: src/main.qml:135 src/views/ItemMenu.qml:119
+#, kde-format
+msgid "Accept"
+msgstr "Прийняти"
+
+#: src/main.qml:136 src/views/ItemMenu.qml:120
+#, kde-format
+msgid "Cancel"
+msgstr "Скасувати"
+
+#: src/main.qml:137
+#, kde-format
+msgid "Are sure you want to delete %1 files"
+msgstr "Ви справді хочете вилучити %1 файлів"
+
+#: src/main.qml:163
+#, kde-format
+msgid "Now playing"
+msgstr "Зараз відтворюється"
+
+#: src/main.qml:219
+#, kde-format
+msgid "Open"
+msgstr "Відкрити"
+
+#: src/main.qml:243
+#, kde-format
+msgid "Settings"
+msgstr "Параметри"
+
+#: src/main.qml:251
+#, kde-format
+msgid "About"
+msgstr "Про програму"
+
+#: src/main.qml:259 src/main.qml:379 src/views/settings/SettingsDialog.qml:55
+#, kde-format
+msgid "Collection"
+msgstr "Збірка"
+
+#: src/main.qml:266 src/views/ItemMenu.qml:29
+#, kde-format
+msgid "Tags"
+msgstr "Мітки"
+
+#: src/main.qml:358 src/views/youtube/YouTubeView.qml:25
+#, kde-format
+msgid "Nothing Here!"
+msgstr "Тут нічого немає!"
+
+#: src/main.qml:359
+#, kde-format
+msgid "Open a new video from your collection or file system."
+msgstr "Відкрийте нове відео з вашої збірки або файлової системи."
+
+#: src/main.qml:537
+#, kde-format
+msgid "Toggle SideBar"
+msgstr "Увімкнути чи вимкнути бічну панель"
+
+#: src/views/BrowserLayout.qml:68
+#, kde-format
+msgid "Search %1 video"
+msgid_plural "Search %1 videos"
+msgstr[0] "Шукати у %1 відео"
+msgstr[1] "Шукати у %1 відео"
+msgstr[2] "Шукати у %1 відео"
+msgstr[3] "Шукати у %1 відео"
+
+#: src/views/collection/CollectionView.qml:13 src/views/player/Playlist.qml:19
+#: src/views/tags/TagsView.qml:38
+#, kde-format
+msgid "No Videos!"
+msgstr "Немає відео!"
+
+#: src/views/collection/CollectionView.qml:14
+#, kde-format
+msgid "Add a new video source or open a file."
+msgstr "Додайте нове джерело відео або відкрийте файл."
+
+#: src/views/collection/CollectionView.qml:19
+#, kde-format
+msgid "Open file"
+msgstr "Відкрити файл"
+
+#: src/views/collection/CollectionView.qml:25
+#, kde-format
+msgid "Add sources"
+msgstr "Додати джерела"
+
+#: src/views/ItemMenu.qml:22
+#, kde-format
+msgid "UnFav it"
+msgstr "Прибрати з улюблених"
+
+#: src/views/ItemMenu.qml:41
+#, kde-format
+msgid "Info"
+msgstr "Інформація"
+
+#: src/views/ItemMenu.qml:52 src/views/SelectionBar.qml:75
+#, kde-format
+msgid "Share"
+msgstr "Оприлюднити"
+
+#: src/views/ItemMenu.qml:63 src/views/SelectionBar.qml:45
+#, kde-format
+msgid "Queue"
+msgstr "Додати до черги"
+
+#: src/views/ItemMenu.qml:75
+#, kde-format
+msgid "Select"
+msgstr "Вибрати"
+
+#: src/views/ItemMenu.qml:89
+#, kde-format
+msgid "Show in folder"
+msgstr "Показати у теці"
+
+#: src/views/ItemMenu.qml:102 src/views/SelectionBar.qml:103
+#, kde-format
+msgid "Remove"
+msgstr "Вилучити"
+
+#: src/views/ItemMenu.qml:118
+#, kde-format
+msgid "Delete file?"
+msgstr "Вилучити файл?"
+
+#: src/views/ItemMenu.qml:121
+#, kde-format
+msgid ""
+"Are sure you want to delete \n"
+"%1"
+msgstr ""
+"Ви справді хочете вилучити \n"
+"%1"
+
+#: src/views/player/MPVPlayer.qml:29
+#, kde-format
+msgid "Subtitles"
+msgstr "Субтитри"
+
+#: src/views/player/MPVPlayer.qml:47
+#, kde-format
+msgid "Audio Tracks"
+msgstr "Звукові доріжки"
+
+#: src/views/player/PlayerView.qml:42
+#, kde-format
+msgid "Playing mode"
+msgstr "Режим відтворення"
+
+#: src/views/player/Playlist.qml:20
+#, kde-format
+msgid "Add videos to the playlist."
+msgstr "Додайте відео до списку відтворення."
+
+#: src/views/SelectionBar.qml:34
+#, kde-format
+msgid "Play"
+msgstr "Відтворити"
+
+#: src/views/SelectionBar.qml:56
+#, kde-format
+msgid "Un/Fav"
+msgstr "Не/Улюблене"
+
+#: src/views/SelectionBar.qml:63
+#, kde-format
+msgid "Tag"
+msgstr "Мітка"
+
+#: src/views/SelectionBar.qml:87
+#, kde-format
+msgid "Export"
+msgstr "Експортувати"
+
+#: src/views/settings/SettingsDialog.qml:18
+#, kde-format
+msgid "General"
+msgstr "Загальне"
+
+#: src/views/settings/SettingsDialog.qml:19
+#, kde-format
+msgid "Configure the app behavior."
+msgstr "Налаштувати поведінку програми."
+
+#: src/views/settings/SettingsDialog.qml:23
+#, kde-format
+msgid "Volume Step"
+msgstr "Крок гучності"
+
+#: src/views/settings/SettingsDialog.qml:36
+#, kde-format
+msgid "Dark Mode"
+msgstr "Темний режим"
+
+#: src/views/settings/SettingsDialog.qml:37
+#, kde-format
+msgid "Switch between light and dark colorscheme"
+msgstr "Перемкнутися між світлою і темною схемою кольорів"
+
+#: src/views/settings/SettingsDialog.qml:56
+#, kde-format
+msgid "Sorting order and behavior."
+msgstr "Порядок і поведінка при упорядкуванні."
+
+#: src/views/settings/SettingsDialog.qml:60
+#, kde-format
+msgid "Sorting by"
+msgstr "Критерій упорядкування"
+
+#: src/views/settings/SettingsDialog.qml:61
+#, kde-format
+msgid "Change the sorting key."
+msgstr "Змінити критерій упорядкування."
+
+#: src/views/settings/SettingsDialog.qml:84
+#, kde-format
+msgid "Title"
+msgstr "Заголовок"
+
+#: src/views/settings/SettingsDialog.qml:90
+#, kde-format
+msgid "Date"
+msgstr "Дата"
+
+#: src/views/settings/SettingsDialog.qml:96
+#, kde-format
+msgid "Size"
+msgstr "Розмір"
+
+#: src/views/settings/SettingsDialog.qml:102
+#, kde-format
+msgid "Type"
+msgstr "Тип"
+
+#: src/views/settings/SettingsDialog.qml:110
+#, kde-format
+msgid "Sort order"
+msgstr "Порядок"
+
+#: src/views/settings/SettingsDialog.qml:111
+#, kde-format
+msgid "Change the sorting order."
+msgstr "Змінити порядок."
+
+#: src/views/settings/SettingsDialog.qml:132
+#, kde-format
+msgid "Ascending"
+msgstr "За зростанням"
+
+#: src/views/settings/SettingsDialog.qml:139
+#, kde-format
+msgid "Descending"
+msgstr "За спаданням"
+
+#: src/views/settings/SettingsDialog.qml:149
+#, kde-format
+msgid "Playback"
+msgstr "Відтворення"
+
+#: src/views/settings/SettingsDialog.qml:150
+#, kde-format
+msgid "Configure the player settings."
+msgstr "Налаштувати параметри програвача."
+
+#: src/views/settings/SettingsDialog.qml:154
+#, kde-format
+msgid "Hardware Decoding"
+msgstr "Апаратне декодування"
+
+#: src/views/settings/SettingsDialog.qml:155
+#, kde-format
+msgid "Use the sorting preferences globally for all the tabs and splits."
+msgstr ""
+"Використовувати параметри упорядкування на загальному рівні для усіх вкладок "
+"і розділених панелей."
+
+#: src/views/settings/SettingsDialog.qml:168
+#, kde-format
+msgid "Audio"
+msgstr "Звук"
+
+#: src/views/settings/SettingsDialog.qml:169
+#, kde-format
+msgid "Configure the player audio behaviour."
+msgstr "Налаштувати обробку звуку у програвачі."
+
+#: src/views/settings/SettingsDialog.qml:174
+#, kde-format
+msgid "Preferred Language"
+msgstr "Бажана мова"
+
+#: src/views/settings/SettingsDialog.qml:175
+#, kde-format
+msgid "Preferred language if available."
+msgstr "Бажана мова, якщо доступна."
+
+#: src/views/settings/SettingsDialog.qml:280
+#, kde-format
+msgid "Sources"
+msgstr "Джерела"
+
+#: src/views/settings/SettingsDialog.qml:281
+#, kde-format
+msgid "Add new sources to manage and browse your video collection"
+msgstr "Додайте нові джерела для керування і навігації вашою збіркою відео"
+
+#: src/views/settings/SettingsDialog.qml:323
+#, kde-format
+msgid "Add"
+msgstr "Додати"
+
+#: src/views/settings/SettingsDialog.qml:345
+#, kde-format
+msgid "Remove source"
+msgstr "Вилучити джерело"
+
+#: src/views/settings/SettingsDialog.qml:346
+#, kde-format
+msgid ""
+"Are you sure you want to remove the source: \n"
+" %1"
+msgstr ""
+"Ви справді хочете вилучити це джерело:\n"
+" %1"
+
+#: src/views/tags/TagsGrid.qml:22
+#, kde-format
+msgid "No Tags!"
+msgstr "Немає міток!"
+
+#: src/views/tags/TagsGrid.qml:23
+#, kde-format
+msgid "Add a new tag to start organizing your video collection."
+msgstr "Додайте нову мітку, щоб розпочати упорядковування вашої збірки відео."
+
+#: src/views/tags/TagsGrid.qml:36
+#, kde-format
+msgid "Filter"
+msgstr "Фільтрувати"
+
+#: src/views/tags/TagsView.qml:39
+#, kde-format
+msgid "There's no videos associated with the tag"
+msgstr "З цією міткою не пов'язано жодного відео"
+
+#: src/views/youtube/YouTubeView.qml:26
+#, kde-format
+msgid "Start searching for online videos."
+msgstr "Почніть пошук відео в інтернеті."
+
+#: src/views/youtube/YouTubeView.qml:44
+#, kde-format
+msgid "Search..."
+msgstr "Шукати…"
+
+#~ msgid "Player"
+#~ msgstr "Програвач"
+
+#~ msgid "Configure the app UI."
+#~ msgstr "Налаштувати інтерфейс програми."
+
+#~ msgid "Directory"
+#~ msgstr "Каталог"
+
+#~ msgid "Folder path containing the subtitle files."
+#~ msgstr "Шлях до теки, де містяться файли субтитрів."
+
+#~ msgid "Font Family"
+#~ msgstr "Гарнітура шрифту"
+
+#~ msgid "Font Size"
+#~ msgstr "Розмір шрифту"
+
+#~ msgid "YouTube"
+#~ msgstr "YouTube"
+
+#~ msgid "Configure YouTube details."
+#~ msgstr "Налаштувати параметри доступу до YouTube."
+
+#~ msgid "Key"
+#~ msgstr "Ключ"
+
+#~ msgid "Personal key for limitless browsing."
+#~ msgstr "Особистий ключ для необмеженої навігації."
+
+#~ msgid ""
+#~ "<a href='https://console.developers.google.com/apis/credentials'>Get your "
+#~ "personal key.</a>"
+#~ msgstr ""
+#~ "<a href='https://console.developers.google.com/apis/credentials'>Отримати "
+#~ "ваш особистий ключ.</a>"
+
+#~ msgid "Online"
+#~ msgstr "Інтернет"
+
+#~ msgid "Corrections"
+#~ msgstr "Виправлення"
+
+#~ msgid "Saturation"
+#~ msgstr "Насиченість"
+
+#~ msgid "Contrast"
+#~ msgstr "Контрастність"
+
+#~ msgid "Gamma"
+#~ msgstr "Гама"
+
+#~ msgid "Player Tag Bar"
+#~ msgstr "Панель міток програвача"
+
+#~ msgid "Display tags bar to quickly tag videos being played."
+#~ msgstr ""
+#~ "Показати панель міток для пришвидшення позначення відео, які "
+#~ "відтворюються."
+
+#~ msgid "Color Scheme"
+#~ msgstr "Схема кольорів"
+
+#~ msgid "Video collection manager and MPV player."
+#~ msgstr "Програма для керування збіркою відео та програвач MPV."
+
+#~ msgid "New tag"
+#~ msgstr "Створити мітку"
+
+#~ msgid "Create a new tag to organize your collection"
+#~ msgstr "Створіть мітку для упорядкування вашої збірки"
+
+#~ msgid "List"
+#~ msgstr "Список"
+
+#~ msgid "Grid"
+#~ msgstr "Таблиця"
+
+#~ msgid "Built from "
+#~ msgstr "Зібрано на основі"
+
+#~ msgctxt "Complementary Color"
+#~ msgid "CC"
+#~ msgstr "ДК"
+
+#~ msgid "Cinema"
+#~ msgstr "Cinema"

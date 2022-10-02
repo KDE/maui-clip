@@ -1,0 +1,484 @@
+# Translation for clip.po to Euskara/Basque (eu).
+# Copyright (C) 2021-2022, This file is copyright:
+# This file is distributed under the same license as the maui-clip package.
+# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+#
+# Translators:
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: maui-clip\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-21 00:44+0000\n"
+"PO-Revision-Date: 2022-07-30 22:58+0200\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 22.04.3\n"
+
+#: src/controllers/YouTube.qml:95
+#, kde-format
+msgid "Custom API Key"
+msgstr "API gako pertsonalizatua"
+
+#: src/controllers/YouTube.qml:114
+#, kde-format
+msgid "Search results"
+msgstr "Bilaketaren emaitzak"
+
+#: src/controllers/YouTube.qml:209
+#, kde-format
+msgid "No Results!"
+msgstr "Emaitzarik ez!"
+
+#: src/controllers/YouTube.qml:210
+#, kde-format
+msgid "Try with another query"
+msgstr "Saiatu beste itaun batekin"
+
+#: src/controllers/YouTube.qml:249
+#, kde-format
+msgid "Search videos..."
+msgstr "Bilatu bideoak..."
+
+#: src/main.cpp:99
+#, kde-format
+msgid "Clip"
+msgstr "Clip"
+
+#: src/main.cpp:99
+#, kde-format
+msgid "Browse and play your videos."
+msgstr "Zure bideoak arakatu eta jo."
+
+#: src/main.cpp:100
+#, kde-format
+msgid "© 2019-%1 Maui Development Team"
+msgstr "© 2019-%1 Maui garapen taldea"
+
+#: src/main.cpp:101
+#, kde-format
+msgid "Camilo Higuita"
+msgstr "Camilo Higuita"
+
+#: src/main.cpp:101
+#, kde-format
+msgid "Developer"
+msgstr "Garatzailea"
+
+#: src/main.qml:100 src/main.qml:232
+#, kde-format
+msgid "Open URL"
+msgstr "Ireki URLa"
+
+#: src/main.qml:102
+#, kde-format
+msgid ""
+"Enter any remote location, like YouTube video URLs, or from other services "
+"supported by MPV."
+msgstr ""
+"Sartu urruneko edozein kokapen, hala nola YouTube-ko bideoen URLak edo MPV-"
+"rekin bateragarriak diren beste zerbitzu batzuenak."
+
+#: src/main.qml:134
+#, kde-format
+msgid "Delete files?"
+msgstr "Fitxategik ezabatu?"
+
+#: src/main.qml:135 src/views/ItemMenu.qml:119
+#, kde-format
+msgid "Accept"
+msgstr "Onartu"
+
+#: src/main.qml:136 src/views/ItemMenu.qml:120
+#, kde-format
+msgid "Cancel"
+msgstr "Utzi"
+
+#: src/main.qml:137
+#, kde-format
+msgid "Are sure you want to delete %1 files"
+msgstr "Ziur zaude %1 fitxategi ezabatu nahi dituzula?"
+
+#: src/main.qml:163
+#, kde-format
+msgid "Now playing"
+msgstr "Orain jotzen"
+
+#: src/main.qml:219
+#, kde-format
+msgid "Open"
+msgstr "Ireki"
+
+#: src/main.qml:243
+#, kde-format
+msgid "Settings"
+msgstr "Ezarpenak"
+
+#: src/main.qml:251
+#, kde-format
+msgid "About"
+msgstr "Honi buruz"
+
+#: src/main.qml:259 src/main.qml:379 src/views/settings/SettingsDialog.qml:55
+#, kde-format
+msgid "Collection"
+msgstr "Bilduma"
+
+#: src/main.qml:266 src/views/ItemMenu.qml:29
+#, kde-format
+msgid "Tags"
+msgstr "Etiketak"
+
+#: src/main.qml:358 src/views/youtube/YouTubeView.qml:25
+#, kde-format
+msgid "Nothing Here!"
+msgstr "Hemen ez dago ezer!"
+
+#: src/main.qml:359
+#, kde-format
+msgid "Open a new video from your collection or file system."
+msgstr "Ireki bideo berri bat zure bildumatik edo fitxategi-sistematik."
+
+#: src/main.qml:537
+#, kde-format
+msgid "Toggle SideBar"
+msgstr "Txandakatu alboko-barra"
+
+#: src/views/BrowserLayout.qml:68
+#, kde-format
+msgid "Search %1 video"
+msgid_plural "Search %1 videos"
+msgstr[0] "Bilatu bideo %1"
+msgstr[1] "Bilatu %1 bideo"
+
+#: src/views/collection/CollectionView.qml:13 src/views/player/Playlist.qml:19
+#: src/views/tags/TagsView.qml:38
+#, kde-format
+msgid "No Videos!"
+msgstr "Bideorik ez!"
+
+#: src/views/collection/CollectionView.qml:14
+#, kde-format
+msgid "Add a new video source or open a file."
+msgstr "Gehitu bideo sorburu berri bat edo ireki fitxategi bat."
+
+#: src/views/collection/CollectionView.qml:19
+#, kde-format
+msgid "Open file"
+msgstr "Ireki fitxategia"
+
+#: src/views/collection/CollectionView.qml:25
+#, kde-format
+msgid "Add sources"
+msgstr "Gehitu sorburuak"
+
+#: src/views/ItemMenu.qml:22
+#, kde-format
+msgid "UnFav it"
+msgstr "Kendu gogokoetatik"
+
+#: src/views/ItemMenu.qml:41
+#, kde-format
+msgid "Info"
+msgstr "Informazioa"
+
+#: src/views/ItemMenu.qml:52 src/views/SelectionBar.qml:75
+#, kde-format
+msgid "Share"
+msgstr "Partekatu"
+
+#: src/views/ItemMenu.qml:63 src/views/SelectionBar.qml:45
+#, kde-format
+msgid "Queue"
+msgstr "Ipini ilaran"
+
+#: src/views/ItemMenu.qml:75
+#, kde-format
+msgid "Select"
+msgstr "Hautatu"
+
+#: src/views/ItemMenu.qml:89
+#, kde-format
+msgid "Show in folder"
+msgstr "Erakutsi karpetan"
+
+#: src/views/ItemMenu.qml:102 src/views/SelectionBar.qml:103
+#, kde-format
+msgid "Remove"
+msgstr "Kendu"
+
+#: src/views/ItemMenu.qml:118
+#, kde-format
+msgid "Delete file?"
+msgstr "Fitxategi ezabatu?"
+
+#: src/views/ItemMenu.qml:121
+#, kde-format
+msgid ""
+"Are sure you want to delete \n"
+"%1"
+msgstr ""
+"Ziur zaude\n"
+"%1 ezabatu nahi duzula?"
+
+#: src/views/player/MPVPlayer.qml:29
+#, kde-format
+msgid "Subtitles"
+msgstr "Azpidatziak"
+
+#: src/views/player/MPVPlayer.qml:47
+#, kde-format
+msgid "Audio Tracks"
+msgstr "Audio pistak"
+
+#: src/views/player/PlayerView.qml:42
+#, kde-format
+msgid "Playing mode"
+msgstr "Jotzeko modua"
+
+#: src/views/player/Playlist.qml:20
+#, kde-format
+msgid "Add videos to the playlist."
+msgstr "Gehitu bideoak jotze-zerrendara."
+
+#: src/views/SelectionBar.qml:34
+#, kde-format
+msgid "Play"
+msgstr "Jo"
+
+#: src/views/SelectionBar.qml:56
+#, kde-format
+msgid "Un/Fav"
+msgstr "Gogokoa kendu/egin"
+
+#: src/views/SelectionBar.qml:63
+#, kde-format
+msgid "Tag"
+msgstr "Etiketa"
+
+#: src/views/SelectionBar.qml:87
+#, kde-format
+msgid "Export"
+msgstr "Esportatu"
+
+#: src/views/settings/SettingsDialog.qml:18
+#, kde-format
+msgid "General"
+msgstr "Orokorra"
+
+#: src/views/settings/SettingsDialog.qml:19
+#, kde-format
+msgid "Configure the app behavior."
+msgstr "Konfiguratu aplikazioaren jokabidea."
+
+#: src/views/settings/SettingsDialog.qml:23
+#, kde-format
+msgid "Volume Step"
+msgstr "Bolumen urratsa"
+
+#: src/views/settings/SettingsDialog.qml:36
+#, kde-format
+msgid "Dark Mode"
+msgstr "Modu iluna"
+
+#: src/views/settings/SettingsDialog.qml:37
+#, kde-format
+msgid "Switch between light and dark colorscheme"
+msgstr "Aldatu kolore-antolaera argi eta ilunaren artean"
+
+#: src/views/settings/SettingsDialog.qml:56
+#, kde-format
+msgid "Sorting order and behavior."
+msgstr "Sailkapen ordena eta jokabidea."
+
+#: src/views/settings/SettingsDialog.qml:60
+#, kde-format
+msgid "Sorting by"
+msgstr "Honen arabera sailkatzea"
+
+#: src/views/settings/SettingsDialog.qml:61
+#, kde-format
+msgid "Change the sorting key."
+msgstr "Aldatu sailkatzeko gakoa."
+
+#: src/views/settings/SettingsDialog.qml:84
+#, kde-format
+msgid "Title"
+msgstr "Titulua"
+
+#: src/views/settings/SettingsDialog.qml:90
+#, kde-format
+msgid "Date"
+msgstr "Data"
+
+#: src/views/settings/SettingsDialog.qml:96
+#, kde-format
+msgid "Size"
+msgstr "Neurria"
+
+#: src/views/settings/SettingsDialog.qml:102
+#, kde-format
+msgid "Type"
+msgstr "Mota"
+
+#: src/views/settings/SettingsDialog.qml:110
+#, kde-format
+msgid "Sort order"
+msgstr "Sailkatzeko ordena"
+
+#: src/views/settings/SettingsDialog.qml:111
+#, kde-format
+msgid "Change the sorting order."
+msgstr "Aldatu sailkatzeko ordena."
+
+#: src/views/settings/SettingsDialog.qml:132
+#, kde-format
+msgid "Ascending"
+msgstr "Gorakorra"
+
+#: src/views/settings/SettingsDialog.qml:139
+#, kde-format
+msgid "Descending"
+msgstr "Beherakorra"
+
+#: src/views/settings/SettingsDialog.qml:149
+#, kde-format
+msgid "Playback"
+msgstr "Atzera-jo"
+
+#: src/views/settings/SettingsDialog.qml:150
+#, kde-format
+msgid "Configure the player settings."
+msgstr "Konfiguratu jotzailearen ezarpenak."
+
+#: src/views/settings/SettingsDialog.qml:154
+#, kde-format
+msgid "Hardware Decoding"
+msgstr "Hardware bidezko deskodetzea"
+
+#: src/views/settings/SettingsDialog.qml:155
+#, kde-format
+msgid "Use the sorting preferences globally for all the tabs and splits."
+msgstr ""
+"Erabili sailkatzeko hobespenak orokorki fitxa eta zatiketa guztietarako."
+
+#: src/views/settings/SettingsDialog.qml:168
+#, kde-format
+msgid "Audio"
+msgstr "Audioa"
+
+#: src/views/settings/SettingsDialog.qml:169
+#, kde-format
+msgid "Configure the player audio behaviour."
+msgstr "Konfiguratu jotzaile audioaren jokabidea."
+
+#: src/views/settings/SettingsDialog.qml:174
+#, kde-format
+msgid "Preferred Language"
+msgstr "Hobetsitako hizkuntza"
+
+#: src/views/settings/SettingsDialog.qml:175
+#, kde-format
+msgid "Preferred language if available."
+msgstr "Hobetsitako hizkuntza erabilgarri badago."
+
+#: src/views/settings/SettingsDialog.qml:280
+#, kde-format
+msgid "Sources"
+msgstr "Iturburuak"
+
+#: src/views/settings/SettingsDialog.qml:281
+#, kde-format
+msgid "Add new sources to manage and browse your video collection"
+msgstr "Gehitu, zure bideo bilduma kudeatzeko eta arakatzeko, iturburu berriak"
+
+#: src/views/settings/SettingsDialog.qml:323
+#, kde-format
+msgid "Add"
+msgstr "Gehitu"
+
+#: src/views/settings/SettingsDialog.qml:345
+#, kde-format
+msgid "Remove source"
+msgstr "Kendu iturburua"
+
+#: src/views/settings/SettingsDialog.qml:346
+#, kde-format
+msgid ""
+"Are you sure you want to remove the source: \n"
+" %1"
+msgstr ""
+"Ziur zaude iturburua kendu nahi duzula:\n"
+"%1"
+
+#: src/views/tags/TagsGrid.qml:22
+#, kde-format
+msgid "No Tags!"
+msgstr "Etiketarik ez!"
+
+#: src/views/tags/TagsGrid.qml:23
+#, kde-format
+msgid "Add a new tag to start organizing your video collection."
+msgstr "Gehitu, zure bideo bilduma antolatzen hasteko, etiketa berri bat."
+
+#: src/views/tags/TagsGrid.qml:36
+#, kde-format
+msgid "Filter"
+msgstr "Iragazkia"
+
+#: src/views/tags/TagsView.qml:39
+#, kde-format
+msgid "There's no videos associated with the tag"
+msgstr "Ez dago etiketa horrekin lotutako bideorik"
+
+#: src/views/youtube/YouTubeView.qml:26
+#, kde-format
+msgid "Start searching for online videos."
+msgstr "Hasi lerroko bideoak bilatzen."
+
+#: src/views/youtube/YouTubeView.qml:44
+#, kde-format
+msgid "Search..."
+msgstr "Bilatu..."
+
+#~ msgid "Player"
+#~ msgstr "Jotzailea"
+
+#~ msgid "Configure the app UI."
+#~ msgstr "Konfiguratu aplikazioaren erabiltzaile-interfazea."
+
+#~ msgid "Directory"
+#~ msgstr "Direktorioa"
+
+#~ msgid "Folder path containing the subtitle files."
+#~ msgstr "Azpidatzi-fitxategiak dituen karpetaren bide-izena."
+
+#~ msgid "Font Family"
+#~ msgstr "Letra-tipoaren familia"
+
+#~ msgid "Font Size"
+#~ msgstr "Letra-tipo neurria"
+
+#~ msgid "YouTube"
+#~ msgstr "YouTube"
+
+#~ msgid "Configure YouTube details."
+#~ msgstr "Konfiguratu YouTube xehetasunak."
+
+#~ msgid "Key"
+#~ msgstr "Gakoa"
+
+#~ msgid "Personal key for limitless browsing."
+#~ msgstr "Mugarik gabe arakatzeko gako pertsonala."
+
+#~ msgid ""
+#~ "<a href='https://console.developers.google.com/apis/credentials'>Get your "
+#~ "personal key.</a>"
+#~ msgstr ""
+#~ "<a href='https://console.developers.google.com/apis/credentials'>Lortu "
+#~ "zure gako pertsonala.</a>"

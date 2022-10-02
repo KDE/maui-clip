@@ -1,0 +1,524 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the maui-clip package.
+#
+# Łukasz Wojniłowicz <<lukasz.wojnilowicz@gmail.com>>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: maui-clip\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-21 00:44+0000\n"
+"PO-Revision-Date: 2022-01-16 09:41+0100\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
+"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 22.03.70\n"
+
+#: src/controllers/YouTube.qml:95
+#, kde-format
+msgid "Custom API Key"
+msgstr "Własny klucz API"
+
+#: src/controllers/YouTube.qml:114
+#, kde-format
+msgid "Search results"
+msgstr "Wyniki wyszukiwania"
+
+#: src/controllers/YouTube.qml:209
+#, kde-format
+msgid "No Results!"
+msgstr "Brak wyników!"
+
+#: src/controllers/YouTube.qml:210
+#, kde-format
+msgid "Try with another query"
+msgstr "Spróbuj innego zapytania"
+
+#: src/controllers/YouTube.qml:249
+#, kde-format
+msgid "Search videos..."
+msgstr "Szukaj filmów..."
+
+#: src/main.cpp:99
+#, kde-format
+msgid "Clip"
+msgstr "Clip"
+
+#: src/main.cpp:99
+#, kde-format
+msgid "Browse and play your videos."
+msgstr "Przeglądaj i odtwarzaj swoje filmy."
+
+#: src/main.cpp:100
+#, kde-format
+msgid "© 2019-%1 Maui Development Team"
+msgstr "© 2019-%1 Zespół programistów Maui"
+
+#: src/main.cpp:101
+#, kde-format
+msgid "Camilo Higuita"
+msgstr "Camilo Higuita"
+
+#: src/main.cpp:101
+#, kde-format
+msgid "Developer"
+msgstr "Programista"
+
+#: src/main.qml:100 src/main.qml:232
+#, kde-format
+msgid "Open URL"
+msgstr "Otwórz adres URL"
+
+#: src/main.qml:102
+#, kde-format
+msgid ""
+"Enter any remote location, like YouTube video URLs, or from other services "
+"supported by MPV."
+msgstr ""
+"Wpisz dowolne zdalne położenie, jak np. adres URL do filmu na YouTube lub do "
+"innych usług obsługiwanych przez MPV."
+
+#: src/main.qml:134
+#, kde-format
+msgid "Delete files?"
+msgstr "Czy usunąć pliki?"
+
+#: src/main.qml:135 src/views/ItemMenu.qml:119
+#, kde-format
+msgid "Accept"
+msgstr "Przyjmij"
+
+#: src/main.qml:136 src/views/ItemMenu.qml:120
+#, kde-format
+msgid "Cancel"
+msgstr "Anuluj"
+
+#: src/main.qml:137
+#, kde-format
+msgid "Are sure you want to delete %1 files"
+msgstr "Czy na pewno usunąć %1 plików"
+
+#: src/main.qml:163
+#, kde-format
+msgid "Now playing"
+msgstr "Teraz odtwarzany"
+
+#: src/main.qml:219
+#, kde-format
+msgid "Open"
+msgstr "Otwórz"
+
+#: src/main.qml:243
+#, kde-format
+msgid "Settings"
+msgstr "Ustawienia"
+
+#: src/main.qml:251
+#, kde-format
+msgid "About"
+msgstr "O programie"
+
+#: src/main.qml:259 src/main.qml:379 src/views/settings/SettingsDialog.qml:55
+#, kde-format
+msgid "Collection"
+msgstr "Zbiór"
+
+#: src/main.qml:266 src/views/ItemMenu.qml:29
+#, kde-format
+msgid "Tags"
+msgstr "Znaczniki"
+
+#: src/main.qml:358 src/views/youtube/YouTubeView.qml:25
+#, kde-format
+msgid "Nothing Here!"
+msgstr "Nie ma tutaj niczego!"
+
+#: src/main.qml:359
+#, kde-format
+msgid "Open a new video from your collection or file system."
+msgstr "Otwórz nowy film z twojego zbioru lub systemu plików."
+
+#: src/main.qml:537
+#, kde-format
+msgid "Toggle SideBar"
+msgstr "Przełącz pasek boczny"
+
+#: src/views/BrowserLayout.qml:68
+#, kde-format
+msgid "Search %1 video"
+msgid_plural "Search %1 videos"
+msgstr[0] "Szukaj %1 filmu"
+msgstr[1] "Szukaj %1 filmów"
+msgstr[2] "Szukaj %1 filmów"
+
+#: src/views/collection/CollectionView.qml:13 src/views/player/Playlist.qml:19
+#: src/views/tags/TagsView.qml:38
+#, kde-format
+msgid "No Videos!"
+msgstr "Brak filmów!"
+
+#: src/views/collection/CollectionView.qml:14
+#, kde-format
+msgid "Add a new video source or open a file."
+msgstr "Dodaj nowe źródło filmu lub otwórz plik."
+
+#: src/views/collection/CollectionView.qml:19
+#, kde-format
+msgid "Open file"
+msgstr "Otwórz plik"
+
+#: src/views/collection/CollectionView.qml:25
+#, kde-format
+msgid "Add sources"
+msgstr "Dodaj źródła"
+
+#: src/views/ItemMenu.qml:22
+#, kde-format
+msgid "UnFav it"
+msgstr "Usuń z ulubionych"
+
+#: src/views/ItemMenu.qml:41
+#, kde-format
+msgid "Info"
+msgstr "Informacja"
+
+#: src/views/ItemMenu.qml:52 src/views/SelectionBar.qml:75
+#, kde-format
+msgid "Share"
+msgstr "Udostępnij"
+
+#: src/views/ItemMenu.qml:63 src/views/SelectionBar.qml:45
+#, kde-format
+msgid "Queue"
+msgstr "Do kolejki"
+
+#: src/views/ItemMenu.qml:75
+#, kde-format
+msgid "Select"
+msgstr "Zaznacz"
+
+#: src/views/ItemMenu.qml:89
+#, kde-format
+msgid "Show in folder"
+msgstr "Pokaż w katalogu"
+
+#: src/views/ItemMenu.qml:102 src/views/SelectionBar.qml:103
+#, kde-format
+msgid "Remove"
+msgstr "Usuń"
+
+#: src/views/ItemMenu.qml:118
+#, kde-format
+msgid "Delete file?"
+msgstr "Czy usunąć plik?"
+
+#: src/views/ItemMenu.qml:121
+#, kde-format
+msgid ""
+"Are sure you want to delete \n"
+"%1"
+msgstr ""
+"Czy na pewno usunąć \n"
+"%1"
+
+#: src/views/player/MPVPlayer.qml:29
+#, kde-format
+msgid "Subtitles"
+msgstr "Napisy"
+
+#: src/views/player/MPVPlayer.qml:47
+#, kde-format
+msgid "Audio Tracks"
+msgstr "Ścieżki dźwiękowe"
+
+#: src/views/player/PlayerView.qml:42
+#, kde-format
+msgid "Playing mode"
+msgstr "Tryb odtwarzania"
+
+#: src/views/player/Playlist.qml:20
+#, kde-format
+msgid "Add videos to the playlist."
+msgstr "Dodaj film do listy odtwarzania."
+
+#: src/views/SelectionBar.qml:34
+#, kde-format
+msgid "Play"
+msgstr "Odtwórz"
+
+#: src/views/SelectionBar.qml:56
+#, kde-format
+msgid "Un/Fav"
+msgstr "Dodaj/usuń z ulubionych"
+
+#: src/views/SelectionBar.qml:63
+#, kde-format
+msgid "Tag"
+msgstr "Znacznik"
+
+#: src/views/SelectionBar.qml:87
+#, kde-format
+msgid "Export"
+msgstr "Wyeksportuj"
+
+#: src/views/settings/SettingsDialog.qml:18
+#, kde-format
+msgid "General"
+msgstr "Ogólne"
+
+#: src/views/settings/SettingsDialog.qml:19
+#, kde-format
+msgid "Configure the app behavior."
+msgstr "Ustawienia zachowania programu."
+
+#: src/views/settings/SettingsDialog.qml:23
+#, kde-format
+msgid "Volume Step"
+msgstr "Krok głośności"
+
+#: src/views/settings/SettingsDialog.qml:36
+#, kde-format
+msgid "Dark Mode"
+msgstr "Tryb ciemny"
+
+#: src/views/settings/SettingsDialog.qml:37
+#, kde-format
+msgid "Switch between light and dark colorscheme"
+msgstr "Przełącz pomiędzy trybem jasnym i ciemnym"
+
+#: src/views/settings/SettingsDialog.qml:56
+#, kde-format
+msgid "Sorting order and behavior."
+msgstr "Kolejność szeregowania i zachowanie."
+
+#: src/views/settings/SettingsDialog.qml:60
+#, kde-format
+msgid "Sorting by"
+msgstr "Szeregowanie wg"
+
+#: src/views/settings/SettingsDialog.qml:61
+#, kde-format
+msgid "Change the sorting key."
+msgstr "Zmień klucz szeregowania."
+
+#: src/views/settings/SettingsDialog.qml:84
+#, kde-format
+msgid "Title"
+msgstr "Nazwa"
+
+#: src/views/settings/SettingsDialog.qml:90
+#, kde-format
+msgid "Date"
+msgstr "Data"
+
+#: src/views/settings/SettingsDialog.qml:96
+#, kde-format
+msgid "Size"
+msgstr "Rozmiar"
+
+#: src/views/settings/SettingsDialog.qml:102
+#, kde-format
+msgid "Type"
+msgstr "Rodzaj"
+
+#: src/views/settings/SettingsDialog.qml:110
+#, kde-format
+msgid "Sort order"
+msgstr "Porządek szeregowania"
+
+#: src/views/settings/SettingsDialog.qml:111
+#, kde-format
+msgid "Change the sorting order."
+msgstr "Zmień kolejność szeregowania."
+
+#: src/views/settings/SettingsDialog.qml:132
+#, kde-format
+msgid "Ascending"
+msgstr "Rosnąco"
+
+#: src/views/settings/SettingsDialog.qml:139
+#, kde-format
+msgid "Descending"
+msgstr "Malejąco"
+
+#: src/views/settings/SettingsDialog.qml:149
+#, kde-format
+msgid "Playback"
+msgstr "Odtwarzanie"
+
+#: src/views/settings/SettingsDialog.qml:150
+#, kde-format
+msgid "Configure the player settings."
+msgstr "Ustawienia odtwarzacza."
+
+#: src/views/settings/SettingsDialog.qml:154
+#, kde-format
+msgid "Hardware Decoding"
+msgstr "Dekodowanie sprzętowe"
+
+#: src/views/settings/SettingsDialog.qml:155
+#, kde-format
+msgid "Use the sorting preferences globally for all the tabs and splits."
+msgstr ""
+"Zastosuj ustawienia szeregowania globalnie dla wszystkich kart i "
+"podzielonych widoków."
+
+#: src/views/settings/SettingsDialog.qml:168
+#, kde-format
+msgid "Audio"
+msgstr "Dźwięk"
+
+#: src/views/settings/SettingsDialog.qml:169
+#, kde-format
+msgid "Configure the player audio behaviour."
+msgstr "Ustawienia zachowania dźwięków w odtwarzaczu."
+
+#: src/views/settings/SettingsDialog.qml:174
+#, kde-format
+msgid "Preferred Language"
+msgstr "Domyślny język"
+
+#: src/views/settings/SettingsDialog.qml:175
+#, kde-format
+msgid "Preferred language if available."
+msgstr "Domyślny język, jeśli jest dostępny."
+
+#: src/views/settings/SettingsDialog.qml:280
+#, kde-format
+msgid "Sources"
+msgstr "Źródła"
+
+#: src/views/settings/SettingsDialog.qml:281
+#, kde-format
+msgid "Add new sources to manage and browse your video collection"
+msgstr ""
+"Dodaj nowe źródła do swojego zbioru filmów, aby nimi zarządzać i przeglądać"
+
+#: src/views/settings/SettingsDialog.qml:323
+#, kde-format
+msgid "Add"
+msgstr "Dodaj"
+
+#: src/views/settings/SettingsDialog.qml:345
+#, kde-format
+msgid "Remove source"
+msgstr "Usuń źródło"
+
+#: src/views/settings/SettingsDialog.qml:346
+#, kde-format
+msgid ""
+"Are you sure you want to remove the source: \n"
+" %1"
+msgstr ""
+"Czy na pewno usunąć źródło: \n"
+" %1"
+
+#: src/views/tags/TagsGrid.qml:22
+#, kde-format
+msgid "No Tags!"
+msgstr "Brak znaczników!"
+
+#: src/views/tags/TagsGrid.qml:23
+#, kde-format
+msgid "Add a new tag to start organizing your video collection."
+msgstr "Dodaj nowy znacznik, aby zacząć zarządzać swoim zbiorem filmów."
+
+#: src/views/tags/TagsGrid.qml:36
+#, kde-format
+msgid "Filter"
+msgstr "Odfiltruj"
+
+#: src/views/tags/TagsView.qml:39
+#, kde-format
+msgid "There's no videos associated with the tag"
+msgstr "Nie ma filmów przypisanych temu znacznikowi"
+
+#: src/views/youtube/YouTubeView.qml:26
+#, kde-format
+msgid "Start searching for online videos."
+msgstr "Zacznij szukać filmów w sieci."
+
+#: src/views/youtube/YouTubeView.qml:44
+#, kde-format
+msgid "Search..."
+msgstr "Szukaj..."
+
+#~ msgid "Player"
+#~ msgstr "Odtwarzacz"
+
+#~ msgid "Configure the app UI."
+#~ msgstr "Ustawienia interfejsu programu."
+
+#~ msgid "Directory"
+#~ msgstr "Katalog"
+
+#~ msgid "Folder path containing the subtitle files."
+#~ msgstr "Ścieżka do katalogu, zawierającego pliki napisów."
+
+#~ msgid "Font Family"
+#~ msgstr "Rodzina czcionek"
+
+#~ msgid "Font Size"
+#~ msgstr "Rozmiar czcionki"
+
+#~ msgid "YouTube"
+#~ msgstr "YouTube"
+
+#~ msgid "Configure YouTube details."
+#~ msgstr "Ustawienia szczegółów YouTube."
+
+#~ msgid "Key"
+#~ msgstr "Klucz"
+
+#~ msgid "Personal key for limitless browsing."
+#~ msgstr "Osobisty klucz do nieograniczonego przeglądania."
+
+#~ msgid ""
+#~ "<a href='https://console.developers.google.com/apis/credentials'>Get your "
+#~ "personal key.</a>"
+#~ msgstr ""
+#~ "<a href='https://console.developers.google.com/apis/credentials'>Uzyskaj "
+#~ "swój klucz osobisty.</a>"
+
+#~ msgid "Online"
+#~ msgstr "Dostępny"
+
+#~ msgid "Corrections"
+#~ msgstr "Poprawki"
+
+#~ msgid "Saturation"
+#~ msgstr "Nasycenie"
+
+#~ msgid "Contrast"
+#~ msgstr "Kontrast"
+
+#~ msgid "Gamma"
+#~ msgstr "Gamma"
+
+#~ msgid "Player Tag Bar"
+#~ msgstr "Pasek znaczników odtwarzacza"
+
+#~ msgid "Display tags bar to quickly tag videos being played."
+#~ msgstr "Wyświetl pasek znaczników, aby móc szybko znaczyć odtwarzane filmy."
+
+#~ msgid "Color Scheme"
+#~ msgstr "Zestaw barw"
+
+#~ msgid "Video collection manager and MPV player."
+#~ msgstr "Zarządzanie zbiorem filmów i odtwarzacz MPV."
+
+#~ msgid "New tag"
+#~ msgstr "Nowy znacznik"
+
+#~ msgid "Create a new tag to organize your collection"
+#~ msgstr "Utwórz nowy znacznik, aby zarządzać swoim zbiorem"
+
+#~ msgid "List"
+#~ msgstr "Lista"
+
+#~ msgid "Grid"
+#~ msgstr "Siatka"
