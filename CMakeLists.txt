@@ -103,6 +103,8 @@ ecm_setup_version(${CLIP_VERSION}
 
 add_subdirectory(src)
 
+install(FILES org.kde.clip.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
+
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
 file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES *.cpp *.h)

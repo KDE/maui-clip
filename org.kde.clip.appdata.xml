@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component type="desktop">
+  <id>org.kde.clip.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>LGPL-3.0</project_license>
+  <name>Clip</name>
+  <summary>Terminal Emulator</summary>
+  <description>
+    <p>Clip is a video player a collection manager.</p>
+  </description>
+  <url type="homepage">https://apps.kde.org/clip</url>
+  <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?product=clip</url>
+  <url type="donation">https://kde.org/community/donations</url>
+  <screenshots>
+    <screenshot type="default">
+      <image type="source">https://cdn.kde.org/screenshots/clip/clip-stable.png</image>
+      <caption>Clip playing videos.</caption>
+    </screenshot>   
+  </screenshots>
+  <recommends>
+    <control>pointing</control>
+    <control>keyboard</control>
+    <control>touch</control>
+  </recommends>
+  <content_rating type="oars-1.0"/>
+  <provides>
+    <binary>clip</binary>
+  </provides>
+  <project_group>KDE</project_group>
+  <releases>
+  <release version="2.1.2" date="2022-05-16">
+    <url>https://mauikit.org/blog/maui-2-1-2-release/</url>
+  </release>
+<release version="2.2.0" date="2022-08-30">
+  <url>https://mauikit.org/blog/maui-2-2-0-release/</url>
+</release>
+    <release version="1.2.2" date="2021-05-11">
+      <url>https://nxos.org/maui/maui-1-2-2-release/</url>
+    </release>
+    <release version="0.1.0" date="2018-09-06"/>
+  </releases>
+</component>
