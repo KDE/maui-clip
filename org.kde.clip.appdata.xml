@@ -4,9 +4,9 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>LGPL-3.0</project_license>
   <name>Clip</name>
-  <summary>Terminal Emulator</summary>
+  <summary>Video Player</summary>
   <description>
-    <p>Clip is a video player a collection manager.</p>
+    <p>Clip is a video player and collection manager.</p>
   </description>
   <url type="homepage">https://apps.kde.org/clip</url>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?product=clip</url>
