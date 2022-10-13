@@ -4,6 +4,14 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>LGPL-3.0</project_license>
   <name>Clip</name>
+  <name xml:lang="ca">Clip</name>
+  <name xml:lang="ca-valencia">Clip</name>
+  <name xml:lang="es">Clip</name>
+  <name xml:lang="eu">Clip</name>
+  <name xml:lang="nl">Clip</name>
+  <name xml:lang="tr">Klip</name>
+  <name xml:lang="uk">Clip</name>
+  <name xml:lang="x-test">xxClipxx</name>
   <summary>Video Player</summary>
   <description>
     <p>Clip is a video player and collection manager.</p>
@@ -15,7 +23,15 @@
     <screenshot type="default">
       <image type="source">https://cdn.kde.org/screenshots/clip/clip-stable.png</image>
       <caption>Clip playing videos.</caption>
-    </screenshot>   
+      <caption xml:lang="ca">El Clip reproduint vídeos.</caption>
+      <caption xml:lang="ca-valencia">Clip reproduint vídeos.</caption>
+      <caption xml:lang="es">Clip reproduciendo vídeos.</caption>
+      <caption xml:lang="eu">«Clip» bideoak jotzen.</caption>
+      <caption xml:lang="nl">Clip speelt video's af.</caption>
+      <caption xml:lang="tr">Klip, video oynatırken.</caption>
+      <caption xml:lang="uk">Clip відтворює відео.</caption>
+      <caption xml:lang="x-test">xxClip playing videos.xx</caption>
+    </screenshot>
   </screenshots>
   <recommends>
     <control>pointing</control>
@@ -28,12 +44,12 @@
   </provides>
   <project_group>KDE</project_group>
   <releases>
-  <release version="2.1.2" date="2022-05-16">
-    <url>https://mauikit.org/blog/maui-2-1-2-release/</url>
-  </release>
-<release version="2.2.0" date="2022-08-30">
-  <url>https://mauikit.org/blog/maui-2-2-0-release/</url>
-</release>
+    <release version="2.1.2" date="2022-05-16">
+      <url>https://mauikit.org/blog/maui-2-1-2-release/</url>
+    </release>
+    <release version="2.2.0" date="2022-08-30">
+      <url>https://mauikit.org/blog/maui-2-2-0-release/</url>
+    </release>
     <release version="1.2.2" date="2021-05-11">
       <url>https://nxos.org/maui/maui-1-2-2-release/</url>
     </release>
