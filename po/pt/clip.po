@@ -12,6 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-POFile-SpellExtra: Nitrux Higuita MPV YouTube Maui\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-POFile-IgnoreConsistency: Clip\n"
 
 #: src/controllers/YouTube.qml:95
 #, kde-format
