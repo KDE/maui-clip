@@ -17,10 +17,12 @@
   <name xml:lang="x-test">xxClipxx</name>
   <summary>Video Player</summary>
   <summary xml:lang="ca">Reproductor de vídeo</summary>
+  <summary xml:lang="ca-valencia">Reproductor de vídeo</summary>
   <summary xml:lang="es">Reproductor de vídeo</summary>
   <summary xml:lang="eu">Bideo jotzailea</summary>
   <summary xml:lang="fr">Lecteur de vidéos</summary>
   <summary xml:lang="nl">Videospeler</summary>
+  <summary xml:lang="pt">Reprodutor de Vídeo</summary>
   <summary xml:lang="sl">Video predvajalnik</summary>
   <summary xml:lang="tr">Video Oynatıcı</summary>
   <summary xml:lang="uk">Відеопрогравач</summary>
@@ -28,10 +30,12 @@
   <description>
     <p>Clip is a video player and collection manager.</p>
     <p xml:lang="ca">El Clip és un reproductor de vídeo i un gestor de col·leccions.</p>
+    <p xml:lang="ca-valencia">Clip és un reproductor de vídeo i un gestor de col·leccions.</p>
     <p xml:lang="es">Clip es un reproductor de vídeo y gestor de colecciones.</p>
     <p xml:lang="eu">«Clip» bideo jotzaile eta bilduma kudeatzaile bat da.</p>
     <p xml:lang="fr">Le logiciel « Clip » est un lecteur de vidéo et un gestionnaire de collections.</p>
     <p xml:lang="nl">Clip is een videospeler en beheerder van een verzameling.</p>
+    <p xml:lang="pt">O Clip é um leitor de vídeo e um gestor de colecções.</p>
     <p xml:lang="sl">Clip je video predvajalnik in upravljalnik zbirk.</p>
     <p xml:lang="tr">Klip, bir video oynatıcı ve koleksiyon yöneticisidir.</p>
     <p xml:lang="uk">Clip — програвач відео і засіб керування збіркою.</p>
