@@ -53,7 +53,6 @@ Exec=clip %U
 Terminal=false
 Type=Application
 GenericName=Video Player
-GenericName[ast]=Reproductor de vídeos
 GenericName[ca]=Reproductor de vídeo
 GenericName[ca@valencia]=Reproductor de vídeo
 GenericName[cs]=Přehrávač videa
