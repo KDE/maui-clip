@@ -10,6 +10,7 @@
   <name xml:lang="eu">Clip</name>
   <name xml:lang="fr">Clip</name>
   <name xml:lang="id">Clip</name>
+  <name xml:lang="it">Clip</name>
   <name xml:lang="nl">Clip</name>
   <name xml:lang="pt">Clip</name>
   <name xml:lang="sl">Clip</name>
@@ -23,6 +24,7 @@
   <summary xml:lang="eu">Bideo jotzailea</summary>
   <summary xml:lang="fr">Lecteur de vidéos</summary>
   <summary xml:lang="id">Pemutar Video</summary>
+  <summary xml:lang="it">Lettore video</summary>
   <summary xml:lang="nl">Videospeler</summary>
   <summary xml:lang="pt">Reprodutor de Vídeo</summary>
   <summary xml:lang="sl">Video predvajalnik</summary>
@@ -37,6 +39,7 @@
     <p xml:lang="eu">«Clip» bideo jotzaile eta bilduma kudeatzaile bat da.</p>
     <p xml:lang="fr">Le logiciel « Clip » est un lecteur de vidéo et un gestionnaire de collections.</p>
     <p xml:lang="id">Clip adalah sebuah pemutar video dan pengelola koleksi.</p>
+    <p xml:lang="it">Clip è un lettore video e un gestore di raccolte.</p>
     <p xml:lang="nl">Clip is een videospeler en beheerder van een verzameling.</p>
     <p xml:lang="pt">O Clip é um leitor de vídeo e um gestor de colecções.</p>
     <p xml:lang="sl">Clip je video predvajalnik in upravljalnik zbirk.</p>
@@ -57,6 +60,7 @@
       <caption xml:lang="eu">«Clip» bideoak jotzen.</caption>
       <caption xml:lang="fr">Le logiciel « Clip » en cours de lecture de vidéos.</caption>
       <caption xml:lang="id">Clip memutar video-video.</caption>
+      <caption xml:lang="it">Clip che riproduce video.</caption>
       <caption xml:lang="nl">Clip speelt video's af.</caption>
       <caption xml:lang="pt">O Clip a reproduzir vídeos.</caption>
       <caption xml:lang="sl">Clip predvaja videoposnetke.</caption>
