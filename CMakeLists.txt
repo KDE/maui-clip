@@ -103,7 +103,9 @@ ecm_setup_version(${CLIP_VERSION}
 
 add_subdirectory(src)
 
-install(FILES org.kde.clip.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
+if(UNIX AND NOT APPLE AND NOT ANDROID)
+    install(FILES org.kde.clip.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
+endif()
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
