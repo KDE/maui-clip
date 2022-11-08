@@ -23,21 +23,13 @@ Maui.ApplicationWindow
     id: root
 
     title: _playerView.currentVideo.label
-    Maui.Style.styleType: Maui.Handy.isAndroid ? (appSettings.darkMode ? Maui.Style.Dark : Maui.Style.Light) : undefined
+    Maui.Style.styleType: Maui.Handy.isAndroid ? (settings.darkMode ? Maui.Style.Dark : Maui.Style.Light) : undefined
 
     property bool selectionMode : false
 
     readonly property var views : ({player: 0, collection: 1, tags: 2})
     property alias dialog : dialogLoader.item
     property alias player: _playerView.player
-
-    Maui.WindowBlur
-    {
-        view: root
-        geometry: Qt.rect(root.x, root.y, root.width, root.height)
-        windowRadius: root.background.radius
-        enabled: !Maui.Handy.isMobile
-    }
 
     onIsPortraitChanged:
     {
@@ -65,7 +57,7 @@ Maui.ApplicationWindow
         property bool playerTagBar: true
         property string youtubeKey: "AIzaSyDMLmTSEN7i6psE2tHdaG6hy3ljWKXIYBk"
         property int youtubeQueryLimit : 50
-        property bool darkMode: true
+        property bool darkMode : Maui.Style.styleType === Maui.Style.Dark
     }
 
     Loader
