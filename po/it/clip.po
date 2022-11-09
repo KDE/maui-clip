@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-cinema\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-21 00:44+0000\n"
+"POT-Creation-Date: 2022-11-09 00:46+0000\n"
 "PO-Revision-Date: 2022-01-12 17:39+0100\n"
 "Last-Translator: Paolo Zamponi <zapaolo@email.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -67,12 +67,12 @@ msgstr "Camilo Higuita"
 msgid "Developer"
 msgstr "Sviluppatore"
 
-#: src/main.qml:100 src/main.qml:232
+#: src/main.qml:92 src/main.qml:224
 #, kde-format
 msgid "Open URL"
 msgstr "Apri URL"
 
-#: src/main.qml:102
+#: src/main.qml:94
 #, kde-format
 msgid ""
 "Enter any remote location, like YouTube video URLs, or from other services "
@@ -81,67 +81,67 @@ msgstr ""
 "Inserisci una posizione remota, ad esempio URL di video su YouTube o su "
 "altri servizi supportati da MPV."
 
-#: src/main.qml:134
+#: src/main.qml:126
 #, kde-format
 msgid "Delete files?"
 msgstr "Eliminare i file?"
 
-#: src/main.qml:135 src/views/ItemMenu.qml:119
+#: src/main.qml:127 src/views/ItemMenu.qml:119
 #, kde-format
 msgid "Accept"
 msgstr "Accetta"
 
-#: src/main.qml:136 src/views/ItemMenu.qml:120
+#: src/main.qml:128 src/views/ItemMenu.qml:120
 #, kde-format
 msgid "Cancel"
 msgstr "Annulla"
 
-#: src/main.qml:137
+#: src/main.qml:129
 #, kde-format
 msgid "Are sure you want to delete %1 files"
 msgstr "Sei sicuro di voler eliminare %1 file?"
 
-#: src/main.qml:163
+#: src/main.qml:155
 #, kde-format
 msgid "Now playing"
 msgstr "In riproduzione"
 
-#: src/main.qml:219
+#: src/main.qml:211
 #, kde-format
 msgid "Open"
 msgstr "Apri"
 
-#: src/main.qml:243
+#: src/main.qml:235
 #, kde-format
 msgid "Settings"
 msgstr "Impostazioni"
 
-#: src/main.qml:251
+#: src/main.qml:243
 #, kde-format
 msgid "About"
 msgstr "Informazioni su"
 
-#: src/main.qml:259 src/main.qml:379 src/views/settings/SettingsDialog.qml:55
+#: src/main.qml:251 src/main.qml:371 src/views/settings/SettingsDialog.qml:55
 #, kde-format
 msgid "Collection"
 msgstr "Collezione"
 
-#: src/main.qml:266 src/views/ItemMenu.qml:29
+#: src/main.qml:258 src/views/ItemMenu.qml:29
 #, kde-format
 msgid "Tags"
 msgstr "Etichette"
 
-#: src/main.qml:358 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:350 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "Non c'è niente qui."
 
-#: src/main.qml:359
+#: src/main.qml:351
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr "Apri un nuovo video dalla tua collezione o dal file system."
 
-#: src/main.qml:537
+#: src/main.qml:529
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "Attiva o disattiva la barra laterale"
