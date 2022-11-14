@@ -93,8 +93,6 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     app.setWindowIcon(QIcon(":/img/assets/clip.svg"));
     QGuiApplication::setDesktopFileName(QStringLiteral("org.kde.clip"));
 
-    MauiApp::instance()->setIconName("qrc:/img/assets/clip.svg");
-
     KLocalizedString::setApplicationDomain("clip");
     KAboutData about(QStringLiteral("clip"), i18n("Clip"), CLIP_VERSION_STRING, i18n("Browse and play your videos."),
                      KAboutLicense::LGPL_V3, i18n("© 2019-%1 Maui Development Team", QString::number(QDate::currentDate().year())), QString(GIT_BRANCH) + "/" + QString(GIT_COMMIT_HASH));
@@ -105,7 +103,13 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     about.setOrganizationDomain(CLIP_URI);
     about.setProgramLogo(app.windowIcon());
 
+#ifdef MPV_AVAILABLE
+about.addComponent("MPV");
+#endif
+
+
     KAboutData::setApplicationData(about);
+    MauiApp::instance()->setIconName("qrc:/img/assets/clip.svg");
 
     QCommandLineParser parser;
 
