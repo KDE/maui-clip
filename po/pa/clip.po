@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-09 00:46+0000\n"
+"POT-Creation-Date: 2022-11-15 00:45+0000\n"
 "PO-Revision-Date: 2021-05-01 23:20-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -42,28 +42,28 @@ msgstr ""
 msgid "Search videos..."
 msgstr "...ਵੀਡੀਓ ਖੋਜੋ"
 
-#: src/main.cpp:99
+#: src/main.cpp:97
 #, kde-format
 msgid "Clip"
 msgstr "ਕਲਿੱਪ"
 
-#: src/main.cpp:99
+#: src/main.cpp:97
 #, kde-format
 msgid "Browse and play your videos."
 msgstr ""
 
-#: src/main.cpp:100
+#: src/main.cpp:98
 #, fuzzy, kde-format
 #| msgid "© 2019-%1 Nitrux Development Team"
 msgid "© 2019-%1 Maui Development Team"
 msgstr "© 2019-%1 Nitrux Development ਟੀਮ"
 
-#: src/main.cpp:101
+#: src/main.cpp:99
 #, kde-format
 msgid "Camilo Higuita"
 msgstr "Camilo Higuita"
 
-#: src/main.cpp:101
+#: src/main.cpp:99
 #, kde-format
 msgid "Developer"
 msgstr "ਡਿਵੈਲਪਰ"

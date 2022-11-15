@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-09 00:46+0000\n"
+"POT-Creation-Date: 2022-11-15 00:45+0000\n"
 "PO-Revision-Date: 2022-01-09 09:41+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -45,27 +45,27 @@ msgstr "Спробуйте інший запит"
 msgid "Search videos..."
 msgstr "Шукати відео…"
 
-#: src/main.cpp:99
+#: src/main.cpp:97
 #, kde-format
 msgid "Clip"
 msgstr "Кліп"
 
-#: src/main.cpp:99
+#: src/main.cpp:97
 #, kde-format
 msgid "Browse and play your videos."
 msgstr "Навігація збіркою відео та відтворення відео."
 
-#: src/main.cpp:100
+#: src/main.cpp:98
 #, kde-format
 msgid "© 2019-%1 Maui Development Team"
 msgstr "© Команда розробників Maui, 2019–%1"
 
-#: src/main.cpp:101
+#: src/main.cpp:99
 #, kde-format
 msgid "Camilo Higuita"
 msgstr "Camilo Higuita"
 
-#: src/main.cpp:101
+#: src/main.cpp:99
 #, kde-format
 msgid "Developer"
 msgstr "Розробник"

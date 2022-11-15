@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-09 00:46+0000\n"
+"POT-Creation-Date: 2022-11-15 00:45+0000\n"
 "PO-Revision-Date: 2022-10-12 14:23+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -42,27 +42,27 @@ msgstr "Başka bir sorgu ile deneyin"
 msgid "Search videos..."
 msgstr "Videolar ara..."
 
-#: src/main.cpp:99
+#: src/main.cpp:97
 #, kde-format
 msgid "Clip"
 msgstr "Klip"
 
-#: src/main.cpp:99
+#: src/main.cpp:97
 #, kde-format
 msgid "Browse and play your videos."
 msgstr "Videolarına göz atın ve onları oynatın."
 
-#: src/main.cpp:100
+#: src/main.cpp:98
 #, kde-format
 msgid "© 2019-%1 Maui Development Team"
 msgstr "© 2019-%1 Maui Geliştirme Takımı"
 
-#: src/main.cpp:101
+#: src/main.cpp:99
 #, kde-format
 msgid "Camilo Higuita"
 msgstr "Camilo Higuita"
 
-#: src/main.cpp:101
+#: src/main.cpp:99
 #, kde-format
 msgid "Developer"
 msgstr "Geliştirici"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cinema\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-09 00:46+0000\n"
+"POT-Creation-Date: 2022-11-15 00:45+0000\n"
 "PO-Revision-Date: 2022-01-09 04:40+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -44,27 +44,27 @@ msgstr "Pruebe a hacer otra consulta"
 msgid "Search videos..."
 msgstr "Buscar vídeos..."
 
-#: src/main.cpp:99
+#: src/main.cpp:97
 #, kde-format
 msgid "Clip"
 msgstr "Clip"
 
-#: src/main.cpp:99
+#: src/main.cpp:97
 #, kde-format
 msgid "Browse and play your videos."
 msgstr "Explore y reproduzca sus vídeos."
 
-#: src/main.cpp:100
+#: src/main.cpp:98
 #, kde-format
 msgid "© 2019-%1 Maui Development Team"
 msgstr "© 2019-%1 El equipo de desarrollo de Maui"
 
-#: src/main.cpp:101
+#: src/main.cpp:99
 #, kde-format
 msgid "Camilo Higuita"
 msgstr "Camilo Higuita"
 
-#: src/main.cpp:101
+#: src/main.cpp:99
 #, kde-format
 msgid "Developer"
 msgstr "Desarrollador"
