@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-15 00:45+0000\n"
-"PO-Revision-Date: 2022-10-08 10:23+0200\n"
+"PO-Revision-Date: 2022-11-25 23:03+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2\n"
 
 #: src/controllers/YouTube.qml:95
 #, kde-format
@@ -46,7 +46,7 @@ msgstr "ვიდეოების ძებნა..."
 #: src/main.cpp:97
 #, kde-format
 msgid "Clip"
-msgstr ""
+msgstr "Clip"
 
 #: src/main.cpp:97
 #, kde-format
@@ -79,6 +79,8 @@ msgid ""
 "Enter any remote location, like YouTube video URLs, or from other services "
 "supported by MPV."
 msgstr ""
+"შეიყვანეთ დაშორებული მდებარეობა, მაგალითად YouTube-ის ვიდეოების ბმულები ან "
+"MPV-ის მიერ მხარდაჭერილი სხვა სერვისები."
 
 #: src/main.qml:126
 #, kde-format
@@ -138,12 +140,12 @@ msgstr "აქ არაფერია!"
 #: src/main.qml:351
 #, kde-format
 msgid "Open a new video from your collection or file system."
-msgstr ""
+msgstr "გახსენით ახალი ვიდეო თქვენი კოლექციიდან ან ფაილური სისტემიდან."
 
 #: src/main.qml:529
 #, kde-format
 msgid "Toggle SideBar"
-msgstr ""
+msgstr "გვერდითი პანელი ჩვენების ჩართ/გამორთ"
 
 #: src/views/BrowserLayout.qml:68
 #, kde-format
@@ -156,12 +158,12 @@ msgstr[1] "%1 ვიდეოში ძებნა"
 #: src/views/tags/TagsView.qml:38
 #, kde-format
 msgid "No Videos!"
-msgstr ""
+msgstr "ვიდეოების გარეშე!"
 
 #: src/views/collection/CollectionView.qml:14
 #, kde-format
 msgid "Add a new video source or open a file."
-msgstr ""
+msgstr "დაამატეთ ვიდეოს ახალი წყარო ან გახსენით ფაილი."
 
 #: src/views/collection/CollectionView.qml:19
 #, kde-format
@@ -240,7 +242,7 @@ msgstr "დაკვრის რეჟიმი"
 #: src/views/player/Playlist.qml:20
 #, kde-format
 msgid "Add videos to the playlist."
-msgstr ""
+msgstr "დასაკრავ სიაში ვიდეოს ჩამატება."
 
 #: src/views/SelectionBar.qml:34
 #, kde-format
@@ -270,7 +272,7 @@ msgstr "მთავარი"
 #: src/views/settings/SettingsDialog.qml:19
 #, kde-format
 msgid "Configure the app behavior."
-msgstr ""
+msgstr "აპის ქცევის მორგება."
 
 #: src/views/settings/SettingsDialog.qml:23
 #, kde-format
@@ -350,17 +352,17 @@ msgstr "დაკვრა"
 #: src/views/settings/SettingsDialog.qml:150
 #, kde-format
 msgid "Configure the player settings."
-msgstr ""
+msgstr "დამკვრელის ქცევის მორგება."
 
 #: src/views/settings/SettingsDialog.qml:154
 #, kde-format
 msgid "Hardware Decoding"
-msgstr ""
+msgstr "აპარატურული დეკოდერი"
 
 #: src/views/settings/SettingsDialog.qml:155
 #, kde-format
 msgid "Use the sorting preferences globally for all the tabs and splits."
-msgstr ""
+msgstr "დალაგების ამ პარამეტრების ყველა ჩანართებსა და დაყოფებზე მორგება."
 
 #: src/views/settings/SettingsDialog.qml:168
 #, kde-format
@@ -370,17 +372,17 @@ msgstr "აუდიო"
 #: src/views/settings/SettingsDialog.qml:169
 #, kde-format
 msgid "Configure the player audio behaviour."
-msgstr ""
+msgstr "დამკვრელის ხმის ქცევის მორგება."
 
 #: src/views/settings/SettingsDialog.qml:174
 #, kde-format
 msgid "Preferred Language"
-msgstr ""
+msgstr "სასურველი ენა"
 
 #: src/views/settings/SettingsDialog.qml:175
 #, kde-format
 msgid "Preferred language if available."
-msgstr ""
+msgstr "სასურველი ენა, თუ ხელმისაწვდომია."
 
 #: src/views/settings/SettingsDialog.qml:280
 #, kde-format
@@ -390,7 +392,7 @@ msgstr "წყაროები"
 #: src/views/settings/SettingsDialog.qml:281
 #, kde-format
 msgid "Add new sources to manage and browse your video collection"
-msgstr ""
+msgstr "დაამატეთ ახალი წყაროები სამართავად და მართეთ თქვენი ვიდეო კოლექცია"
 
 #: src/views/settings/SettingsDialog.qml:323
 #, kde-format
@@ -408,6 +410,8 @@ msgid ""
 "Are you sure you want to remove the source: \n"
 " %1"
 msgstr ""
+"დარწმუნებული ბრძანდებით, რომ გნებავთ წაშალოთ წყარო:\n"
+"%1"
 
 #: src/views/tags/TagsGrid.qml:22
 #, kde-format
@@ -417,7 +421,7 @@ msgstr "ჭდეების გარეშე!"
 #: src/views/tags/TagsGrid.qml:23
 #, kde-format
 msgid "Add a new tag to start organizing your video collection."
-msgstr ""
+msgstr "დაამატეთ ახალი ჭდე თქვენი ვიდეოების კოლექციის დალაგების დასაწყებად."
 
 #: src/views/tags/TagsGrid.qml:36
 #, kde-format
@@ -427,14 +431,14 @@ msgstr "ფილტრი"
 #: src/views/tags/TagsView.qml:39
 #, kde-format
 msgid "There's no videos associated with the tag"
-msgstr ""
+msgstr "ამ ჭდესთან ასოცირებული ვიდეოები ვერ ვიპოვე"
 
 #: src/views/youtube/YouTubeView.qml:26
 #, kde-format
 msgid "Start searching for online videos."
-msgstr ""
+msgstr "დაიწყეთ ონლაინ ვიდეოების ძებნა."
 
 #: src/views/youtube/YouTubeView.qml:44
 #, kde-format
 msgid "Search..."
-msgstr ""
+msgstr "ძებნა..."
