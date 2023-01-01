@@ -6,6 +6,7 @@
   <name>Clip</name>
   <name xml:lang="ca">Clip</name>
   <name xml:lang="ca-valencia">Clip</name>
+  <name xml:lang="en-GB">Clip</name>
   <name xml:lang="es">Clip</name>
   <name xml:lang="eu">Clip</name>
   <name xml:lang="fr">Clip</name>
@@ -21,6 +22,7 @@
   <summary>Video Player</summary>
   <summary xml:lang="ca">Reproductor de vídeo</summary>
   <summary xml:lang="ca-valencia">Reproductor de vídeo</summary>
+  <summary xml:lang="en-GB">Video Player</summary>
   <summary xml:lang="es">Reproductor de vídeo</summary>
   <summary xml:lang="eu">Bideo jotzailea</summary>
   <summary xml:lang="fr">Lecteur de vidéos</summary>
@@ -37,6 +39,7 @@
     <p>Clip is a video player and collection manager.</p>
     <p xml:lang="ca">El Clip és un reproductor de vídeo i un gestor de col·leccions.</p>
     <p xml:lang="ca-valencia">Clip és un reproductor de vídeo i un gestor de col·leccions.</p>
+    <p xml:lang="en-GB">Clip is a video player and collection manager.</p>
     <p xml:lang="es">Clip es un reproductor de vídeo y gestor de colecciones.</p>
     <p xml:lang="eu">«Clip» bideo jotzaile eta bilduma kudeatzaile bat da.</p>
     <p xml:lang="fr">Le logiciel « Clip » est un lecteur de vidéo et un gestionnaire de collections.</p>
@@ -59,6 +62,7 @@
       <caption>Clip playing videos.</caption>
       <caption xml:lang="ca">El Clip reproduint vídeos.</caption>
       <caption xml:lang="ca-valencia">Clip reproduint vídeos.</caption>
+      <caption xml:lang="en-GB">Clip playing videos.</caption>
       <caption xml:lang="es">Clip reproduciendo vídeos.</caption>
       <caption xml:lang="eu">«Clip» bideoak jotzen.</caption>
       <caption xml:lang="fr">Le logiciel « Clip » en cours de lecture de vidéos.</caption>
