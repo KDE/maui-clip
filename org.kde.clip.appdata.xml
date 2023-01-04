@@ -6,6 +6,7 @@
   <name>Clip</name>
   <name xml:lang="ca">Clip</name>
   <name xml:lang="ca-valencia">Clip</name>
+  <name xml:lang="cs">Clip</name>
   <name xml:lang="en-GB">Clip</name>
   <name xml:lang="es">Clip</name>
   <name xml:lang="eu">Clip</name>
@@ -22,6 +23,7 @@
   <summary>Video Player</summary>
   <summary xml:lang="ca">Reproductor de vídeo</summary>
   <summary xml:lang="ca-valencia">Reproductor de vídeo</summary>
+  <summary xml:lang="cs">Video přehrávač</summary>
   <summary xml:lang="en-GB">Video Player</summary>
   <summary xml:lang="es">Reproductor de vídeo</summary>
   <summary xml:lang="eu">Bideo jotzailea</summary>
