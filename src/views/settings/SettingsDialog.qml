@@ -12,13 +12,13 @@ Maui.SettingsDialog
 {
     id: control
 
-    Maui.SettingsSection
+    Maui.SectionGroup
     {
         //        alt: true
         title: i18n("General")
         description: i18n("Configure the app behavior.")
 
-        Maui.SettingTemplate
+        Maui.SectionItem
         {
             label1.text: i18n("Volume Step")
 
@@ -31,7 +31,7 @@ Maui.SettingsDialog
             }
         }        
 
-        Maui.SettingTemplate
+        Maui.SectionItem
         {
             label1.text: i18n("Dark Mode")
             label2.text: i18n("Switch between light and dark colorscheme")
@@ -49,13 +49,13 @@ Maui.SettingsDialog
         }
     }
 
-    Maui.SettingsSection
+    Maui.SectionGroup
     {
         //        alt: false
         title: i18n("Collection")
         description: i18n("Sorting order and behavior.")
 
-        Maui.SettingTemplate
+        Maui.SectionItem
         {
             label1.text: i18n("Sorting by")
             label2.text: i18n("Change the sorting key.")
@@ -105,7 +105,7 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SettingTemplate
+        Maui.SectionItem
         {
             label1.text: i18n("Sort order")
             label2.text: i18n("Change the sorting order.")
@@ -144,12 +144,12 @@ Maui.SettingsDialog
         }
     }
 
-    Maui.SettingsSection
+    Maui.SectionGroup
     {
         title: i18n("Playback")
         description: i18n("Configure the player settings.")
         enabled: Clip.Clip.mpvAvailable
-        Maui.SettingTemplate
+        Maui.SectionItem
         {
             label1.text: i18n("Hardware Decoding")
             label2.text: i18n("Use the sorting preferences globally for all the tabs and splits.")
@@ -163,19 +163,19 @@ Maui.SettingsDialog
         }
     }
 
-    Maui.SettingsSection
+    Maui.SectionGroup
     {
         title: i18n("Audio")
         description: i18n("Configure the player audio behaviour.")
         enabled: Clip.Clip.mpvAvailable
 
-        Maui.SettingTemplate
+        Maui.SectionItem
         {
             label1.text: i18n("Preferred Language")
             label2.text: i18n("Preferred language if available.")
             wide: false
 
-            Maui.TextField
+            TextField
             {
                 Layout.fillWidth: true
                 text: settings.preferredLanguage
@@ -184,13 +184,13 @@ Maui.SettingsDialog
         }
     }
 
-//    Maui.SettingsSection
+//    Maui.SectionGroup
 //    {
 //        title: i18n("Subtitles")
 //        description: i18n("Configure the app UI.")
 //        enabled: Clip.Clip.mpvAvailable
 
-//        Maui.SettingTemplate
+//        Maui.SectionItem
 //        {
 //            label1.text: i18n("Directory")
 //            label2.text: i18n("Folder path containing the subtitle files.")
@@ -221,7 +221,7 @@ Maui.SettingsDialog
 //            }
 //        }
 
-//        Maui.SettingTemplate
+//        Maui.SectionItem
 //        {
 //            label1.text: i18n("Font Family")
 
@@ -234,7 +234,7 @@ Maui.SettingsDialog
 //            }
 //        }
 
-//        Maui.SettingTemplate
+//        Maui.SectionItem
 //        {
 //            label1.text: i18n("Font Size")
 
@@ -247,12 +247,12 @@ Maui.SettingsDialog
 //        }
 //    }
 
-//    Maui.SettingsSection
+//    Maui.SectionGroup
 //    {
 //        title: i18n("YouTube")
 //        description: i18n("Configure YouTube details.")
 
-//        Maui.SettingTemplate
+//        Maui.SectionItem
 //        {
 //            label1.text: i18n("Key")
 //            label2.text: i18n("Personal key for limitless browsing.")
@@ -275,7 +275,7 @@ Maui.SettingsDialog
 //        }
 //    }
 
-    Maui.SettingsSection
+    Maui.SectionGroup
     {
         title: i18n("Sources")
         description: i18n("Add new sources to manage and browse your video collection")
