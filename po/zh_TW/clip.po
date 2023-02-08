@@ -2,216 +2,217 @@
 # maui-clip 套件的正體中文翻譯.
 # Copyright (C) 2022 This file is copyright:
 # This file is distributed under the same license as the maui-clip package.
-# Automatically generated, 2022.
 #
+# Automatically generated, 2022.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-15 00:45+0000\n"
-"PO-Revision-Date: 2022-06-07 00:49+0000\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-02-08 00:57+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 23.03.70\n"
 
 #: src/controllers/YouTube.qml:95
 #, kde-format
 msgid "Custom API Key"
-msgstr ""
+msgstr "自訂 API 金鑰"
 
 #: src/controllers/YouTube.qml:114
 #, kde-format
 msgid "Search results"
-msgstr ""
+msgstr "搜尋結果"
 
 #: src/controllers/YouTube.qml:209
 #, kde-format
 msgid "No Results!"
-msgstr ""
+msgstr "沒有結果！"
 
 #: src/controllers/YouTube.qml:210
 #, kde-format
 msgid "Try with another query"
-msgstr ""
+msgstr "試試看別的查詢"
 
 #: src/controllers/YouTube.qml:249
 #, kde-format
 msgid "Search videos..."
-msgstr ""
+msgstr "搜尋影片…"
 
 #: src/main.cpp:97
 #, kde-format
 msgid "Clip"
-msgstr ""
+msgstr "Clip"
 
 #: src/main.cpp:97
 #, kde-format
 msgid "Browse and play your videos."
-msgstr ""
+msgstr "瀏覽並播放您的影片。"
 
 #: src/main.cpp:98
 #, kde-format
 msgid "© 2019-%1 Maui Development Team"
-msgstr ""
+msgstr "© 2019-%1 Maui 開發團隊"
 
 #: src/main.cpp:99
 #, kde-format
 msgid "Camilo Higuita"
-msgstr ""
+msgstr "Camilo Higuita"
 
 #: src/main.cpp:99
 #, kde-format
 msgid "Developer"
-msgstr ""
+msgstr "開發者"
 
 #: src/main.qml:92 src/main.qml:224
 #, kde-format
 msgid "Open URL"
-msgstr ""
+msgstr "開啟網址"
 
 #: src/main.qml:94
 #, kde-format
 msgid ""
 "Enter any remote location, like YouTube video URLs, or from other services "
 "supported by MPV."
-msgstr ""
+msgstr "輸入任何遠端位置，像是 YouTube 影片網址，或是其他任何 MPV 支援的服務。"
 
 #: src/main.qml:126
 #, kde-format
 msgid "Delete files?"
-msgstr ""
+msgstr "刪除檔案？"
 
 #: src/main.qml:127 src/views/ItemMenu.qml:119
 #, kde-format
 msgid "Accept"
-msgstr ""
+msgstr "接受"
 
 #: src/main.qml:128 src/views/ItemMenu.qml:120
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #: src/main.qml:129
 #, kde-format
 msgid "Are sure you want to delete %1 files"
-msgstr ""
+msgstr "您確定要刪除 %1 個檔案嗎"
 
 #: src/main.qml:155
 #, kde-format
 msgid "Now playing"
-msgstr ""
+msgstr "現正播放"
 
 #: src/main.qml:211
 #, kde-format
 msgid "Open"
-msgstr ""
+msgstr "開啟"
 
 #: src/main.qml:235
 #, kde-format
 msgid "Settings"
-msgstr ""
+msgstr "設定"
 
 #: src/main.qml:243
 #, kde-format
 msgid "About"
-msgstr ""
+msgstr "關於"
 
 #: src/main.qml:251 src/main.qml:371 src/views/settings/SettingsDialog.qml:55
 #, kde-format
 msgid "Collection"
-msgstr ""
+msgstr "收藏"
 
 #: src/main.qml:258 src/views/ItemMenu.qml:29
 #, kde-format
 msgid "Tags"
-msgstr ""
+msgstr "標籤"
 
 #: src/main.qml:350 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
-msgstr ""
+msgstr "這裡什麼都沒有！"
 
 #: src/main.qml:351
 #, kde-format
 msgid "Open a new video from your collection or file system."
-msgstr ""
+msgstr "從您的收藏或檔案系統裡開啟影片。"
 
 #: src/main.qml:529
 #, kde-format
 msgid "Toggle SideBar"
-msgstr ""
+msgstr "切換側邊欄"
 
 #: src/views/BrowserLayout.qml:68
 #, kde-format
 msgid "Search %1 video"
 msgid_plural "Search %1 videos"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "搜尋 %1 個影片…"
 
 #: src/views/collection/CollectionView.qml:13 src/views/player/Playlist.qml:19
 #: src/views/tags/TagsView.qml:38
 #, kde-format
 msgid "No Videos!"
-msgstr ""
+msgstr "沒有影片！"
 
 #: src/views/collection/CollectionView.qml:14
 #, kde-format
 msgid "Add a new video source or open a file."
-msgstr ""
+msgstr "新增影片來源或是開啟檔案。"
 
 #: src/views/collection/CollectionView.qml:19
 #, kde-format
 msgid "Open file"
-msgstr ""
+msgstr "開啟檔案"
 
 #: src/views/collection/CollectionView.qml:25
 #, kde-format
 msgid "Add sources"
-msgstr ""
+msgstr "新增來源"
 
 #: src/views/ItemMenu.qml:22
 #, kde-format
 msgid "UnFav it"
-msgstr ""
+msgstr "從最愛中移除它"
 
 #: src/views/ItemMenu.qml:41
 #, kde-format
 msgid "Info"
-msgstr ""
+msgstr "資訊"
 
 #: src/views/ItemMenu.qml:52 src/views/SelectionBar.qml:75
 #, kde-format
 msgid "Share"
-msgstr ""
+msgstr "分享"
 
 #: src/views/ItemMenu.qml:63 src/views/SelectionBar.qml:45
 #, kde-format
 msgid "Queue"
-msgstr ""
+msgstr "佇列"
 
 #: src/views/ItemMenu.qml:75
 #, kde-format
 msgid "Select"
-msgstr ""
+msgstr "選取"
 
 #: src/views/ItemMenu.qml:89
 #, kde-format
 msgid "Show in folder"
-msgstr ""
+msgstr "在資料夾顯示"
 
 #: src/views/ItemMenu.qml:102 src/views/SelectionBar.qml:103
 #, kde-format
 msgid "Remove"
-msgstr ""
+msgstr "移除"
 
 #: src/views/ItemMenu.qml:118
 #, kde-format
 msgid "Delete file?"
-msgstr ""
+msgstr "刪除檔案？"
 
 #: src/views/ItemMenu.qml:121
 #, kde-format
@@ -219,186 +220,188 @@ msgid ""
 "Are sure you want to delete \n"
 "%1"
 msgstr ""
+"您確定要刪除嗎\n"
+"%1"
 
 #: src/views/player/MPVPlayer.qml:29
 #, kde-format
 msgid "Subtitles"
-msgstr ""
+msgstr "字幕"
 
 #: src/views/player/MPVPlayer.qml:47
 #, kde-format
 msgid "Audio Tracks"
-msgstr ""
+msgstr "音效音軌"
 
 #: src/views/player/PlayerView.qml:42
 #, kde-format
 msgid "Playing mode"
-msgstr ""
+msgstr "播放模式"
 
 #: src/views/player/Playlist.qml:20
 #, kde-format
 msgid "Add videos to the playlist."
-msgstr ""
+msgstr "新增影片到播放清單。"
 
 #: src/views/SelectionBar.qml:34
 #, kde-format
 msgid "Play"
-msgstr ""
+msgstr "播放"
 
 #: src/views/SelectionBar.qml:56
 #, kde-format
 msgid "Un/Fav"
-msgstr ""
+msgstr "切換最愛"
 
 #: src/views/SelectionBar.qml:63
 #, kde-format
 msgid "Tag"
-msgstr ""
+msgstr "標籤"
 
 #: src/views/SelectionBar.qml:87
 #, kde-format
 msgid "Export"
-msgstr ""
+msgstr "匯出"
 
 #: src/views/settings/SettingsDialog.qml:18
 #, kde-format
 msgid "General"
-msgstr ""
+msgstr "一般"
 
 #: src/views/settings/SettingsDialog.qml:19
 #, kde-format
 msgid "Configure the app behavior."
-msgstr ""
+msgstr "設定應用程式行為。"
 
 #: src/views/settings/SettingsDialog.qml:23
 #, kde-format
 msgid "Volume Step"
-msgstr ""
+msgstr "音量間隔值"
 
 #: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Dark Mode"
-msgstr ""
+msgstr "暗色模式"
 
 #: src/views/settings/SettingsDialog.qml:37
 #, kde-format
 msgid "Switch between light and dark colorscheme"
-msgstr ""
+msgstr "在明亮和暗色配色方案間切換"
 
 #: src/views/settings/SettingsDialog.qml:56
 #, kde-format
 msgid "Sorting order and behavior."
-msgstr ""
+msgstr "排序方式與行為。"
 
 #: src/views/settings/SettingsDialog.qml:60
 #, kde-format
 msgid "Sorting by"
-msgstr ""
+msgstr "排序方式"
 
 #: src/views/settings/SettingsDialog.qml:61
 #, kde-format
 msgid "Change the sorting key."
-msgstr ""
+msgstr "變更排序依據。"
 
 #: src/views/settings/SettingsDialog.qml:84
 #, kde-format
 msgid "Title"
-msgstr ""
+msgstr "標題"
 
 #: src/views/settings/SettingsDialog.qml:90
 #, kde-format
 msgid "Date"
-msgstr ""
+msgstr "日期"
 
 #: src/views/settings/SettingsDialog.qml:96
 #, kde-format
 msgid "Size"
-msgstr ""
+msgstr "大小"
 
 #: src/views/settings/SettingsDialog.qml:102
 #, kde-format
 msgid "Type"
-msgstr ""
+msgstr "類型"
 
 #: src/views/settings/SettingsDialog.qml:110
 #, kde-format
 msgid "Sort order"
-msgstr ""
+msgstr "排序方向"
 
 #: src/views/settings/SettingsDialog.qml:111
 #, kde-format
 msgid "Change the sorting order."
-msgstr ""
+msgstr "變更排序方向。"
 
 #: src/views/settings/SettingsDialog.qml:132
 #, kde-format
 msgid "Ascending"
-msgstr ""
+msgstr "遞增"
 
 #: src/views/settings/SettingsDialog.qml:139
 #, kde-format
 msgid "Descending"
-msgstr ""
+msgstr "遞減"
 
 #: src/views/settings/SettingsDialog.qml:149
 #, kde-format
 msgid "Playback"
-msgstr ""
+msgstr "播放"
 
 #: src/views/settings/SettingsDialog.qml:150
 #, kde-format
 msgid "Configure the player settings."
-msgstr ""
+msgstr "設定播放器。"
 
 #: src/views/settings/SettingsDialog.qml:154
 #, kde-format
 msgid "Hardware Decoding"
-msgstr ""
+msgstr "硬體解碼"
 
 #: src/views/settings/SettingsDialog.qml:155
 #, kde-format
 msgid "Use the sorting preferences globally for all the tabs and splits."
-msgstr ""
+msgstr "全域套用排序偏好設定到所有分頁和分割畫面上。"
 
 #: src/views/settings/SettingsDialog.qml:168
 #, kde-format
 msgid "Audio"
-msgstr ""
+msgstr "音效"
 
 #: src/views/settings/SettingsDialog.qml:169
 #, kde-format
 msgid "Configure the player audio behaviour."
-msgstr ""
+msgstr "設定播放器音效行為。"
 
 #: src/views/settings/SettingsDialog.qml:174
 #, kde-format
 msgid "Preferred Language"
-msgstr ""
+msgstr "偏好語言"
 
 #: src/views/settings/SettingsDialog.qml:175
 #, kde-format
 msgid "Preferred language if available."
-msgstr ""
+msgstr "偏好使用的語言，如果可用的話。"
 
 #: src/views/settings/SettingsDialog.qml:280
 #, kde-format
 msgid "Sources"
-msgstr ""
+msgstr "來源"
 
 #: src/views/settings/SettingsDialog.qml:281
 #, kde-format
 msgid "Add new sources to manage and browse your video collection"
-msgstr ""
+msgstr "新增來源來管理並瀏覽您的影片收藏"
 
 #: src/views/settings/SettingsDialog.qml:323
 #, kde-format
 msgid "Add"
-msgstr ""
+msgstr "新增"
 
 #: src/views/settings/SettingsDialog.qml:345
 #, kde-format
 msgid "Remove source"
-msgstr ""
+msgstr "移除來源"
 
 #: src/views/settings/SettingsDialog.qml:346
 #, kde-format
@@ -406,33 +409,35 @@ msgid ""
 "Are you sure you want to remove the source: \n"
 " %1"
 msgstr ""
+"您確定要移除來源嗎：\n"
+" %1"
 
 #: src/views/tags/TagsGrid.qml:22
 #, kde-format
 msgid "No Tags!"
-msgstr ""
+msgstr "沒有標籤！"
 
 #: src/views/tags/TagsGrid.qml:23
 #, kde-format
 msgid "Add a new tag to start organizing your video collection."
-msgstr ""
+msgstr "新增標籤來管理您的影片收藏。"
 
 #: src/views/tags/TagsGrid.qml:36
 #, kde-format
 msgid "Filter"
-msgstr ""
+msgstr "過濾器"
 
 #: src/views/tags/TagsView.qml:39
 #, kde-format
 msgid "There's no videos associated with the tag"
-msgstr ""
+msgstr "沒有含有該標籤的影片"
 
 #: src/views/youtube/YouTubeView.qml:26
 #, kde-format
 msgid "Start searching for online videos."
-msgstr ""
+msgstr "開始搜尋線上影片。"
 
 #: src/views/youtube/YouTubeView.qml:44
 #, kde-format
 msgid "Search..."
-msgstr ""
+msgstr "搜尋…"
