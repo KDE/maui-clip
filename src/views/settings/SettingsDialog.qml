@@ -296,8 +296,7 @@ Maui.SettingsDialog
                 {
                     width: ListView.view.width
                     implicitHeight: Maui.Style.rowHeight * 1.5
-                    leftPadding: 0
-                    rightPadding: 0
+
                     template.iconSource: modelData.icon
                     template.iconSizeHint: Maui.Style.iconSizes.small
                     template.label1.text: modelData.label

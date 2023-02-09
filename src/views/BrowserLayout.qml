@@ -11,6 +11,7 @@ Maui.AltBrowser
 {
     id: control
     property alias list : _collectionList
+    property alias urls : _collectionList.urls
     property alias listModel : _collectionModel
     property alias searchField:  _searchField
 

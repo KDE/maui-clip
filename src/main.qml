@@ -143,150 +143,75 @@ Maui.ApplicationWindow
     Loader { id: dialogLoader }
 
 
-    Maui.SideBarView
+
+
+    StackView
     {
-        id: _sideBarView
+        id: _stackView
         anchors.fill: parent
-        sideBar.enabled: _playlist.count > 1
-        sideBar.preferredWidth: Maui.Style.units.gridUnit * 16
-        sideBarContent:  Maui.Page
+        initialItem: initModule === "viewer" ? _sideBarView : _appViewsComponent
+
+        Component
         {
-            anchors.fill: parent
-            title: i18n("Now playing")
-            showTitle: true
+            id: _appViewsComponent
 
-            headBar.visible: _playlist.count > 0
-            headBar.background: null
-            background: Rectangle
+            CollectionView
             {
-                color: Maui.Theme.backgroundColor
-                opacity: 0.2
+
             }
 
-            headBar.rightContent: ToolButton
-            {
-                icon.name: "edit-delete"
-                onClicked:
-                {
-                    player.stop()
-                    _playlist.list.clear()
-                }
-            }
-
-            headBar.leftContent: ToolButton
-            {
-                icon.name: "document-save"
-                onClicked: saveList()
-            }
-
-            Playlist
-            {
-                id: _playlist
-                anchors.fill: parent
-            }
         }
-
-
-        StackView
+        Maui.SideBarView
         {
-            id: _stackView
-            anchors.fill: parent
-            initialItem: initModule === "viewer" ? _playerPage : _appViewsComponent
-
-            Component
+            id: _sideBarView
+            visible: StackView.status === StackView.Active
+            height: parent.height
+            width: parent.width
+            sideBar.enabled: _playlist.count > 1
+            sideBar.preferredWidth: Maui.Style.units.gridUnit * 16
+            sideBarContent:  Maui.Page
             {
-                id: _appViewsComponent
+                anchors.fill: parent
+                title: i18n("Now playing")
+                showTitle: true
 
-                Maui.AppViews
+                headBar.visible: _playlist.count > 0
+                headBar.background: null
+                background: Rectangle
                 {
-                    id: _appViews
-                    maxViews: 4
-                    floatingFooter: true
-                    flickable: _appViews.currentItem.item.flickable
-                    showCSDControls: true
+                    color: Maui.Theme.backgroundColor
+                    opacity: 0.2
+                }
 
-                    altHeader: Maui.Handy.isMobile
-                    headBar.rightContent: ToolButton
+                headBar.rightContent: ToolButton
+                {
+                    icon.name: "edit-delete"
+                    onClicked:
                     {
-                        text: i18n("Open")
-                        display: isWide ? ToolButton.TextBesideIcon : ToolButton.IconOnly
-                        icon.name: "folder-open"
-                        onClicked: root.openFileDialog()
-                    }
-
-                    headBar.leftContent: Maui.ToolButtonMenu
-                    {
-                        icon.name: "application-menu"
-
-                        MenuItem
-                        {
-                            enabled: Clip.Cip.mpvAvailable
-                            text: i18n("Open URL")
-                            icon.name: "filename-space-amarok"
-
-                            onTriggered:
-                            {
-                                _openUrlDialog.open()
-                            }
-                        }
-
-                        MenuItem
-                        {
-                            text: i18n("Settings")
-                            icon.name: "settings-configure"
-
-                            onTriggered: openSettingsDialog()
-                        }
-
-                        MenuItem
-                        {
-                            text: i18n("About")
-                            icon.name: "documentinfo"
-                            onTriggered: root.about()
-                        }
-                    }
-
-                    Maui.AppViewLoader
-                    {
-                        Maui.AppView.title: i18n("Collection")
-                        Maui.AppView.iconName: "folder-videos"
-                        CollectionView {}
-                    }
-
-                    Maui.AppViewLoader
-                    {
-                        Maui.AppView.title: i18n("Tags")
-                        Maui.AppView.iconName: "tag"
-                        TagsView {}
-                    }
-
-                    //            YouTubeView
-                    //            {
-                    //                id: _youtubeView
-                    //                Maui.AppView.title: i18n("Online")
-                    //                Maui.AppView.iconName: "folder-cloud"
-                    //            }
-
-                    footer: SelectionBar
-                    {
-                        id: selectionBar
-                        anchors.horizontalCenter: parent.horizontalCenter
-                        width: Math.min(parent.width-(Maui.Style.space.medium*2), implicitWidth)
-                        maxListHeight: _appViews.height - Maui.Style.space.medium
+                        player.stop()
+                        _playlist.list.clear()
                     }
                 }
 
-                //    footBar.visible: player.video.playbackState !== MediaPlayer.StoppedState
+                headBar.leftContent: ToolButton
+                {
+                    icon.name: "document-save"
+                    onClicked: saveList()
+                }
+
+                Playlist
+                {
+                    id: _playlist
+                    anchors.fill: parent
+                }
             }
 
             Maui.Page
             {
                 id: _playerPage
-                height: parent.height
-                width: parent.width
-                visible: StackView.status === StackView.Active
+                anchors.fill: parent
                 autoHideHeader: _playerView.player.playbackState === MediaPlayer.PlayingState
-                autoHideFooter: _playerView.player.playbackState === MediaPlayer.PlayingState
+                //                autoHideFooter: _playerView.player.playbackState === MediaPlayer.PlayingState
 
                 floatingHeader: autoHideHeader
                 headBar.visible: !_playerHolderLoader.active
@@ -463,7 +388,15 @@ Maui.ApplicationWindow
                     }
                 }
 
-                headBar.rightContent: Loader
+                headBar.rightContent: [
+                    ToolButton
+                                    {
+                                        //                        text: i18n("Open")
+                                        display: isWide ? ToolButton.TextBesideIcon : ToolButton.IconOnly
+                                        icon.name: "folder-open"
+                                        onClicked: root.openFileDialog()
+                                    },
+                    Loader
                 {
                     active: Clip.Clip.mpvAvailable
                     asynchronous: true
@@ -510,7 +443,7 @@ Maui.ApplicationWindow
                             onTriggered: _audioTracksDialog.open()
                         }
                     }
-                }
+                }]
 
                 footBar.visible: root.sideBar.enabled
                 footBar.farLeftContent: Loader
@@ -567,7 +500,7 @@ Maui.ApplicationWindow
     Loader
     {
         visible: active
-        active: !_playerPage.visible && !_playerView.player.stopped
+        active: !_sideBarView.visible && !_playerView.player.stopped
         asynchronous: true
         sourceComponent: FloatingVideo {}
     }
@@ -600,11 +533,11 @@ Maui.ApplicationWindow
 
     function toggleViewer()
     {
-        if(_playerPage.visible)
+        if(_sideBarView.visible)
         {
             if(_stackView.depth === 1)
             {
-                _stackView.replace(_playerPage, _appViewsComponent)
+                _stackView.replace(_sideBarView, _appViewsComponent)
 
             }else
             {
@@ -613,7 +546,7 @@ Maui.ApplicationWindow
 
         }else
         {
-            _stackView.push(_playerPage)
+            _stackView.push(_sideBarView)
         }
 
         _stackView.currentItem.forceActiveFocus()

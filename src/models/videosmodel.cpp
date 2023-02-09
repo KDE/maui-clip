@@ -19,6 +19,7 @@ VideosModel::VideosModel(QObject *parent) : MauiList(parent)
   , m_autoReload(true)
   , m_autoScan(true)
   , m_recursive (true)
+  , m_urls({"collection:///"})
 {
     qDebug()<< "CREATING GALLERY LIST";
 
@@ -53,6 +54,12 @@ VideosModel::VideosModel(QObject *parent) : MauiList(parent)
     {
         qDebug()<< "File changed" << file;
     });
+
+    connect(this, &VideosModel::urlsChanged, [this]()
+    {
+         this->scan(m_urls, m_recursive, m_limit);
+    });
+
 }
 
 const FMH::MODEL_LIST &VideosModel::items() const
@@ -60,26 +67,26 @@ const FMH::MODEL_LIST &VideosModel::items() const
     return this->list;
 }
 
-void VideosModel::setUrls(const QList<QUrl> &urls)
+void VideosModel::setUrls(const QStringList &urls)
 {
-    qDebug()<< "setting urls"<< this->m_urls << urls;
+    qDebug()<< "setting urls"<< this->m_urls << urls;    
 
     if(this->m_urls == urls)
         return;
 
     this->m_urls = urls;
     this->clear();
-    emit this->urlsChanged();
-
-    if(m_autoScan)
-    {
-        this->scan(m_urls, m_recursive, m_limit);
-    }
+    emit this->urlsChanged();   
 }
 
-QList<QUrl> VideosModel::urls() const
+QStringList VideosModel::urls() const
 {
     return m_urls;
+}
+
+void VideosModel::resetUrls()
+{
+    setUrls({"collection:///"});
 }
 
 void VideosModel::setAutoScan(const bool &value)
@@ -130,31 +137,12 @@ QStringList VideosModel::files() const
     return FMH::modelToList(this->list, FMH::MODEL_KEY::URL);
 }
 
-void VideosModel::scan(const QList<QUrl> &urls, const bool &recursive, const int &limit)
+void VideosModel::scan(const QStringList &urls, const bool &recursive, const int &limit)
 {
-    this->scanTags (extractTags (urls), limit);
-    m_fileLoader->requestPath(urls, recursive, FMStatic::FILTER_LIST[FMStatic::FILTER_TYPE::VIDEO]);
-}
+    this->clear();
+    auto paths = urls.count() == 1 && urls.first() == "collection:///" ? Clip::instance()->sources() : urls;
 
-void VideosModel::scanTags(const QList<QUrl> & urls, const int & limit)
-{
-    FMH::MODEL_LIST res;
-    for(const auto &tagUrl : urls)
-    {
-        auto items = Tagging::getInstance ()->getUrls(tagUrl.toString ().replace ("tags:///", ""), true, limit, "video");
-
-        for(const auto &item : items)
-        {
-            const auto url = QUrl(item.toMap ().value ("url").toString());
-            if(FMH::fileExists(url))
-                res << videoData(url);
-        }
-    }
-
-    emit this->preListChanged ();
-    list << res;
-    emit this->postListChanged ();
-    emit countChanged();
+    m_fileLoader->requestPath(QUrl::fromStringList(paths), recursive, FMStatic::FILTER_LIST[FMStatic::FILTER_TYPE::VIDEO]);
 }
 
 void VideosModel::insertFolder(const QUrl &path)
@@ -170,20 +158,6 @@ void VideosModel::insertFolder(const QUrl &path)
 
         emit foldersChanged();
     }
-}
-
-QList<QUrl> VideosModel::extractTags(const QList<QUrl> & urls)
-{
-    QList<QUrl> res;
-    return std::accumulate(urls.constBegin (), urls.constEnd (), res, [](QList<QUrl> &list, const QUrl &url)
-    {
-        if(FMStatic::getPathType (url) == FMStatic::PATHTYPE_KEY::TAGS_PATH)
-        {
-            list << url;
-        }
-
-        return list;
-    });
 }
 
 bool VideosModel::remove(const int &index)
@@ -236,17 +210,13 @@ void VideosModel::clear()
     emit this->postListChanged();
     emit this->countChanged();
 
+    this->m_watcher->removePaths(m_watcher->directories());
+
     this->m_folders.clear ();
     emit foldersChanged();
 }
 
 void VideosModel::rescan()
-{
-    this->clear();
-    this->scan(m_urls, m_recursive, m_limit);
-}
-
-void VideosModel::reload()
 {
     this->scan(m_urls, m_recursive, m_limit);
 }
@@ -267,4 +237,14 @@ void VideosModel::setlimit(int limit)
 
     m_limit = limit;
     emit limitChanged(m_limit);
+}
+
+
+void VideosModel::classBegin()
+{
+}
+
+void VideosModel::componentComplete()
+{
+     this->scan(m_urls, m_recursive, m_limit);
 }

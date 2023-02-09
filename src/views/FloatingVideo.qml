@@ -38,7 +38,7 @@ Item
 
         drag.minimumY: 0
         drag.maximumY: root.height - control.height
-        onClicked: _stackView.push(_playerPage)
+        onClicked: toggleViewer()
 
         ShaderEffectSource
         {

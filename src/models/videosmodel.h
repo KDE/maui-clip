@@ -4,6 +4,7 @@
 #include <QObject>
 
 #include <MauiKit/Core/mauilist.h>
+#include "utils/clip.h"
 
 #define CINEMA_QUERY_MAX_LIMIT 20000
 
@@ -16,7 +17,7 @@ class QFileSystemWatcher;
 class VideosModel : public MauiList
 {
     Q_OBJECT
-    Q_PROPERTY(QList<QUrl> urls READ urls WRITE setUrls NOTIFY urlsChanged)
+    Q_PROPERTY(QStringList urls READ urls WRITE setUrls NOTIFY urlsChanged RESET resetUrls)
     Q_PROPERTY(QList<QUrl> folders READ folders NOTIFY foldersChanged FINAL)
     Q_PROPERTY(bool recursive READ recursive WRITE setRecursive NOTIFY recursiveChanged)
     Q_PROPERTY(bool autoScan READ autoScan WRITE setAutoScan NOTIFY autoScanChanged)
@@ -29,8 +30,9 @@ public:
 
     const FMH::MODEL_LIST &items() const override final;
 
-    void setUrls(const QList<QUrl> &urls);
-    QList<QUrl> urls() const;
+    void setUrls(const QStringList &urls);
+    QStringList urls() const;
+    void resetUrls();
 
     void setAutoScan(const bool &value);
     bool autoScan() const;
@@ -49,15 +51,14 @@ private:
     FMH::FileLoader *m_fileLoader;
     QFileSystemWatcher *m_watcher;
 
-    QList<QUrl> m_urls;
+    QStringList m_urls;
     QList<QUrl> m_folders;
     bool m_autoReload;
     bool m_autoScan;
 
     FMH::MODEL_LIST list;
 
-    void scan(const QList<QUrl> &urls, const bool &recursive = true, const int &limit = CINEMA_QUERY_MAX_LIMIT);
-    void scanTags(const QList<QUrl> &urls, const int &limit = CINEMA_QUERY_MAX_LIMIT);
+    void scan(const QStringList &urls, const bool &recursive = true, const int &limit = CINEMA_QUERY_MAX_LIMIT);
 
     void insert(const FMH::MODEL_LIST &items);
 
@@ -66,7 +67,6 @@ private:
     bool m_recursive;
 
     int m_limit = CINEMA_QUERY_MAX_LIMIT;
-    QList<QUrl> extractTags(const QList<QUrl> &urls);
 
 signals:
     void urlsChanged();
@@ -90,10 +90,14 @@ public slots:
 
     void clear();
     void rescan();
-    void reload();
 
     void setRecursive(bool recursive);
     void setlimit(int limit);
+
+    // QQmlParserStatus interface
+public:
+    void classBegin() override final;
+    void componentComplete() override final;
 };
 
 #endif // VIDEOSMODEL_H

@@ -3,35 +3,36 @@
 #include <MauiKit/FileBrowsing/fmstatic.h>
 #include <MauiKit/FileBrowsing/tagging.h>
 
+#include <KI18n/KLocalizedString>
+
 TagsModel::TagsModel(QObject *parent) : MauiList(parent)
-{
+{    
+    m_quickPlaces << QVariantMap{{"icon", "love"}, {"path", "tags:///fav"}, {"label", i18n("Favorites")}};
+      m_quickPlaces << QVariantMap{{"icon", "folder-download"}, {"path", FMStatic::DownloadsPath}, {"label", i18n("Downloads")}};
+      m_quickPlaces << QVariantMap{{"icon", "folder-videos"}, {"path", FMStatic::VideosPath}, {"label", i18n("Videos")}};
+//      m_quickPlaces << QVariantMap{{"icon", "org.gnome.Screenshot-symbolic"}, {"path", screenshotsPath().toString()}, {"label", i18n("Screenshots")}};
+      m_quickPlaces << QVariantMap{{"icon", "view-list-icons"}, {"path", "collection:///"}, {"label", i18n("Collection")}};
+
     connect(Tagging::getInstance(), &Tagging::tagged, [this](QVariantMap tag) {
         emit this->preItemAppended();
-        this->list << FMH::toModel(tag);
+        auto item = FMH::toModel(tag);
+
+        item[FMH::MODEL_KEY::PATH] = "tags:///"+item[FMH::MODEL_KEY::TAG];
+        item[FMH::MODEL_KEY::TYPE] = i18n("Tags");
+        this->list << item;
         emit this->postItemAppended();
     });
 
-    connect(Tagging::getInstance(), &Tagging::urlTagged, [this](QString url, QString tag) {
-        const auto index = this->indexOf(FMH::MODEL_KEY::TAG, tag);
-        auto item = this->list[index];
-        auto previews = item[FMH::MODEL_KEY::PREVIEW].split(",", Qt::SkipEmptyParts);
-
-        if (previews.size() == 4) {
-            previews.pop_back();
-        }
-
-        previews.insert(0, url);
-        previews.removeDuplicates();
-
-        item[FMH::MODEL_KEY::PREVIEW] = previews.join(",");
-        this->list[index] = item;
-        this->updateModel(index, {});
-    });
 }
 
 void TagsModel::componentComplete()
 {
     this->setList();
+}
+
+QVariantList TagsModel::quickPlaces() const
+{
+    return m_quickPlaces;
 }
 
 const FMH::MODEL_LIST &TagsModel::items() const
@@ -54,7 +55,9 @@ FMH::MODEL_LIST TagsModel::tags()
 
     return std::accumulate(tags.constBegin(), tags.constEnd(), res, [this](FMH::MODEL_LIST &list, const QVariant &item) {
         auto tag = FMH::toModel(item.toMap());
-        packPreviewImages(tag);
+//        packPreviewImages(tag);
+        tag[FMH::MODEL_KEY::PATH] = "tags:///"+tag[FMH::MODEL_KEY::TAG];
+        tag[FMH::MODEL_KEY::TYPE] = i18n("Tags");
         list << tag;
         return list;
     });

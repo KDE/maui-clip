@@ -15,6 +15,7 @@
         <file>views/settings/SettingsDialog.qml</file>
         <file>views/youtube/YouTubeView.qml</file>
         <file>views/player/Player.qml</file>
+        <file>views/collection/PlacesSidebar.qml</file>
     </qresource>
     <qresource prefix="/img">
         <file>assets/tag.svg</file>
