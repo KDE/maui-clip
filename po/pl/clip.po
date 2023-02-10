@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-15 00:45+0000\n"
+"POT-Creation-Date: 2023-02-10 00:57+0000\n"
 "PO-Revision-Date: 2022-01-16 09:41+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -68,7 +68,7 @@ msgstr "Camilo Higuita"
 msgid "Developer"
 msgstr "Programista"
 
-#: src/main.qml:92 src/main.qml:224
+#: src/main.qml:92 src/views/collection/CollectionView.qml:39
 #, kde-format
 msgid "Open URL"
 msgstr "Otwórz adres URL"
@@ -102,52 +102,56 @@ msgstr "Anuluj"
 msgid "Are sure you want to delete %1 files"
 msgstr "Czy na pewno usunąć %1 plików"
 
-#: src/main.qml:155
+#: src/main.qml:175
 #, kde-format
 msgid "Now playing"
 msgstr "Teraz odtwarzany"
 
-#: src/main.qml:211
-#, kde-format
-msgid "Open"
-msgstr "Otwórz"
-
-#: src/main.qml:235
-#, kde-format
-msgid "Settings"
-msgstr "Ustawienia"
-
-#: src/main.qml:243
-#, kde-format
-msgid "About"
-msgstr "O programie"
-
-#: src/main.qml:251 src/main.qml:371 src/views/settings/SettingsDialog.qml:55
-#, kde-format
-msgid "Collection"
-msgstr "Zbiór"
-
-#: src/main.qml:258 src/views/ItemMenu.qml:29
-#, kde-format
-msgid "Tags"
-msgstr "Znaczniki"
-
-#: src/main.qml:350 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:275 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "Nie ma tutaj niczego!"
 
-#: src/main.qml:351
+#: src/main.qml:276
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr "Otwórz nowy film z twojego zbioru lub systemu plików."
 
-#: src/main.qml:529
+#. i18n("Screenshots")}};
+#: src/main.qml:296 src/models/tagsmodel.cpp:14
+#: src/views/settings/SettingsDialog.qml:55
+#, kde-format
+msgid "Collection"
+msgstr "Zbiór"
+
+#: src/main.qml:462
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "Przełącz pasek boczny"
 
-#: src/views/BrowserLayout.qml:68
+#: src/models/tagsmodel.cpp:10
+#, kde-format
+msgid "Favorites"
+msgstr ""
+
+#: src/models/tagsmodel.cpp:11
+#, kde-format
+msgid "Downloads"
+msgstr ""
+
+#: src/models/tagsmodel.cpp:12
+#, fuzzy, kde-format
+#| msgid "No Videos!"
+msgid "Videos"
+msgstr "Brak filmów!"
+
+#: src/models/tagsmodel.cpp:21 src/models/tagsmodel.cpp:60
+#: src/views/ItemMenu.qml:29
+#, kde-format
+msgid "Tags"
+msgstr "Znaczniki"
+
+#: src/views/BrowserLayout.qml:69
 #, kde-format
 msgid "Search %1 video"
 msgid_plural "Search %1 videos"
@@ -155,26 +159,53 @@ msgstr[0] "Szukaj %1 filmu"
 msgstr[1] "Szukaj %1 filmów"
 msgstr[2] "Szukaj %1 filmów"
 
-#: src/views/collection/CollectionView.qml:13 src/views/player/Playlist.qml:19
+#: src/views/collection/CollectionView.qml:50
+#, kde-format
+msgid "Settings"
+msgstr "Ustawienia"
+
+#: src/views/collection/CollectionView.qml:58
+#, kde-format
+msgid "About"
+msgstr "O programie"
+
+#: src/views/collection/CollectionView.qml:71
+#, fuzzy, kde-format
+#| msgid "Toggle SideBar"
+msgid "Toggle sidebar"
+msgstr "Przełącz pasek boczny"
+
+#: src/views/collection/CollectionView.qml:77 src/views/player/Playlist.qml:19
 #: src/views/tags/TagsView.qml:38
 #, kde-format
 msgid "No Videos!"
 msgstr "Brak filmów!"
 
-#: src/views/collection/CollectionView.qml:14
+#: src/views/collection/CollectionView.qml:78
 #, kde-format
 msgid "Add a new video source or open a file."
 msgstr "Dodaj nowe źródło filmu lub otwórz plik."
 
-#: src/views/collection/CollectionView.qml:19
+#: src/views/collection/CollectionView.qml:83
 #, kde-format
 msgid "Open file"
 msgstr "Otwórz plik"
 
-#: src/views/collection/CollectionView.qml:25
+#: src/views/collection/CollectionView.qml:89
 #, kde-format
 msgid "Add sources"
 msgstr "Dodaj źródła"
+
+#: src/views/collection/PlacesSidebar.qml:52
+#, fuzzy, kde-format
+#| msgid "Tags"
+msgid "Tags!"
+msgstr "Znaczniki"
+
+#: src/views/collection/PlacesSidebar.qml:53
+#, kde-format
+msgid "Your tags will be listed here"
+msgstr ""
 
 #: src/views/ItemMenu.qml:22
 #, kde-format
@@ -398,17 +429,17 @@ msgid "Add new sources to manage and browse your video collection"
 msgstr ""
 "Dodaj nowe źródła do swojego zbioru filmów, aby nimi zarządzać i przeglądać"
 
-#: src/views/settings/SettingsDialog.qml:323
+#: src/views/settings/SettingsDialog.qml:322
 #, kde-format
 msgid "Add"
 msgstr "Dodaj"
 
-#: src/views/settings/SettingsDialog.qml:345
+#: src/views/settings/SettingsDialog.qml:344
 #, kde-format
 msgid "Remove source"
 msgstr "Usuń źródło"
 
-#: src/views/settings/SettingsDialog.qml:346
+#: src/views/settings/SettingsDialog.qml:345
 #, kde-format
 msgid ""
 "Are you sure you want to remove the source: \n"
@@ -446,6 +477,9 @@ msgstr "Zacznij szukać filmów w sieci."
 #, kde-format
 msgid "Search..."
 msgstr "Szukaj..."
+
+#~ msgid "Open"
+#~ msgstr "Otwórz"
 
 #~ msgid "Player"
 #~ msgstr "Odtwarzacz"
