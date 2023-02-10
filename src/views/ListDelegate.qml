@@ -26,6 +26,7 @@ label3.text: model.mime
 label4.text: Qt.formatDateTime(new Date(model.modified), "d MMM yyyy")
 imageSource: model.preview
 iconSource: model.icon
-template.fillMode: Image.PreserveAspectCrop
+template.fillMode: Image.PreserveAspectFit
+//template.width
 
 }

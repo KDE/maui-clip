@@ -295,8 +295,6 @@ Maui.SettingsDialog
                 delegate: Maui.ListDelegate
                 {
                     width: ListView.view.width
-                    implicitHeight: Maui.Style.rowHeight * 1.5
-
                     template.iconSource: modelData.icon
                     template.iconSizeHint: Maui.Style.iconSizes.small
                     template.label1.text: modelData.label
