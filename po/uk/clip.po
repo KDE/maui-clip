@@ -3,13 +3,13 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2020, 2021, 2022.
+# Yuri Chornoivan <yurchor@ukr.net>, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-10 00:57+0000\n"
-"PO-Revision-Date: 2022-01-09 09:41+0200\n"
+"POT-Creation-Date: 2023-02-11 00:56+0000\n"
+"PO-Revision-Date: 2023-02-10 08:52+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -134,18 +134,17 @@ msgstr "Увімкнути чи вимкнути бічну панель"
 #: src/models/tagsmodel.cpp:10
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "Улюблене"
 
 #: src/models/tagsmodel.cpp:11
 #, kde-format
 msgid "Downloads"
-msgstr ""
+msgstr "Завантажене"
 
 #: src/models/tagsmodel.cpp:12
-#, fuzzy, kde-format
-#| msgid "No Videos!"
+#, kde-format
 msgid "Videos"
-msgstr "Немає відео!"
+msgstr "Відео"
 
 #: src/models/tagsmodel.cpp:21 src/models/tagsmodel.cpp:60
 #: src/views/ItemMenu.qml:29
@@ -173,10 +172,9 @@ msgid "About"
 msgstr "Про програму"
 
 #: src/views/collection/CollectionView.qml:71
-#, fuzzy, kde-format
-#| msgid "Toggle SideBar"
+#, kde-format
 msgid "Toggle sidebar"
-msgstr "Увімкнути чи вимкнути бічну панель"
+msgstr "Увімкнути/Вимкнути бічну панель"
 
 #: src/views/collection/CollectionView.qml:77 src/views/player/Playlist.qml:19
 #: src/views/tags/TagsView.qml:38
@@ -200,15 +198,14 @@ msgid "Add sources"
 msgstr "Додати джерела"
 
 #: src/views/collection/PlacesSidebar.qml:52
-#, fuzzy, kde-format
-#| msgid "Tags"
+#, kde-format
 msgid "Tags!"
-msgstr "Мітки"
+msgstr "Мітки!"
 
 #: src/views/collection/PlacesSidebar.qml:53
 #, kde-format
 msgid "Your tags will be listed here"
-msgstr ""
+msgstr "Тут буде наведено список ваших міток"
 
 #: src/views/ItemMenu.qml:22
 #, kde-format
@@ -431,17 +428,17 @@ msgstr "Джерела"
 msgid "Add new sources to manage and browse your video collection"
 msgstr "Додайте нові джерела для керування і навігації вашою збіркою відео"
 
-#: src/views/settings/SettingsDialog.qml:322
+#: src/views/settings/SettingsDialog.qml:320
 #, kde-format
 msgid "Add"
 msgstr "Додати"
 
-#: src/views/settings/SettingsDialog.qml:344
+#: src/views/settings/SettingsDialog.qml:342
 #, kde-format
 msgid "Remove source"
 msgstr "Вилучити джерело"
 
-#: src/views/settings/SettingsDialog.qml:345
+#: src/views/settings/SettingsDialog.qml:343
 #, kde-format
 msgid ""
 "Are you sure you want to remove the source: \n"

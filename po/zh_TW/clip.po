@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-10 00:57+0000\n"
+"POT-Creation-Date: 2023-02-11 00:56+0000\n"
 "PO-Revision-Date: 2023-02-08 00:57+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -424,17 +424,17 @@ msgstr "來源"
 msgid "Add new sources to manage and browse your video collection"
 msgstr "新增來源來管理並瀏覽您的影片收藏"
 
-#: src/views/settings/SettingsDialog.qml:322
+#: src/views/settings/SettingsDialog.qml:320
 #, kde-format
 msgid "Add"
 msgstr "新增"
 
-#: src/views/settings/SettingsDialog.qml:344
+#: src/views/settings/SettingsDialog.qml:342
 #, kde-format
 msgid "Remove source"
 msgstr "移除來源"
 
-#: src/views/settings/SettingsDialog.qml:345
+#: src/views/settings/SettingsDialog.qml:343
 #, kde-format
 msgid ""
 "Are you sure you want to remove the source: \n"

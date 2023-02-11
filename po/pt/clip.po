@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-10 00:57+0000\n"
+"POT-Creation-Date: 2023-02-11 00:56+0000\n"
 "PO-Revision-Date: 2021-11-08 18:09+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -128,7 +128,7 @@ msgstr "Comutar a Barra Lateral"
 #: src/models/tagsmodel.cpp:10
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "Favoritos"
 
 #: src/models/tagsmodel.cpp:11
 #, kde-format
@@ -136,10 +136,9 @@ msgid "Downloads"
 msgstr ""
 
 #: src/models/tagsmodel.cpp:12
-#, fuzzy, kde-format
-#| msgid "No Videos!"
+#, kde-format
 msgid "Videos"
-msgstr "Sem Vídeos!"
+msgstr "Vídeos"
 
 #: src/models/tagsmodel.cpp:21 src/models/tagsmodel.cpp:60
 #: src/views/ItemMenu.qml:29
@@ -165,10 +164,9 @@ msgid "About"
 msgstr "Acerca"
 
 #: src/views/collection/CollectionView.qml:71
-#, fuzzy, kde-format
-#| msgid "Toggle SideBar"
+#, kde-format
 msgid "Toggle sidebar"
-msgstr "Comutar a Barra Lateral"
+msgstr "Comutar a barra lateral"
 
 #: src/views/collection/CollectionView.qml:77 src/views/player/Playlist.qml:19
 #: src/views/tags/TagsView.qml:38
@@ -423,17 +421,17 @@ msgstr "Fontes"
 msgid "Add new sources to manage and browse your video collection"
 msgstr "Adicione novas fontes para gerir e navegar a sua colecção de vídeos"
 
-#: src/views/settings/SettingsDialog.qml:322
+#: src/views/settings/SettingsDialog.qml:320
 #, kde-format
 msgid "Add"
 msgstr "Adicionar"
 
-#: src/views/settings/SettingsDialog.qml:344
+#: src/views/settings/SettingsDialog.qml:342
 #, kde-format
 msgid "Remove source"
 msgstr "Remover a fonte"
 
-#: src/views/settings/SettingsDialog.qml:345
+#: src/views/settings/SettingsDialog.qml:343
 #, kde-format
 msgid ""
 "Are you sure you want to remove the source: \n"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-cinema\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-10 00:57+0000\n"
+"POT-Creation-Date: 2023-02-11 00:56+0000\n"
 "PO-Revision-Date: 2021-01-20 12:13+0100\n"
 "Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -435,18 +435,18 @@ msgid "Add new sources to manage and browse your video collection"
 msgstr ""
 "Adjon hozzá új címkét a videogyűjteménye rendszerezésének megkezdéséhez."
 
-#: src/views/settings/SettingsDialog.qml:322
+#: src/views/settings/SettingsDialog.qml:320
 #, kde-format
 msgid "Add"
 msgstr "Hozzáadás"
 
-#: src/views/settings/SettingsDialog.qml:344
+#: src/views/settings/SettingsDialog.qml:342
 #, fuzzy, kde-format
 #| msgid "Remove"
 msgid "Remove source"
 msgstr "Eltávolítás"
 
-#: src/views/settings/SettingsDialog.qml:345
+#: src/views/settings/SettingsDialog.qml:343
 #, fuzzy, kde-format
 #| msgid ""
 #| "Are sure you want to delete \n"

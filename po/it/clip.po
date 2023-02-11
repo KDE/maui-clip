@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-cinema\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-10 00:57+0000\n"
+"POT-Creation-Date: 2023-02-11 00:56+0000\n"
 "PO-Revision-Date: 2022-01-12 17:39+0100\n"
 "Last-Translator: Paolo Zamponi <zapaolo@email.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -427,17 +427,17 @@ msgid "Add new sources to manage and browse your video collection"
 msgstr ""
 "Aggiungi nuove fonti per gestire e per sfogliare la tua collezione di video"
 
-#: src/views/settings/SettingsDialog.qml:322
+#: src/views/settings/SettingsDialog.qml:320
 #, kde-format
 msgid "Add"
 msgstr "Aggiungi"
 
-#: src/views/settings/SettingsDialog.qml:344
+#: src/views/settings/SettingsDialog.qml:342
 #, kde-format
 msgid "Remove source"
 msgstr "Rimuovi fonte"
 
-#: src/views/settings/SettingsDialog.qml:345
+#: src/views/settings/SettingsDialog.qml:343
 #, kde-format
 msgid ""
 "Are you sure you want to remove the source: \n"

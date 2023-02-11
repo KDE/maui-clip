@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2020, 2021, 2022.
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-10 00:57+0000\n"
-"PO-Revision-Date: 2022-01-10 16:58+0100\n"
+"POT-Creation-Date: 2023-02-11 00:56+0000\n"
+"PO-Revision-Date: 2023-02-10 13:51+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.0\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: src/controllers/YouTube.qml:95
 #, kde-format
@@ -131,18 +131,17 @@ msgstr "Zijbalk omschakelen"
 #: src/models/tagsmodel.cpp:10
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "Favorieten"
 
 #: src/models/tagsmodel.cpp:11
 #, kde-format
 msgid "Downloads"
-msgstr ""
+msgstr "Downloads"
 
 #: src/models/tagsmodel.cpp:12
-#, fuzzy, kde-format
-#| msgid "No Videos!"
+#, kde-format
 msgid "Videos"
-msgstr "Geen video's!"
+msgstr "Video's"
 
 #: src/models/tagsmodel.cpp:21 src/models/tagsmodel.cpp:60
 #: src/views/ItemMenu.qml:29
@@ -168,8 +167,7 @@ msgid "About"
 msgstr "Info over"
 
 #: src/views/collection/CollectionView.qml:71
-#, fuzzy, kde-format
-#| msgid "Toggle SideBar"
+#, kde-format
 msgid "Toggle sidebar"
 msgstr "Zijbalk omschakelen"
 
@@ -195,15 +193,14 @@ msgid "Add sources"
 msgstr "Bronnen toevoegen"
 
 #: src/views/collection/PlacesSidebar.qml:52
-#, fuzzy, kde-format
-#| msgid "Tags"
+#, kde-format
 msgid "Tags!"
-msgstr "Tags"
+msgstr "Tags!"
 
 #: src/views/collection/PlacesSidebar.qml:53
 #, kde-format
 msgid "Your tags will be listed here"
-msgstr ""
+msgstr "Uw tags worden hier getoond"
 
 #: src/views/ItemMenu.qml:22
 #, kde-format
@@ -426,17 +423,17 @@ msgid "Add new sources to manage and browse your video collection"
 msgstr ""
 "Nieuwe bronnen toevoegen om uw videoverzameling te beheren en in te bladeren."
 
-#: src/views/settings/SettingsDialog.qml:322
+#: src/views/settings/SettingsDialog.qml:320
 #, kde-format
 msgid "Add"
 msgstr "Toevoegen"
 
-#: src/views/settings/SettingsDialog.qml:344
+#: src/views/settings/SettingsDialog.qml:342
 #, kde-format
 msgid "Remove source"
 msgstr "Bron verwijderen"
 
-#: src/views/settings/SettingsDialog.qml:345
+#: src/views/settings/SettingsDialog.qml:343
 #, kde-format
 msgid ""
 "Are you sure you want to remove the source: \n"

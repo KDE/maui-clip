@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-10 00:57+0000\n"
-"PO-Revision-Date: 2022-11-25 23:03+0100\n"
+"POT-Creation-Date: 2023-02-11 00:56+0000\n"
+"PO-Revision-Date: 2023-02-10 08:51+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: src/controllers/YouTube.qml:95
 #, kde-format
@@ -132,18 +132,17 @@ msgstr "გვერდითი პანელი ჩვენების ჩ
 #: src/models/tagsmodel.cpp:10
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "სანიშნები"
 
 #: src/models/tagsmodel.cpp:11
 #, kde-format
 msgid "Downloads"
-msgstr ""
+msgstr "გადმოწერები"
 
 #: src/models/tagsmodel.cpp:12
-#, fuzzy, kde-format
-#| msgid "No Videos!"
+#, kde-format
 msgid "Videos"
-msgstr "ვიდეოების გარეშე!"
+msgstr "ვიდეო"
 
 #: src/models/tagsmodel.cpp:21 src/models/tagsmodel.cpp:60
 #: src/views/ItemMenu.qml:29
@@ -169,10 +168,9 @@ msgid "About"
 msgstr "შესახებ"
 
 #: src/views/collection/CollectionView.qml:71
-#, fuzzy, kde-format
-#| msgid "Toggle SideBar"
+#, kde-format
 msgid "Toggle sidebar"
-msgstr "გვერდითი პანელი ჩვენების ჩართ/გამორთ"
+msgstr "გვერდითი ზოლის ჩართ/გამორთ"
 
 #: src/views/collection/CollectionView.qml:77 src/views/player/Playlist.qml:19
 #: src/views/tags/TagsView.qml:38
@@ -196,15 +194,14 @@ msgid "Add sources"
 msgstr "წყაროების დამატება"
 
 #: src/views/collection/PlacesSidebar.qml:52
-#, fuzzy, kde-format
-#| msgid "Tags"
+#, kde-format
 msgid "Tags!"
-msgstr "ჭდეები"
+msgstr "ჭდეები!"
 
 #: src/views/collection/PlacesSidebar.qml:53
 #, kde-format
 msgid "Your tags will be listed here"
-msgstr ""
+msgstr "თქვენი ჭდეები აქ ჩამოითვლება"
 
 #: src/views/ItemMenu.qml:22
 #, kde-format
@@ -425,17 +422,17 @@ msgstr "წყაროები"
 msgid "Add new sources to manage and browse your video collection"
 msgstr "დაამატეთ ახალი წყაროები სამართავად და მართეთ თქვენი ვიდეო კოლექცია"
 
-#: src/views/settings/SettingsDialog.qml:322
+#: src/views/settings/SettingsDialog.qml:320
 #, kde-format
 msgid "Add"
 msgstr "დამატება"
 
-#: src/views/settings/SettingsDialog.qml:344
+#: src/views/settings/SettingsDialog.qml:342
 #, kde-format
 msgid "Remove source"
 msgstr "წყაროს წაშლა"
 
-#: src/views/settings/SettingsDialog.qml:345
+#: src/views/settings/SettingsDialog.qml:343
 #, kde-format
 msgid ""
 "Are you sure you want to remove the source: \n"

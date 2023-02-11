@@ -1,15 +1,15 @@
 # Translation of clip.po to Catalan (Valencian)
-# Copyright (C) 2020-2022 This_file_is_part_of_KDE
+# Copyright (C) 2020-2023 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2020, 2021, 2022.
+# Josep M. Ferrer <txemaq@gmail.com>, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-10 00:57+0000\n"
-"PO-Revision-Date: 2022-02-08 08:57+0100\n"
+"POT-Creation-Date: 2023-02-11 00:56+0000\n"
+"PO-Revision-Date: 2023-02-10 10:04+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -133,18 +133,17 @@ msgstr "Mostra o oculta la barra lateral"
 #: src/models/tagsmodel.cpp:10
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "Preferits"
 
 #: src/models/tagsmodel.cpp:11
 #, kde-format
 msgid "Downloads"
-msgstr ""
+msgstr "Baixades"
 
 #: src/models/tagsmodel.cpp:12
-#, fuzzy, kde-format
-#| msgid "No Videos!"
+#, kde-format
 msgid "Videos"
-msgstr "No hi ha cap vídeo!"
+msgstr "Vídeos"
 
 #: src/models/tagsmodel.cpp:21 src/models/tagsmodel.cpp:60
 #: src/views/ItemMenu.qml:29
@@ -170,8 +169,7 @@ msgid "About"
 msgstr "Quant a"
 
 #: src/views/collection/CollectionView.qml:71
-#, fuzzy, kde-format
-#| msgid "Toggle SideBar"
+#, kde-format
 msgid "Toggle sidebar"
 msgstr "Mostra o oculta la barra lateral"
 
@@ -197,15 +195,14 @@ msgid "Add sources"
 msgstr "Afig fonts"
 
 #: src/views/collection/PlacesSidebar.qml:52
-#, fuzzy, kde-format
-#| msgid "Tags"
+#, kde-format
 msgid "Tags!"
-msgstr "Etiquetes"
+msgstr "Etiquetes!"
 
 #: src/views/collection/PlacesSidebar.qml:53
 #, kde-format
 msgid "Your tags will be listed here"
-msgstr ""
+msgstr "Ací es llistaran les vostres etiquetes"
 
 #: src/views/ItemMenu.qml:22
 #, kde-format
@@ -428,17 +425,17 @@ msgstr "Fonts"
 msgid "Add new sources to manage and browse your video collection"
 msgstr "Afig fonts noves per a gestionat i navegar per la col·lecció de vídeos"
 
-#: src/views/settings/SettingsDialog.qml:322
+#: src/views/settings/SettingsDialog.qml:320
 #, kde-format
 msgid "Add"
 msgstr "Afig"
 
-#: src/views/settings/SettingsDialog.qml:344
+#: src/views/settings/SettingsDialog.qml:342
 #, kde-format
 msgid "Remove source"
 msgstr "Elimina la font"
 
-#: src/views/settings/SettingsDialog.qml:345
+#: src/views/settings/SettingsDialog.qml:343
 #, kde-format
 msgid ""
 "Are you sure you want to remove the source: \n"
@@ -478,6 +475,3 @@ msgstr "Comença la busca de vídeos en línia."
 #, kde-format
 msgid "Search..."
 msgstr "Busca..."
-
-#~ msgid "Open"
-#~ msgstr "Obri"
