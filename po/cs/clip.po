@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the maui-clip package.
-# Vit Pelcak <vit@pelcak.org>, 2021, 2022.
+# Vit Pelcak <vit@pelcak.org>, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-11 00:56+0000\n"
-"PO-Revision-Date: 2022-01-13 16:28+0100\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"PO-Revision-Date: 2023-02-13 12:56+0100\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.0\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: src/controllers/YouTube.qml:95
 #, kde-format
@@ -107,7 +107,7 @@ msgstr "Nyní přehrávám"
 #: src/main.qml:275 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
-msgstr ""
+msgstr "Zde nic není!"
 
 #: src/main.qml:276
 #, kde-format
@@ -129,17 +129,17 @@ msgstr "Přepnout postranní panel"
 #: src/models/tagsmodel.cpp:10
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "Oblíbené"
 
 #: src/models/tagsmodel.cpp:11
 #, kde-format
 msgid "Downloads"
-msgstr ""
+msgstr "Stahování"
 
 #: src/models/tagsmodel.cpp:12
 #, kde-format
 msgid "Videos"
-msgstr ""
+msgstr "Videa"
 
 #: src/models/tagsmodel.cpp:21 src/models/tagsmodel.cpp:60
 #: src/views/ItemMenu.qml:29
@@ -167,7 +167,7 @@ msgstr "O aplikaci"
 #: src/views/collection/CollectionView.qml:71
 #, kde-format
 msgid "Toggle sidebar"
-msgstr ""
+msgstr "Přepnout postranní panel"
 
 #: src/views/collection/CollectionView.qml:77 src/views/player/Playlist.qml:19
 #: src/views/tags/TagsView.qml:38
@@ -193,12 +193,12 @@ msgstr "Přidat zdroje"
 #: src/views/collection/PlacesSidebar.qml:52
 #, kde-format
 msgid "Tags!"
-msgstr ""
+msgstr "Značky!"
 
 #: src/views/collection/PlacesSidebar.qml:53
 #, kde-format
 msgid "Your tags will be listed here"
-msgstr ""
+msgstr "Zde budou vypsány vaše značky"
 
 #: src/views/ItemMenu.qml:22
 #, kde-format
@@ -382,7 +382,7 @@ msgstr ""
 #: src/views/settings/SettingsDialog.qml:154
 #, kde-format
 msgid "Hardware Decoding"
-msgstr ""
+msgstr "Hardwarové dekódování"
 
 #: src/views/settings/SettingsDialog.qml:155
 #, kde-format
