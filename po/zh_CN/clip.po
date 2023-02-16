@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-11 00:56+0000\n"
-"PO-Revision-Date: 2023-02-07 11:03\n"
+"PO-Revision-Date: 2023-02-15 11:05\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -138,10 +138,9 @@ msgid "Downloads"
 msgstr ""
 
 #: src/models/tagsmodel.cpp:12
-#, fuzzy, kde-format
-#| msgid "No Videos!"
+#, kde-format
 msgid "Videos"
-msgstr "没有视频"
+msgstr ""
 
 #: src/models/tagsmodel.cpp:21 src/models/tagsmodel.cpp:60
 #: src/views/ItemMenu.qml:29
@@ -166,10 +165,9 @@ msgid "About"
 msgstr "关于"
 
 #: src/views/collection/CollectionView.qml:71
-#, fuzzy, kde-format
-#| msgid "Toggle SideBar"
+#, kde-format
 msgid "Toggle sidebar"
-msgstr "显示/隐藏侧边栏"
+msgstr ""
 
 #: src/views/collection/CollectionView.qml:77 src/views/player/Playlist.qml:19
 #: src/views/tags/TagsView.qml:38
@@ -193,10 +191,9 @@ msgid "Add sources"
 msgstr "添加来源"
 
 #: src/views/collection/PlacesSidebar.qml:52
-#, fuzzy, kde-format
-#| msgid "Tags"
+#, kde-format
 msgid "Tags!"
-msgstr "标签"
+msgstr ""
 
 #: src/views/collection/PlacesSidebar.qml:53
 #, kde-format
@@ -470,6 +467,3 @@ msgstr "开始搜索在线视频。"
 #, kde-format
 msgid "Search..."
 msgstr "搜索..."
-
-#~ msgid "Open"
-#~ msgstr "打开"

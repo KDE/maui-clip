@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-11 00:56+0000\n"
-"PO-Revision-Date: 2021-11-08 18:09+0000\n"
+"PO-Revision-Date: 2023-02-15 12:50+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -133,7 +133,7 @@ msgstr "Favoritos"
 #: src/models/tagsmodel.cpp:11
 #, kde-format
 msgid "Downloads"
-msgstr ""
+msgstr "Transferências"
 
 #: src/models/tagsmodel.cpp:12
 #, kde-format
@@ -190,15 +190,14 @@ msgid "Add sources"
 msgstr "Adicionar fontes"
 
 #: src/views/collection/PlacesSidebar.qml:52
-#, fuzzy, kde-format
-#| msgid "Tags"
+#, kde-format
 msgid "Tags!"
-msgstr "Marcas"
+msgstr "Marcas!"
 
 #: src/views/collection/PlacesSidebar.qml:53
 #, kde-format
 msgid "Your tags will be listed here"
-msgstr ""
+msgstr "As suas marcas serão apresentadas aqui"
 
 #: src/views/ItemMenu.qml:22
 #, kde-format
@@ -470,9 +469,3 @@ msgstr "Inicie a pesquisa por vídeos 'online'."
 #, kde-format
 msgid "Search..."
 msgstr "Procurar..."
-
-#~ msgid "Open"
-#~ msgstr "Abrir"
-
-#~ msgid "Player"
-#~ msgstr "Leitor"
