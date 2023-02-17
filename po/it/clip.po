@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the maui-cinema package.
-# Paolo Zamponi <zapaolo@email.it>, 2020, 2021, 2022.
+# Paolo Zamponi <zapaolo@email.it>, 2020, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: maui-cinema\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-11 00:56+0000\n"
-"PO-Revision-Date: 2022-01-12 17:39+0100\n"
+"PO-Revision-Date: 2023-02-11 08:30+0100\n"
 "Last-Translator: Paolo Zamponi <zapaolo@email.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.0\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: src/controllers/YouTube.qml:95
 #, kde-format
@@ -131,18 +131,17 @@ msgstr "Attiva o disattiva la barra laterale"
 #: src/models/tagsmodel.cpp:10
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "Preferiti"
 
 #: src/models/tagsmodel.cpp:11
 #, kde-format
 msgid "Downloads"
-msgstr ""
+msgstr "Scaricamenti"
 
 #: src/models/tagsmodel.cpp:12
-#, fuzzy, kde-format
-#| msgid "No Videos!"
+#, kde-format
 msgid "Videos"
-msgstr "Nessun video."
+msgstr "Video"
 
 #: src/models/tagsmodel.cpp:21 src/models/tagsmodel.cpp:60
 #: src/views/ItemMenu.qml:29
@@ -168,10 +167,9 @@ msgid "About"
 msgstr "Informazioni su"
 
 #: src/views/collection/CollectionView.qml:71
-#, fuzzy, kde-format
-#| msgid "Toggle SideBar"
+#, kde-format
 msgid "Toggle sidebar"
-msgstr "Attiva o disattiva la barra laterale"
+msgstr "Attiva/disattiva la barra laterale"
 
 #: src/views/collection/CollectionView.qml:77 src/views/player/Playlist.qml:19
 #: src/views/tags/TagsView.qml:38
@@ -195,15 +193,14 @@ msgid "Add sources"
 msgstr "Aggiungi fonti"
 
 #: src/views/collection/PlacesSidebar.qml:52
-#, fuzzy, kde-format
-#| msgid "Tags"
+#, kde-format
 msgid "Tags!"
-msgstr "Etichette"
+msgstr "Etichette."
 
 #: src/views/collection/PlacesSidebar.qml:53
 #, kde-format
 msgid "Your tags will be listed here"
-msgstr ""
+msgstr "Le tue etichette verranno elencate qui"
 
 #: src/views/ItemMenu.qml:22
 #, kde-format
