@@ -22,7 +22,6 @@ TagsModel::TagsModel(QObject *parent) : MauiList(parent)
         this->list << item;
         emit this->postItemAppended();
     });
-
 }
 
 void TagsModel::componentComplete()

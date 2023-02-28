@@ -19,7 +19,7 @@ VideosModel::VideosModel(QObject *parent) : MauiList(parent)
   , m_autoReload(true)
   , m_autoScan(true)
   , m_recursive (true)
-  , m_urls({"collection:///"})
+  , m_urls(QStringList())
 {
     qDebug()<< "CREATING GALLERY LIST";
 
@@ -59,7 +59,6 @@ VideosModel::VideosModel(QObject *parent) : MauiList(parent)
     {
          this->scan(m_urls, m_recursive, m_limit);
     });
-
 }
 
 const FMH::MODEL_LIST &VideosModel::items() const

@@ -13,6 +13,7 @@ Maui.ListBrowser
 
     property alias list : _collectionList
     property alias listModel: _collectionModel
+    clip: true
 
     holder.visible: list.count === 0
     holder.emoji: "qrc:/img/assets/media-playlist-append.svg"

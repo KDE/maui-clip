@@ -82,6 +82,7 @@ Maui.AltBrowser
         list: Clip.Videos
         {
             id: _collectionList
+            urls: ["collection:///"]
         }
     }
 

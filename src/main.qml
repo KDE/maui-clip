@@ -27,21 +27,20 @@ Maui.ApplicationWindow
 
     property bool selectionMode : false
 
-    readonly property var views : ({player: 0, collection: 1, tags: 2})
     property alias dialog : dialogLoader.item
     property alias player: _playerView.player
 
-    onIsPortraitChanged:
-    {
-        if(!isPortrait)
-        {
-            root.showFullScreen()
-        }
-        else
-        {
-            root.showNormal()
-        }
-    }
+//    onIsPortraitChanged:
+//    {
+//        if(!isPortrait)
+//        {
+//            root.showFullScreen()
+//        }
+//        else
+//        {
+//            root.showNormal()
+//        }
+//    }
 
     Settings
     {
@@ -142,9 +141,6 @@ Maui.ApplicationWindow
 
     Loader { id: dialogLoader }
 
-
-
-
     StackView
     {
         id: _stackView
@@ -155,10 +151,7 @@ Maui.ApplicationWindow
         {
             id: _appViewsComponent
 
-            CollectionView
-            {
-
-            }
+            CollectionView  {}
 
         }
         Maui.SideBarView
@@ -168,6 +161,8 @@ Maui.ApplicationWindow
             height: parent.height
             width: parent.width
             sideBar.enabled: _playlist.count > 1
+            sideBar.autoHide: true
+            sideBar.autoShow: false
             sideBar.preferredWidth: Maui.Style.units.gridUnit * 16
             sideBarContent:  Maui.Page
             {
@@ -445,10 +440,10 @@ Maui.ApplicationWindow
                     }
                 }]
 
-                footBar.visible: root.sideBar.enabled
+                footBar.visible: _sideBarView.sideBar.enabled
                 footBar.farLeftContent: Loader
                 {
-                    active: root.sideBar.enabled
+                    active: _sideBarView.sideBar.enabled
                     visible: active
                     asynchronous: true
                     sourceComponent: ToolButton
@@ -474,7 +469,6 @@ Maui.ApplicationWindow
 
                         Action
                         {
-                            enabled: root.sideBar.enabled
                             icon.name: "media-skip-backward"
                             onTriggered: playPrevious()
                         }
@@ -487,7 +481,6 @@ Maui.ApplicationWindow
 
                         Action
                         {
-                            enabled: root.sideBar.enabled
                             icon.name: "media-skip-forward"
                             onTriggered: playNext()
                         }

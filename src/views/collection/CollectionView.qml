@@ -35,7 +35,7 @@ Maui.SideBarView
 
             MenuItem
             {
-                enabled: Clip.Cip.mpvAvailable
+                enabled: Clip.Clip.mpvAvailable
                 text: i18n("Open URL")
                 icon.name: "filename-space-amarok"
 

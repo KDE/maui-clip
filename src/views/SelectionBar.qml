@@ -76,9 +76,7 @@ Maui.SelectionBar
         icon.name: "document-share"
         onTriggered:
         {
-            dialogLoader.sourceComponent = shareDialogComponent
-            dialog.urls= control.uris
-            dialog.open()
+             Maui.Platform.shareFiles(control.uris)
         }
     }
 
