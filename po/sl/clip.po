@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-cinema\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-11 00:56+0000\n"
+"POT-Creation-Date: 2023-03-02 00:53+0000\n"
 "PO-Revision-Date: 2023-02-12 18:21+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -68,12 +68,12 @@ msgstr "Camilo Higuita"
 msgid "Developer"
 msgstr "Razvijalec"
 
-#: src/main.qml:92 src/views/collection/CollectionView.qml:39
+#: src/main.qml:91 src/views/collection/CollectionView.qml:39
 #, kde-format
 msgid "Open URL"
 msgstr "Odpri URL"
 
-#: src/main.qml:94
+#: src/main.qml:93
 #, kde-format
 msgid ""
 "Enter any remote location, like YouTube video URLs, or from other services "
@@ -82,49 +82,49 @@ msgstr ""
 "Vnesite katero koli oddaljeno lokacijo, na primer naslove videoposnetkov v "
 "YouTubu, ali drugih storitev, ki ji podpira predvajalnik."
 
-#: src/main.qml:126
+#: src/main.qml:125
 #, kde-format
 msgid "Delete files?"
 msgstr "Brišem datoteke?"
 
-#: src/main.qml:127 src/views/ItemMenu.qml:119
+#: src/main.qml:126 src/views/ItemMenu.qml:119
 #, kde-format
 msgid "Accept"
 msgstr "Sprejemi"
 
-#: src/main.qml:128 src/views/ItemMenu.qml:120
+#: src/main.qml:127 src/views/ItemMenu.qml:120
 #, kde-format
 msgid "Cancel"
 msgstr "Prekliči"
 
-#: src/main.qml:129
+#: src/main.qml:128
 #, kde-format
 msgid "Are sure you want to delete %1 files"
 msgstr "Ali ste prepričani, da želite izbrisati %1 datotek"
 
-#: src/main.qml:175
+#: src/main.qml:170
 #, kde-format
 msgid "Now playing"
 msgstr "Zdaj se predvaja"
 
-#: src/main.qml:275 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:270 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "Ničesar ni tu!"
 
-#: src/main.qml:276
+#: src/main.qml:271
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr "Odpri nov video iz vaše zbirke ali sistema datotek."
 
 #. i18n("Screenshots")}};
-#: src/main.qml:296 src/models/tagsmodel.cpp:14
+#: src/main.qml:291 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:55
 #, kde-format
 msgid "Collection"
 msgstr "Zbirka"
 
-#: src/main.qml:462
+#: src/main.qml:457
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "Preklopi stransko vrstico"
@@ -144,7 +144,7 @@ msgstr "Prenosi"
 msgid "Videos"
 msgstr "Videi"
 
-#: src/models/tagsmodel.cpp:21 src/models/tagsmodel.cpp:60
+#: src/models/tagsmodel.cpp:21 src/models/tagsmodel.cpp:59
 #: src/views/ItemMenu.qml:29
 #, kde-format
 msgid "Tags"
@@ -174,7 +174,7 @@ msgstr "O programu"
 msgid "Toggle sidebar"
 msgstr "Preklopi stransko vrstico"
 
-#: src/views/collection/CollectionView.qml:77 src/views/player/Playlist.qml:19
+#: src/views/collection/CollectionView.qml:77 src/views/player/Playlist.qml:20
 #: src/views/tags/TagsView.qml:38
 #, kde-format
 msgid "No Videos!"
@@ -235,7 +235,7 @@ msgstr "Izberi"
 msgid "Show in folder"
 msgstr "Pokaži v mapi"
 
-#: src/views/ItemMenu.qml:102 src/views/SelectionBar.qml:103
+#: src/views/ItemMenu.qml:102 src/views/SelectionBar.qml:101
 #, kde-format
 msgid "Remove"
 msgstr "Odstrani"
@@ -269,7 +269,7 @@ msgstr "Avdio sledi"
 msgid "Playing mode"
 msgstr "Predvajalni način"
 
-#: src/views/player/Playlist.qml:20
+#: src/views/player/Playlist.qml:21
 #, kde-format
 msgid "Add videos to the playlist."
 msgstr "Dodaj videe na seznam videov."
@@ -289,7 +289,7 @@ msgstr "Od/Prilj"
 msgid "Tag"
 msgstr "Značka"
 
-#: src/views/SelectionBar.qml:87
+#: src/views/SelectionBar.qml:85
 #, kde-format
 msgid "Export"
 msgstr "Izvozi"

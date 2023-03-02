@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-11 00:56+0000\n"
+"POT-Creation-Date: 2023-03-02 00:53+0000\n"
 "PO-Revision-Date: 2023-02-15 12:50+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -64,12 +64,12 @@ msgstr "Camilo Higuita"
 msgid "Developer"
 msgstr "Desenvolvimento"
 
-#: src/main.qml:92 src/views/collection/CollectionView.qml:39
+#: src/main.qml:91 src/views/collection/CollectionView.qml:39
 #, kde-format
 msgid "Open URL"
 msgstr "Abrir o URL"
 
-#: src/main.qml:94
+#: src/main.qml:93
 #, kde-format
 msgid ""
 "Enter any remote location, like YouTube video URLs, or from other services "
@@ -78,49 +78,49 @@ msgstr ""
 "Indique qualquer localização remota, como os URL's de vídeos do YouTube ou "
 "de outros serviços suportados pelo MPV."
 
-#: src/main.qml:126
+#: src/main.qml:125
 #, kde-format
 msgid "Delete files?"
 msgstr "Apagar os ficheiros?"
 
-#: src/main.qml:127 src/views/ItemMenu.qml:119
+#: src/main.qml:126 src/views/ItemMenu.qml:119
 #, kde-format
 msgid "Accept"
 msgstr "Aceitar"
 
-#: src/main.qml:128 src/views/ItemMenu.qml:120
+#: src/main.qml:127 src/views/ItemMenu.qml:120
 #, kde-format
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: src/main.qml:129
+#: src/main.qml:128
 #, kde-format
 msgid "Are sure you want to delete %1 files"
 msgstr "Tem a certeza que deseja apagar os %1 ficheiros"
 
-#: src/main.qml:175
+#: src/main.qml:170
 #, kde-format
 msgid "Now playing"
 msgstr "Agora a tocar"
 
-#: src/main.qml:275 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:270 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "Nada Aqui!"
 
-#: src/main.qml:276
+#: src/main.qml:271
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr "Abrir um novo vídeo da sua colecção ou sistema de ficheiros."
 
 #. i18n("Screenshots")}};
-#: src/main.qml:296 src/models/tagsmodel.cpp:14
+#: src/main.qml:291 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:55
 #, kde-format
 msgid "Collection"
 msgstr "Colecção"
 
-#: src/main.qml:462
+#: src/main.qml:457
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "Comutar a Barra Lateral"
@@ -140,7 +140,7 @@ msgstr "Transferências"
 msgid "Videos"
 msgstr "Vídeos"
 
-#: src/models/tagsmodel.cpp:21 src/models/tagsmodel.cpp:60
+#: src/models/tagsmodel.cpp:21 src/models/tagsmodel.cpp:59
 #: src/views/ItemMenu.qml:29
 #, kde-format
 msgid "Tags"
@@ -168,7 +168,7 @@ msgstr "Acerca"
 msgid "Toggle sidebar"
 msgstr "Comutar a barra lateral"
 
-#: src/views/collection/CollectionView.qml:77 src/views/player/Playlist.qml:19
+#: src/views/collection/CollectionView.qml:77 src/views/player/Playlist.qml:20
 #: src/views/tags/TagsView.qml:38
 #, kde-format
 msgid "No Videos!"
@@ -229,7 +229,7 @@ msgstr "Seleccionar"
 msgid "Show in folder"
 msgstr "Mostrar na pasta"
 
-#: src/views/ItemMenu.qml:102 src/views/SelectionBar.qml:103
+#: src/views/ItemMenu.qml:102 src/views/SelectionBar.qml:101
 #, kde-format
 msgid "Remove"
 msgstr "Remover"
@@ -263,7 +263,7 @@ msgstr "Faixas de Áudio"
 msgid "Playing mode"
 msgstr "Modo de reprodução"
 
-#: src/views/player/Playlist.qml:20
+#: src/views/player/Playlist.qml:21
 #, kde-format
 msgid "Add videos to the playlist."
 msgstr "Adicionar os vídeos à lista de reprodução."
@@ -283,7 +283,7 @@ msgstr "Favoritos"
 msgid "Tag"
 msgstr "Marca"
 
-#: src/views/SelectionBar.qml:87
+#: src/views/SelectionBar.qml:85
 #, kde-format
 msgid "Export"
 msgstr "Exportar"

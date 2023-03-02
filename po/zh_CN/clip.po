@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-11 00:56+0000\n"
+"POT-Creation-Date: 2023-03-02 00:53+0000\n"
 "PO-Revision-Date: 2023-02-24 12:44\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -67,12 +67,12 @@ msgstr "Camilo Higuita"
 msgid "Developer"
 msgstr "开发人员"
 
-#: src/main.qml:92 src/views/collection/CollectionView.qml:39
+#: src/main.qml:91 src/views/collection/CollectionView.qml:39
 #, kde-format
 msgid "Open URL"
 msgstr "打开 URL"
 
-#: src/main.qml:94
+#: src/main.qml:93
 #, kde-format
 msgid ""
 "Enter any remote location, like YouTube video URLs, or from other services "
@@ -80,49 +80,49 @@ msgid ""
 msgstr ""
 "输入一个远程位置，例如 Youtube 视频 URL，或来自其他 MPV 支持的服务的位置。"
 
-#: src/main.qml:126
+#: src/main.qml:125
 #, kde-format
 msgid "Delete files?"
 msgstr "删除文件？"
 
-#: src/main.qml:127 src/views/ItemMenu.qml:119
+#: src/main.qml:126 src/views/ItemMenu.qml:119
 #, kde-format
 msgid "Accept"
 msgstr "接受"
 
-#: src/main.qml:128 src/views/ItemMenu.qml:120
+#: src/main.qml:127 src/views/ItemMenu.qml:120
 #, kde-format
 msgid "Cancel"
 msgstr "取消"
 
-#: src/main.qml:129
+#: src/main.qml:128
 #, kde-format
 msgid "Are sure you want to delete %1 files"
 msgstr "您确定要删除 %1 个文件吗？"
 
-#: src/main.qml:175
+#: src/main.qml:170
 #, kde-format
 msgid "Now playing"
 msgstr "正在播放"
 
-#: src/main.qml:275 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:270 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "暂无内容"
 
-#: src/main.qml:276
+#: src/main.qml:271
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr "从您的收藏集合或文件系统中打开一个新视频。"
 
 #. i18n("Screenshots")}};
-#: src/main.qml:296 src/models/tagsmodel.cpp:14
+#: src/main.qml:291 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:55
 #, kde-format
 msgid "Collection"
 msgstr "视频集合"
 
-#: src/main.qml:462
+#: src/main.qml:457
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "显示/隐藏侧边栏"
@@ -142,7 +142,7 @@ msgstr ""
 msgid "Videos"
 msgstr ""
 
-#: src/models/tagsmodel.cpp:21 src/models/tagsmodel.cpp:60
+#: src/models/tagsmodel.cpp:21 src/models/tagsmodel.cpp:59
 #: src/views/ItemMenu.qml:29
 #, kde-format
 msgid "Tags"
@@ -169,7 +169,7 @@ msgstr "关于"
 msgid "Toggle sidebar"
 msgstr ""
 
-#: src/views/collection/CollectionView.qml:77 src/views/player/Playlist.qml:19
+#: src/views/collection/CollectionView.qml:77 src/views/player/Playlist.qml:20
 #: src/views/tags/TagsView.qml:38
 #, kde-format
 msgid "No Videos!"
@@ -230,7 +230,7 @@ msgstr "选择"
 msgid "Show in folder"
 msgstr "打开所在文件夹"
 
-#: src/views/ItemMenu.qml:102 src/views/SelectionBar.qml:103
+#: src/views/ItemMenu.qml:102 src/views/SelectionBar.qml:101
 #, kde-format
 msgid "Remove"
 msgstr "移除"
@@ -264,7 +264,7 @@ msgstr "音轨"
 msgid "Playing mode"
 msgstr "播放模式"
 
-#: src/views/player/Playlist.qml:20
+#: src/views/player/Playlist.qml:21
 #, kde-format
 msgid "Add videos to the playlist."
 msgstr "添加视频到播放列表。"
@@ -284,7 +284,7 @@ msgstr "收藏/取消收藏"
 msgid "Tag"
 msgstr "标签"
 
-#: src/views/SelectionBar.qml:87
+#: src/views/SelectionBar.qml:85
 #, kde-format
 msgid "Export"
 msgstr "导出"
