@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the maui-cinema package.
-# Tommi Nieminen <translator@legisign.org>, 2021, 2022.
+# Tommi Nieminen <translator@legisign.org>, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: maui-cinema\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-02 00:53+0000\n"
-"PO-Revision-Date: 2022-01-28 11:51+0200\n"
+"PO-Revision-Date: 2023-03-06 13:40+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: src/controllers/YouTube.qml:95
 #, kde-format
@@ -131,18 +131,17 @@ msgstr "Näytä tai piilota sivupaneeli"
 #: src/models/tagsmodel.cpp:10
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "Suosikit"
 
 #: src/models/tagsmodel.cpp:11
 #, kde-format
 msgid "Downloads"
-msgstr ""
+msgstr "Lataukset"
 
 #: src/models/tagsmodel.cpp:12
-#, fuzzy, kde-format
-#| msgid "No Videos!"
+#, kde-format
 msgid "Videos"
-msgstr "Ei videoita!"
+msgstr "Videot"
 
 #: src/models/tagsmodel.cpp:21 src/models/tagsmodel.cpp:59
 #: src/views/ItemMenu.qml:29
@@ -168,8 +167,7 @@ msgid "About"
 msgstr "Tietoa"
 
 #: src/views/collection/CollectionView.qml:71
-#, fuzzy, kde-format
-#| msgid "Toggle SideBar"
+#, kde-format
 msgid "Toggle sidebar"
 msgstr "Näytä tai piilota sivupaneeli"
 
@@ -195,15 +193,14 @@ msgid "Add sources"
 msgstr "Lisää lähteitä"
 
 #: src/views/collection/PlacesSidebar.qml:52
-#, fuzzy, kde-format
-#| msgid "Tags"
+#, kde-format
 msgid "Tags!"
-msgstr "Luokitukset"
+msgstr "Luokituksia!"
 
 #: src/views/collection/PlacesSidebar.qml:53
 #, kde-format
 msgid "Your tags will be listed here"
-msgstr ""
+msgstr "Tässä luetellaan luokituksesi"
 
 #: src/views/ItemMenu.qml:22
 #, kde-format
