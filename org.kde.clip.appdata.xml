@@ -18,6 +18,7 @@
   <name xml:lang="nl">Clip</name>
   <name xml:lang="pl">Clip</name>
   <name xml:lang="pt">Clip</name>
+  <name xml:lang="sk">Clip</name>
   <name xml:lang="sl">Clip</name>
   <name xml:lang="tr">Klip</name>
   <name xml:lang="uk">Clip</name>
@@ -38,6 +39,7 @@
   <summary xml:lang="nl">Videospeler</summary>
   <summary xml:lang="pl">Odtwarzacz filmów</summary>
   <summary xml:lang="pt">Reprodutor de Vídeo</summary>
+  <summary xml:lang="sk">Prehrávač videa</summary>
   <summary xml:lang="sl">Video predvajalnik</summary>
   <summary xml:lang="tr">Video Oynatıcı</summary>
   <summary xml:lang="uk">Відеопрогравач</summary>
