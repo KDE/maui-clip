@@ -1,20 +1,22 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the maui-clip package.
-#
 # Burkhard Lück <lueck@hube-lueck.de>, 2021.
+# Frederik Schwarzer <schwarzer@kde.org>, 2023.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-02 00:53+0000\n"
-"PO-Revision-Date: 2021-07-01 10:43+0200\n"
-"Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
+"PO-Revision-Date: 2023-03-12 17:07+0100\n"
+"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.07.70\n"
 
 #: src/controllers/YouTube.qml:95
 #, kde-format
@@ -52,10 +54,9 @@ msgid "Browse and play your videos."
 msgstr "Videos durchsehen und abspielen."
 
 #: src/main.cpp:98
-#, fuzzy, kde-format
-#| msgid "© 2019-%1 Nitrux Development Team"
+#, kde-format
 msgid "© 2019-%1 Maui Development Team"
-msgstr "© 2019-%1 Nitrux-Entwicklerteam"
+msgstr "Copyright © 2019-%1 Maui-Entwicklerteam"
 
 #: src/main.cpp:99
 #, kde-format
@@ -127,26 +128,24 @@ msgid "Collection"
 msgstr "Sammlung"
 
 #: src/main.qml:457
-#, fuzzy, kde-format
-#| msgid "Toogle SideBar"
+#, kde-format
 msgid "Toggle SideBar"
 msgstr "Seitenleiste umschalten"
 
 #: src/models/tagsmodel.cpp:10
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "Favoriten"
 
 #: src/models/tagsmodel.cpp:11
 #, kde-format
 msgid "Downloads"
-msgstr ""
+msgstr "Downloads"
 
 #: src/models/tagsmodel.cpp:12
-#, fuzzy, kde-format
-#| msgid "No Videos!"
+#, kde-format
 msgid "Videos"
-msgstr "Keine Videos"
+msgstr "Videos"
 
 #: src/models/tagsmodel.cpp:21 src/models/tagsmodel.cpp:59
 #: src/views/ItemMenu.qml:29
@@ -172,8 +171,7 @@ msgid "About"
 msgstr "Über"
 
 #: src/views/collection/CollectionView.qml:71
-#, fuzzy, kde-format
-#| msgid "Toogle SideBar"
+#, kde-format
 msgid "Toggle sidebar"
 msgstr "Seitenleiste umschalten"
 
@@ -192,22 +190,19 @@ msgstr ""
 "der Wiedergabeliste hinzu."
 
 #: src/views/collection/CollectionView.qml:83
-#, fuzzy, kde-format
-#| msgid "Open"
+#, kde-format
 msgid "Open file"
-msgstr "Öffnen"
+msgstr "Datei öffnen"
 
 #: src/views/collection/CollectionView.qml:89
-#, fuzzy, kde-format
-#| msgid "Sources"
+#, kde-format
 msgid "Add sources"
-msgstr "Quellen"
+msgstr "Quellen hinzufügen"
 
 #: src/views/collection/PlacesSidebar.qml:52
-#, fuzzy, kde-format
-#| msgid "Tags"
+#, kde-format
 msgid "Tags!"
-msgstr "Stichwörter"
+msgstr "Stichwörter!"
 
 #: src/views/collection/PlacesSidebar.qml:53
 #, kde-format
@@ -276,7 +271,7 @@ msgstr "Audiospuren"
 #: src/views/player/PlayerView.qml:42
 #, kde-format
 msgid "Playing mode"
-msgstr ""
+msgstr "Wiedergabemodus"
 
 #: src/views/player/Playlist.qml:21
 #, kde-format
@@ -321,12 +316,12 @@ msgstr "Schrittweite der Lautstärke"
 #: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Dark Mode"
-msgstr ""
+msgstr "Dunkler Modus"
 
 #: src/views/settings/SettingsDialog.qml:37
 #, kde-format
 msgid "Switch between light and dark colorscheme"
-msgstr ""
+msgstr "Zwischen hellem und dunklem Farbschema umschalten"
 
 #: src/views/settings/SettingsDialog.qml:56
 #, kde-format

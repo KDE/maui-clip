@@ -1,18 +1,18 @@
 # translation of cinema.po to Slovak
-# Roman Paholik <wizzardsk@gmail.com>, 2020, 2021.
+# Roman Paholik <wizzardsk@gmail.com>, 2020, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: cinema\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-02 00:53+0000\n"
-"PO-Revision-Date: 2021-11-15 17:57+0100\n"
+"PO-Revision-Date: 2023-03-12 10:22+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: src/controllers/YouTube.qml:95
@@ -45,7 +45,7 @@ msgstr "Hľadať"
 #: src/main.cpp:97
 #, fuzzy, kde-format
 msgid "Clip"
-msgstr "Ustrihnúť"
+msgstr "Clip"
 
 #: src/main.cpp:97
 #, kde-format
@@ -55,7 +55,7 @@ msgstr ""
 #: src/main.cpp:98
 #, kde-format
 msgid "© 2019-%1 Maui Development Team"
-msgstr ""
+msgstr "© 2019-%1 Vývojársky tím Maui"
 
 #: src/main.cpp:99
 #, kde-format
@@ -129,17 +129,17 @@ msgstr "Prepnúť bočný panel"
 #: src/models/tagsmodel.cpp:10
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "Obľúbené"
 
 #: src/models/tagsmodel.cpp:11
 #, kde-format
 msgid "Downloads"
-msgstr ""
+msgstr "Sťahovania"
 
 #: src/models/tagsmodel.cpp:12
 #, kde-format
 msgid "Videos"
-msgstr ""
+msgstr "Videá"
 
 #: src/models/tagsmodel.cpp:21 src/models/tagsmodel.cpp:59
 #: src/views/ItemMenu.qml:29
@@ -307,7 +307,7 @@ msgstr "Krok hlasitosti:"
 #: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Dark Mode"
-msgstr ""
+msgstr "Tmavý režim"
 
 #: src/views/settings/SettingsDialog.qml:37
 #, kde-format
@@ -400,7 +400,7 @@ msgid "Configure the player audio behaviour."
 msgstr ""
 
 #: src/views/settings/SettingsDialog.qml:174
-#, fuzzy, kde-format
+#, kde-format
 msgid "Preferred Language"
 msgstr "Preferovaný jazyk"
 
@@ -410,7 +410,7 @@ msgid "Preferred language if available."
 msgstr ""
 
 #: src/views/settings/SettingsDialog.qml:280
-#, fuzzy, kde-format
+#, kde-format
 msgid "Sources"
 msgstr "Zdroje"
 
@@ -437,9 +437,9 @@ msgid ""
 msgstr ""
 
 #: src/views/tags/TagsGrid.qml:22
-#, fuzzy, kde-format
+#, kde-format
 msgid "No Tags!"
-msgstr "Žiadne značky"
+msgstr "Žiadne značky!"
 
 #: src/views/tags/TagsGrid.qml:23
 #, kde-format
@@ -447,7 +447,7 @@ msgid "Add a new tag to start organizing your video collection."
 msgstr ""
 
 #: src/views/tags/TagsGrid.qml:36
-#, fuzzy, kde-format
+#, kde-format
 msgid "Filter"
 msgstr "Filter"
 
