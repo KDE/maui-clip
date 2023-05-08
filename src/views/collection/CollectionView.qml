@@ -60,11 +60,16 @@ Maui.SideBarView
                 onTriggered: root.about()
             }
         },
+
         ToolButton
             {
                 icon.name: control.sideBar.visible ? "sidebar-collapse" : "sidebar-expand"
+                visible: control.sideBar.collapsed
+
                 onClicked: control.sideBar.toggle()
+
                 checked: control.sideBar.visible
+
                 ToolTip.delay: 1000
                 ToolTip.timeout: 5000
                 ToolTip.visible: hovered

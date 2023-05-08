@@ -152,18 +152,22 @@ Maui.ApplicationWindow
             id: _appViewsComponent
 
             CollectionView  {}
-
         }
+
         Maui.SideBarView
         {
             id: _sideBarView
+
             visible: StackView.status === StackView.Active
+
             height: parent.height
             width: parent.width
+
             sideBar.enabled: _playlist.count > 1
             sideBar.autoHide: true
             sideBar.autoShow: false
             sideBar.preferredWidth: Maui.Style.units.gridUnit * 16
+
             sideBarContent:  Maui.Page
             {
                 anchors.fill: parent
@@ -172,6 +176,7 @@ Maui.ApplicationWindow
 
                 headBar.visible: _playlist.count > 0
                 headBar.background: null
+
                 background: Rectangle
                 {
                     color: Maui.Theme.backgroundColor

@@ -29,7 +29,7 @@ Maui.SettingsDialog
                 to: 20
                 onValueChanged: settings.volumeStep = value
             }
-        }        
+        }
 
         Maui.SectionItem
         {
@@ -64,43 +64,34 @@ Maui.SettingsDialog
             {
                 expanded: true
                 autoExclusive: true
-                display: ToolButton.TextOnly
-
-                Binding on currentIndex
-                {
-                    value:  switch(settings.sortBy)
-                            {
-                            case "label": return 0;
-                            case "date": return 1;
-                            case "modified": return 2;
-                            case "mimetype": return 3;
-                            default: return -1;
-                            }
-                    restoreMode: Binding.RestoreValue
-                }
+                display: ToolButton.Text
 
                 Action
                 {
                     text: i18n("Title")
                     onTriggered: settings.sortBy =  "label"
+                    checked: settings.sortBy ===  "label"
                 }
 
                 Action
                 {
                     text: i18n("Date")
                     onTriggered: settings.sortBy = "modified"
+                    checked: settings.sortBy ===  "modified"
                 }
 
                 Action
                 {
                     text: i18n("Size")
                     onTriggered: settings.sortBy = "size"
+                    checked: settings.sortBy ===  "size"
                 }
 
                 Action
                 {
                     text: i18n("Type")
                     onTriggered: settings.sortBy = "type"
+                    checked: settings.sortBy ===  "type"
                 }
             }
         }
@@ -116,22 +107,12 @@ Maui.SettingsDialog
                 autoExclusive: true
                 display: ToolButton.IconOnly
 
-                Binding on currentIndex
-                {
-                    value:  switch(settings.sortOrder)
-                            {
-                            case Qt.AscendingOrder: return 0;
-                            case Qt.DescendingOrder: return 1;
-                            default: return -1;
-                            }
-                    restoreMode: Binding.RestoreValue
-                }
-
                 Action
                 {
                     text: i18n("Ascending")
                     icon.name: "view-sort-ascending"
                     onTriggered: settings.sortOrder = Qt.AscendingOrder
+                    checked: settings.sortOrder === Qt.AscendingOrder
                 }
 
                 Action
@@ -139,6 +120,7 @@ Maui.SettingsDialog
                     text: i18n("Descending")
                     icon.name: "view-sort-descending"
                     onTriggered: settings.sortOrder = Qt.DescendingOrder
+                    checked: settings.sortOrder === Qt.DescendingOrder
                 }
             }
         }
