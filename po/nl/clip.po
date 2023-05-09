@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-02 00:53+0000\n"
+"POT-Creation-Date: 2023-05-09 00:46+0000\n"
 "PO-Revision-Date: 2023-02-10 13:51+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -101,29 +101,29 @@ msgstr "Annuleren"
 msgid "Are sure you want to delete %1 files"
 msgstr "Wilt u %1 bestanden verwijderen"
 
-#: src/main.qml:170
+#: src/main.qml:174
 #, kde-format
 msgid "Now playing"
 msgstr "Nu aan het afspelen"
 
-#: src/main.qml:270 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:275 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "Er is hier niets!"
 
-#: src/main.qml:271
+#: src/main.qml:276
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr "Een nieuwe video openen uit uw verzameling of bestandssysteem."
 
 #. i18n("Screenshots")}};
-#: src/main.qml:291 src/models/tagsmodel.cpp:14
+#: src/main.qml:296 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:55
 #, kde-format
 msgid "Collection"
 msgstr "Verzameling"
 
-#: src/main.qml:457
+#: src/main.qml:462
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "Zijbalk omschakelen"
@@ -166,28 +166,28 @@ msgstr "Instellingen"
 msgid "About"
 msgstr "Info over"
 
-#: src/views/collection/CollectionView.qml:71
+#: src/views/collection/CollectionView.qml:76
 #, kde-format
 msgid "Toggle sidebar"
 msgstr "Zijbalk omschakelen"
 
-#: src/views/collection/CollectionView.qml:77 src/views/player/Playlist.qml:20
+#: src/views/collection/CollectionView.qml:82 src/views/player/Playlist.qml:20
 #: src/views/tags/TagsView.qml:38
 #, kde-format
 msgid "No Videos!"
 msgstr "Geen video's!"
 
-#: src/views/collection/CollectionView.qml:78
+#: src/views/collection/CollectionView.qml:83
 #, kde-format
 msgid "Add a new video source or open a file."
 msgstr "Een nieuwe videobron toevoegen of een bestand openen."
 
-#: src/views/collection/CollectionView.qml:83
+#: src/views/collection/CollectionView.qml:88
 #, kde-format
 msgid "Open file"
 msgstr "Bestand openen"
 
-#: src/views/collection/CollectionView.qml:89
+#: src/views/collection/CollectionView.qml:94
 #, kde-format
 msgid "Add sources"
 msgstr "Bronnen toevoegen"
@@ -331,109 +331,109 @@ msgstr "Sorteren op"
 msgid "Change the sorting key."
 msgstr "De sorteersleutel wijzigen."
 
-#: src/views/settings/SettingsDialog.qml:84
+#: src/views/settings/SettingsDialog.qml:71
 #, kde-format
 msgid "Title"
 msgstr "Titel"
 
-#: src/views/settings/SettingsDialog.qml:90
+#: src/views/settings/SettingsDialog.qml:78
 #, kde-format
 msgid "Date"
 msgstr "Datum"
 
-#: src/views/settings/SettingsDialog.qml:96
+#: src/views/settings/SettingsDialog.qml:85
 #, kde-format
 msgid "Size"
 msgstr "Grootte"
 
-#: src/views/settings/SettingsDialog.qml:102
+#: src/views/settings/SettingsDialog.qml:92
 #, kde-format
 msgid "Type"
 msgstr "Type"
 
-#: src/views/settings/SettingsDialog.qml:110
+#: src/views/settings/SettingsDialog.qml:101
 #, kde-format
 msgid "Sort order"
 msgstr "Sorteervolgorde"
 
-#: src/views/settings/SettingsDialog.qml:111
+#: src/views/settings/SettingsDialog.qml:102
 #, kde-format
 msgid "Change the sorting order."
 msgstr "De sorteervolgorde wijzigen."
 
-#: src/views/settings/SettingsDialog.qml:132
+#: src/views/settings/SettingsDialog.qml:112
 #, kde-format
 msgid "Ascending"
 msgstr "Oplopend"
 
-#: src/views/settings/SettingsDialog.qml:139
+#: src/views/settings/SettingsDialog.qml:120
 #, kde-format
 msgid "Descending"
 msgstr "Aflopend"
 
-#: src/views/settings/SettingsDialog.qml:149
+#: src/views/settings/SettingsDialog.qml:131
 #, kde-format
 msgid "Playback"
 msgstr "Afspelen"
 
-#: src/views/settings/SettingsDialog.qml:150
+#: src/views/settings/SettingsDialog.qml:132
 #, kde-format
 msgid "Configure the player settings."
 msgstr "Instellingen van de speler configureren."
 
-#: src/views/settings/SettingsDialog.qml:154
+#: src/views/settings/SettingsDialog.qml:136
 #, kde-format
 msgid "Hardware Decoding"
 msgstr "Decoderen met hardware"
 
-#: src/views/settings/SettingsDialog.qml:155
+#: src/views/settings/SettingsDialog.qml:137
 #, kde-format
 msgid "Use the sorting preferences globally for all the tabs and splits."
 msgstr ""
 "De sorteervoorkeuren gebruiken globaal voor alle tabbladen en splitsingen."
 
-#: src/views/settings/SettingsDialog.qml:168
+#: src/views/settings/SettingsDialog.qml:150
 #, kde-format
 msgid "Audio"
 msgstr "Geluid"
 
-#: src/views/settings/SettingsDialog.qml:169
+#: src/views/settings/SettingsDialog.qml:151
 #, kde-format
 msgid "Configure the player audio behaviour."
 msgstr "Gedrag van de geluid van speler configureren."
 
-#: src/views/settings/SettingsDialog.qml:174
+#: src/views/settings/SettingsDialog.qml:156
 #, kde-format
 msgid "Preferred Language"
 msgstr "Voorkeurtaal"
 
-#: src/views/settings/SettingsDialog.qml:175
+#: src/views/settings/SettingsDialog.qml:157
 #, kde-format
 msgid "Preferred language if available."
 msgstr "Voorkeurtaal indien beschikbaar"
 
-#: src/views/settings/SettingsDialog.qml:280
+#: src/views/settings/SettingsDialog.qml:262
 #, kde-format
 msgid "Sources"
 msgstr "Bronnen"
 
-#: src/views/settings/SettingsDialog.qml:281
+#: src/views/settings/SettingsDialog.qml:263
 #, kde-format
 msgid "Add new sources to manage and browse your video collection"
 msgstr ""
 "Nieuwe bronnen toevoegen om uw videoverzameling te beheren en in te bladeren."
 
-#: src/views/settings/SettingsDialog.qml:320
+#: src/views/settings/SettingsDialog.qml:302
 #, kde-format
 msgid "Add"
 msgstr "Toevoegen"
 
-#: src/views/settings/SettingsDialog.qml:342
+#: src/views/settings/SettingsDialog.qml:324
 #, kde-format
 msgid "Remove source"
 msgstr "Bron verwijderen"
 
-#: src/views/settings/SettingsDialog.qml:343
+#: src/views/settings/SettingsDialog.qml:325
 #, kde-format
 msgid ""
 "Are you sure you want to remove the source: \n"

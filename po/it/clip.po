@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-cinema\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-02 00:53+0000\n"
+"POT-Creation-Date: 2023-05-09 00:46+0000\n"
 "PO-Revision-Date: 2023-02-11 08:30+0100\n"
 "Last-Translator: Paolo Zamponi <zapaolo@email.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -101,29 +101,29 @@ msgstr "Annulla"
 msgid "Are sure you want to delete %1 files"
 msgstr "Sei sicuro di voler eliminare %1 file?"
 
-#: src/main.qml:170
+#: src/main.qml:174
 #, kde-format
 msgid "Now playing"
 msgstr "In riproduzione"
 
-#: src/main.qml:270 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:275 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "Non c'è niente qui."
 
-#: src/main.qml:271
+#: src/main.qml:276
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr "Apri un nuovo video dalla tua collezione o dal file system."
 
 #. i18n("Screenshots")}};
-#: src/main.qml:291 src/models/tagsmodel.cpp:14
+#: src/main.qml:296 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:55
 #, kde-format
 msgid "Collection"
 msgstr "Collezione"
 
-#: src/main.qml:457
+#: src/main.qml:462
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "Attiva o disattiva la barra laterale"
@@ -166,28 +166,28 @@ msgstr "Impostazioni"
 msgid "About"
 msgstr "Informazioni su"
 
-#: src/views/collection/CollectionView.qml:71
+#: src/views/collection/CollectionView.qml:76
 #, kde-format
 msgid "Toggle sidebar"
 msgstr "Attiva/disattiva la barra laterale"
 
-#: src/views/collection/CollectionView.qml:77 src/views/player/Playlist.qml:20
+#: src/views/collection/CollectionView.qml:82 src/views/player/Playlist.qml:20
 #: src/views/tags/TagsView.qml:38
 #, kde-format
 msgid "No Videos!"
 msgstr "Nessun video."
 
-#: src/views/collection/CollectionView.qml:78
+#: src/views/collection/CollectionView.qml:83
 #, kde-format
 msgid "Add a new video source or open a file."
 msgstr "Aggiungi una nuova fonte video o apri un file."
 
-#: src/views/collection/CollectionView.qml:83
+#: src/views/collection/CollectionView.qml:88
 #, kde-format
 msgid "Open file"
 msgstr "Apri file"
 
-#: src/views/collection/CollectionView.qml:89
+#: src/views/collection/CollectionView.qml:94
 #, kde-format
 msgid "Add sources"
 msgstr "Aggiungi fonti"
@@ -331,110 +331,110 @@ msgstr "Ordina per"
 msgid "Change the sorting key."
 msgstr "Modifica la chiave di ordinamento."
 
-#: src/views/settings/SettingsDialog.qml:84
+#: src/views/settings/SettingsDialog.qml:71
 #, kde-format
 msgid "Title"
 msgstr "Titolo"
 
-#: src/views/settings/SettingsDialog.qml:90
+#: src/views/settings/SettingsDialog.qml:78
 #, kde-format
 msgid "Date"
 msgstr "Data"
 
-#: src/views/settings/SettingsDialog.qml:96
+#: src/views/settings/SettingsDialog.qml:85
 #, kde-format
 msgid "Size"
 msgstr "Dimensione"
 
-#: src/views/settings/SettingsDialog.qml:102
+#: src/views/settings/SettingsDialog.qml:92
 #, kde-format
 msgid "Type"
 msgstr "Tipo"
 
-#: src/views/settings/SettingsDialog.qml:110
+#: src/views/settings/SettingsDialog.qml:101
 #, kde-format
 msgid "Sort order"
 msgstr "Ordinamento"
 
-#: src/views/settings/SettingsDialog.qml:111
+#: src/views/settings/SettingsDialog.qml:102
 #, kde-format
 msgid "Change the sorting order."
 msgstr "Modifica l'ordinamento."
 
-#: src/views/settings/SettingsDialog.qml:132
+#: src/views/settings/SettingsDialog.qml:112
 #, kde-format
 msgid "Ascending"
 msgstr "Crescente"
 
-#: src/views/settings/SettingsDialog.qml:139
+#: src/views/settings/SettingsDialog.qml:120
 #, kde-format
 msgid "Descending"
 msgstr "Decrescente"
 
-#: src/views/settings/SettingsDialog.qml:149
+#: src/views/settings/SettingsDialog.qml:131
 #, kde-format
 msgid "Playback"
 msgstr "Riproduzione"
 
-#: src/views/settings/SettingsDialog.qml:150
+#: src/views/settings/SettingsDialog.qml:132
 #, kde-format
 msgid "Configure the player settings."
 msgstr "Configura le impostazioni del lettore."
 
-#: src/views/settings/SettingsDialog.qml:154
+#: src/views/settings/SettingsDialog.qml:136
 #, kde-format
 msgid "Hardware Decoding"
 msgstr "Decodifica hardware"
 
-#: src/views/settings/SettingsDialog.qml:155
+#: src/views/settings/SettingsDialog.qml:137
 #, kde-format
 msgid "Use the sorting preferences globally for all the tabs and splits."
 msgstr ""
 "Usa le preferenze di ordinamento globalmente per tutte le schede e le "
 "suddivisioni."
 
-#: src/views/settings/SettingsDialog.qml:168
+#: src/views/settings/SettingsDialog.qml:150
 #, kde-format
 msgid "Audio"
 msgstr "Audio"
 
-#: src/views/settings/SettingsDialog.qml:169
+#: src/views/settings/SettingsDialog.qml:151
 #, kde-format
 msgid "Configure the player audio behaviour."
 msgstr "Configura il comportamento del lettore audio."
 
-#: src/views/settings/SettingsDialog.qml:174
+#: src/views/settings/SettingsDialog.qml:156
 #, kde-format
 msgid "Preferred Language"
 msgstr "Lingua preferita"
 
-#: src/views/settings/SettingsDialog.qml:175
+#: src/views/settings/SettingsDialog.qml:157
 #, kde-format
 msgid "Preferred language if available."
 msgstr "Lingua preferita se disponibile."
 
-#: src/views/settings/SettingsDialog.qml:280
+#: src/views/settings/SettingsDialog.qml:262
 #, kde-format
 msgid "Sources"
 msgstr "Fonti"
 
-#: src/views/settings/SettingsDialog.qml:281
+#: src/views/settings/SettingsDialog.qml:263
 #, kde-format
 msgid "Add new sources to manage and browse your video collection"
 msgstr ""
 "Aggiungi nuove fonti per gestire e per sfogliare la tua collezione di video"
 
-#: src/views/settings/SettingsDialog.qml:320
+#: src/views/settings/SettingsDialog.qml:302
 #, kde-format
 msgid "Add"
 msgstr "Aggiungi"
 
-#: src/views/settings/SettingsDialog.qml:342
+#: src/views/settings/SettingsDialog.qml:324
 #, kde-format
 msgid "Remove source"
 msgstr "Rimuovi fonte"
 
-#: src/views/settings/SettingsDialog.qml:343
+#: src/views/settings/SettingsDialog.qml:325
 #, kde-format
 msgid ""
 "Are you sure you want to remove the source: \n"

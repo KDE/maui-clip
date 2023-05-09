@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-02 00:53+0000\n"
+"POT-Creation-Date: 2023-05-09 00:46+0000\n"
 "PO-Revision-Date: 2023-03-12 17:07+0100\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -102,17 +102,17 @@ msgstr "Abbrechen"
 msgid "Are sure you want to delete %1 files"
 msgstr "Möchten Sie wirklich %1 Dateien löschen?"
 
-#: src/main.qml:170
+#: src/main.qml:174
 #, kde-format
 msgid "Now playing"
 msgstr "Wiedergabe"
 
-#: src/main.qml:270 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:275 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "Nichts"
 
-#: src/main.qml:271
+#: src/main.qml:276
 #, fuzzy, kde-format
 #| msgid "Open a new video to start playing or add it to the playlist."
 msgid "Open a new video from your collection or file system."
@@ -121,13 +121,13 @@ msgstr ""
 "der Wiedergabeliste hinzu."
 
 #. i18n("Screenshots")}};
-#: src/main.qml:291 src/models/tagsmodel.cpp:14
+#: src/main.qml:296 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:55
 #, kde-format
 msgid "Collection"
 msgstr "Sammlung"
 
-#: src/main.qml:457
+#: src/main.qml:462
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "Seitenleiste umschalten"
@@ -170,18 +170,18 @@ msgstr "Einstellungen"
 msgid "About"
 msgstr "Über"
 
-#: src/views/collection/CollectionView.qml:71
+#: src/views/collection/CollectionView.qml:76
 #, kde-format
 msgid "Toggle sidebar"
 msgstr "Seitenleiste umschalten"
 
-#: src/views/collection/CollectionView.qml:77 src/views/player/Playlist.qml:20
+#: src/views/collection/CollectionView.qml:82 src/views/player/Playlist.qml:20
 #: src/views/tags/TagsView.qml:38
 #, kde-format
 msgid "No Videos!"
 msgstr "Keine Videos"
 
-#: src/views/collection/CollectionView.qml:78
+#: src/views/collection/CollectionView.qml:83
 #, fuzzy, kde-format
 #| msgid "Open a new video to start playing or add it to the playlist."
 msgid "Add a new video source or open a file."
@@ -189,12 +189,12 @@ msgstr ""
 "Öffnen Sie ein neues Video, um die Wiedergabe zu starten, oder fügen Sie es "
 "der Wiedergabeliste hinzu."
 
-#: src/views/collection/CollectionView.qml:83
+#: src/views/collection/CollectionView.qml:88
 #, kde-format
 msgid "Open file"
 msgstr "Datei öffnen"
 
-#: src/views/collection/CollectionView.qml:89
+#: src/views/collection/CollectionView.qml:94
 #, kde-format
 msgid "Add sources"
 msgstr "Quellen hinzufügen"
@@ -338,108 +338,108 @@ msgstr "Sortieren nach"
 msgid "Change the sorting key."
 msgstr "Ändern des Sortierschlüssels."
 
-#: src/views/settings/SettingsDialog.qml:84
+#: src/views/settings/SettingsDialog.qml:71
 #, kde-format
 msgid "Title"
 msgstr "Titel"
 
-#: src/views/settings/SettingsDialog.qml:90
+#: src/views/settings/SettingsDialog.qml:78
 #, kde-format
 msgid "Date"
 msgstr "Datum"
 
-#: src/views/settings/SettingsDialog.qml:96
+#: src/views/settings/SettingsDialog.qml:85
 #, kde-format
 msgid "Size"
 msgstr "Größe"
 
-#: src/views/settings/SettingsDialog.qml:102
+#: src/views/settings/SettingsDialog.qml:92
 #, kde-format
 msgid "Type"
 msgstr "Typ"
 
-#: src/views/settings/SettingsDialog.qml:110
+#: src/views/settings/SettingsDialog.qml:101
 #, kde-format
 msgid "Sort order"
 msgstr "Sortiereihenfolge"
 
-#: src/views/settings/SettingsDialog.qml:111
+#: src/views/settings/SettingsDialog.qml:102
 #, kde-format
 msgid "Change the sorting order."
 msgstr "Ändern der Sortiereihenfolge"
 
-#: src/views/settings/SettingsDialog.qml:132
+#: src/views/settings/SettingsDialog.qml:112
 #, kde-format
 msgid "Ascending"
 msgstr "Aufsteigend"
 
-#: src/views/settings/SettingsDialog.qml:139
+#: src/views/settings/SettingsDialog.qml:120
 #, kde-format
 msgid "Descending"
 msgstr "Absteigend"
 
-#: src/views/settings/SettingsDialog.qml:149
+#: src/views/settings/SettingsDialog.qml:131
 #, kde-format
 msgid "Playback"
 msgstr "Wiedergabe"
 
-#: src/views/settings/SettingsDialog.qml:150
+#: src/views/settings/SettingsDialog.qml:132
 #, kde-format
 msgid "Configure the player settings."
 msgstr "Wiedergabe-Einstellungen einrichten."
 
-#: src/views/settings/SettingsDialog.qml:154
+#: src/views/settings/SettingsDialog.qml:136
 #, kde-format
 msgid "Hardware Decoding"
 msgstr "Hardware-Dekodierung"
 
-#: src/views/settings/SettingsDialog.qml:155
+#: src/views/settings/SettingsDialog.qml:137
 #, kde-format
 msgid "Use the sorting preferences globally for all the tabs and splits."
 msgstr "Verwenden Sie die Sortiereinstellungen global für alle GUI-Elemente."
 
-#: src/views/settings/SettingsDialog.qml:168
+#: src/views/settings/SettingsDialog.qml:150
 #, kde-format
 msgid "Audio"
 msgstr "Audio"
 
-#: src/views/settings/SettingsDialog.qml:169
+#: src/views/settings/SettingsDialog.qml:151
 #, kde-format
 msgid "Configure the player audio behaviour."
 msgstr "Verhalten der Audio-Wiedergabe einrichten"
 
-#: src/views/settings/SettingsDialog.qml:174
+#: src/views/settings/SettingsDialog.qml:156
 #, kde-format
 msgid "Preferred Language"
 msgstr "Bevorzugte Sprache"
 
-#: src/views/settings/SettingsDialog.qml:175
+#: src/views/settings/SettingsDialog.qml:157
 #, kde-format
 msgid "Preferred language if available."
 msgstr "Bevorzugte Sprache, falls verfügbar."
 
-#: src/views/settings/SettingsDialog.qml:280
+#: src/views/settings/SettingsDialog.qml:262
 #, kde-format
 msgid "Sources"
 msgstr "Quellen"
 
-#: src/views/settings/SettingsDialog.qml:281
+#: src/views/settings/SettingsDialog.qml:263
 #, kde-format
 msgid "Add new sources to manage and browse your video collection"
 msgstr ""
 "Neue Quellen zum Verwalten und Durchsehen Ihrer Videosammlung hinzufügen"
 
-#: src/views/settings/SettingsDialog.qml:320
+#: src/views/settings/SettingsDialog.qml:302
 #, kde-format
 msgid "Add"
 msgstr "Hinzufügen"
 
-#: src/views/settings/SettingsDialog.qml:342
+#: src/views/settings/SettingsDialog.qml:324
 #, kde-format
 msgid "Remove source"
 msgstr "Datenquelle entfernen"
 
-#: src/views/settings/SettingsDialog.qml:343
+#: src/views/settings/SettingsDialog.qml:325
 #, kde-format
 msgid ""
 "Are you sure you want to remove the source: \n"

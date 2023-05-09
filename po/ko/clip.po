@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-02 00:53+0000\n"
+"POT-Creation-Date: 2023-05-09 00:46+0000\n"
 "PO-Revision-Date: 2022-02-20 21:28+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -101,29 +101,29 @@ msgstr "취소"
 msgid "Are sure you want to delete %1 files"
 msgstr "파일 %1개를 삭제하시겠습니까"
 
-#: src/main.qml:170
+#: src/main.qml:174
 #, kde-format
 msgid "Now playing"
 msgstr "지금 재생 중"
 
-#: src/main.qml:270 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:275 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "아무것도 없습니다!"
 
-#: src/main.qml:271
+#: src/main.qml:276
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr "모음집이나 파일 시스템에서 새 동영상을 엽니다."
 
 #. i18n("Screenshots")}};
-#: src/main.qml:291 src/models/tagsmodel.cpp:14
+#: src/main.qml:296 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:55
 #, kde-format
 msgid "Collection"
 msgstr "모음집"
 
-#: src/main.qml:457
+#: src/main.qml:462
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "사이드바 전환"
@@ -166,29 +166,29 @@ msgstr "설정"
 msgid "About"
 msgstr "정보"
 
-#: src/views/collection/CollectionView.qml:71
+#: src/views/collection/CollectionView.qml:76
 #, fuzzy, kde-format
 #| msgid "Toggle SideBar"
 msgid "Toggle sidebar"
 msgstr "사이드바 전환"
 
-#: src/views/collection/CollectionView.qml:77 src/views/player/Playlist.qml:20
+#: src/views/collection/CollectionView.qml:82 src/views/player/Playlist.qml:20
 #: src/views/tags/TagsView.qml:38
 #, kde-format
 msgid "No Videos!"
 msgstr "동영상이 없습니다!"
 
-#: src/views/collection/CollectionView.qml:78
+#: src/views/collection/CollectionView.qml:83
 #, kde-format
 msgid "Add a new video source or open a file."
 msgstr "새 동영상 원본을 추가하거나 파일을 엽니다."
 
-#: src/views/collection/CollectionView.qml:83
+#: src/views/collection/CollectionView.qml:88
 #, kde-format
 msgid "Open file"
 msgstr "파일 열기"
 
-#: src/views/collection/CollectionView.qml:89
+#: src/views/collection/CollectionView.qml:94
 #, kde-format
 msgid "Add sources"
 msgstr "원본 추가"
@@ -333,107 +333,107 @@ msgstr "정렬 순서"
 msgid "Change the sorting key."
 msgstr "정렬 키를 변경합니다."
 
-#: src/views/settings/SettingsDialog.qml:84
+#: src/views/settings/SettingsDialog.qml:71
 #, kde-format
 msgid "Title"
 msgstr "제목"
 
-#: src/views/settings/SettingsDialog.qml:90
+#: src/views/settings/SettingsDialog.qml:78
 #, kde-format
 msgid "Date"
 msgstr "날짜"
 
-#: src/views/settings/SettingsDialog.qml:96
+#: src/views/settings/SettingsDialog.qml:85
 #, kde-format
 msgid "Size"
 msgstr "크기"
 
-#: src/views/settings/SettingsDialog.qml:102
+#: src/views/settings/SettingsDialog.qml:92
 #, kde-format
 msgid "Type"
 msgstr "종류"
 
-#: src/views/settings/SettingsDialog.qml:110
+#: src/views/settings/SettingsDialog.qml:101
 #, kde-format
 msgid "Sort order"
 msgstr "정렬 순서"
 
-#: src/views/settings/SettingsDialog.qml:111
+#: src/views/settings/SettingsDialog.qml:102
 #, kde-format
 msgid "Change the sorting order."
 msgstr "정렬 순서를 변경합니다."
 
-#: src/views/settings/SettingsDialog.qml:132
+#: src/views/settings/SettingsDialog.qml:112
 #, kde-format
 msgid "Ascending"
 msgstr "오름차순"
 
-#: src/views/settings/SettingsDialog.qml:139
+#: src/views/settings/SettingsDialog.qml:120
 #, kde-format
 msgid "Descending"
 msgstr "내림차순"
 
-#: src/views/settings/SettingsDialog.qml:149
+#: src/views/settings/SettingsDialog.qml:131
 #, kde-format
 msgid "Playback"
 msgstr "재생"
 
-#: src/views/settings/SettingsDialog.qml:150
+#: src/views/settings/SettingsDialog.qml:132
 #, kde-format
 msgid "Configure the player settings."
 msgstr "재생기를 설정합니다."
 
-#: src/views/settings/SettingsDialog.qml:154
+#: src/views/settings/SettingsDialog.qml:136
 #, kde-format
 msgid "Hardware Decoding"
 msgstr "하드웨어 디코딩"
 
-#: src/views/settings/SettingsDialog.qml:155
+#: src/views/settings/SettingsDialog.qml:137
 #, kde-format
 msgid "Use the sorting preferences globally for all the tabs and splits."
 msgstr "모든 탭과 분할 보기에 정렬 순서를 전역적으로 사용합니다."
 
-#: src/views/settings/SettingsDialog.qml:168
+#: src/views/settings/SettingsDialog.qml:150
 #, kde-format
 msgid "Audio"
 msgstr "오디오"
 
-#: src/views/settings/SettingsDialog.qml:169
+#: src/views/settings/SettingsDialog.qml:151
 #, kde-format
 msgid "Configure the player audio behaviour."
 msgstr "재생기 오디오 행동을 설정합니다."
 
-#: src/views/settings/SettingsDialog.qml:174
+#: src/views/settings/SettingsDialog.qml:156
 #, kde-format
 msgid "Preferred Language"
 msgstr "선호하는 언어"
 
-#: src/views/settings/SettingsDialog.qml:175
+#: src/views/settings/SettingsDialog.qml:157
 #, kde-format
 msgid "Preferred language if available."
 msgstr "사용 가능한 경우 선호하는 언어입니다."
 
-#: src/views/settings/SettingsDialog.qml:280
+#: src/views/settings/SettingsDialog.qml:262
 #, kde-format
 msgid "Sources"
 msgstr "원본"
 
-#: src/views/settings/SettingsDialog.qml:281
+#: src/views/settings/SettingsDialog.qml:263
 #, kde-format
 msgid "Add new sources to manage and browse your video collection"
 msgstr "동영상 모음집을 관리하고 탐색할 새 원본 추가"
 
-#: src/views/settings/SettingsDialog.qml:320
+#: src/views/settings/SettingsDialog.qml:302
 #, kde-format
 msgid "Add"
 msgstr "추가"
 
-#: src/views/settings/SettingsDialog.qml:342
+#: src/views/settings/SettingsDialog.qml:324
 #, kde-format
 msgid "Remove source"
 msgstr "원본 삭제"
 
-#: src/views/settings/SettingsDialog.qml:343
+#: src/views/settings/SettingsDialog.qml:325
 #, kde-format
 msgid ""
 "Are you sure you want to remove the source: \n"
