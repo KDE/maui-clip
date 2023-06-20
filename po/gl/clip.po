@@ -231,7 +231,7 @@ msgstr "Seleccionar"
 #: src/views/ItemMenu.qml:89
 #, kde-format
 msgid "Show in folder"
-msgstr "Mostrar no cartafol"
+msgstr "Amosar no cartafol"
 
 #: src/views/ItemMenu.qml:102 src/views/SelectionBar.qml:101
 #, kde-format
