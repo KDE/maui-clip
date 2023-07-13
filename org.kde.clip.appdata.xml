@@ -8,6 +8,7 @@
   <name xml:lang="ca-valencia">Clip</name>
   <name xml:lang="cs">Clip</name>
   <name xml:lang="en-GB">Clip</name>
+  <name xml:lang="eo">Klip</name>
   <name xml:lang="es">Clip</name>
   <name xml:lang="eu">Clip</name>
   <name xml:lang="fi">Clip</name>
@@ -30,6 +31,7 @@
   <summary xml:lang="ca-valencia">Reproductor de vídeo</summary>
   <summary xml:lang="cs">Video přehrávač</summary>
   <summary xml:lang="en-GB">Video Player</summary>
+  <summary xml:lang="eo">Videoludilo</summary>
   <summary xml:lang="es">Reproductor de vídeo</summary>
   <summary xml:lang="eu">Bideo jotzailea</summary>
   <summary xml:lang="fi">Videosoitin</summary>
@@ -52,6 +54,7 @@
     <p xml:lang="ca">El Clip és un reproductor de vídeo i un gestor de col·leccions.</p>
     <p xml:lang="ca-valencia">Clip és un reproductor de vídeo i un gestor de col·leccions.</p>
     <p xml:lang="en-GB">Clip is a video player and collection manager.</p>
+    <p xml:lang="eo">Klip estas ludilo kaj kolekto-mastrumilo por videoj.</p>
     <p xml:lang="es">Clip es un reproductor de vídeo y gestor de colecciones.</p>
     <p xml:lang="eu">«Clip» bideo jotzaile eta bilduma kudeatzaile bat da.</p>
     <p xml:lang="fi">Clip on videosoitin ja kokoelmanhallinta.</p>
@@ -80,6 +83,7 @@
       <caption xml:lang="ca-valencia">Clip reproduint vídeos.</caption>
       <caption xml:lang="cs">Clip přehrávající videa.</caption>
       <caption xml:lang="en-GB">Clip playing videos.</caption>
+      <caption xml:lang="eo">Klip ludante videojn</caption>
       <caption xml:lang="es">Clip reproduciendo vídeos.</caption>
       <caption xml:lang="eu">«Clip» bideoak jotzen.</caption>
       <caption xml:lang="fi">Clip toistamassa videota.</caption>
