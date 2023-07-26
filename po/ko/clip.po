@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the maui-clip package.
-# Shinjo Park <kde@peremen.name>, 2021, 2022.
+# Shinjo Park <kde@peremen.name>, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-09 00:46+0000\n"
-"PO-Revision-Date: 2022-02-20 21:28+0100\n"
+"PO-Revision-Date: 2023-07-26 00:26+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: src/controllers/YouTube.qml:95
 #, kde-format
@@ -131,18 +131,17 @@ msgstr "사이드바 전환"
 #: src/models/tagsmodel.cpp:10
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "책갈피"
 
 #: src/models/tagsmodel.cpp:11
 #, kde-format
 msgid "Downloads"
-msgstr ""
+msgstr "다운로드"
 
 #: src/models/tagsmodel.cpp:12
-#, fuzzy, kde-format
-#| msgid "No Videos!"
+#, kde-format
 msgid "Videos"
-msgstr "동영상이 없습니다!"
+msgstr "동영상"
 
 #: src/models/tagsmodel.cpp:21 src/models/tagsmodel.cpp:59
 #: src/views/ItemMenu.qml:29
@@ -167,8 +166,7 @@ msgid "About"
 msgstr "정보"
 
 #: src/views/collection/CollectionView.qml:76
-#, fuzzy, kde-format
-#| msgid "Toggle SideBar"
+#, kde-format
 msgid "Toggle sidebar"
 msgstr "사이드바 전환"
 
@@ -194,15 +192,14 @@ msgid "Add sources"
 msgstr "원본 추가"
 
 #: src/views/collection/PlacesSidebar.qml:52
-#, fuzzy, kde-format
-#| msgid "Tags"
+#, kde-format
 msgid "Tags!"
-msgstr "태그"
+msgstr "태그!"
 
 #: src/views/collection/PlacesSidebar.qml:53
 #, kde-format
 msgid "Your tags will be listed here"
-msgstr ""
+msgstr "여기에 태그 목록을 표시합니다"
 
 #: src/views/ItemMenu.qml:22
 #, kde-format
