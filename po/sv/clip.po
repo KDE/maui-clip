@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2020, 2021, 2022.
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-09 00:46+0000\n"
-"PO-Revision-Date: 2022-01-09 15:33+0100\n"
+"PO-Revision-Date: 2023-07-31 11:31+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -131,18 +131,17 @@ msgstr "Visa eller dölj sidorad"
 #: src/models/tagsmodel.cpp:10
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "Favoriter"
 
 #: src/models/tagsmodel.cpp:11
 #, kde-format
 msgid "Downloads"
-msgstr ""
+msgstr "Nerladdningar"
 
 #: src/models/tagsmodel.cpp:12
-#, fuzzy, kde-format
-#| msgid "No Videos!"
+#, kde-format
 msgid "Videos"
-msgstr "Inga videor."
+msgstr "Videor"
 
 #: src/models/tagsmodel.cpp:21 src/models/tagsmodel.cpp:59
 #: src/views/ItemMenu.qml:29
@@ -168,8 +167,7 @@ msgid "About"
 msgstr "Om"
 
 #: src/views/collection/CollectionView.qml:76
-#, fuzzy, kde-format
-#| msgid "Toggle SideBar"
+#, kde-format
 msgid "Toggle sidebar"
 msgstr "Visa eller dölj sidorad"
 
@@ -195,15 +193,14 @@ msgid "Add sources"
 msgstr "Lägg till källa"
 
 #: src/views/collection/PlacesSidebar.qml:52
-#, fuzzy, kde-format
-#| msgid "Tags"
+#, kde-format
 msgid "Tags!"
 msgstr "Etiketter"
 
 #: src/views/collection/PlacesSidebar.qml:53
 #, kde-format
 msgid "Your tags will be listed here"
-msgstr ""
+msgstr "Dina etiketter listas här"
 
 #: src/views/ItemMenu.qml:22
 #, kde-format
