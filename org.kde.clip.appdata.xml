@@ -23,6 +23,7 @@
   <name xml:lang="pt">Clip</name>
   <name xml:lang="sk">Clip</name>
   <name xml:lang="sl">Clip</name>
+  <name xml:lang="sv">Klipp</name>
   <name xml:lang="tr">Klip</name>
   <name xml:lang="uk">Clip</name>
   <name xml:lang="x-test">xxClipxx</name>
@@ -47,6 +48,7 @@
   <summary xml:lang="pt">Reprodutor de Vídeo</summary>
   <summary xml:lang="sk">Prehrávač videa</summary>
   <summary xml:lang="sl">Video predvajalnik</summary>
+  <summary xml:lang="sv">Videospelare</summary>
   <summary xml:lang="tr">Video Oynatıcı</summary>
   <summary xml:lang="uk">Відеопрогравач</summary>
   <summary xml:lang="x-test">xxVideo Playerxx</summary>
@@ -70,6 +72,7 @@
     <p xml:lang="pl">Clip jest odtwarzaczem filmów i zarządza ich zbiorami.</p>
     <p xml:lang="pt">O Clip é um leitor de vídeo e um gestor de colecções.</p>
     <p xml:lang="sl">Clip je video predvajalnik in upravljalnik zbirk.</p>
+    <p xml:lang="sv">Klipp är en videospelare och samlingshanterare.</p>
     <p xml:lang="tr">Klip, bir video oynatıcı ve koleksiyon yöneticisidir.</p>
     <p xml:lang="uk">Clip — програвач відео і засіб керування збіркою.</p>
     <p xml:lang="x-test">xxClip is a video player and collection manager.xx</p>
@@ -100,6 +103,7 @@
       <caption xml:lang="pl">Clip odtwarzający filmy.</caption>
       <caption xml:lang="pt">O Clip a reproduzir vídeos.</caption>
       <caption xml:lang="sl">Clip predvaja videoposnetke.</caption>
+      <caption xml:lang="sv">Klipp som spelar videor.</caption>
       <caption xml:lang="tr">Klip, video oynatırken.</caption>
       <caption xml:lang="uk">Clip відтворює відео.</caption>
       <caption xml:lang="x-test">xxClip playing videos.xx</caption>
