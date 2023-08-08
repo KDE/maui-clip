@@ -5,7 +5,7 @@
 #include <QUrl>
 #include <QByteArray>
 
-#include <MauiKit/Core/fmh.h>
+#include <MauiKit3/Core/fmh.h>
 
 class YouTube : public QObject
 {

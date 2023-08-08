@@ -3,9 +3,9 @@
 
 #include <QDebug>
 
-#include <MauiKit/Core/utils.h>
-#include <MauiKit/Core/fmh.h>
-#include <MauiKit/FileBrowsing/fmstatic.h>
+#include <MauiKit3/Core/utils.h>
+#include <MauiKit3/Core/fmh.h>
+#include <MauiKit3/FileBrowsing/fmstatic.h>
 
 class Clip : public QObject
 {

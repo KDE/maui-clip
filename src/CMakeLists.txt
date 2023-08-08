@@ -1,7 +1,6 @@
 
 include_directories(
-    ${FFMPEG_INCLUDE_DIRS}
-    )
+    ${FFMPEG_INCLUDE_DIRS})
 
 if(MPV_AVAILABLE)
     set(mpvSRCS
@@ -9,8 +8,7 @@ if(MPV_AVAILABLE)
         backends/mpv/track.cpp
         backends/mpv/tracksmodel.cpp
         backends/mpv/subtitlesfoldersmodel.cpp
-        backends/mpv/qthelper.h
-        )
+        backends/mpv/qthelper.h)
 endif()
 
 set(clipSRCS
@@ -21,16 +19,14 @@ set(clipSRCS
     models/youtubemodel.cpp
     utils/clip.cpp
     controllers/lockmanager.cpp
-    controllers/youtube.cpp
-    )
+    controllers/youtube.cpp)
 
 set(thumbnailerSRCS
     utils/thumbnailer.cpp
     utils/ffmpegthumbs/filmstripfilter.cpp
     utils/ffmpegthumbs/moviedecoder.cpp
     utils/ffmpegthumbs/imagewriter.cpp
-    utils/ffmpegthumbs/videothumbnailer.cpp
-    )
+    utils/ffmpegthumbs/videothumbnailer.cpp)
 
 if(QUICK_COMPILER)
     qtquick_compiler_add_resources(clip_QML_QRC qml.qrc)
@@ -40,26 +36,22 @@ endif()
 
 if(ANDROID)
     list(APPEND clipSRCS
-        controllers/android/androidlockbackend.cpp
-        )
+        controllers/android/androidlockbackend.cpp)
 
     add_library(${PROJECT_NAME} SHARED
         ${clipSRCS}
         ${thumbnailerSRCS}
-        ${clip_QML_QRC}
-        )
+        ${clip_QML_QRC})
 else()
     list(APPEND clipSRCS
-          controllers/linux/solidlockbackend.cpp
-       )
+          controllers/linux/solidlockbackend.cpp)
        qt_add_dbus_interface(clipSRCS controllers/linux/org.freedesktop.ScreenSaver.xml screensaverdbusinterface)
 
     add_executable(${PROJECT_NAME}
         ${clipSRCS}
         ${thumbnailerSRCS}
         ${clip_QML_QRC}
-        ${mpvSRCS}
-        )
+        ${mpvSRCS})
 endif()
 
 if (ANDROID)
@@ -80,7 +72,20 @@ if(MPV_AVAILABLE)
     target_compile_definitions(${PROJECT_NAME} PUBLIC MPV_AVAILABLE)
 endif()
 
-target_link_libraries(${PROJECT_NAME} MauiKit MauiKit::FileBrowsing Qt5::Quick Qt5::Qml Qt5::Multimedia KF5::CoreAddons KF5::I18n ${AVUTIL_LIBRARIES} ${AVFILTER_LIBRARIES} ${AVFORMAT_LIBRARIES} ${AVCODEC_LIBRARIES} ${SWSCALE_LIBRARIES} Taglib::Taglib)
+target_link_libraries(${PROJECT_NAME}
+    MauiKit3
+    MauiKit3::FileBrowsing
+    Qt5::Quick
+    Qt5::Qml
+    Qt5::Multimedia
+    KF5::CoreAddons
+    KF5::I18n
+    ${AVUTIL_LIBRARIES}
+    ${AVFILTER_LIBRARIES}
+    ${AVFORMAT_LIBRARIES}
+    ${AVCODEC_LIBRARIES}
+    ${SWSCALE_LIBRARIES}
+    Taglib::Taglib)
 
 if(UNIX AND NOT APPLE AND NOT ANDROID)
     install (TARGETS ${PROJECT_NAME} ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

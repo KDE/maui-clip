@@ -1,7 +1,7 @@
 #ifndef YOUTUBEMODEL_H
 #define YOUTUBEMODEL_H
 
-#include <MauiKit/Core/mauilist.h>
+#include <MauiKit3/Core/mauilist.h>
 #include <QObject>
 
 class YouTube;

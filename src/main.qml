@@ -86,7 +86,7 @@ Maui.ApplicationWindow
     Component
     {
         id: _openUrlDialogComponent
-        Maui.NewDialog
+        Maui.InputDialog
         {
             title: i18n("Open URL")
             textEntry.placeholderText: "URL"
@@ -120,14 +120,14 @@ Maui.ApplicationWindow
     {
         id: removeDialogComponent
 
-        Maui.Dialog
+        Maui.InfoDialog
         {
             title: i18n("Delete files?")
-            acceptButton.text: i18n("Accept")
-            rejectButton.text: i18n("Cancel")
+
             message: i18n("Are sure you want to delete %1 files", String(selectionBar.count))
-            page.margins: Maui.Style.space.big
+
             template.iconSource: "emblem-warning"
+
             onRejected: close()
             onAccepted:
             {
