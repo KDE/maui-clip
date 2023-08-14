@@ -23,7 +23,7 @@ MpvObject
     onEndOfFile: playNext()
 
 
-    Maui.Dialog
+    Maui.InfoDialog
     {
         id: _subtitlesDialog
         title: i18n("Subtitles")
@@ -41,7 +41,7 @@ MpvObject
         }
     }
 
-    Maui.Dialog
+    Maui.InfoDialog
     {
         id: _audioTracksDialog
         title: i18n("Audio Tracks")

@@ -3,7 +3,7 @@
 
 #include <QObject>
 
-#include <MauiKit/Core/mauilist.h>
+#include <MauiKit3/Core/mauilist.h>
 #include "utils/clip.h"
 
 #define CINEMA_QUERY_MAX_LIMIT 20000

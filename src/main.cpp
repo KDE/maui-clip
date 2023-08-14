@@ -11,8 +11,8 @@
 #include <KI18n/KLocalizedString>
 #include "controllers/lockmanager.h"
 
-#include <MauiKit/Core/mauiapp.h>
-#include <MauiKit/FileBrowsing/fmstatic.h>
+#include <MauiKit3/Core/mauiapp.h>
+#include <MauiKit3/FileBrowsing/fmstatic.h>
 
 #ifdef MPV_AVAILABLE
 #include "backends/mpv/mpvobject.h"

@@ -316,7 +316,7 @@ Maui.SettingsDialog
         }
     }
 
-    Maui.Dialog
+    Maui.InfoDialog
     {
         id: confirmationDialog
         property string url : ""
@@ -324,7 +324,6 @@ Maui.SettingsDialog
         title : i18n("Remove source")
         message : i18n("Are you sure you want to remove the source: \n %1", url)
         template.iconSource: "emblem-warning"
-        page.margins: Maui.Style.space.big
 
         onAccepted:
         {

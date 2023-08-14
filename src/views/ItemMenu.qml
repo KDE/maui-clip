@@ -112,14 +112,12 @@ Maui.ContextualMenu
         {
             id: removeDialogComponent
 
-        Maui.Dialog
+        Maui.InfoDialog
         {
 
             title: i18n("Delete file?")
-            acceptButton.text: i18n("Accept")
-            rejectButton.text: i18n("Cancel")
+
             message: i18n("Are sure you want to delete \n%1", control.model.get(index).url)
-            page.margins: Maui.Style.space.big
             template.iconSource: "emblem-warning"
 
             onRejected: close()
