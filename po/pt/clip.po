@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-09 00:46+0000\n"
+"POT-Creation-Date: 2023-08-15 00:44+0000\n"
 "PO-Revision-Date: 2023-02-15 12:50+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -83,17 +83,7 @@ msgstr ""
 msgid "Delete files?"
 msgstr "Apagar os ficheiros?"
 
-#: src/main.qml:126 src/views/ItemMenu.qml:119
-#, kde-format
-msgid "Accept"
-msgstr "Aceitar"
-
-#: src/main.qml:127 src/views/ItemMenu.qml:120
-#, kde-format
-msgid "Cancel"
-msgstr "Cancelar"
-
-#: src/main.qml:128
+#: src/main.qml:127
 #, kde-format
 msgid "Are sure you want to delete %1 files"
 msgstr "Tem a certeza que deseja apagar os %1 ficheiros"
@@ -239,7 +229,7 @@ msgstr "Remover"
 msgid "Delete file?"
 msgstr "Apagar o ficheiro?"
 
-#: src/views/ItemMenu.qml:121
+#: src/views/ItemMenu.qml:120
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
@@ -469,3 +459,9 @@ msgstr "Inicie a pesquisa por vídeos 'online'."
 #, kde-format
 msgid "Search..."
 msgstr "Procurar..."
+
+#~ msgid "Accept"
+#~ msgstr "Aceitar"
+
+#~ msgid "Cancel"
+#~ msgstr "Cancelar"

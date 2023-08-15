@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-09 00:46+0000\n"
+"POT-Creation-Date: 2023-08-15 00:44+0000\n"
 "PO-Revision-Date: 2021-05-01 23:20-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -85,17 +85,7 @@ msgstr ""
 msgid "Delete files?"
 msgstr "ਫਾਇਲਾਂ ਹਟਾਉਣੀਆਂ ਹਨ?"
 
-#: src/main.qml:126 src/views/ItemMenu.qml:119
-#, kde-format
-msgid "Accept"
-msgstr "ਮਨਜ਼ੂਰ ਕਰੋ"
-
-#: src/main.qml:127 src/views/ItemMenu.qml:120
-#, kde-format
-msgid "Cancel"
-msgstr "ਰੱਦ ਕਰੋ"
-
-#: src/main.qml:128
+#: src/main.qml:127
 #, kde-format
 msgid "Are sure you want to delete %1 files"
 msgstr "ਕੀ ਤੁਸੀਂ %1 ਫਾਇਲਾਂ ਨੂੰ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ"
@@ -247,7 +237,7 @@ msgstr "ਹਟਾਓ"
 msgid "Delete file?"
 msgstr "ਫਾਇਲ ਹਟਾਉਣੀ ਹੈ?"
 
-#: src/views/ItemMenu.qml:121
+#: src/views/ItemMenu.qml:120
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
@@ -470,6 +460,12 @@ msgstr ""
 #, kde-format
 msgid "Search..."
 msgstr "...ਖੋਜੋ"
+
+#~ msgid "Accept"
+#~ msgstr "ਮਨਜ਼ੂਰ ਕਰੋ"
+
+#~ msgid "Cancel"
+#~ msgstr "ਰੱਦ ਕਰੋ"
 
 #~ msgid "Open"
 #~ msgstr "ਖੋਲ੍ਹੋ"

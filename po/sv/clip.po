@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-09 00:46+0000\n"
+"POT-Creation-Date: 2023-08-15 00:44+0000\n"
 "PO-Revision-Date: 2023-07-31 11:31+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -86,17 +86,7 @@ msgstr ""
 msgid "Delete files?"
 msgstr "Ta bort filer?"
 
-#: src/main.qml:126 src/views/ItemMenu.qml:119
-#, kde-format
-msgid "Accept"
-msgstr "Acceptera"
-
-#: src/main.qml:127 src/views/ItemMenu.qml:120
-#, kde-format
-msgid "Cancel"
-msgstr "Avbryt"
-
-#: src/main.qml:128
+#: src/main.qml:127
 #, kde-format
 msgid "Are sure you want to delete %1 files"
 msgstr "Är du säker på att du vill ta bort %1 filer"
@@ -242,7 +232,7 @@ msgstr "Ta bort"
 msgid "Delete file?"
 msgstr "Ta bort fil?"
 
-#: src/views/ItemMenu.qml:121
+#: src/views/ItemMenu.qml:120
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
@@ -470,6 +460,12 @@ msgstr "Börja söka efter videor på nätet."
 #, kde-format
 msgid "Search..."
 msgstr "Sök..."
+
+#~ msgid "Accept"
+#~ msgstr "Acceptera"
+
+#~ msgid "Cancel"
+#~ msgstr "Avbryt"
 
 #~ msgid "Open"
 #~ msgstr "Öppna"

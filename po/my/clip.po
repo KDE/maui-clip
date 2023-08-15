@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-09 00:46+0000\n"
+"POT-Creation-Date: 2023-08-15 00:44+0000\n"
 "PO-Revision-Date: 2021-09-15 21:44+0630\n"
 "Last-Translator: \n"
 "Language-Team: Burmese <kde-i18n-doc@kde.org>\n"
@@ -88,17 +88,7 @@ msgstr ""
 msgid "Delete files?"
 msgstr "ဖိုင်လ်များဖျက်မည်လား။"
 
-#: src/main.qml:126 src/views/ItemMenu.qml:119
-#, kde-format
-msgid "Accept"
-msgstr "လက်ခံမည်"
-
-#: src/main.qml:127 src/views/ItemMenu.qml:120
-#, kde-format
-msgid "Cancel"
-msgstr "ပယ်ဖျက်မည်"
-
-#: src/main.qml:128
+#: src/main.qml:127
 #, kde-format
 msgid "Are sure you want to delete %1 files"
 msgstr "ဖိုင်လ် %1ခု ကို သင်တကယ်ဖျက်တော့မည်လား"
@@ -251,7 +241,7 @@ msgstr "ဖယ်ရှားမည်"
 msgid "Delete file?"
 msgstr "ဖိုင်လ် ဖျက်မည်လား။"
 
-#: src/views/ItemMenu.qml:121
+#: src/views/ItemMenu.qml:120
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
@@ -478,6 +468,12 @@ msgstr "အွန်လိုင်းဗီဒီယိုများ ရှ�
 #, kde-format
 msgid "Search..."
 msgstr "ရှာရန်..."
+
+#~ msgid "Accept"
+#~ msgstr "လက်ခံမည်"
+
+#~ msgid "Cancel"
+#~ msgstr "ပယ်ဖျက်မည်"
 
 #~ msgid "Open"
 #~ msgstr "ဖွင့်"

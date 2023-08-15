@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-cinema\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-09 00:46+0000\n"
+"POT-Creation-Date: 2023-08-15 00:44+0000\n"
 "PO-Revision-Date: 2023-02-14 21:26+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -84,17 +84,7 @@ msgstr ""
 msgid "Delete files?"
 msgstr "Supprimer les fichiers ?"
 
-#: src/main.qml:126 src/views/ItemMenu.qml:119
-#, kde-format
-msgid "Accept"
-msgstr "Accepter"
-
-#: src/main.qml:127 src/views/ItemMenu.qml:120
-#, kde-format
-msgid "Cancel"
-msgstr "Annuler"
-
-#: src/main.qml:128
+#: src/main.qml:127
 #, kde-format
 msgid "Are sure you want to delete %1 files"
 msgstr "Voulez-vous vraiment supprimer les %1 fichiers ?"
@@ -242,7 +232,7 @@ msgstr "Supprimer"
 msgid "Delete file?"
 msgstr "Supprimer le fichier ?"
 
-#: src/views/ItemMenu.qml:121
+#: src/views/ItemMenu.qml:120
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
@@ -475,6 +465,12 @@ msgstr "Démarrage de la recherche des vidéos en ligne."
 #, kde-format
 msgid "Search..."
 msgstr "Rechercher…"
+
+#~ msgid "Accept"
+#~ msgstr "Accepter"
+
+#~ msgid "Cancel"
+#~ msgstr "Annuler"
 
 #~ msgid "Open"
 #~ msgstr "Ouvrir"

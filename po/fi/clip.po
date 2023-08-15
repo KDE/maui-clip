@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-cinema\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-09 00:46+0000\n"
+"POT-Creation-Date: 2023-08-15 00:44+0000\n"
 "PO-Revision-Date: 2023-03-06 13:40+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -86,17 +86,7 @@ msgstr ""
 msgid "Delete files?"
 msgstr "Poistetaanko tiedostot?"
 
-#: src/main.qml:126 src/views/ItemMenu.qml:119
-#, kde-format
-msgid "Accept"
-msgstr "Hyväksy"
-
-#: src/main.qml:127 src/views/ItemMenu.qml:120
-#, kde-format
-msgid "Cancel"
-msgstr "Peru"
-
-#: src/main.qml:128
+#: src/main.qml:127
 #, kde-format
 msgid "Are sure you want to delete %1 files"
 msgstr "Haluatko varmasti poistaa %1 tiedostoa"
@@ -242,7 +232,7 @@ msgstr "Poista"
 msgid "Delete file?"
 msgstr "Poistetaanko tiedosto?"
 
-#: src/views/ItemMenu.qml:121
+#: src/views/ItemMenu.qml:120
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
@@ -471,6 +461,12 @@ msgstr "Käynnistä verkkovideoiden haku."
 #, kde-format
 msgid "Search..."
 msgstr "Etsi…"
+
+#~ msgid "Accept"
+#~ msgstr "Hyväksy"
+
+#~ msgid "Cancel"
+#~ msgstr "Peru"
 
 #~ msgid "Open"
 #~ msgstr "Avaa"

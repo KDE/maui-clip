@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-cinema\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-09 00:46+0000\n"
+"POT-Creation-Date: 2023-08-15 00:44+0000\n"
 "PO-Revision-Date: 2021-01-20 12:13+0100\n"
 "Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -88,17 +88,7 @@ msgstr ""
 msgid "Delete files?"
 msgstr "Törli a fájlokat?"
 
-#: src/main.qml:126 src/views/ItemMenu.qml:119
-#, kde-format
-msgid "Accept"
-msgstr "Elfogadás"
-
-#: src/main.qml:127 src/views/ItemMenu.qml:120
-#, kde-format
-msgid "Cancel"
-msgstr "Mégsem"
-
-#: src/main.qml:128
+#: src/main.qml:127
 #, kde-format
 msgid "Are sure you want to delete %1 files"
 msgstr "Biztosan törli ezt a(z) %1 fájlt"
@@ -253,7 +243,7 @@ msgstr "Eltávolítás"
 msgid "Delete file?"
 msgstr "Törli a fájlt?"
 
-#: src/views/ItemMenu.qml:121
+#: src/views/ItemMenu.qml:120
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
@@ -489,6 +479,12 @@ msgstr ""
 #| msgid "Search"
 msgid "Search..."
 msgstr "Keresés"
+
+#~ msgid "Accept"
+#~ msgstr "Elfogadás"
+
+#~ msgid "Cancel"
+#~ msgstr "Mégsem"
 
 #~ msgid "Open"
 #~ msgstr "Megnyitás"
