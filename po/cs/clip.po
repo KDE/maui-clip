@@ -455,9 +455,3 @@ msgstr ""
 #, kde-format
 msgid "Search..."
 msgstr "Hledat..."
-
-#~ msgid "Accept"
-#~ msgstr "Přijmout"
-
-#~ msgid "Cancel"
-#~ msgstr "Zrušit"
