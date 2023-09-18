@@ -465,9 +465,3 @@ msgstr "Comença la busca de vídeos en línia."
 #, kde-format
 msgid "Search..."
 msgstr "Busca..."
-
-#~ msgid "Accept"
-#~ msgstr "Accepta"
-
-#~ msgid "Cancel"
-#~ msgstr "Cancel·la"
