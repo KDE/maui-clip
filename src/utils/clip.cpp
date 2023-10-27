@@ -1,6 +1,6 @@
 #include "clip.h"
 #include <QDesktopServices>
-
+#include <QSettings>
 #include <MauiKit3/FileBrowsing/fmstatic.h>
 
 Clip::Clip(QObject *parent) : QObject(parent)
@@ -9,6 +9,45 @@ Clip::Clip(QObject *parent) : QObject(parent)
 #ifdef MPV_AVAILABLE
     FMStatic::createDir(FMStatic::PicturesPath, "screenshots");
 #endif
+}
+
+const QStringList Clip::getSourcePaths()
+{
+    static const QStringList defaultSources  = {FMStatic::VideosPath, FMStatic::DownloadsPath};
+
+    QSettings settings;
+    settings.beginGroup("Settings");
+    const auto sources  = settings.value("Sources", defaultSources).toStringList();
+    settings.endGroup();
+
+    qDebug()<< "SOURCES" << sources;
+    return sources;
+}
+
+void Clip::saveSourcePath(const QStringList &paths)
+{
+    auto sources = getSourcePaths();
+
+    sources << paths;
+    sources.removeDuplicates();
+
+    qDebug()<< "Saving new sources" << sources;
+    QSettings settings;
+    settings.beginGroup("Settings");
+    settings.setValue("Sources", sources);
+    settings.endGroup();
+
+}
+
+void Clip::removeSourcePath(const QString &path)
+{
+    auto sources = getSourcePaths();
+    sources.removeOne(path);
+
+    QSettings settings;
+    settings.beginGroup("Settings");
+    settings.setValue("Sources", sources);
+    settings.endGroup();
 }
 
 bool Clip::mpvAvailable() const

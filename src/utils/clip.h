@@ -1,9 +1,7 @@
-#ifndef CLIP_H
-#define CLIP_H
+#pragma once
 
 #include <QDebug>
 
-#include <MauiKit3/Core/utils.h>
 #include <MauiKit3/Core/fmh.h>
 #include <MauiKit3/FileBrowsing/fmstatic.h>
 
@@ -28,7 +26,7 @@ public:
 
     bool mpvAvailable() const;
 
-public slots:
+public Q_SLOTS:
     QVariantList sourcesModel() const;
     QStringList sources() const;
 
@@ -43,37 +41,15 @@ public slots:
 private:
     explicit Clip(QObject* parent = nullptr);
 
-    inline static const QStringList getSourcePaths()
-    {
-        static const QStringList defaultSources  = {FMStatic::VideosPath, FMStatic::DownloadsPath};
-        const auto sources = UTIL::loadSettings("Sources", "Settings", defaultSources).toStringList();
-        qDebug()<< "SOURCES" << sources;
-        return sources;
-    }
+    static const QStringList getSourcePaths();
 
-    inline static void saveSourcePath(QStringList const& paths)
-    {
-        auto sources = getSourcePaths();
+    static void saveSourcePath(QStringList const& paths);
 
-        sources << paths;
-        sources.removeDuplicates();
+    static void removeSourcePath(const QString &path);
 
-        qDebug()<< "Saving new sources" << sources;
-        UTIL::saveSettings("Sources", sources, "Settings");
-    }
-
-    inline static void removeSourcePath(const QString &path)
-    {
-        auto sources = getSourcePaths();
-        sources.removeOne(path);
-
-        UTIL::saveSettings("Sources", sources, "Settings");
-    }
-
-signals:
+Q_SIGNALS:
     void refreshViews(QVariantMap tables);
     void openUrls(QStringList urls);
     void sourcesChanged();
 };
 
-#endif // CLIP_H

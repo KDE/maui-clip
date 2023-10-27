@@ -14,9 +14,8 @@ Maui.SettingsDialog
 
     Maui.SectionGroup
     {
-        //        alt: true
         title: i18n("General")
-        description: i18n("Configure the app behavior.")
+//        description: i18n("Configure the app behavior.")
 
         Maui.SectionItem
         {
@@ -51,9 +50,8 @@ Maui.SettingsDialog
 
     Maui.SectionGroup
     {
-        //        alt: false
         title: i18n("Collection")
-        description: i18n("Sorting order and behavior.")
+//        description: i18n("Sorting order and behavior.")
 
         Maui.SectionItem
         {
@@ -129,7 +127,7 @@ Maui.SettingsDialog
     Maui.SectionGroup
     {
         title: i18n("Playback")
-        description: i18n("Configure the player settings.")
+//        description: i18n("Configure the player settings.")
         enabled: Clip.Clip.mpvAvailable
         Maui.SectionItem
         {
@@ -148,7 +146,7 @@ Maui.SettingsDialog
     Maui.SectionGroup
     {
         title: i18n("Audio")
-        description: i18n("Configure the player audio behaviour.")
+//        description: i18n("Configure the player audio behaviour.")
         enabled: Clip.Clip.mpvAvailable
 
         Maui.SectionItem
@@ -260,23 +258,21 @@ Maui.SettingsDialog
     Maui.SectionGroup
     {
         title: i18n("Sources")
-        description: i18n("Add new sources to manage and browse your video collection")
+//        description: i18n("Add new sources to manage and browse your video collection")
 
         ColumnLayout
         {
             Layout.fillWidth: true
-            spacing: Maui.Style.space.big
+            spacing: Maui.Style.space.medium
 
-            Maui.ListBrowser
+            Repeater
             {
                 id: _sourcesList
-                Layout.fillHeight: true
-                Layout.fillWidth: true
-                Layout.minimumHeight: Math.min(500, contentHeight)
+
                 model: Clip.Clip.sourcesModel
                 delegate: Maui.ListDelegate
                 {
-                    width: ListView.view.width
+                    Layout.fillWidth: true
                     template.iconSource: modelData.icon
                     template.iconSizeHint: Maui.Style.iconSizes.small
                     template.label1.text: modelData.label
@@ -324,6 +320,8 @@ Maui.SettingsDialog
         title : i18n("Remove source")
         message : i18n("Are you sure you want to remove the source: \n %1", url)
         template.iconSource: "emblem-warning"
+
+        standardButtons: Dialog.Ok | Dialog.Cancel
 
         onAccepted:
         {
