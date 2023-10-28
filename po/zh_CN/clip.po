@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-15 00:44+0000\n"
+"POT-Creation-Date: 2023-10-28 00:42+0000\n"
 "PO-Revision-Date: 2023-10-21 13:55\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -47,22 +47,23 @@ msgstr "搜索视频..."
 msgid "Clip"
 msgstr "Clip"
 
-#: src/main.cpp:97
+#: src/main.cpp:99
 #, kde-format
 msgid "Browse and play your videos."
 msgstr "浏览并播放视频。"
 
-#: src/main.cpp:98
-#, kde-format
-msgid "© 2019-%1 Maui Development Team"
+#: src/main.cpp:101
+#, fuzzy, kde-format
+#| msgid "© 2019-%1 Maui Development Team"
+msgid "© 2019-2023 Maui Development Team"
 msgstr "© 2019-%1 Maui Development Team"
 
-#: src/main.cpp:99
+#: src/main.cpp:104
 #, kde-format
 msgid "Camilo Higuita"
 msgstr "Camilo Higuita"
 
-#: src/main.cpp:99
+#: src/main.cpp:104
 #, kde-format
 msgid "Developer"
 msgstr "开发人员"
@@ -107,7 +108,7 @@ msgstr "从您的收藏集合或文件系统中打开一个新视频。"
 
 #. i18n("Screenshots")}};
 #: src/main.qml:296 src/models/tagsmodel.cpp:14
-#: src/views/settings/SettingsDialog.qml:55
+#: src/views/settings/SettingsDialog.qml:53
 #, kde-format
 msgid "Collection"
 msgstr "视频集合"
@@ -279,147 +280,122 @@ msgstr "标签"
 msgid "Export"
 msgstr "导出"
 
-#: src/views/settings/SettingsDialog.qml:18
+#: src/views/settings/SettingsDialog.qml:17
 #, kde-format
 msgid "General"
 msgstr "常规"
 
-#: src/views/settings/SettingsDialog.qml:19
-#, kde-format
-msgid "Configure the app behavior."
-msgstr "配置此应用的行为。"
-
-#: src/views/settings/SettingsDialog.qml:23
+#: src/views/settings/SettingsDialog.qml:22
 #, kde-format
 msgid "Volume Step"
 msgstr "音量调整步长"
 
-#: src/views/settings/SettingsDialog.qml:36
+#: src/views/settings/SettingsDialog.qml:35
 #, kde-format
 msgid "Dark Mode"
 msgstr "深色模式"
 
-#: src/views/settings/SettingsDialog.qml:37
+#: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Switch between light and dark colorscheme"
 msgstr "切换浅色/深色模式"
 
-#: src/views/settings/SettingsDialog.qml:56
-#, kde-format
-msgid "Sorting order and behavior."
-msgstr "排序顺序和行为。"
-
-#: src/views/settings/SettingsDialog.qml:60
+#: src/views/settings/SettingsDialog.qml:58
 #, kde-format
 msgid "Sorting by"
 msgstr "排序依据"
 
-#: src/views/settings/SettingsDialog.qml:61
+#: src/views/settings/SettingsDialog.qml:59
 #, kde-format
 msgid "Change the sorting key."
 msgstr "选择排序依据的条件。"
 
-#: src/views/settings/SettingsDialog.qml:71
+#: src/views/settings/SettingsDialog.qml:69
 #, kde-format
 msgid "Title"
 msgstr "标题"
 
-#: src/views/settings/SettingsDialog.qml:78
+#: src/views/settings/SettingsDialog.qml:76
 #, kde-format
 msgid "Date"
 msgstr "日期"
 
-#: src/views/settings/SettingsDialog.qml:85
+#: src/views/settings/SettingsDialog.qml:83
 #, kde-format
 msgid "Size"
 msgstr "大小"
 
-#: src/views/settings/SettingsDialog.qml:92
+#: src/views/settings/SettingsDialog.qml:90
 #, kde-format
 msgid "Type"
 msgstr "类型"
 
-#: src/views/settings/SettingsDialog.qml:101
+#: src/views/settings/SettingsDialog.qml:99
 #, kde-format
 msgid "Sort order"
 msgstr "排序顺序"
 
-#: src/views/settings/SettingsDialog.qml:102
+#: src/views/settings/SettingsDialog.qml:100
 #, kde-format
 msgid "Change the sorting order."
 msgstr "选择排序顺序。"
 
-#: src/views/settings/SettingsDialog.qml:112
+#: src/views/settings/SettingsDialog.qml:110
 #, kde-format
 msgid "Ascending"
 msgstr "升序"
 
-#: src/views/settings/SettingsDialog.qml:120
+#: src/views/settings/SettingsDialog.qml:118
 #, kde-format
 msgid "Descending"
 msgstr "降序"
 
-#: src/views/settings/SettingsDialog.qml:131
+#: src/views/settings/SettingsDialog.qml:129
 #, kde-format
 msgid "Playback"
 msgstr "播放"
 
-#: src/views/settings/SettingsDialog.qml:132
-#, kde-format
-msgid "Configure the player settings."
-msgstr "配置播放器的设置。"
-
-#: src/views/settings/SettingsDialog.qml:136
+#: src/views/settings/SettingsDialog.qml:134
 #, kde-format
 msgid "Hardware Decoding"
 msgstr "硬件解码"
 
-#: src/views/settings/SettingsDialog.qml:137
+#: src/views/settings/SettingsDialog.qml:135
 #, kde-format
 msgid "Use the sorting preferences globally for all the tabs and splits."
 msgstr "将排序选项全局应用到所有标签页和拆分窗格。"
 
-#: src/views/settings/SettingsDialog.qml:150
+#: src/views/settings/SettingsDialog.qml:148
 #, kde-format
 msgid "Audio"
 msgstr "音频"
 
-#: src/views/settings/SettingsDialog.qml:151
-#, kde-format
-msgid "Configure the player audio behaviour."
-msgstr "配置播放器的音频行为。"
-
-#: src/views/settings/SettingsDialog.qml:156
+#: src/views/settings/SettingsDialog.qml:154
 #, kde-format
 msgid "Preferred Language"
 msgstr "首选语言"
 
-#: src/views/settings/SettingsDialog.qml:157
+#: src/views/settings/SettingsDialog.qml:155
 #, kde-format
 msgid "Preferred language if available."
 msgstr "首选语言 (如果可用)。"
 
-#: src/views/settings/SettingsDialog.qml:262
+#: src/views/settings/SettingsDialog.qml:260
 #, kde-format
 msgid "Sources"
 msgstr "视频来源"
 
-#: src/views/settings/SettingsDialog.qml:263
-#, kde-format
-msgid "Add new sources to manage and browse your video collection"
-msgstr "添加和管理此应用的视频来源位置"
-
-#: src/views/settings/SettingsDialog.qml:302
+#: src/views/settings/SettingsDialog.qml:298
 #, kde-format
 msgid "Add"
 msgstr "添加"
 
-#: src/views/settings/SettingsDialog.qml:324
+#: src/views/settings/SettingsDialog.qml:320
 #, kde-format
 msgid "Remove source"
 msgstr "移除来源"
 
-#: src/views/settings/SettingsDialog.qml:325
+#: src/views/settings/SettingsDialog.qml:321
 #, kde-format
 msgid ""
 "Are you sure you want to remove the source: \n"
@@ -457,3 +433,18 @@ msgstr "开始搜索在线视频。"
 #, kde-format
 msgid "Search..."
 msgstr "搜索..."
+
+#~ msgid "Configure the app behavior."
+#~ msgstr "配置此应用的行为。"
+
+#~ msgid "Sorting order and behavior."
+#~ msgstr "排序顺序和行为。"
+
+#~ msgid "Configure the player settings."
+#~ msgstr "配置播放器的设置。"
+
+#~ msgid "Configure the player audio behaviour."
+#~ msgstr "配置播放器的音频行为。"
+
+#~ msgid "Add new sources to manage and browse your video collection"
+#~ msgstr "添加和管理此应用的视频来源位置"

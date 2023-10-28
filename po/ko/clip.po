@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-15 00:44+0000\n"
+"POT-Creation-Date: 2023-10-28 00:42+0000\n"
 "PO-Revision-Date: 2023-07-26 00:26+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -47,22 +47,23 @@ msgstr "동영상 검색..."
 msgid "Clip"
 msgstr "Clip"
 
-#: src/main.cpp:97
+#: src/main.cpp:99
 #, kde-format
 msgid "Browse and play your videos."
 msgstr "동영상을 탐색하고 재생합니다."
 
-#: src/main.cpp:98
-#, kde-format
-msgid "© 2019-%1 Maui Development Team"
+#: src/main.cpp:101
+#, fuzzy, kde-format
+#| msgid "© 2019-%1 Maui Development Team"
+msgid "© 2019-2023 Maui Development Team"
 msgstr "© 2019-%1 Maui Development Team"
 
-#: src/main.cpp:99
+#: src/main.cpp:104
 #, kde-format
 msgid "Camilo Higuita"
 msgstr "Camilo Higuita"
 
-#: src/main.cpp:99
+#: src/main.cpp:104
 #, kde-format
 msgid "Developer"
 msgstr "개발자"
@@ -108,7 +109,7 @@ msgstr "모음집이나 파일 시스템에서 새 동영상을 엽니다."
 
 #. i18n("Screenshots")}};
 #: src/main.qml:296 src/models/tagsmodel.cpp:14
-#: src/views/settings/SettingsDialog.qml:55
+#: src/views/settings/SettingsDialog.qml:53
 #, kde-format
 msgid "Collection"
 msgstr "모음집"
@@ -280,147 +281,122 @@ msgstr "태그"
 msgid "Export"
 msgstr "내보내기"
 
-#: src/views/settings/SettingsDialog.qml:18
+#: src/views/settings/SettingsDialog.qml:17
 #, kde-format
 msgid "General"
 msgstr "일반"
 
-#: src/views/settings/SettingsDialog.qml:19
-#, kde-format
-msgid "Configure the app behavior."
-msgstr "앱 행동을 설정합니다."
-
-#: src/views/settings/SettingsDialog.qml:23
+#: src/views/settings/SettingsDialog.qml:22
 #, kde-format
 msgid "Volume Step"
 msgstr "음량 단계"
 
-#: src/views/settings/SettingsDialog.qml:36
+#: src/views/settings/SettingsDialog.qml:35
 #, kde-format
 msgid "Dark Mode"
 msgstr "어두운 모드"
 
-#: src/views/settings/SettingsDialog.qml:37
+#: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Switch between light and dark colorscheme"
 msgstr "밝은 색상과 어두운 색상 전환"
 
-#: src/views/settings/SettingsDialog.qml:56
-#, kde-format
-msgid "Sorting order and behavior."
-msgstr "정렬 순서와 행동입니다."
-
-#: src/views/settings/SettingsDialog.qml:60
+#: src/views/settings/SettingsDialog.qml:58
 #, kde-format
 msgid "Sorting by"
 msgstr "정렬 순서"
 
-#: src/views/settings/SettingsDialog.qml:61
+#: src/views/settings/SettingsDialog.qml:59
 #, kde-format
 msgid "Change the sorting key."
 msgstr "정렬 키를 변경합니다."
 
-#: src/views/settings/SettingsDialog.qml:71
+#: src/views/settings/SettingsDialog.qml:69
 #, kde-format
 msgid "Title"
 msgstr "제목"
 
-#: src/views/settings/SettingsDialog.qml:78
+#: src/views/settings/SettingsDialog.qml:76
 #, kde-format
 msgid "Date"
 msgstr "날짜"
 
-#: src/views/settings/SettingsDialog.qml:85
+#: src/views/settings/SettingsDialog.qml:83
 #, kde-format
 msgid "Size"
 msgstr "크기"
 
-#: src/views/settings/SettingsDialog.qml:92
+#: src/views/settings/SettingsDialog.qml:90
 #, kde-format
 msgid "Type"
 msgstr "종류"
 
-#: src/views/settings/SettingsDialog.qml:101
+#: src/views/settings/SettingsDialog.qml:99
 #, kde-format
 msgid "Sort order"
 msgstr "정렬 순서"
 
-#: src/views/settings/SettingsDialog.qml:102
+#: src/views/settings/SettingsDialog.qml:100
 #, kde-format
 msgid "Change the sorting order."
 msgstr "정렬 순서를 변경합니다."
 
-#: src/views/settings/SettingsDialog.qml:112
+#: src/views/settings/SettingsDialog.qml:110
 #, kde-format
 msgid "Ascending"
 msgstr "오름차순"
 
-#: src/views/settings/SettingsDialog.qml:120
+#: src/views/settings/SettingsDialog.qml:118
 #, kde-format
 msgid "Descending"
 msgstr "내림차순"
 
-#: src/views/settings/SettingsDialog.qml:131
+#: src/views/settings/SettingsDialog.qml:129
 #, kde-format
 msgid "Playback"
 msgstr "재생"
 
-#: src/views/settings/SettingsDialog.qml:132
-#, kde-format
-msgid "Configure the player settings."
-msgstr "재생기를 설정합니다."
-
-#: src/views/settings/SettingsDialog.qml:136
+#: src/views/settings/SettingsDialog.qml:134
 #, kde-format
 msgid "Hardware Decoding"
 msgstr "하드웨어 디코딩"
 
-#: src/views/settings/SettingsDialog.qml:137
+#: src/views/settings/SettingsDialog.qml:135
 #, kde-format
 msgid "Use the sorting preferences globally for all the tabs and splits."
 msgstr "모든 탭과 분할 보기에 정렬 순서를 전역적으로 사용합니다."
 
-#: src/views/settings/SettingsDialog.qml:150
+#: src/views/settings/SettingsDialog.qml:148
 #, kde-format
 msgid "Audio"
 msgstr "오디오"
 
-#: src/views/settings/SettingsDialog.qml:151
-#, kde-format
-msgid "Configure the player audio behaviour."
-msgstr "재생기 오디오 행동을 설정합니다."
-
-#: src/views/settings/SettingsDialog.qml:156
+#: src/views/settings/SettingsDialog.qml:154
 #, kde-format
 msgid "Preferred Language"
 msgstr "선호하는 언어"
 
-#: src/views/settings/SettingsDialog.qml:157
+#: src/views/settings/SettingsDialog.qml:155
 #, kde-format
 msgid "Preferred language if available."
 msgstr "사용 가능한 경우 선호하는 언어입니다."
 
-#: src/views/settings/SettingsDialog.qml:262
+#: src/views/settings/SettingsDialog.qml:260
 #, kde-format
 msgid "Sources"
 msgstr "원본"
 
-#: src/views/settings/SettingsDialog.qml:263
-#, kde-format
-msgid "Add new sources to manage and browse your video collection"
-msgstr "동영상 모음집을 관리하고 탐색할 새 원본 추가"
-
-#: src/views/settings/SettingsDialog.qml:302
+#: src/views/settings/SettingsDialog.qml:298
 #, kde-format
 msgid "Add"
 msgstr "추가"
 
-#: src/views/settings/SettingsDialog.qml:324
+#: src/views/settings/SettingsDialog.qml:320
 #, kde-format
 msgid "Remove source"
 msgstr "원본 삭제"
 
-#: src/views/settings/SettingsDialog.qml:325
+#: src/views/settings/SettingsDialog.qml:321
 #, kde-format
 msgid ""
 "Are you sure you want to remove the source: \n"
@@ -458,6 +434,21 @@ msgstr "온라인 동영상 검색을 시작합니다."
 #, kde-format
 msgid "Search..."
 msgstr "검색..."
+
+#~ msgid "Configure the app behavior."
+#~ msgstr "앱 행동을 설정합니다."
+
+#~ msgid "Sorting order and behavior."
+#~ msgstr "정렬 순서와 행동입니다."
+
+#~ msgid "Configure the player settings."
+#~ msgstr "재생기를 설정합니다."
+
+#~ msgid "Configure the player audio behaviour."
+#~ msgstr "재생기 오디오 행동을 설정합니다."
+
+#~ msgid "Add new sources to manage and browse your video collection"
+#~ msgstr "동영상 모음집을 관리하고 탐색할 새 원본 추가"
 
 #~ msgid "Accept"
 #~ msgstr "수락"

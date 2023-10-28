@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-15 00:44+0000\n"
+"POT-Creation-Date: 2023-10-28 00:42+0000\n"
 "PO-Revision-Date: 2021-05-01 23:20-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -47,23 +47,23 @@ msgstr "...ਵੀਡੀਓ ਖੋਜੋ"
 msgid "Clip"
 msgstr "ਕਲਿੱਪ"
 
-#: src/main.cpp:97
+#: src/main.cpp:99
 #, kde-format
 msgid "Browse and play your videos."
 msgstr ""
 
-#: src/main.cpp:98
+#: src/main.cpp:101
 #, fuzzy, kde-format
 #| msgid "© 2019-%1 Nitrux Development Team"
-msgid "© 2019-%1 Maui Development Team"
+msgid "© 2019-2023 Maui Development Team"
 msgstr "© 2019-%1 Nitrux Development ਟੀਮ"
 
-#: src/main.cpp:99
+#: src/main.cpp:104
 #, kde-format
 msgid "Camilo Higuita"
 msgstr "Camilo Higuita"
 
-#: src/main.cpp:99
+#: src/main.cpp:104
 #, kde-format
 msgid "Developer"
 msgstr "ਡਿਵੈਲਪਰ"
@@ -107,7 +107,7 @@ msgstr ""
 
 #. i18n("Screenshots")}};
 #: src/main.qml:296 src/models/tagsmodel.cpp:14
-#: src/views/settings/SettingsDialog.qml:55
+#: src/views/settings/SettingsDialog.qml:53
 #, kde-format
 msgid "Collection"
 msgstr "ਭੰਡਾਰ"
@@ -284,147 +284,122 @@ msgstr "ਟੈਗ"
 msgid "Export"
 msgstr "ਐਕਸਪੋਰਟ"
 
-#: src/views/settings/SettingsDialog.qml:18
+#: src/views/settings/SettingsDialog.qml:17
 #, kde-format
 msgid "General"
 msgstr "ਆਮ"
 
-#: src/views/settings/SettingsDialog.qml:19
-#, kde-format
-msgid "Configure the app behavior."
-msgstr ""
-
-#: src/views/settings/SettingsDialog.qml:23
+#: src/views/settings/SettingsDialog.qml:22
 #, kde-format
 msgid "Volume Step"
 msgstr "ਵਾਲੀਅਮ ਪੜਾਅ"
 
-#: src/views/settings/SettingsDialog.qml:36
+#: src/views/settings/SettingsDialog.qml:35
 #, kde-format
 msgid "Dark Mode"
 msgstr ""
 
-#: src/views/settings/SettingsDialog.qml:37
+#: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Switch between light and dark colorscheme"
 msgstr ""
 
-#: src/views/settings/SettingsDialog.qml:56
-#, fuzzy, kde-format
-msgid "Sorting order and behavior."
-msgstr "ਲੜੀਬੱਧ ਕਰਨ ਦਾ ਢੰਗ ਅਤੇ ਰਵੱਈਆ।"
-
-#: src/views/settings/SettingsDialog.qml:60
+#: src/views/settings/SettingsDialog.qml:58
 #, kde-format
 msgid "Sorting by"
 msgstr "ਲੜੀਬੱਧ"
 
-#: src/views/settings/SettingsDialog.qml:61
+#: src/views/settings/SettingsDialog.qml:59
 #, kde-format
 msgid "Change the sorting key."
 msgstr ""
 
-#: src/views/settings/SettingsDialog.qml:71
+#: src/views/settings/SettingsDialog.qml:69
 #, kde-format
 msgid "Title"
 msgstr "ਟਾਈਟਲ"
 
-#: src/views/settings/SettingsDialog.qml:78
+#: src/views/settings/SettingsDialog.qml:76
 #, kde-format
 msgid "Date"
 msgstr "ਤਾਰੀਖ"
 
-#: src/views/settings/SettingsDialog.qml:85
+#: src/views/settings/SettingsDialog.qml:83
 #, kde-format
 msgid "Size"
 msgstr "ਆਕਾਰ"
 
-#: src/views/settings/SettingsDialog.qml:92
+#: src/views/settings/SettingsDialog.qml:90
 #, kde-format
 msgid "Type"
 msgstr "ਕਿਸਮ"
 
-#: src/views/settings/SettingsDialog.qml:101
+#: src/views/settings/SettingsDialog.qml:99
 #, kde-format
 msgid "Sort order"
 msgstr "ਲੜੀਬੱਧ ਕ੍ਰਮ"
 
-#: src/views/settings/SettingsDialog.qml:102
+#: src/views/settings/SettingsDialog.qml:100
 #, kde-format
 msgid "Change the sorting order."
 msgstr "ਲੜੀਬੱਧ ਕਰਨ ਦਾ ਢੰਗ ਬਦਲੋ।"
 
-#: src/views/settings/SettingsDialog.qml:112
+#: src/views/settings/SettingsDialog.qml:110
 #, kde-format
 msgid "Ascending"
 msgstr "ਵੱਧਦਾ-ਕ੍ਰਮ"
 
-#: src/views/settings/SettingsDialog.qml:120
+#: src/views/settings/SettingsDialog.qml:118
 #, kde-format
 msgid "Descending"
 msgstr "ਘੱਟਦਾ-ਕ੍ਰਮ"
 
-#: src/views/settings/SettingsDialog.qml:131
+#: src/views/settings/SettingsDialog.qml:129
 #, kde-format
 msgid "Playback"
 msgstr "ਚਲਾਓ"
 
-#: src/views/settings/SettingsDialog.qml:132
-#, kde-format
-msgid "Configure the player settings."
-msgstr ""
-
-#: src/views/settings/SettingsDialog.qml:136
+#: src/views/settings/SettingsDialog.qml:134
 #, kde-format
 msgid "Hardware Decoding"
 msgstr "ਹਾਰਡਵੇਅਰ ਡੀਕੋਡਿੰਗ"
 
-#: src/views/settings/SettingsDialog.qml:137
+#: src/views/settings/SettingsDialog.qml:135
 #, kde-format
 msgid "Use the sorting preferences globally for all the tabs and splits."
 msgstr ""
 
-#: src/views/settings/SettingsDialog.qml:150
+#: src/views/settings/SettingsDialog.qml:148
 #, kde-format
 msgid "Audio"
 msgstr "ਆਡੀਓ"
 
-#: src/views/settings/SettingsDialog.qml:151
-#, kde-format
-msgid "Configure the player audio behaviour."
-msgstr ""
-
-#: src/views/settings/SettingsDialog.qml:156
+#: src/views/settings/SettingsDialog.qml:154
 #, kde-format
 msgid "Preferred Language"
 msgstr "ਤਰਜੀਹੀ ਭਾਸ਼ਾ"
 
-#: src/views/settings/SettingsDialog.qml:157
+#: src/views/settings/SettingsDialog.qml:155
 #, kde-format
 msgid "Preferred language if available."
 msgstr ""
 
-#: src/views/settings/SettingsDialog.qml:262
+#: src/views/settings/SettingsDialog.qml:260
 #, kde-format
 msgid "Sources"
 msgstr "ਸਰੋਤ"
 
-#: src/views/settings/SettingsDialog.qml:263
-#, kde-format
-msgid "Add new sources to manage and browse your video collection"
-msgstr ""
-
-#: src/views/settings/SettingsDialog.qml:302
+#: src/views/settings/SettingsDialog.qml:298
 #, kde-format
 msgid "Add"
 msgstr "ਜੋੜੋ"
 
-#: src/views/settings/SettingsDialog.qml:324
+#: src/views/settings/SettingsDialog.qml:320
 #, kde-format
 msgid "Remove source"
 msgstr "ਸਰੋਤ ਨੂੰ ਹਟਾਓ"
 
-#: src/views/settings/SettingsDialog.qml:325
+#: src/views/settings/SettingsDialog.qml:321
 #, kde-format
 msgid ""
 "Are you sure you want to remove the source: \n"
@@ -460,6 +435,10 @@ msgstr ""
 #, kde-format
 msgid "Search..."
 msgstr "...ਖੋਜੋ"
+
+#, fuzzy
+#~ msgid "Sorting order and behavior."
+#~ msgstr "ਲੜੀਬੱਧ ਕਰਨ ਦਾ ਢੰਗ ਅਤੇ ਰਵੱਈਆ।"
 
 #~ msgid "Accept"
 #~ msgstr "ਮਨਜ਼ੂਰ ਕਰੋ"

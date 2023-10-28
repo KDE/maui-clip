@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-15 00:44+0000\n"
+"POT-Creation-Date: 2023-10-28 00:42+0000\n"
 "PO-Revision-Date: 2023-02-10 10:04+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -49,22 +49,23 @@ msgstr "Busca vídeos..."
 msgid "Clip"
 msgstr "Clip"
 
-#: src/main.cpp:97
+#: src/main.cpp:99
 #, kde-format
 msgid "Browse and play your videos."
 msgstr "Navegueu i reproduïu els vostres vídeos."
 
-#: src/main.cpp:98
-#, kde-format
-msgid "© 2019-%1 Maui Development Team"
+#: src/main.cpp:101
+#, fuzzy, kde-format
+#| msgid "© 2019-%1 Maui Development Team"
+msgid "© 2019-2023 Maui Development Team"
 msgstr "© 2019-%1 L'equip de desenvolupament de Maui"
 
-#: src/main.cpp:99
+#: src/main.cpp:104
 #, kde-format
 msgid "Camilo Higuita"
 msgstr "Camilo Higuita"
 
-#: src/main.cpp:99
+#: src/main.cpp:104
 #, kde-format
 msgid "Developer"
 msgstr "Desenvolupador"
@@ -110,7 +111,7 @@ msgstr "Obri un vídeo nou de la col·lecció o del sistema de fitxers."
 
 #. i18n("Screenshots")}};
 #: src/main.qml:296 src/models/tagsmodel.cpp:14
-#: src/views/settings/SettingsDialog.qml:55
+#: src/views/settings/SettingsDialog.qml:53
 #, kde-format
 msgid "Collection"
 msgstr "Col·lecció"
@@ -283,149 +284,124 @@ msgstr "Etiqueta"
 msgid "Export"
 msgstr "Exporta"
 
-#: src/views/settings/SettingsDialog.qml:18
+#: src/views/settings/SettingsDialog.qml:17
 #, kde-format
 msgid "General"
 msgstr "General"
 
-#: src/views/settings/SettingsDialog.qml:19
-#, kde-format
-msgid "Configure the app behavior."
-msgstr "Configura el comportament de l'aplicació."
-
-#: src/views/settings/SettingsDialog.qml:23
+#: src/views/settings/SettingsDialog.qml:22
 #, kde-format
 msgid "Volume Step"
 msgstr "Pas de volum"
 
-#: src/views/settings/SettingsDialog.qml:36
+#: src/views/settings/SettingsDialog.qml:35
 #, kde-format
 msgid "Dark Mode"
 msgstr "Mode fosc"
 
-#: src/views/settings/SettingsDialog.qml:37
+#: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Switch between light and dark colorscheme"
 msgstr "Alterna entre els esquemes de color clar i fosc"
 
-#: src/views/settings/SettingsDialog.qml:56
-#, kde-format
-msgid "Sorting order and behavior."
-msgstr "Criteri i comportament de l'ordenació."
-
-#: src/views/settings/SettingsDialog.qml:60
+#: src/views/settings/SettingsDialog.qml:58
 #, kde-format
 msgid "Sorting by"
 msgstr "Ordena per"
 
-#: src/views/settings/SettingsDialog.qml:61
+#: src/views/settings/SettingsDialog.qml:59
 #, kde-format
 msgid "Change the sorting key."
 msgstr "Canvia la clau d'ordenació."
 
-#: src/views/settings/SettingsDialog.qml:71
+#: src/views/settings/SettingsDialog.qml:69
 #, kde-format
 msgid "Title"
 msgstr "Títol"
 
-#: src/views/settings/SettingsDialog.qml:78
+#: src/views/settings/SettingsDialog.qml:76
 #, kde-format
 msgid "Date"
 msgstr "Data"
 
-#: src/views/settings/SettingsDialog.qml:85
+#: src/views/settings/SettingsDialog.qml:83
 #, kde-format
 msgid "Size"
 msgstr "Mida"
 
-#: src/views/settings/SettingsDialog.qml:92
+#: src/views/settings/SettingsDialog.qml:90
 #, kde-format
 msgid "Type"
 msgstr "Tipus"
 
-#: src/views/settings/SettingsDialog.qml:101
+#: src/views/settings/SettingsDialog.qml:99
 #, kde-format
 msgid "Sort order"
 msgstr "Criteri d'ordenació"
 
-#: src/views/settings/SettingsDialog.qml:102
+#: src/views/settings/SettingsDialog.qml:100
 #, kde-format
 msgid "Change the sorting order."
 msgstr "Canvia el sentit d'ordenació."
 
-#: src/views/settings/SettingsDialog.qml:112
+#: src/views/settings/SettingsDialog.qml:110
 #, kde-format
 msgid "Ascending"
 msgstr "Ascendent"
 
-#: src/views/settings/SettingsDialog.qml:120
+#: src/views/settings/SettingsDialog.qml:118
 #, kde-format
 msgid "Descending"
 msgstr "Descendent"
 
-#: src/views/settings/SettingsDialog.qml:131
+#: src/views/settings/SettingsDialog.qml:129
 #, kde-format
 msgid "Playback"
 msgstr "Reproducció"
 
-#: src/views/settings/SettingsDialog.qml:132
-#, kde-format
-msgid "Configure the player settings."
-msgstr "Configura les opcions del reproductor."
-
-#: src/views/settings/SettingsDialog.qml:136
+#: src/views/settings/SettingsDialog.qml:134
 #, kde-format
 msgid "Hardware Decoding"
 msgstr "Descodificació per maquinari"
 
-#: src/views/settings/SettingsDialog.qml:137
+#: src/views/settings/SettingsDialog.qml:135
 #, kde-format
 msgid "Use the sorting preferences globally for all the tabs and splits."
 msgstr ""
 "Utilitza les preferències globals d'ordenació per a totes les pestanyes i "
 "divisions."
 
-#: src/views/settings/SettingsDialog.qml:150
+#: src/views/settings/SettingsDialog.qml:148
 #, kde-format
 msgid "Audio"
 msgstr "Àudio"
 
-#: src/views/settings/SettingsDialog.qml:151
-#, kde-format
-msgid "Configure the player audio behaviour."
-msgstr "Configura el comportament de l'àudio del reproductor."
-
-#: src/views/settings/SettingsDialog.qml:156
+#: src/views/settings/SettingsDialog.qml:154
 #, kde-format
 msgid "Preferred Language"
 msgstr "Idioma preferit"
 
-#: src/views/settings/SettingsDialog.qml:157
+#: src/views/settings/SettingsDialog.qml:155
 #, kde-format
 msgid "Preferred language if available."
 msgstr "Idioma preferit si està disponible."
 
-#: src/views/settings/SettingsDialog.qml:262
+#: src/views/settings/SettingsDialog.qml:260
 #, kde-format
 msgid "Sources"
 msgstr "Fonts"
 
-#: src/views/settings/SettingsDialog.qml:263
-#, kde-format
-msgid "Add new sources to manage and browse your video collection"
-msgstr "Afig fonts noves per a gestionat i navegar per la col·lecció de vídeos"
-
-#: src/views/settings/SettingsDialog.qml:302
+#: src/views/settings/SettingsDialog.qml:298
 #, kde-format
 msgid "Add"
 msgstr "Afig"
 
-#: src/views/settings/SettingsDialog.qml:324
+#: src/views/settings/SettingsDialog.qml:320
 #, kde-format
 msgid "Remove source"
 msgstr "Elimina la font"
 
-#: src/views/settings/SettingsDialog.qml:325
+#: src/views/settings/SettingsDialog.qml:321
 #, kde-format
 msgid ""
 "Are you sure you want to remove the source: \n"
@@ -465,3 +441,19 @@ msgstr "Comença la busca de vídeos en línia."
 #, kde-format
 msgid "Search..."
 msgstr "Busca..."
+
+#~ msgid "Configure the app behavior."
+#~ msgstr "Configura el comportament de l'aplicació."
+
+#~ msgid "Sorting order and behavior."
+#~ msgstr "Criteri i comportament de l'ordenació."
+
+#~ msgid "Configure the player settings."
+#~ msgstr "Configura les opcions del reproductor."
+
+#~ msgid "Configure the player audio behaviour."
+#~ msgstr "Configura el comportament de l'àudio del reproductor."
+
+#~ msgid "Add new sources to manage and browse your video collection"
+#~ msgstr ""
+#~ "Afig fonts noves per a gestionat i navegar per la col·lecció de vídeos"
