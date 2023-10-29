@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-28 00:42+0000\n"
-"PO-Revision-Date: 2023-02-10 08:52+0200\n"
+"PO-Revision-Date: 2023-10-28 09:12+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -56,10 +56,9 @@ msgid "Browse and play your videos."
 msgstr "Навігація збіркою відео та відтворення відео."
 
 #: src/main.cpp:101
-#, fuzzy, kde-format
-#| msgid "© 2019-%1 Maui Development Team"
+#, kde-format
 msgid "© 2019-2023 Maui Development Team"
-msgstr "© Команда розробників Maui, 2019–%1"
+msgstr "© Команда розробників Maui, 2019–2023"
 
 #: src/main.cpp:104
 #, kde-format
