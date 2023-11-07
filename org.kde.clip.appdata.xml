@@ -26,6 +26,7 @@
   <name xml:lang="sv">Klipp</name>
   <name xml:lang="tr">Klip</name>
   <name xml:lang="uk">Clip</name>
+  <name xml:lang="x-test">xxClipxx</name>
   <name xml:lang="zh-TW">Clip</name>
   <summary>Video Player</summary>
   <summary xml:lang="ca">Reproductor de vídeo</summary>
@@ -50,6 +51,7 @@
   <summary xml:lang="sv">Videospelare</summary>
   <summary xml:lang="tr">Video Oynatıcısı</summary>
   <summary xml:lang="uk">Відеопрогравач</summary>
+  <summary xml:lang="x-test">xxVideo Playerxx</summary>
   <summary xml:lang="zh-TW">影片播放器</summary>
   <description>
     <p>Clip is a video player and collection manager.</p>
@@ -73,6 +75,7 @@
     <p xml:lang="sv">Klipp är en videospelare och samlingshanterare.</p>
     <p xml:lang="tr">Klip, bir video oynatıcısı ve koleksiyon yöneticisidir.</p>
     <p xml:lang="uk">Clip — програвач відео і засіб керування збіркою.</p>
+    <p xml:lang="x-test">xxClip is a video player and collection manager.xx</p>
     <p xml:lang="zh-TW">Clip 是一個影片播放與收藏管理工具。</p>
   </description>
   <url type="homepage">https://apps.kde.org/clip</url>
@@ -102,6 +105,7 @@
       <caption xml:lang="sv">Klipp som spelar videor.</caption>
       <caption xml:lang="tr">Klip, video oynatırken.</caption>
       <caption xml:lang="uk">Clip відтворює відео.</caption>
+      <caption xml:lang="x-test">xxClip playing videos.xx</caption>
       <caption xml:lang="zh-TW">正在播放影片的 Clip。</caption>
     </screenshot>
   </screenshots>
