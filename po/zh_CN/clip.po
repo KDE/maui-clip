@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-05 12:28+0000\n"
-"PO-Revision-Date: 2023-10-21 13:55\n"
+"PO-Revision-Date: 2023-11-19 03:41\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -53,10 +53,9 @@ msgid "Browse and play your videos."
 msgstr "浏览并播放视频。"
 
 #: src/main.cpp:101
-#, fuzzy, kde-format
-#| msgid "© 2019-%1 Maui Development Team"
+#, kde-format
 msgid "© 2019-2023 Maui Development Team"
-msgstr "© 2019-%1 Maui Development Team"
+msgstr ""
 
 #: src/main.cpp:104
 #, kde-format
@@ -433,18 +432,3 @@ msgstr "开始搜索在线视频。"
 #, kde-format
 msgid "Search..."
 msgstr "搜索..."
-
-#~ msgid "Configure the app behavior."
-#~ msgstr "配置此应用的行为。"
-
-#~ msgid "Sorting order and behavior."
-#~ msgstr "排序顺序和行为。"
-
-#~ msgid "Configure the player settings."
-#~ msgstr "配置播放器的设置。"
-
-#~ msgid "Configure the player audio behaviour."
-#~ msgstr "配置播放器的音频行为。"
-
-#~ msgid "Add new sources to manage and browse your video collection"
-#~ msgstr "添加和管理此应用的视频来源位置"
