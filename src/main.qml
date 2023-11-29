@@ -27,8 +27,8 @@ Maui.ApplicationWindow
 
     property bool selectionMode : false
 
-    property alias dialog : dialogLoader.item
-    property alias player: _playerView.player
+    readonly property alias dialog : dialogLoader.item
+    readonly property alias player: _playerView.player
 
 //    onIsPortraitChanged:
 //    {
@@ -56,24 +56,22 @@ Maui.ApplicationWindow
         property bool playerTagBar: true
         property string youtubeKey: "AIzaSyDMLmTSEN7i6psE2tHdaG6hy3ljWKXIYBk"
         property int youtubeQueryLimit : 50
-        property bool darkMode : Maui.Style.styleType === Maui.Style.Dark
+        property bool darkMode : true
     }
 
     Loader
     {
         anchors.fill: parent
-
         asynchronous: true
-
-        sourceComponent:  DropArea
+        sourceComponent: DropArea
         {
-            onDropped:
-            {
-                if(drop.urls)
-                {
-                    Clip.Clip.openVideos(drop.urls)
-                }
-            }
+            onDropped: (drop) =>
+                       {
+                           if(drop.urls)
+                           {
+                               Clip.Clip.openVideos(drop.urls)
+                           }
+                       }
         }
     }
 
@@ -125,7 +123,7 @@ Maui.ApplicationWindow
             title: i18n("Delete files?")
 
             message: i18n("Are sure you want to delete %1 files", String(selectionBar.count))
-
+            standardButtons: Dialog.Ok | Dialog.Cancel
             template.iconSource: "emblem-warning"
 
             onRejected: close()
@@ -157,6 +155,7 @@ Maui.ApplicationWindow
         Maui.SideBarView
         {
             id: _sideBarView
+            focus: true
 
             visible: StackView.status === StackView.Active
 
@@ -168,7 +167,7 @@ Maui.ApplicationWindow
             sideBar.autoShow: false
             sideBar.preferredWidth: Maui.Style.units.gridUnit * 16
 
-            sideBarContent:  Maui.Page
+            sideBarContent: Maui.Page
             {
                 anchors.fill: parent
                 title: i18n("Now playing")
@@ -217,6 +216,13 @@ Maui.ApplicationWindow
                 headBar.visible: !_playerHolderLoader.active
 
                 showCSDControls: true
+
+                onGoBackTriggered: _stackView.pop()
+
+                Keys.enabled: !Maui.Handy.isMobile
+                Keys.onSpacePressed: player.playbackState === MediaPlayer.PlayingState ? player.pause() : player.play()
+                Keys.onLeftPressed: player.seek(player.position - 500)
+                Keys.onRightPressed: player.seek(player.position + 500)
 
                 PlayerView
                 {
@@ -390,60 +396,60 @@ Maui.ApplicationWindow
 
                 headBar.rightContent: [
                     ToolButton
-                                    {
-                                        //                        text: i18n("Open")
-                                        display: isWide ? ToolButton.TextBesideIcon : ToolButton.IconOnly
-                                        icon.name: "folder-open"
-                                        onClicked: root.openFileDialog()
-                                    },
-                    Loader
-                {
-                    active: Clip.Clip.mpvAvailable
-                    asynchronous: true
-                    sourceComponent:  Maui.ToolButtonMenu
                     {
-                        icon.name: "overflow-menu"
-
-                        Maui.MenuItemActionRow
+                        //                        text: i18n("Open")
+                        display: isWide ? ToolButton.TextBesideIcon : ToolButton.IconOnly
+                        icon.name: "folder-open"
+                        onClicked: root.openFileDialog()
+                    },
+                    Loader
+                    {
+                        active: Clip.Clip.mpvAvailable
+                        asynchronous: true
+                        sourceComponent:  Maui.ToolButtonMenu
                         {
-                            Action
+                            icon.name: "overflow-menu"
+
+                            Maui.MenuItemActionRow
                             {
-                                icon.name: "edit-share"
+                                Action
+                                {
+                                    icon.name: "edit-share"
+                                }
+
+                                Action
+                                {
+                                    icon.name: "edit"
+                                }
+
+                                Action
+                                {
+                                    icon.name: "view-fullscreen"
+                                    onTriggered: toggleFullscreen()
+                                }
                             }
 
-                            Action
+                            MenuSeparator{}
+
+                            MenuItem
                             {
-                                icon.name: "edit"
+                                text: "Corrections"
+                                onTriggered: control.editing = !control.editing
                             }
 
-                            Action
+                            MenuItem
                             {
-                                icon.name: "view-fullscreen"
-                                onTriggered: toggleFullscreen()
+                                text: "Subtitles"
+                                onTriggered: _subtitlesDialog.open()
+                            }
+
+                            MenuItem
+                            {
+                                text: "Audio"
+                                onTriggered: _audioTracksDialog.open()
                             }
                         }
-
-                        MenuSeparator{}
-
-                        MenuItem
-                        {
-                            text: "Corrections"
-                            onTriggered: control.editing = !control.editing
-                        }
-
-                        MenuItem
-                        {
-                            text: "Subtitles"
-                            onTriggered: _subtitlesDialog.open()
-                        }
-
-                        MenuItem
-                        {
-                            text: "Audio"
-                            onTriggered: _audioTracksDialog.open()
-                        }
-                    }
-                }]
+                    }]
 
                 footBar.visible: _sideBarView.sideBar.enabled
                 footBar.farLeftContent: Loader

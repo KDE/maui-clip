@@ -1,5 +1,4 @@
-#ifndef YOUTUBE_H
-#define YOUTUBE_H
+#pragma once
 
 #include <QObject>
 #include <QUrl>
@@ -27,8 +26,6 @@ private:
     QString KEY;
     const QString API = "https://www.googleapis.com/youtube/v3/search?";
 
-signals:
+Q_SIGNALS:
     void queryResultsReady(FMH::MODEL_LIST res);
 };
-
-#endif // YOUTUBE_H

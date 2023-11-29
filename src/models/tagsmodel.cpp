@@ -14,13 +14,13 @@ TagsModel::TagsModel(QObject *parent) : MauiList(parent)
       m_quickPlaces << QVariantMap{{"icon", "view-list-icons"}, {"path", "collection:///"}, {"label", i18n("Collection")}};
 
     connect(Tagging::getInstance(), &Tagging::tagged, [this](QVariantMap tag) {
-        emit this->preItemAppended();
+        Q_EMIT this->preItemAppended();
         auto item = FMH::toModel(tag);
 
         item[FMH::MODEL_KEY::PATH] = "tags:///"+item[FMH::MODEL_KEY::TAG];
         item[FMH::MODEL_KEY::TYPE] = i18n("Tags");
         this->list << item;
-        emit this->postItemAppended();
+        Q_EMIT this->postItemAppended();
     });
 }
 
@@ -41,10 +41,10 @@ const FMH::MODEL_LIST &TagsModel::items() const
 
 void TagsModel::setList()
 {
-    emit this->preListChanged();
+    Q_EMIT this->preListChanged();
     this->list << this->tags();
-    emit this->postListChanged();
-    emit countChanged();
+    Q_EMIT this->postListChanged();
+    Q_EMIT countChanged();
 }
 
 FMH::MODEL_LIST TagsModel::tags()

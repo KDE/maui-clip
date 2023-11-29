@@ -13,6 +13,7 @@ Maui.ListBrowser
 
     property alias list : _collectionList
     property alias listModel: _collectionModel
+
     clip: true
 
     holder.visible: list.count === 0
@@ -82,7 +83,7 @@ Maui.ListBrowser
             control.currentView.itemsSelected([index])
         }
 
-        onClicked:
+        onClicked: (mouse) =>
         {
             control.currentIndex = index
 

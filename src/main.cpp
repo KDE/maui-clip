@@ -12,6 +12,10 @@
 
 #include <MauiKit3/Core/mauiapp.h>
 #include <MauiKit3/FileBrowsing/fmstatic.h>
+#include <MauiKit3/FileBrowsing/moduleinfo.h>
+
+#include <taglib/taglib.h>
+#include <libavutil/avutil.h>
 
 #ifdef MPV_AVAILABLE
 #include "backends/mpv/mpvobject.h"
@@ -108,9 +112,19 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     about.setOrganizationDomain(CLIP_URI);
     about.setProgramLogo(app.windowIcon());
 
+    const auto FBData = MauiKitFileBrowsing::aboutData();
+    about.addComponent(FBData.name(), MauiKitFileBrowsing::buildVersion(), FBData.version(), FBData.webAddress());
+
+//    about.addComponent("FFmpeg", "", QString::fromLatin1(av_version_info()), QString::fromLatin1(avutil_license()));
+
 #ifdef MPV_AVAILABLE
-about.addComponent("MPV");
+    about.addComponent("MPV");
 #endif
+
+    about.addComponent("TagLib",
+                       "",
+                       QString("%1.%2.%3").arg(QString::number(TAGLIB_MAJOR_VERSION),QString::number(TAGLIB_MINOR_VERSION),QString::number(TAGLIB_PATCH_VERSION)),
+                       "https://taglib.org/api/index.html");
 
     KAboutData::setApplicationData(about);
     MauiApp::instance()->setIconName("qrc:/img/assets/clip.svg");
@@ -166,8 +180,8 @@ about.addComponent("MPV");
 #endif
 
     qmlRegisterSingletonType<LockManager>(CLIP_URI, 1, 0, "LockManager", [](QQmlEngine*, QJSEngine*) -> QObject* {
-            return new LockManager;
-        });
+        return new LockManager;
+    });
 
     engine.load(url);
 

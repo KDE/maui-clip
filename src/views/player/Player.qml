@@ -1,9 +1,10 @@
 import QtMultimedia 5.8
+import QtQuick 2.15
 
 Video
 {
     id: control
-    property alias video : control
+    readonly property alias video : control
     property alias url : control.source
 
     readonly property bool playing : control.playbackState === MediaPlayer.PlayingState

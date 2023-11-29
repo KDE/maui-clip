@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef LOCKMANAGER_H
-#define LOCKMANAGER_H
+#pragma once
 
 #include <QObject>
 
@@ -41,5 +40,3 @@ private:
     LockBackend *m_backend;
     bool m_inhibit;
 };
-
-#endif // LOCKMANAGER_H

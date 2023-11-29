@@ -86,7 +86,7 @@ QOpenGLFramebufferObject * MpvRenderer::createFramebufferObject(const QSize &siz
         if (mpv_render_context_create(&obj->mpv_gl, obj->mpv, params) < 0)
             throw std::runtime_error("failed to initialize mpv GL context");
         mpv_render_context_set_update_callback(obj->mpv_gl, on_mpv_redraw, obj);
-        emit obj->ready();
+        Q_EMIT obj->ready();
     }
 
     return QQuickFramebufferObject::Renderer::createFramebufferObject(size);
@@ -206,7 +206,7 @@ void MpvObject::setPosition(double value)
         return;
     }
     setProperty("time-pos", value);
-    emit positionChanged();
+    Q_EMIT positionChanged();
 }
 
 double MpvObject::remaining()
@@ -230,7 +230,7 @@ void MpvObject::setVolume(int value)
         return;
     }
     setProperty("volume", value);
-    emit volumeChanged();
+    Q_EMIT volumeChanged();
 }
 
 int MpvObject::chapter()
@@ -244,7 +244,7 @@ void MpvObject::setChapter(int value)
         return;
     }
     setProperty("chapter", value);
-    emit chapterChanged();
+    Q_EMIT chapterChanged();
 }
 
 int MpvObject::audioId()
@@ -258,7 +258,7 @@ void MpvObject::setAudioId(int value)
         return;
     }
     setProperty("aid", value);
-    emit audioIdChanged();
+    Q_EMIT audioIdChanged();
 }
 
 int MpvObject::subtitleId()
@@ -272,7 +272,7 @@ void MpvObject::setSubtitleId(int value)
         return;
     }
     setProperty("sid", value);
-    emit subtitleIdChanged();
+    Q_EMIT subtitleIdChanged();
 }
 
 int MpvObject::secondarySubtitleId()
@@ -286,7 +286,7 @@ void MpvObject::setSecondarySubtitleId(int value)
         return;
     }
     setProperty("secondary-sid", value);
-    emit secondarySubtitleIdChanged();
+    Q_EMIT secondarySubtitleIdChanged();
 }
 
 int MpvObject::contrast()
@@ -300,7 +300,7 @@ void MpvObject::setContrast(int value)
         return;
     }
     setProperty("contrast", value);
-    emit contrastChanged();
+    Q_EMIT contrastChanged();
 }
 
 int MpvObject::brightness()
@@ -314,7 +314,7 @@ void MpvObject::setBrightness(int value)
         return;
     }
     setProperty("brightness", value);
-    emit brightnessChanged();
+    Q_EMIT brightnessChanged();
 }
 
 int MpvObject::gamma()
@@ -328,7 +328,7 @@ void MpvObject::setGamma(int value)
         return;
     }
     setProperty("gamma", value);
-    emit gammaChanged();
+    Q_EMIT gammaChanged();
 }
 
 int MpvObject::saturation()
@@ -342,7 +342,7 @@ void MpvObject::setSaturation(int value)
         return;
     }
     setProperty("saturation", value);
-    emit saturationChanged();
+    Q_EMIT saturationChanged();
 }
 
 double MpvObject::watchPercentage()
@@ -356,7 +356,7 @@ void MpvObject::setWatchPercentage(double value)
         return;
     }
     m_watchPercentage = value;
-    emit watchPercentageChanged();
+    Q_EMIT watchPercentageChanged();
 }
 
 bool MpvObject::hwDecoding()
@@ -375,7 +375,7 @@ void MpvObject::setHWDecoding(bool value)
     } else  {
         setProperty("hwdec", "no");
     }
-    emit hwDecodingChanged();
+    Q_EMIT hwDecodingChanged();
 }
 
 QQuickFramebufferObject::Renderer *MpvObject::createRenderer() const
@@ -401,7 +401,7 @@ void MpvObject::eventHandler()
 
         case MPV_EVENT_START_FILE:
             //               clearTrackState();
-            //               emit sourceChanged();
+            //               Q_EMIT sourceChanged();
             setStatus(QMediaPlayer::LoadingMedia);
             break;
 
@@ -412,16 +412,16 @@ void MpvObject::eventHandler()
         case MPV_EVENT_PLAYBACK_RESTART: {
             bool paused = this->getProperty("pause").toBool();
             if (paused)
-                emit this->paused();
+                Q_EMIT this->paused();
             else
-                emit this->playing();
+                Q_EMIT this->playing();
             break;
         }
 
         case MPV_EVENT_FILE_LOADED: {
-            emit fileLoaded();
+            Q_EMIT fileLoaded();
             setStatus(QMediaPlayer::LoadedMedia);
-            emit this->playing();
+            Q_EMIT this->playing();
             break;
         }
 
@@ -429,9 +429,9 @@ void MpvObject::eventHandler()
             auto prop = (mpv_event_end_file *)event->data;
             if (prop->reason == MPV_END_FILE_REASON_EOF ||
                     prop ->reason == MPV_END_FILE_REASON_ERROR) {
-                emit endOfFile();
+                Q_EMIT endOfFile();
                 setStatus(QMediaPlayer::EndOfMedia);
-                emit this->stopped();
+                Q_EMIT this->stopped();
             }
             break;
         }
@@ -440,23 +440,23 @@ void MpvObject::eventHandler()
 
             if (strcmp(prop->name, "time-pos") == 0) {
                 if (prop->format == MPV_FORMAT_DOUBLE) {
-                    emit positionChanged();
+                    Q_EMIT positionChanged();
                 }
             } else if (strcmp(prop->name, "media-title") == 0) {
                 if (prop->format == MPV_FORMAT_STRING) {
-                    emit mediaTitleChanged();
+                    Q_EMIT mediaTitleChanged();
                 }
             } else if (strcmp(prop->name, "time-remaining") == 0) {
                 if (prop->format == MPV_FORMAT_DOUBLE) {
-                    emit remainingChanged();
+                    Q_EMIT remainingChanged();
                 }
             } else if (strcmp(prop->name, "duration") == 0) {
                 if (prop->format == MPV_FORMAT_DOUBLE) {
-                    emit durationChanged();
+                    Q_EMIT durationChanged();
                 }
             } else if (strcmp(prop->name, "volume") == 0) {
                 if (prop->format == MPV_FORMAT_INT64) {
-                    emit volumeChanged();
+                    Q_EMIT volumeChanged();
                 }
             } else if (strcmp(prop->name, "pause") == 0) {
 
@@ -464,17 +464,17 @@ void MpvObject::eventHandler()
                     int pause = *(int *)prop->data;
                     bool paused = pause == 1;
                     if (paused)
-                        emit this->paused();
+                        Q_EMIT this->paused();
                     else {
                         if(this->getProperty("core-idle").toBool())
                         {
-                            emit this->stopped();
+                            Q_EMIT this->stopped();
                             setStatus(QMediaPlayer::NoMedia);
                         }
                         else
                         {
-                            emit this->playing();
-                            emit this->stopped();
+                            Q_EMIT this->playing();
+                            Q_EMIT this->stopped();
                             setStatus(QMediaPlayer::LoadedMedia);
                         }
                     }
@@ -482,39 +482,39 @@ void MpvObject::eventHandler()
 
             } else if (strcmp(prop->name, "chapter") == 0) {
                 if (prop->format == MPV_FORMAT_INT64) {
-                    emit chapterChanged();
+                    Q_EMIT chapterChanged();
                 }
             } else if (strcmp(prop->name, "aid") == 0) {
                 if (prop->format == MPV_FORMAT_INT64) {
-                    emit audioIdChanged();
+                    Q_EMIT audioIdChanged();
                 }
             } else if (strcmp(prop->name, "sid") == 0) {
                 if (prop->format == MPV_FORMAT_INT64) {
-                    emit subtitleIdChanged();
+                    Q_EMIT subtitleIdChanged();
                 } else {
-                    emit subtitleIdChanged();
+                    Q_EMIT subtitleIdChanged();
                 }
             } else if (strcmp(prop->name, "secondary-sid") == 0) {
                 if (prop->format == MPV_FORMAT_INT64) {
-                    emit secondarySubtitleIdChanged();
+                    Q_EMIT secondarySubtitleIdChanged();
                 } else {
-                    emit secondarySubtitleIdChanged();
+                    Q_EMIT secondarySubtitleIdChanged();
                 }
             } else if (strcmp(prop->name, "contrast") == 0) {
                 if (prop->format == MPV_FORMAT_INT64) {
-                    emit contrastChanged();
+                    Q_EMIT contrastChanged();
                 }
             } else if (strcmp(prop->name, "brightness") == 0) {
                 if (prop->format == MPV_FORMAT_INT64) {
-                    emit brightnessChanged();
+                    Q_EMIT brightnessChanged();
                 }
             } else if (strcmp(prop->name, "gamma") == 0) {
                 if (prop->format == MPV_FORMAT_INT64) {
-                    emit gammaChanged();
+                    Q_EMIT gammaChanged();
                 }
             } else if (strcmp(prop->name, "saturation") == 0) {
                 if (prop->format == MPV_FORMAT_INT64) {
-                    emit saturationChanged();
+                    Q_EMIT saturationChanged();
                 }
             }
             break;
@@ -526,7 +526,7 @@ void MpvObject::eventHandler()
 
             if (msg->log_level == MPV_LOG_LEVEL_ERROR) {
                 //                    lastErrorString = QString::fromUtf8(msg->text);
-                emit error(QString::fromUtf8(msg->text));
+                Q_EMIT error(QString::fromUtf8(msg->text));
                 setStatus(QMediaPlayer::InvalidMedia);
 
             }
@@ -596,8 +596,8 @@ void MpvObject::loadTracks()
 
     m_audioTracksModel->setTracks(m_audioTracks);
 
-    emit audioTracksModelChanged();
-    emit subtitleTracksModelChanged();
+    Q_EMIT audioTracksModelChanged();
+    Q_EMIT subtitleTracksModelChanged();
 }
 
 void MpvObject::play()
@@ -608,7 +608,7 @@ void MpvObject::play()
 void MpvObject::stop()
 {
     this->command(QStringList () << "stop" << "");
-    emit this->stopped();
+    Q_EMIT this->stopped();
 }
 
 void MpvObject::pause()
@@ -634,7 +634,7 @@ void MpvObject::setHardwareDecoding(bool hardwareDecoding)
         setProperty("hwdec", "no");
     }
 
-    emit hardwareDecodingChanged(m_hardwareDecoding);
+    Q_EMIT hardwareDecodingChanged(m_hardwareDecoding);
 }
 
 TracksModel *MpvObject::subtitleTracksModel() const
@@ -664,7 +664,7 @@ void MpvObject::setSource(QUrl url)
         this->playUrl();
     }
 
-    emit sourceChanged(m_source);
+    Q_EMIT sourceChanged(m_source);
 }
 
 void MpvObject::setAutoPlay(bool autoPlay)
@@ -673,7 +673,7 @@ void MpvObject::setAutoPlay(bool autoPlay)
         return;
 
     m_autoPlay = autoPlay;
-    emit autoPlayChanged(m_autoPlay);
+    Q_EMIT autoPlayChanged(m_autoPlay);
 }
 
 QVariant MpvObject::getProperty(const QString &name)
@@ -700,13 +700,13 @@ bool MpvObject::autoPlay() const
 void MpvObject::setPlaybackState(const QMediaPlayer::State &state)
 {
     m_playbackState = state;
-    emit this->playbackStateChanged(m_playbackState);
+    Q_EMIT this->playbackStateChanged(m_playbackState);
 }
 
 void MpvObject::setStatus(const QMediaPlayer::MediaStatus  &status)
 {
     m_status = status;
-    emit this->statusChanged(m_status);
+    Q_EMIT this->statusChanged(m_status);
 }
 
 QMediaPlayer::State MpvObject::getPlaybackState() const

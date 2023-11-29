@@ -29,7 +29,7 @@ AsyncImageResponse::AsyncImageResponse(const QString &id, const QSize &requested
     {
        qDebug() << "image Ready" << img.height();
        m_image = img;
-       emit this->finished();
+       Q_EMIT this->finished();
     });
 
     surface->request(QUrl::fromUserInput(id).toLocalFile(), requestedSize.width(), requestedSize.height());
@@ -38,7 +38,7 @@ AsyncImageResponse::AsyncImageResponse(const QString &id, const QSize &requested
     {
         m_error = error;
         this->cancel();
-        emit this->finished();
+        Q_EMIT this->finished();
     });
 }
 
@@ -76,7 +76,7 @@ void Surface::request(const QString& path, int width, int /*height*/)
     if (cachedImg) {
         img = *cachedImg;
 
-        emit this->previewReady(img);
+        Q_EMIT this->previewReady(img);
         return;
     }
 
@@ -106,7 +106,7 @@ void Surface::request(const QString& path, int width, int /*height*/)
 
         if (seqIdx == 0) {
 
-            emit this->previewReady(img);
+            Q_EMIT this->previewReady(img);
             return;
         }
 
@@ -125,11 +125,11 @@ void Surface::request(const QString& path, int width, int /*height*/)
 
     if (!img.isNull()) {
         // seqIdx 0 will be served from KIO's regular thumbnail cache.
-        emit this->previewReady(img);
+        Q_EMIT this->previewReady(img);
         return;
     }
 
-   emit this->error("Image preview could not be generated");
+   Q_EMIT this->error("Image preview could not be generated");
 }
 
 

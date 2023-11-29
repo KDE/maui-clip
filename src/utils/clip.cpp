@@ -77,7 +77,7 @@ QStringList Clip::sources() const
 
 void Clip::openVideos(const QList<QUrl> &urls)
 {
-    emit this->openUrls(QUrl::toStringList(urls));
+    Q_EMIT this->openUrls(QUrl::toStringList(urls));
 }
 
 void Clip::refreshCollection()
@@ -95,11 +95,11 @@ void Clip::showInFolder(const QStringList &urls)
 void Clip::addSources(const QStringList &paths)
 {
     saveSourcePath(paths);
-    emit sourcesChanged();
+    Q_EMIT sourcesChanged();
 }
 
 void Clip::removeSources(const QString &path)
 {
     removeSourcePath(path);
-    emit sourcesChanged();
+    Q_EMIT sourcesChanged();
 }

@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef ANDROIDLOCKBACKEND_H
-#define ANDROIDLOCKBACKEND_H
+#pragma once
 
 #include <QObject>
 #include "../lockmanager.h"
@@ -20,6 +19,3 @@ public:
     void setInhibitionOff() override;
     void setInhibitionOn(const QString &explanation) override;
 };
-
-#endif //  ANDROIDBRIGHTNESSBACKEND_H
-

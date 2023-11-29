@@ -1,5 +1,4 @@
-#ifndef YOUTUBEMODEL_H
-#define YOUTUBEMODEL_H
+#pragma once
 
 #include <MauiKit3/Core/mauilist.h>
 #include <QObject>
@@ -32,7 +31,7 @@ public slots:
 
     void setLimit(int limit);
 
-signals:
+Q_SIGNALS:
     void queryChanged(QString query);
 
     void keyChanged(QString key);
@@ -50,5 +49,3 @@ private:
     QString m_key;
     int m_limit = 10;
 };
-
-#endif // YOUTUBEMODEL_H

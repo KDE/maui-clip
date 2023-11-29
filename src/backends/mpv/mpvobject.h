@@ -4,8 +4,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-#ifndef MPVOBJECT_H
-#define MPVOBJECT_H
+#pragma once
 
 #include <QtQuick/QQuickFramebufferObject>
 
@@ -194,7 +193,7 @@ public:
 
     bool hardwareDecoding() const;
 
-public slots:
+public Q_SLOTS:
     static void mpvEvents(void *ctx);
     void eventHandler();
     int setProperty(const QString &name, const QVariant &value);
@@ -211,7 +210,7 @@ public slots:
 
     void setHardwareDecoding(bool hardwareDecoding);
 
-signals:
+Q_SIGNALS:
     void mediaTitleChanged();
     void positionChanged();
     void durationChanged();
@@ -289,5 +288,3 @@ public:
 
     void render() override final;
 };
-
-#endif // MPVOBJECT_H

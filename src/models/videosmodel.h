@@ -1,5 +1,4 @@
-#ifndef VIDEOSMODEL_H
-#define VIDEOSMODEL_H
+#pragma once
 
 #include <QObject>
 
@@ -68,7 +67,7 @@ private:
 
     int m_limit = CINEMA_QUERY_MAX_LIMIT;
 
-signals:
+Q_SIGNALS:
     void urlsChanged();
     void foldersChanged();
     void autoReloadChanged();
@@ -80,7 +79,7 @@ signals:
 
     void filesChanged();
 
-public slots:
+public Q_SLOTS:
     bool remove(const int &index);
     bool deleteAt(const int &index);
 
@@ -99,5 +98,3 @@ public:
     void classBegin() override final;
     void componentComplete() override final;
 };
-
-#endif // VIDEOSMODEL_H

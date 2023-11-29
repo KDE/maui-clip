@@ -123,6 +123,5 @@ Maui.AltBrowser
                 }
             }
         }
-
     }
 }

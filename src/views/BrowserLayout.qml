@@ -97,7 +97,7 @@ Maui.AltBrowser
             control.currentView.itemsSelected([index])
         }
 
-        onClicked:
+        onClicked: (mouse) =>
         {
             control.currentIndex = index
             if(selectionMode || (mouse.button == Qt.LeftButton && (mouse.modifiers & Qt.ControlModifier)))
@@ -240,7 +240,7 @@ Maui.AltBrowser
             }
         }
 
-        onClicked:
+        onClicked: (mouse) =>
         {
             control.currentIndex = index
             if(selectionMode || (mouse.button == Qt.LeftButton && (mouse.modifiers & Qt.ControlModifier)))

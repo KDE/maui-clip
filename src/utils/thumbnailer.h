@@ -1,5 +1,4 @@
-#ifndef THUMBNAILER_H
-#define THUMBNAILER_H
+#pragma once
 
 #include <QQuickImageProvider>
 #include <QCache>
@@ -22,7 +21,7 @@ private:
     ffmpegthumbnailer::FilmStripFilter  m_FilmStrip;
     ThumbCache m_thumbCache;
 
-signals:
+Q_SIGNALS:
     void previewReady(QImage image);
     void error(QString error);
 };
@@ -46,5 +45,3 @@ class Thumbnailer : public QQuickAsyncImageProvider
 public:
     QQuickImageResponse *requestImageResponse(const QString &id, const QSize &requestedSize) override;
 };
-
-#endif // THUMBNAILER_H

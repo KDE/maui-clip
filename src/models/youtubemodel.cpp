@@ -39,7 +39,7 @@ void YouTubeModel::setQuery(QString query)
         return;
 
     m_query = query;
-    emit queryChanged(m_query);
+    Q_EMIT queryChanged(m_query);
 }
 
 void YouTubeModel::setKey(QString key)
@@ -48,7 +48,7 @@ void YouTubeModel::setKey(QString key)
         return;
 
     m_key = key;
-    emit keyChanged(m_key);
+    Q_EMIT keyChanged(m_key);
 }
 
 void YouTubeModel::setLimit(int limit)
@@ -57,17 +57,17 @@ void YouTubeModel::setLimit(int limit)
         return;
 
     m_limit = limit;
-    emit limitChanged(m_limit);
+    Q_EMIT limitChanged(m_limit);
 }
 
 void YouTubeModel::setList(const FMH::MODEL_LIST &data)
 {
     this->m_list.clear();
-    emit this->preListChanged();
+    Q_EMIT this->preListChanged();
 
     this->m_list = data;
 
-    emit this->postListChanged();
+    Q_EMIT this->postListChanged();
 }
 
 void YouTubeModel::request(const QString &query)

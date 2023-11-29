@@ -27,15 +27,15 @@ VideosModel::VideosModel(QObject *parent) : MauiList(parent)
     connect(m_fileLoader, &FMH::FileLoader::finished,[this](FMH::MODEL_LIST items)
     {
         qDebug() << "Items finished" << items.size();
-        emit this->filesChanged();
+        Q_EMIT this->filesChanged();
     });
 
     connect(m_fileLoader, &FMH::FileLoader::itemsReady,[this](FMH::MODEL_LIST items)
     {
-        emit this->preListChanged();
+        Q_EMIT this->preListChanged();
         this-> list << items;
-        emit this->postListChanged();
-        emit this->countChanged();
+        Q_EMIT this->postListChanged();
+        Q_EMIT this->countChanged();
     });
 
     connect(m_fileLoader, &FMH::FileLoader::itemReady,[this](FMH::MODEL item)
@@ -75,7 +75,7 @@ void VideosModel::setUrls(const QStringList &urls)
 
     this->m_urls = urls;
     this->clear();
-    emit this->urlsChanged();   
+    Q_EMIT this->urlsChanged();
 }
 
 QStringList VideosModel::urls() const
@@ -94,7 +94,7 @@ void VideosModel::setAutoScan(const bool &value)
         return;
 
     m_autoScan = value;
-    emit autoScanChanged();
+    Q_EMIT autoScanChanged();
 }
 
 bool VideosModel::autoScan() const
@@ -108,7 +108,7 @@ void VideosModel::setAutoReload(const bool &value)
         return;
 
     m_autoReload = value;
-    emit autoReloadChanged();
+    Q_EMIT autoReloadChanged();
 }
 
 bool VideosModel::autoReload() const
@@ -155,7 +155,7 @@ void VideosModel::insertFolder(const QUrl &path)
             this->m_watcher->addPath(path.toLocalFile());
         }
 
-        emit foldersChanged();
+        Q_EMIT foldersChanged();
     }
 }
 
@@ -164,10 +164,10 @@ bool VideosModel::remove(const int &index)
     if (index >= this->list.size() || index < 0)
         return false;
 
-    emit this->preItemRemoved(index);
+    Q_EMIT this->preItemRemoved(index);
     this->list.removeAt(index);
-    emit this->postItemRemoved();
-    emit this->countChanged();
+    Q_EMIT this->postItemRemoved();
+    Q_EMIT this->countChanged();
 
     return true;
 }
@@ -177,42 +177,42 @@ bool VideosModel::deleteAt(const int &index)
     if(index >= this->list.size() || index < 0)
         return false;
 
-    emit this->preItemRemoved(index);
+    Q_EMIT this->preItemRemoved(index);
     auto item = this->list.takeAt(index);
     FMStatic::removeFiles ({item[FMH::MODEL_KEY::URL]});
-    emit this->postItemRemoved();
-    emit this->countChanged();
+    Q_EMIT this->postItemRemoved();
+    Q_EMIT this->countChanged();
 
     return true;
 }
 
 void VideosModel::append(const QVariantMap &item)
 {
-    emit this->preItemAppended();
+    Q_EMIT this->preItemAppended();
     this->list << FMH::toModel (item);
-    emit this->postItemAppended();
-    emit this->countChanged();
+    Q_EMIT this->postItemAppended();
+    Q_EMIT this->countChanged();
 }
 
 void VideosModel::appendUrl(const QString &url)
 {
-    emit this->preItemAppended();
+    Q_EMIT this->preItemAppended();
     this->list << FMStatic::getFileInfoModel(QUrl::fromUserInput (url));
-    emit this->postItemAppended();
-    emit this->countChanged();
+    Q_EMIT this->postItemAppended();
+    Q_EMIT this->countChanged();
 }
 
 void VideosModel::clear()
 {
-    emit this->preListChanged();
+    Q_EMIT this->preListChanged();
     this->list.clear ();
-    emit this->postListChanged();
-    emit this->countChanged();
+    Q_EMIT this->postListChanged();
+    Q_EMIT this->countChanged();
 
     this->m_watcher->removePaths(m_watcher->directories());
 
     this->m_folders.clear ();
-    emit foldersChanged();
+    Q_EMIT foldersChanged();
 }
 
 void VideosModel::rescan()
@@ -226,7 +226,7 @@ void VideosModel::setRecursive(bool recursive)
         return;
 
     m_recursive = recursive;
-    emit recursiveChanged(m_recursive);
+    Q_EMIT recursiveChanged(m_recursive);
 }
 
 void VideosModel::setlimit(int limit)
@@ -235,7 +235,7 @@ void VideosModel::setlimit(int limit)
         return;
 
     m_limit = limit;
-    emit limitChanged(m_limit);
+    Q_EMIT limitChanged(m_limit);
 }
 
 

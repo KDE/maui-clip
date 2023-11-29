@@ -12,21 +12,11 @@ Clip.Video
 {
     id: control
     url: currentVideo.url
-    focus: true
 
     property alias player : control
 
     property var currentVideo : ({})
     property int currentVideoIndex : -1
-
-    Keys.enabled: true
-    Keys.onSpacePressed: player.playbackState === MediaPlayer.PlayingState ? player.pause() : player.play()
-    Keys.onLeftPressed: player.seek(player.position - 500)
-    Keys.onRightPressed: player.seek(player.position + 500)
-
-    Maui.Theme.inherit: false
-    Maui.Theme.backgroundColor: "#333"
-    Maui.Theme.textColor: "#fafafa"
 
     Connections
     {
@@ -34,7 +24,6 @@ Clip.Video
 
         function onPlaybackStateChanged()
         {
-
             console.log("Playbakc state changed", control.player.playing, control.player.stopped)
 
             if(control.player.playing)

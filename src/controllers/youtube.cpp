@@ -98,7 +98,7 @@ bool YouTube::packQueryResults(const QByteArray &array)
         }
     }
 
-    emit this->queryResultsReady(res);
+    Q_EMIT this->queryResultsReady(res);
     return true;
 }
 
