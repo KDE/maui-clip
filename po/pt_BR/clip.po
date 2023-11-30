@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:28+0000\n"
+"POT-Creation-Date: 2023-11-30 00:40+0000\n"
 "PO-Revision-Date: 2023-11-14 14:19-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -42,37 +42,37 @@ msgstr "Tente com outra consulta"
 msgid "Search videos..."
 msgstr "Pesquisar vídeos..."
 
-#: src/main.cpp:97
+#: src/main.cpp:101
 #, kde-format
 msgid "Clip"
 msgstr "Clip"
 
-#: src/main.cpp:99
+#: src/main.cpp:103
 #, kde-format
 msgid "Browse and play your videos."
 msgstr "Navegue e reproduza seus vídeos."
 
-#: src/main.cpp:101
+#: src/main.cpp:105
 #, kde-format
 msgid "© 2019-2023 Maui Development Team"
 msgstr "© 2019-2023 Equipe de desenvolvimento do Maui"
 
-#: src/main.cpp:104
+#: src/main.cpp:108
 #, kde-format
 msgid "Camilo Higuita"
 msgstr "Camilo Higuita"
 
-#: src/main.cpp:104
+#: src/main.cpp:108
 #, kde-format
 msgid "Developer"
 msgstr "Desenvolvedor"
 
-#: src/main.qml:91 src/views/collection/CollectionView.qml:39
+#: src/main.qml:89 src/views/collection/CollectionView.qml:39
 #, kde-format
 msgid "Open URL"
 msgstr "Abrir URL"
 
-#: src/main.qml:93
+#: src/main.qml:91
 #, kde-format
 msgid ""
 "Enter any remote location, like YouTube video URLs, or from other services "
@@ -81,39 +81,39 @@ msgstr ""
 "Insira qualquer local remoto, como URLs de vídeos do YouTube ou de outros "
 "serviços suportados pelo MPV."
 
-#: src/main.qml:125
+#: src/main.qml:123
 #, kde-format
 msgid "Delete files?"
 msgstr "Excluir arquivos?"
 
-#: src/main.qml:127
+#: src/main.qml:125
 #, kde-format
 msgid "Are sure you want to delete %1 files"
 msgstr "Tem certeza que deseja excluir %1 arquivos"
 
-#: src/main.qml:174
+#: src/main.qml:173
 #, kde-format
 msgid "Now playing"
 msgstr "Reproduzindo agora"
 
-#: src/main.qml:275 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:281 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "Nada aqui!"
 
-#: src/main.qml:276
+#: src/main.qml:282
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr "Abra um novo vídeo da sua coleção ou sistema de arquivos."
 
 #. i18n("Screenshots")}};
-#: src/main.qml:296 src/models/tagsmodel.cpp:14
+#: src/main.qml:302 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:53
 #, kde-format
 msgid "Collection"
 msgstr "Coleção"
 
-#: src/main.qml:462
+#: src/main.qml:468
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "Alterar barra lateral"
@@ -161,7 +161,7 @@ msgstr "Sobre"
 msgid "Toggle sidebar"
 msgstr "Alterar barra lateral"
 
-#: src/views/collection/CollectionView.qml:82 src/views/player/Playlist.qml:20
+#: src/views/collection/CollectionView.qml:82 src/views/player/Playlist.qml:21
 #: src/views/tags/TagsView.qml:38
 #, kde-format
 msgid "No Videos!"
@@ -251,12 +251,12 @@ msgstr "Legendas"
 msgid "Audio Tracks"
 msgstr "Faixas de áudio"
 
-#: src/views/player/PlayerView.qml:42
+#: src/views/player/PlayerView.qml:31
 #, kde-format
 msgid "Playing mode"
 msgstr "Modo de reprodução"
 
-#: src/views/player/Playlist.qml:21
+#: src/views/player/Playlist.qml:22
 #, kde-format
 msgid "Add videos to the playlist."
 msgstr "Adicione vídeos à lista de reprodução."

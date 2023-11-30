@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:28+0000\n"
+"POT-Creation-Date: 2023-11-30 00:40+0000\n"
 "PO-Revision-Date: 2023-10-28 09:12+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -45,37 +45,37 @@ msgstr "Спробуйте інший запит"
 msgid "Search videos..."
 msgstr "Шукати відео…"
 
-#: src/main.cpp:97
+#: src/main.cpp:101
 #, kde-format
 msgid "Clip"
 msgstr "Кліп"
 
-#: src/main.cpp:99
+#: src/main.cpp:103
 #, kde-format
 msgid "Browse and play your videos."
 msgstr "Навігація збіркою відео та відтворення відео."
 
-#: src/main.cpp:101
+#: src/main.cpp:105
 #, kde-format
 msgid "© 2019-2023 Maui Development Team"
 msgstr "© Команда розробників Maui, 2019–2023"
 
-#: src/main.cpp:104
+#: src/main.cpp:108
 #, kde-format
 msgid "Camilo Higuita"
 msgstr "Camilo Higuita"
 
-#: src/main.cpp:104
+#: src/main.cpp:108
 #, kde-format
 msgid "Developer"
 msgstr "Розробник"
 
-#: src/main.qml:91 src/views/collection/CollectionView.qml:39
+#: src/main.qml:89 src/views/collection/CollectionView.qml:39
 #, kde-format
 msgid "Open URL"
 msgstr "Відкрити адресу"
 
-#: src/main.qml:93
+#: src/main.qml:91
 #, kde-format
 msgid ""
 "Enter any remote location, like YouTube video URLs, or from other services "
@@ -84,39 +84,39 @@ msgstr ""
 "Введіть будь-яку віддалену адресу, наприклад адресу відео YouTube або інших "
 "служб, підтримку яких передбачено у MPV."
 
-#: src/main.qml:125
+#: src/main.qml:123
 #, kde-format
 msgid "Delete files?"
 msgstr "Вилучити файли?"
 
-#: src/main.qml:127
+#: src/main.qml:125
 #, kde-format
 msgid "Are sure you want to delete %1 files"
 msgstr "Ви справді хочете вилучити %1 файлів"
 
-#: src/main.qml:174
+#: src/main.qml:173
 #, kde-format
 msgid "Now playing"
 msgstr "Зараз відтворюється"
 
-#: src/main.qml:275 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:281 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "Тут нічого немає!"
 
-#: src/main.qml:276
+#: src/main.qml:282
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr "Відкрийте нове відео з вашої збірки або файлової системи."
 
 #. i18n("Screenshots")}};
-#: src/main.qml:296 src/models/tagsmodel.cpp:14
+#: src/main.qml:302 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:53
 #, kde-format
 msgid "Collection"
 msgstr "Збірка"
 
-#: src/main.qml:462
+#: src/main.qml:468
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "Увімкнути чи вимкнути бічну панель"
@@ -166,7 +166,7 @@ msgstr "Про програму"
 msgid "Toggle sidebar"
 msgstr "Увімкнути/Вимкнути бічну панель"
 
-#: src/views/collection/CollectionView.qml:82 src/views/player/Playlist.qml:20
+#: src/views/collection/CollectionView.qml:82 src/views/player/Playlist.qml:21
 #: src/views/tags/TagsView.qml:38
 #, kde-format
 msgid "No Videos!"
@@ -256,12 +256,12 @@ msgstr "Субтитри"
 msgid "Audio Tracks"
 msgstr "Звукові доріжки"
 
-#: src/views/player/PlayerView.qml:42
+#: src/views/player/PlayerView.qml:31
 #, kde-format
 msgid "Playing mode"
 msgstr "Режим відтворення"
 
-#: src/views/player/Playlist.qml:21
+#: src/views/player/Playlist.qml:22
 #, kde-format
 msgid "Add videos to the playlist."
 msgstr "Додайте відео до списку відтворення."

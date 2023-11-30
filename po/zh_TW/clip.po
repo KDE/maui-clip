@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:28+0000\n"
+"POT-Creation-Date: 2023-11-30 00:40+0000\n"
 "PO-Revision-Date: 2023-02-24 23:19+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -45,77 +45,77 @@ msgstr "試試看別的查詢"
 msgid "Search videos..."
 msgstr "搜尋影片…"
 
-#: src/main.cpp:97
+#: src/main.cpp:101
 #, kde-format
 msgid "Clip"
 msgstr "Clip"
 
-#: src/main.cpp:99
+#: src/main.cpp:103
 #, kde-format
 msgid "Browse and play your videos."
 msgstr "瀏覽並播放您的影片。"
 
-#: src/main.cpp:101
+#: src/main.cpp:105
 #, fuzzy, kde-format
 #| msgid "© 2019-%1 Maui Development Team"
 msgid "© 2019-2023 Maui Development Team"
 msgstr "© 2019-%1 Maui 開發團隊"
 
-#: src/main.cpp:104
+#: src/main.cpp:108
 #, kde-format
 msgid "Camilo Higuita"
 msgstr "Camilo Higuita"
 
-#: src/main.cpp:104
+#: src/main.cpp:108
 #, kde-format
 msgid "Developer"
 msgstr "開發者"
 
-#: src/main.qml:91 src/views/collection/CollectionView.qml:39
+#: src/main.qml:89 src/views/collection/CollectionView.qml:39
 #, kde-format
 msgid "Open URL"
 msgstr "開啟網址"
 
-#: src/main.qml:93
+#: src/main.qml:91
 #, kde-format
 msgid ""
 "Enter any remote location, like YouTube video URLs, or from other services "
 "supported by MPV."
 msgstr "輸入任何遠端位置，像是 YouTube 影片網址，或是其他任何 MPV 支援的服務。"
 
-#: src/main.qml:125
+#: src/main.qml:123
 #, kde-format
 msgid "Delete files?"
 msgstr "刪除檔案？"
 
-#: src/main.qml:127
+#: src/main.qml:125
 #, kde-format
 msgid "Are sure you want to delete %1 files"
 msgstr "您確定要刪除 %1 個檔案嗎"
 
-#: src/main.qml:174
+#: src/main.qml:173
 #, kde-format
 msgid "Now playing"
 msgstr "現正播放"
 
-#: src/main.qml:275 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:281 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "這裡什麼都沒有！"
 
-#: src/main.qml:276
+#: src/main.qml:282
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr "從您的收藏或檔案系統裡開啟影片。"
 
 #. i18n("Screenshots")}};
-#: src/main.qml:296 src/models/tagsmodel.cpp:14
+#: src/main.qml:302 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:53
 #, kde-format
 msgid "Collection"
 msgstr "收藏"
 
-#: src/main.qml:462
+#: src/main.qml:468
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "切換側邊欄"
@@ -162,7 +162,7 @@ msgstr "關於"
 msgid "Toggle sidebar"
 msgstr "切換側邊欄"
 
-#: src/views/collection/CollectionView.qml:82 src/views/player/Playlist.qml:20
+#: src/views/collection/CollectionView.qml:82 src/views/player/Playlist.qml:21
 #: src/views/tags/TagsView.qml:38
 #, kde-format
 msgid "No Videos!"
@@ -252,12 +252,12 @@ msgstr "字幕"
 msgid "Audio Tracks"
 msgstr "音效音軌"
 
-#: src/views/player/PlayerView.qml:42
+#: src/views/player/PlayerView.qml:31
 #, kde-format
 msgid "Playing mode"
 msgstr "播放模式"
 
-#: src/views/player/Playlist.qml:21
+#: src/views/player/Playlist.qml:22
 #, kde-format
 msgid "Add videos to the playlist."
 msgstr "新增影片到播放清單。"
