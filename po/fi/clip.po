@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: maui-cinema\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-30 00:40+0000\n"
-"PO-Revision-Date: 2023-03-06 13:40+0200\n"
+"PO-Revision-Date: 2023-11-19 19:35+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -53,10 +53,9 @@ msgid "Browse and play your videos."
 msgstr "Selaa ja toista videoitasi."
 
 #: src/main.cpp:105
-#, fuzzy, kde-format
-#| msgid "© 2019-%1 Maui Development Team"
+#, kde-format
 msgid "© 2019-2023 Maui Development Team"
-msgstr "© 2019–%1 Maui-kehitysryhmä"
+msgstr "© 2019–2023 Maui-kehitysryhmä"
 
 #: src/main.cpp:108
 #, kde-format
