@@ -4,21 +4,21 @@
 # This file is distributed under the same license as the maui-clip package.
 #
 # Automatically generated, 2022.
-# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
+# SPDX-FileCopyrightText: 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-30 00:40+0000\n"
-"PO-Revision-Date: 2023-02-24 23:19+0900\n"
+"PO-Revision-Date: 2024-02-07 23:40+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
-"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 24.01.95\n"
 
 #: src/controllers/YouTube.qml:95
 #, kde-format
@@ -56,10 +56,9 @@ msgid "Browse and play your videos."
 msgstr "瀏覽並播放您的影片。"
 
 #: src/main.cpp:105
-#, fuzzy, kde-format
-#| msgid "© 2019-%1 Maui Development Team"
+#, kde-format
 msgid "© 2019-2023 Maui Development Team"
-msgstr "© 2019-%1 Maui 開發團隊"
+msgstr "© 2019-2023 Maui 開發團隊"
 
 #: src/main.cpp:108
 #, kde-format
