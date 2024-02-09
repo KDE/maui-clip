@@ -98,14 +98,14 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
     KLocalizedString::setApplicationDomain("clip");
     KAboutData about(QStringLiteral("clip"),
-                     i18n("Clip"),
+                     QStringLiteral("Clip"),
                      CLIP_VERSION_STRING,
                      i18n("Browse and play your videos."),
                      KAboutLicense::LGPL_V3,
-                     i18n("© 2019-2023 Maui Development Team"),
+                     APP_COPYRIGHT_NOTICE,
                      QString(GIT_BRANCH) + "/" + QString(GIT_COMMIT_HASH));
 
-    about.addAuthor(i18n("Camilo Higuita"), i18n("Developer"), QStringLiteral("milo.h@aol.com"));
+    about.addAuthor(QStringLiteral("Camilo Higuita"), i18n("Developer"), QStringLiteral("milo.h@aol.com"));
     about.setHomepage("https://mauikit.org");
     about.setProductName("maui/clip");
     about.setBugAddress("https://invent.kde.org/maui/clip/-/issues");
