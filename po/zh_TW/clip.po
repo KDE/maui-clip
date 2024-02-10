@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-30 00:40+0000\n"
+"POT-Creation-Date: 2024-02-10 01:51+0000\n"
 "PO-Revision-Date: 2024-02-07 23:40+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -45,25 +45,10 @@ msgstr "試試看別的查詢"
 msgid "Search videos..."
 msgstr "搜尋影片…"
 
-#: src/main.cpp:101
-#, kde-format
-msgid "Clip"
-msgstr "Clip"
-
 #: src/main.cpp:103
 #, kde-format
 msgid "Browse and play your videos."
 msgstr "瀏覽並播放您的影片。"
-
-#: src/main.cpp:105
-#, kde-format
-msgid "© 2019-2023 Maui Development Team"
-msgstr "© 2019-2023 Maui 開發團隊"
-
-#: src/main.cpp:108
-#, kde-format
-msgid "Camilo Higuita"
-msgstr "Camilo Higuita"
 
 #: src/main.cpp:108
 #, kde-format
@@ -434,6 +419,15 @@ msgstr "開始搜尋線上影片。"
 #, kde-format
 msgid "Search..."
 msgstr "搜尋…"
+
+#~ msgid "Clip"
+#~ msgstr "Clip"
+
+#~ msgid "© 2019-2023 Maui Development Team"
+#~ msgstr "© 2019-2023 Maui 開發團隊"
+
+#~ msgid "Camilo Higuita"
+#~ msgstr "Camilo Higuita"
 
 #~ msgid "Configure the app behavior."
 #~ msgstr "設定應用程式行為。"

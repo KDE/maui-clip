@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the maui-clip package.
-# Shinjo Park <kde@peremen.name>, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-30 00:40+0000\n"
-"PO-Revision-Date: 2023-07-26 00:26+0200\n"
+"POT-Creation-Date: 2024-02-10 01:51+0000\n"
+"PO-Revision-Date: 2024-02-10 00:18+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: src/controllers/YouTube.qml:95
 #, kde-format
@@ -42,26 +42,10 @@ msgstr "다른 검색어로 시도하십시오"
 msgid "Search videos..."
 msgstr "동영상 검색..."
 
-#: src/main.cpp:101
-#, kde-format
-msgid "Clip"
-msgstr "Clip"
-
 #: src/main.cpp:103
 #, kde-format
 msgid "Browse and play your videos."
 msgstr "동영상을 탐색하고 재생합니다."
-
-#: src/main.cpp:105
-#, fuzzy, kde-format
-#| msgid "© 2019-%1 Maui Development Team"
-msgid "© 2019-2023 Maui Development Team"
-msgstr "© 2019-%1 Maui Development Team"
-
-#: src/main.cpp:108
-#, kde-format
-msgid "Camilo Higuita"
-msgstr "Camilo Higuita"
 
 #: src/main.cpp:108
 #, kde-format
@@ -434,6 +418,15 @@ msgstr "온라인 동영상 검색을 시작합니다."
 #, kde-format
 msgid "Search..."
 msgstr "검색..."
+
+#~ msgid "Clip"
+#~ msgstr "Clip"
+
+#~ msgid "© 2019-2023 Maui Development Team"
+#~ msgstr "© 2019-2023 Maui Development Team"
+
+#~ msgid "Camilo Higuita"
+#~ msgstr "Camilo Higuita"
 
 #~ msgid "Configure the app behavior."
 #~ msgstr "앱 행동을 설정합니다."
