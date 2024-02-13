@@ -23,7 +23,6 @@ Maui.ApplicationWindow
     id: root
 
     title: _playerView.currentVideo.label
-    Maui.Style.styleType: Maui.Handy.isAndroid ? (settings.darkMode ? Maui.Style.Dark : Maui.Style.Light) : undefined
 
     property bool selectionMode : false
 
@@ -56,7 +55,6 @@ Maui.ApplicationWindow
         property bool playerTagBar: true
         property string youtubeKey: "AIzaSyDMLmTSEN7i6psE2tHdaG6hy3ljWKXIYBk"
         property int youtubeQueryLimit : 50
-        property bool darkMode : true
     }
 
     Loader
@@ -518,20 +516,6 @@ Maui.ApplicationWindow
                 _playlist.list.appendUrl(url)
 
             playAt(_playlist.count - urls.length)
-        }
-    }
-
-    Component.onCompleted:
-    {
-        setAndroidStatusBarColor()
-    }
-
-    function setAndroidStatusBarColor()
-    {
-        if(Maui.Handy.isAndroid)
-        {
-            Maui.Android.statusbarColor( Maui.Theme.backgroundColor, !settings.darkMode)
-            Maui.Android.navBarColor(Maui.Theme.backgroundColor, !settings.darkMode)
         }
     }
 

@@ -29,23 +29,6 @@ Maui.SettingsDialog
                 onValueChanged: settings.volumeStep = value
             }
         }
-
-        Maui.SectionItem
-        {
-            label1.text: i18n("Dark Mode")
-            label2.text: i18n("Switch between light and dark colorscheme")
-
-            Switch
-            {
-                Layout.fillHeight: true
-                checked: settings.darkMode
-                onToggled:
-                {
-                     settings.darkMode = !settings.darkMode
-                    setAndroidStatusBarColor()
-                }
-            }
-        }
     }
 
     Maui.SectionGroup
