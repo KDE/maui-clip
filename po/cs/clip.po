@@ -415,12 +415,3 @@ msgstr ""
 #, kde-format
 msgid "Search..."
 msgstr "Hledat..."
-
-#~ msgid "Clip"
-#~ msgstr "Klip"
-
-#~ msgid "© 2019-2023 Maui Development Team"
-#~ msgstr "© 2019-2023 Vývojový tým Maui"
-
-#~ msgid "Camilo Higuita"
-#~ msgstr "Camilo Higuita"
