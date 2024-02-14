@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-10 01:51+0000\n"
+"POT-Creation-Date: 2024-02-14 01:39+0000\n"
 "PO-Revision-Date: 2024-02-07 23:40+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -55,51 +55,51 @@ msgstr "瀏覽並播放您的影片。"
 msgid "Developer"
 msgstr "開發者"
 
-#: src/main.qml:89 src/views/collection/CollectionView.qml:39
+#: src/main.qml:87 src/views/collection/CollectionView.qml:39
 #, kde-format
 msgid "Open URL"
 msgstr "開啟網址"
 
-#: src/main.qml:91
+#: src/main.qml:89
 #, kde-format
 msgid ""
 "Enter any remote location, like YouTube video URLs, or from other services "
 "supported by MPV."
 msgstr "輸入任何遠端位置，像是 YouTube 影片網址，或是其他任何 MPV 支援的服務。"
 
-#: src/main.qml:123
+#: src/main.qml:121
 #, kde-format
 msgid "Delete files?"
 msgstr "刪除檔案？"
 
-#: src/main.qml:125
+#: src/main.qml:123
 #, kde-format
 msgid "Are sure you want to delete %1 files"
 msgstr "您確定要刪除 %1 個檔案嗎"
 
-#: src/main.qml:173
+#: src/main.qml:171
 #, kde-format
 msgid "Now playing"
 msgstr "現正播放"
 
-#: src/main.qml:281 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:279 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "這裡什麼都沒有！"
 
-#: src/main.qml:282
+#: src/main.qml:280
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr "從您的收藏或檔案系統裡開啟影片。"
 
 #. i18n("Screenshots")}};
-#: src/main.qml:302 src/models/tagsmodel.cpp:14
-#: src/views/settings/SettingsDialog.qml:53
+#: src/main.qml:300 src/models/tagsmodel.cpp:14
+#: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Collection"
 msgstr "收藏"
 
-#: src/main.qml:468
+#: src/main.qml:466
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "切換側邊欄"
@@ -276,112 +276,102 @@ msgstr "一般"
 msgid "Volume Step"
 msgstr "音量間隔值"
 
-#: src/views/settings/SettingsDialog.qml:35
-#, kde-format
-msgid "Dark Mode"
-msgstr "暗色模式"
-
-#: src/views/settings/SettingsDialog.qml:36
-#, kde-format
-msgid "Switch between light and dark colorscheme"
-msgstr "在明亮和暗色配色方案間切換"
-
-#: src/views/settings/SettingsDialog.qml:58
+#: src/views/settings/SettingsDialog.qml:41
 #, kde-format
 msgid "Sorting by"
 msgstr "排序方式"
 
-#: src/views/settings/SettingsDialog.qml:59
+#: src/views/settings/SettingsDialog.qml:42
 #, kde-format
 msgid "Change the sorting key."
 msgstr "變更排序依據。"
 
-#: src/views/settings/SettingsDialog.qml:69
+#: src/views/settings/SettingsDialog.qml:52
 #, kde-format
 msgid "Title"
 msgstr "標題"
 
-#: src/views/settings/SettingsDialog.qml:76
+#: src/views/settings/SettingsDialog.qml:59
 #, kde-format
 msgid "Date"
 msgstr "日期"
 
-#: src/views/settings/SettingsDialog.qml:83
+#: src/views/settings/SettingsDialog.qml:66
 #, kde-format
 msgid "Size"
 msgstr "大小"
 
-#: src/views/settings/SettingsDialog.qml:90
+#: src/views/settings/SettingsDialog.qml:73
 #, kde-format
 msgid "Type"
 msgstr "類型"
 
-#: src/views/settings/SettingsDialog.qml:99
+#: src/views/settings/SettingsDialog.qml:82
 #, kde-format
 msgid "Sort order"
 msgstr "排序方向"
 
-#: src/views/settings/SettingsDialog.qml:100
+#: src/views/settings/SettingsDialog.qml:83
 #, kde-format
 msgid "Change the sorting order."
 msgstr "變更排序方向。"
 
-#: src/views/settings/SettingsDialog.qml:110
+#: src/views/settings/SettingsDialog.qml:93
 #, kde-format
 msgid "Ascending"
 msgstr "遞增"
 
-#: src/views/settings/SettingsDialog.qml:118
+#: src/views/settings/SettingsDialog.qml:101
 #, kde-format
 msgid "Descending"
 msgstr "遞減"
 
-#: src/views/settings/SettingsDialog.qml:129
+#: src/views/settings/SettingsDialog.qml:112
 #, kde-format
 msgid "Playback"
 msgstr "播放"
 
-#: src/views/settings/SettingsDialog.qml:134
+#: src/views/settings/SettingsDialog.qml:117
 #, kde-format
 msgid "Hardware Decoding"
 msgstr "硬體解碼"
 
-#: src/views/settings/SettingsDialog.qml:135
+#: src/views/settings/SettingsDialog.qml:118
 #, kde-format
 msgid "Use the sorting preferences globally for all the tabs and splits."
 msgstr "全域套用排序偏好設定到所有分頁和分割畫面上。"
 
-#: src/views/settings/SettingsDialog.qml:148
+#: src/views/settings/SettingsDialog.qml:131
 #, kde-format
 msgid "Audio"
 msgstr "音效"
 
-#: src/views/settings/SettingsDialog.qml:154
+#: src/views/settings/SettingsDialog.qml:137
 #, kde-format
 msgid "Preferred Language"
 msgstr "偏好語言"
 
-#: src/views/settings/SettingsDialog.qml:155
+#: src/views/settings/SettingsDialog.qml:138
 #, kde-format
 msgid "Preferred language if available."
 msgstr "偏好使用的語言，如果可用的話。"
 
-#: src/views/settings/SettingsDialog.qml:260
+#: src/views/settings/SettingsDialog.qml:243
 #, kde-format
 msgid "Sources"
 msgstr "來源"
 
-#: src/views/settings/SettingsDialog.qml:298
+#: src/views/settings/SettingsDialog.qml:281
 #, kde-format
 msgid "Add"
 msgstr "新增"
 
-#: src/views/settings/SettingsDialog.qml:320
+#: src/views/settings/SettingsDialog.qml:303
 #, kde-format
 msgid "Remove source"
 msgstr "移除來源"
 
-#: src/views/settings/SettingsDialog.qml:321
+#: src/views/settings/SettingsDialog.qml:304
 #, kde-format
 msgid ""
 "Are you sure you want to remove the source: \n"
@@ -419,6 +409,12 @@ msgstr "開始搜尋線上影片。"
 #, kde-format
 msgid "Search..."
 msgstr "搜尋…"
+
+#~ msgid "Dark Mode"
+#~ msgstr "暗色模式"
+
+#~ msgid "Switch between light and dark colorscheme"
+#~ msgstr "在明亮和暗色配色方案間切換"
 
 #~ msgid "Clip"
 #~ msgstr "Clip"

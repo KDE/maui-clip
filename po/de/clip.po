@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-10 01:51+0000\n"
+"POT-Creation-Date: 2024-02-14 01:39+0000\n"
 "PO-Revision-Date: 2023-03-12 17:07+0100\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -53,12 +53,12 @@ msgstr "Videos durchsehen und abspielen."
 msgid "Developer"
 msgstr "Entwickler"
 
-#: src/main.qml:89 src/views/collection/CollectionView.qml:39
+#: src/main.qml:87 src/views/collection/CollectionView.qml:39
 #, kde-format
 msgid "Open URL"
 msgstr "Adresse (URL) öffnen"
 
-#: src/main.qml:91
+#: src/main.qml:89
 #, kde-format
 msgid ""
 "Enter any remote location, like YouTube video URLs, or from other services "
@@ -67,27 +67,27 @@ msgstr ""
 "Geben Sie einen beliebigen entfernten Ort ein, z. B. YouTube-Video-URLs oder "
 "von anderen Diensten, die von MPV unterstützt werden."
 
-#: src/main.qml:123
+#: src/main.qml:121
 #, kde-format
 msgid "Delete files?"
 msgstr "Dateien löschen?"
 
-#: src/main.qml:125
+#: src/main.qml:123
 #, kde-format
 msgid "Are sure you want to delete %1 files"
 msgstr "Möchten Sie wirklich %1 Dateien löschen?"
 
-#: src/main.qml:173
+#: src/main.qml:171
 #, kde-format
 msgid "Now playing"
 msgstr "Wiedergabe"
 
-#: src/main.qml:281 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:279 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "Nichts"
 
-#: src/main.qml:282
+#: src/main.qml:280
 #, fuzzy, kde-format
 #| msgid "Open a new video to start playing or add it to the playlist."
 msgid "Open a new video from your collection or file system."
@@ -96,13 +96,13 @@ msgstr ""
 "der Wiedergabeliste hinzu."
 
 #. i18n("Screenshots")}};
-#: src/main.qml:302 src/models/tagsmodel.cpp:14
-#: src/views/settings/SettingsDialog.qml:53
+#: src/main.qml:300 src/models/tagsmodel.cpp:14
+#: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Collection"
 msgstr "Sammlung"
 
-#: src/main.qml:468
+#: src/main.qml:466
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "Seitenleiste umschalten"
@@ -283,112 +283,102 @@ msgstr "Allgemein"
 msgid "Volume Step"
 msgstr "Schrittweite der Lautstärke"
 
-#: src/views/settings/SettingsDialog.qml:35
-#, kde-format
-msgid "Dark Mode"
-msgstr "Dunkler Modus"
-
-#: src/views/settings/SettingsDialog.qml:36
-#, kde-format
-msgid "Switch between light and dark colorscheme"
-msgstr "Zwischen hellem und dunklem Farbschema umschalten"
-
-#: src/views/settings/SettingsDialog.qml:58
+#: src/views/settings/SettingsDialog.qml:41
 #, kde-format
 msgid "Sorting by"
 msgstr "Sortieren nach"
 
-#: src/views/settings/SettingsDialog.qml:59
+#: src/views/settings/SettingsDialog.qml:42
 #, kde-format
 msgid "Change the sorting key."
 msgstr "Ändern des Sortierschlüssels."
 
-#: src/views/settings/SettingsDialog.qml:69
+#: src/views/settings/SettingsDialog.qml:52
 #, kde-format
 msgid "Title"
 msgstr "Titel"
 
-#: src/views/settings/SettingsDialog.qml:76
+#: src/views/settings/SettingsDialog.qml:59
 #, kde-format
 msgid "Date"
 msgstr "Datum"
 
-#: src/views/settings/SettingsDialog.qml:83
+#: src/views/settings/SettingsDialog.qml:66
 #, kde-format
 msgid "Size"
 msgstr "Größe"
 
-#: src/views/settings/SettingsDialog.qml:90
+#: src/views/settings/SettingsDialog.qml:73
 #, kde-format
 msgid "Type"
 msgstr "Typ"
 
-#: src/views/settings/SettingsDialog.qml:99
+#: src/views/settings/SettingsDialog.qml:82
 #, kde-format
 msgid "Sort order"
 msgstr "Sortiereihenfolge"
 
-#: src/views/settings/SettingsDialog.qml:100
+#: src/views/settings/SettingsDialog.qml:83
 #, kde-format
 msgid "Change the sorting order."
 msgstr "Ändern der Sortiereihenfolge"
 
-#: src/views/settings/SettingsDialog.qml:110
+#: src/views/settings/SettingsDialog.qml:93
 #, kde-format
 msgid "Ascending"
 msgstr "Aufsteigend"
 
-#: src/views/settings/SettingsDialog.qml:118
+#: src/views/settings/SettingsDialog.qml:101
 #, kde-format
 msgid "Descending"
 msgstr "Absteigend"
 
-#: src/views/settings/SettingsDialog.qml:129
+#: src/views/settings/SettingsDialog.qml:112
 #, kde-format
 msgid "Playback"
 msgstr "Wiedergabe"
 
-#: src/views/settings/SettingsDialog.qml:134
+#: src/views/settings/SettingsDialog.qml:117
 #, kde-format
 msgid "Hardware Decoding"
 msgstr "Hardware-Dekodierung"
 
-#: src/views/settings/SettingsDialog.qml:135
+#: src/views/settings/SettingsDialog.qml:118
 #, kde-format
 msgid "Use the sorting preferences globally for all the tabs and splits."
 msgstr "Verwenden Sie die Sortiereinstellungen global für alle GUI-Elemente."
 
-#: src/views/settings/SettingsDialog.qml:148
+#: src/views/settings/SettingsDialog.qml:131
 #, kde-format
 msgid "Audio"
 msgstr "Audio"
 
-#: src/views/settings/SettingsDialog.qml:154
+#: src/views/settings/SettingsDialog.qml:137
 #, kde-format
 msgid "Preferred Language"
 msgstr "Bevorzugte Sprache"
 
-#: src/views/settings/SettingsDialog.qml:155
+#: src/views/settings/SettingsDialog.qml:138
 #, kde-format
 msgid "Preferred language if available."
 msgstr "Bevorzugte Sprache, falls verfügbar."
 
-#: src/views/settings/SettingsDialog.qml:260
+#: src/views/settings/SettingsDialog.qml:243
 #, kde-format
 msgid "Sources"
 msgstr "Quellen"
 
-#: src/views/settings/SettingsDialog.qml:298
+#: src/views/settings/SettingsDialog.qml:281
 #, kde-format
 msgid "Add"
 msgstr "Hinzufügen"
 
-#: src/views/settings/SettingsDialog.qml:320
+#: src/views/settings/SettingsDialog.qml:303
 #, kde-format
 msgid "Remove source"
 msgstr "Datenquelle entfernen"
 
-#: src/views/settings/SettingsDialog.qml:321
+#: src/views/settings/SettingsDialog.qml:304
 #, kde-format
 msgid ""
 "Are you sure you want to remove the source: \n"
@@ -428,6 +418,12 @@ msgstr "Suche nach Online-Videos beginnen."
 #, kde-format
 msgid "Search..."
 msgstr "Suchen ..."
+
+#~ msgid "Dark Mode"
+#~ msgstr "Dunkler Modus"
+
+#~ msgid "Switch between light and dark colorscheme"
+#~ msgstr "Zwischen hellem und dunklem Farbschema umschalten"
 
 #~ msgid "Clip"
 #~ msgstr "Clip"
