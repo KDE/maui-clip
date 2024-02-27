@@ -64,7 +64,7 @@
     <p xml:lang="es">Clip es un reproductor de vídeo y gestor de colecciones.</p>
     <p xml:lang="eu">«Clip» bideo jotzaile eta bilduma kudeatzaile bat da.</p>
     <p xml:lang="fi">Clip on videosoitin ja kokoelmanhallinta.</p>
-    <p xml:lang="fr">Le logiciel « Clip » est un lecteur de vidéo et un gestionnaire de collections.</p>
+    <p xml:lang="fr">Le logiciel « Clip » est un lecteur de vidéo et un gestionnaire de collections.</p>
     <p xml:lang="gl">Clip é un reprodutor de vídeo e xestor de coleccións.</p>
     <p xml:lang="id">Clip adalah sebuah pemutar video dan pengelola koleksi.</p>
     <p xml:lang="it">Clip è un lettore video e un gestore di raccolte.</p>
@@ -95,7 +95,7 @@
       <caption xml:lang="es">Clip reproduciendo vídeos.</caption>
       <caption xml:lang="eu">«Clip» bideoak jotzen.</caption>
       <caption xml:lang="fi">Clip toistamassa videota.</caption>
-      <caption xml:lang="fr">Le logiciel « Clip » en cours de lecture de vidéos.</caption>
+      <caption xml:lang="fr">Le logiciel « Clip » en cours de lecture de vidéos.</caption>
       <caption xml:lang="gl">Clip reproducindo vídeos.</caption>
       <caption xml:lang="id">Clip memutar video-video.</caption>
       <caption xml:lang="it">Clip che riproduce video.</caption>
@@ -124,9 +124,9 @@
   </provides>
   <project_group>KDE</project_group>
   <releases>
-  <release version="3.1.0" date="2024-02-26">
-    <url>https://mauikit.org/blog/maui-release-briefing-5/</url>
-  </release>
+    <release version="3.1.0" date="2024-02-26">
+      <url>https://mauikit.org/blog/maui-release-briefing-5/</url>
+    </release>
     <release version="3.0.2" date="2023-11-30">
       <url>https://mauikit.org/blog/maui-release-briefing-4/</url>
     </release>
