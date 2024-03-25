@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-14 01:39+0000\n"
-"PO-Revision-Date: 2024-02-26 21:30+0100\n"
+"PO-Revision-Date: 2024-03-24 10:34+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo.org>\n"
 "Language: eo\n"
@@ -21,7 +21,7 @@ msgstr ""
 #: src/controllers/YouTube.qml:95
 #, kde-format
 msgid "Custom API Key"
-msgstr ""
+msgstr "Propra API-Ŝlosilo"
 
 #: src/controllers/YouTube.qml:114
 #, kde-format
@@ -31,22 +31,22 @@ msgstr "Serĉrezultoj"
 #: src/controllers/YouTube.qml:209
 #, kde-format
 msgid "No Results!"
-msgstr ""
+msgstr "Neniuj Rezultoj!"
 
 #: src/controllers/YouTube.qml:210
 #, kde-format
 msgid "Try with another query"
-msgstr ""
+msgstr "Provi kun alia demando"
 
 #: src/controllers/YouTube.qml:249
 #, kde-format
 msgid "Search videos..."
-msgstr ""
+msgstr "Serĉu filmetojn..."
 
 #: src/main.cpp:103
 #, kde-format
 msgid "Browse and play your videos."
-msgstr ""
+msgstr "Foliumi kaj ludi viajn videojn."
 
 #: src/main.cpp:108
 #, kde-format
@@ -68,12 +68,12 @@ msgstr ""
 #: src/main.qml:121
 #, kde-format
 msgid "Delete files?"
-msgstr ""
+msgstr "Ĉu forigi dosierojn?"
 
 #: src/main.qml:123
 #, kde-format
 msgid "Are sure you want to delete %1 files"
-msgstr ""
+msgstr "Ĉu certas, ke vi volas forigi %1 dosierojn"
 
 #: src/main.qml:171
 #, kde-format
@@ -83,12 +83,12 @@ msgstr "Nun ludas"
 #: src/main.qml:279 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
-msgstr ""
+msgstr "Nenio Ĉi tie!"
 
 #: src/main.qml:280
 #, kde-format
 msgid "Open a new video from your collection or file system."
-msgstr ""
+msgstr "Malfermu novan videon el via kolekto aŭ dosiersistemo."
 
 #. i18n("Screenshots")}};
 #: src/main.qml:300 src/models/tagsmodel.cpp:14
@@ -100,7 +100,7 @@ msgstr "Kolekto"
 #: src/main.qml:466
 #, kde-format
 msgid "Toggle SideBar"
-msgstr ""
+msgstr "Baskuligi Flankbaron"
 
 #: src/models/tagsmodel.cpp:10
 #, kde-format
@@ -143,18 +143,18 @@ msgstr "Pri"
 #: src/views/collection/CollectionView.qml:76
 #, kde-format
 msgid "Toggle sidebar"
-msgstr ""
+msgstr "Baskuligi flankbreton"
 
 #: src/views/collection/CollectionView.qml:82 src/views/player/Playlist.qml:21
 #: src/views/tags/TagsView.qml:38
 #, kde-format
 msgid "No Videos!"
-msgstr ""
+msgstr "Neniuj Videoj!"
 
 #: src/views/collection/CollectionView.qml:83
 #, kde-format
 msgid "Add a new video source or open a file."
-msgstr ""
+msgstr "Aldonu novan videofonton aŭ malfermu dosieron."
 
 #: src/views/collection/CollectionView.qml:88
 #, kde-format
@@ -164,22 +164,22 @@ msgstr "Malfermi dosieron"
 #: src/views/collection/CollectionView.qml:94
 #, kde-format
 msgid "Add sources"
-msgstr ""
+msgstr "Aldoni fontojn"
 
 #: src/views/collection/PlacesSidebar.qml:52
 #, kde-format
 msgid "Tags!"
-msgstr ""
+msgstr "Etikedoj!"
 
 #: src/views/collection/PlacesSidebar.qml:53
 #, kde-format
 msgid "Your tags will be listed here"
-msgstr ""
+msgstr "Viaj etikedoj estos listigitaj ĉi tie"
 
 #: src/views/ItemMenu.qml:22
 #, kde-format
 msgid "UnFav it"
-msgstr ""
+msgstr "MalFavi ĝin"
 
 #: src/views/ItemMenu.qml:41
 #, kde-format
@@ -214,7 +214,7 @@ msgstr "Forigi"
 #: src/views/ItemMenu.qml:118
 #, kde-format
 msgid "Delete file?"
-msgstr ""
+msgstr "Ĉu forigi dosieron?"
 
 #: src/views/ItemMenu.qml:120
 #, kde-format
@@ -236,12 +236,12 @@ msgstr "Sonaj trakoj"
 #: src/views/player/PlayerView.qml:31
 #, kde-format
 msgid "Playing mode"
-msgstr ""
+msgstr "Ludanta reĝimo"
 
 #: src/views/player/Playlist.qml:22
 #, kde-format
 msgid "Add videos to the playlist."
-msgstr ""
+msgstr "Aldoni filmetojn al la ludlisto."
 
 #: src/views/SelectionBar.qml:34
 #, kde-format
@@ -251,7 +251,7 @@ msgstr "Ludi"
 #: src/views/SelectionBar.qml:56
 #, kde-format
 msgid "Un/Fav"
-msgstr ""
+msgstr "Mal/Fav"
 
 #: src/views/SelectionBar.qml:63
 #, kde-format
@@ -271,17 +271,17 @@ msgstr "Ĝenerala"
 #: src/views/settings/SettingsDialog.qml:22
 #, kde-format
 msgid "Volume Step"
-msgstr ""
+msgstr "Laŭteco Paŝo"
 
 #: src/views/settings/SettingsDialog.qml:41
 #, kde-format
 msgid "Sorting by"
-msgstr ""
+msgstr "Ordigo laŭ"
 
 #: src/views/settings/SettingsDialog.qml:42
 #, kde-format
 msgid "Change the sorting key."
-msgstr ""
+msgstr "Ŝanĝi la ordigan ŝlosilon."
 
 #: src/views/settings/SettingsDialog.qml:52
 #, kde-format
@@ -311,7 +311,7 @@ msgstr "Ordo de ordigo"
 #: src/views/settings/SettingsDialog.qml:83
 #, kde-format
 msgid "Change the sorting order."
-msgstr ""
+msgstr "Ŝanĝi la ordigon."
 
 #: src/views/settings/SettingsDialog.qml:93
 #, kde-format
@@ -331,12 +331,12 @@ msgstr "Reproduktado"
 #: src/views/settings/SettingsDialog.qml:117
 #, kde-format
 msgid "Hardware Decoding"
-msgstr ""
+msgstr "Aparataro Malkodado"
 
 #: src/views/settings/SettingsDialog.qml:118
 #, kde-format
 msgid "Use the sorting preferences globally for all the tabs and splits."
-msgstr ""
+msgstr "Uzi la ordigajn preferojn globale por ĉiuj langetoj kaj dividoj."
 
 #: src/views/settings/SettingsDialog.qml:131
 #, kde-format
@@ -346,12 +346,12 @@ msgstr "Aŭdaĵo"
 #: src/views/settings/SettingsDialog.qml:137
 #, kde-format
 msgid "Preferred Language"
-msgstr ""
+msgstr "Preferata lingvo"
 
 #: src/views/settings/SettingsDialog.qml:138
 #, kde-format
 msgid "Preferred language if available."
-msgstr ""
+msgstr "Preferata lingvo se disponebla."
 
 #: src/views/settings/SettingsDialog.qml:243
 #, kde-format
@@ -383,7 +383,7 @@ msgstr "Neniuj Etikedoj!"
 #: src/views/tags/TagsGrid.qml:23
 #, kde-format
 msgid "Add a new tag to start organizing your video collection."
-msgstr ""
+msgstr "Aldoni novan etikedon por komenci organizi vian videokolekton."
 
 #: src/views/tags/TagsGrid.qml:36
 #, kde-format
@@ -393,12 +393,12 @@ msgstr "Filtri"
 #: src/views/tags/TagsView.qml:39
 #, kde-format
 msgid "There's no videos associated with the tag"
-msgstr ""
+msgstr "Ne estas videoj asociitaj kun la etikedo"
 
 #: src/views/youtube/YouTubeView.qml:26
 #, kde-format
 msgid "Start searching for online videos."
-msgstr ""
+msgstr "Komenci serĉi interretajn filmetojn."
 
 #: src/views/youtube/YouTubeView.qml:44
 #, kde-format
