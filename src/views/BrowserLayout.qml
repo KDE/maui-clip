@@ -218,13 +218,13 @@ Maui.AltBrowser
                 Video
                 {
                     autoPlay: true
-                    autoLoad: true
+                    // autoLoad: true
                     source: model.url
                     muted: true
                     fillMode: VideoOutput.PreserveAspectFit
                     playbackRate: 5.0
                     loops: 3
-                    flushMode: VideoOutput.LastFrame
+                    // flushMode: VideoOutput.LastFrame
                 }
             }
 

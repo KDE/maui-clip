@@ -1,3 +1,4 @@
+remove_definitions(-DQT_NO_CAST_FROM_ASCII -DQT_STRICT_ITERATORS -DQT_NO_CAST_FROM_BYTEARRAY -DQT_NO_URL_CAST_FROM_STRING)
 
 include_directories(
     ${FFMPEG_INCLUDE_DIRS})
@@ -28,11 +29,7 @@ set(thumbnailerSRCS
     utils/ffmpegthumbs/imagewriter.cpp
     utils/ffmpegthumbs/videothumbnailer.cpp)
 
-if(QUICK_COMPILER)
-    qtquick_compiler_add_resources(clip_QML_QRC qml.qrc)
-else()
-    qt5_add_resources(clip_QML_QRC qml.qrc)
-endif()
+    qt_add_resources(clip_QML_QRC qml.qrc)
 
 if(ANDROID)
     list(APPEND clipSRCS
@@ -55,10 +52,13 @@ else()
 endif()
 
 if (ANDROID)
-    target_link_libraries(${PROJECT_NAME} Qt5::AndroidExtras Qt5::QuickControls2)
+    target_link_libraries(${PROJECT_NAME} 
+    Qt6::AndroidExtras 
+    Qt6::QuickControls2)
 else()
-    target_link_libraries(${PROJECT_NAME} Qt::DBus)
-    target_link_libraries(${PROJECT_NAME} Qt5::Widgets)
+    target_link_libraries(${PROJECT_NAME} 
+    Qt6::DBus
+    Qt6::Widgets)
 endif()
 
 target_compile_definitions(${PROJECT_NAME}
@@ -73,13 +73,13 @@ if(MPV_AVAILABLE)
 endif()
 
 target_link_libraries(${PROJECT_NAME}
-    MauiKit3
-    MauiKit3::FileBrowsing
-    Qt5::Quick
-    Qt5::Qml
-    Qt5::Multimedia
-    KF5::CoreAddons
-    KF5::I18n
+    MauiKit4
+    MauiKit4::FileBrowsing
+    Qt6::Quick
+    Qt6::Qml
+    Qt6::Multimedia
+    KF6::CoreAddons
+    KF6::I18n
     ${AVUTIL_LIBRARIES}
     ${AVFILTER_LIBRARIES}
     ${AVFORMAT_LIBRARIES}
@@ -89,7 +89,7 @@ target_link_libraries(${PROJECT_NAME}
 
 if(UNIX AND NOT APPLE AND NOT ANDROID)
     install (TARGETS ${PROJECT_NAME} ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
-    install(FILES org.kde.clip.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
+    install(FILES org.kde.clip.desktop DESTINATION ${KDE_INSTALL_APPDIR})
     #TODO: port to ecm_install_icons()
     install(FILES assets/clip.svg DESTINATION ${KDE_INSTALL_ICONDIR}/hicolor/scalable/apps)
 endif()

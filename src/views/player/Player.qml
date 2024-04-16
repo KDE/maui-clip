@@ -13,9 +13,9 @@ Video
 
     source: currentVideo.url
     autoPlay: true
-    autoLoad: true
+    // autoLoad: true
     fillMode: VideoOutput.PreserveAspectFit
-    flushMode: VideoOutput.LastFrame
-    audioRole: MediaPlayer.VideoRole
+    // flushMode: VideoOutput.LastFrame
+    // audioRole: MediaPlayer.VideoRole
 }
 

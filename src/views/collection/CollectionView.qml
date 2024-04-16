@@ -25,7 +25,7 @@ Maui.SideBarView
         id: _browser
         anchors.fill: parent
         floatingFooter: true
-        showCSDControls: true
+        Maui.Controls.showCSD: true
 
         altHeader: Maui.Handy.isMobile
 

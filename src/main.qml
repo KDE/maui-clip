@@ -1,15 +1,15 @@
-import QtQuick 2.14
-import QtQuick.Controls 2.14
-import QtQuick.Layouts 1.3
+import QtQuick
+import QtCore
+import QtQuick.Controls 
+import QtQuick.Layouts 
 
-import QtMultimedia 5.8
+import QtMultimedia 
 
-import Qt.labs.settings 1.0
 
-import org.mauikit.controls 1.3 as Maui
-import org.mauikit.filebrowsing 1.2 as FB
+import org.mauikit.controls as Maui
+import org.mauikit.filebrowsing as FB
 
-import org.maui.clip 1.0 as Clip
+import org.maui.clip as Clip
 
 import "views"
 import "views/player"
@@ -107,8 +107,8 @@ Maui.ApplicationWindow
         FB.FileDialog
         {
             mode: modes.SAVE
-            settings.filterType: FB.FMList.IMAGE
-            settings.onlyDirs: false
+            browser.settings.filterType: FB.FMList.IMAGE
+            browser.settings.onlyDirs: false
         }
     }
 
@@ -213,7 +213,7 @@ Maui.ApplicationWindow
                 floatingHeader: autoHideHeader
                 headBar.visible: !_playerHolderLoader.active
 
-                showCSDControls: true
+                Maui.Controls.showCSD: true
 
                 onGoBackTriggered: _stackView.pop()
 

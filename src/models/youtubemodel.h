@@ -24,7 +24,7 @@ public:
 
     int limit() const;
 
-public slots:
+public Q_SLOTS:
     void setQuery(QString query);
 
     void setKey(QString key);

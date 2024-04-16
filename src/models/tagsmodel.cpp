@@ -1,9 +1,9 @@
 #include "tagsmodel.h"
 
-#include <MauiKit3/FileBrowsing/fmstatic.h>
-#include <MauiKit3/FileBrowsing/tagging.h>
+#include <MauiKit4/FileBrowsing/fmstatic.h>
+#include <MauiKit4/FileBrowsing/tagging.h>
 
-#include <KI18n/KLocalizedString>
+#include <KLocalizedString>
 
 TagsModel::TagsModel(QObject *parent) : MauiList(parent)
 {    
