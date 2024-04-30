@@ -1,5 +1,5 @@
-import QtMultimedia 5.8
-import QtQuick 2.15
+import QtMultimedia
+import QtQuick
 
 Video
 {

@@ -1,7 +1,7 @@
 #include "clip.h"
 #include <QDesktopServices>
 #include <QSettings>
-#include <MauiKit3/FileBrowsing/fmstatic.h>
+#include <MauiKit4/FileBrowsing/fmstatic.h>
 
 Clip::Clip(QObject *parent) : QObject(parent)
 {

@@ -1,12 +1,12 @@
-import QtQuick 2.14
-import QtMultimedia 5.8
-import QtQuick.Layouts 1.3
+import QtQuick
+import QtMultimedia
+import QtQuick.Layouts
 
-import QtQuick.Controls 2.14
+import QtQuick.Controls
 
-import org.mauikit.controls 1.3 as Maui
+import org.mauikit.controls as Maui
 
-import org.maui.clip 1.0 as Clip
+import org.maui.clip as Clip
 
 Clip.Video
 {
@@ -24,9 +24,8 @@ Clip.Video
 
         function onPlaybackStateChanged()
         {
-            console.log("Playbakc state changed", control.player.playing, control.player.stopped)
 
-            if(control.player.playing)
+            if(control.playing)
             {
                 Clip.LockManager.setInhibitionOn(i18n("Playing mode"));
 

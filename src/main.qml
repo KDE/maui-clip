@@ -5,7 +5,6 @@ import QtQuick.Layouts
 
 import QtMultimedia 
 
-
 import org.mauikit.controls as Maui
 import org.mauikit.filebrowsing as FB
 

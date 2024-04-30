@@ -17,10 +17,10 @@ set(clipSRCS
     models/videosmodel.cpp
     models/tagsmodel.cpp
     models/playlistmodel.cpp
-    models/youtubemodel.cpp
+    # models/youtubemodel.cpp
     utils/clip.cpp
     controllers/lockmanager.cpp
-    controllers/youtube.cpp)
+    #[[controllers/youtube.cpp]])
 
 set(thumbnailerSRCS
     utils/thumbnailer.cpp
@@ -29,7 +29,7 @@ set(thumbnailerSRCS
     utils/ffmpegthumbs/imagewriter.cpp
     utils/ffmpegthumbs/videothumbnailer.cpp)
 
-    qt_add_resources(clip_QML_QRC qml.qrc)
+qt_add_resources(clip_QML_QRC qml.qrc)
 
 if(ANDROID)
     list(APPEND clipSRCS
@@ -41,8 +41,8 @@ if(ANDROID)
         ${clip_QML_QRC})
 else()
     list(APPEND clipSRCS
-          controllers/linux/solidlockbackend.cpp)
-       qt_add_dbus_interface(clipSRCS controllers/linux/org.freedesktop.ScreenSaver.xml screensaverdbusinterface)
+        controllers/linux/solidlockbackend.cpp)
+    qt_add_dbus_interface(clipSRCS controllers/linux/org.freedesktop.ScreenSaver.xml screensaverdbusinterface)
 
     add_executable(${PROJECT_NAME}
         ${clipSRCS}
@@ -52,13 +52,13 @@ else()
 endif()
 
 if (ANDROID)
-    target_link_libraries(${PROJECT_NAME} 
-    Qt6::AndroidExtras 
-    Qt6::QuickControls2)
+    target_link_libraries(${PROJECT_NAME}
+        Qt6::AndroidExtras
+        Qt6::QuickControls2)
 else()
-    target_link_libraries(${PROJECT_NAME} 
-    Qt6::DBus
-    Qt6::Widgets)
+    target_link_libraries(${PROJECT_NAME}
+        Qt6::DBus
+        Qt6::Widgets)
 endif()
 
 target_compile_definitions(${PROJECT_NAME}

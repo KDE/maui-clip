@@ -1,11 +1,11 @@
-import QtQuick 2.14
-import QtQuick.Controls 2.14
-import QtQuick.Layouts 1.3
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
 
-import org.mauikit.controls 1.3 as Maui
+import org.mauikit.controls as Maui
 
-import org.maui.clip 1.0 as Clip
-import QtMultimedia 5.8
+import org.maui.clip as Clip
+import QtMultimedia
 
 Maui.AltBrowser
 {
@@ -91,7 +91,7 @@ Maui.AltBrowser
         id: _listDelegate
         width: ListView.view.width
 
-        onToggled:
+        onToggled: (state) =>
         {
             control.currentIndex = index
             control.currentView.itemsSelected([index])

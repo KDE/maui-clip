@@ -23,7 +23,7 @@
 
 #include "models/videosmodel.h"
 #include "models/tagsmodel.h"
-#include "models/youtubemodel.h"
+// #include "models/youtubemodel.h"
 #include "utils/thumbnailer.h"
 
 #include "utils/clip.h"
@@ -164,7 +164,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
     qmlRegisterType<VideosModel>(CLIP_URI, 1, 0, "Videos");
     qmlRegisterType<TagsModel>(CLIP_URI, 1, 0, "Tags");
-    qmlRegisterType<YouTubeModel>(CLIP_URI, 1, 0, "YouTube");
+    // qmlRegisterType<YouTubeModel>(CLIP_URI, 1, 0, "YouTube");
     qmlRegisterSingletonInstance<Clip>(CLIP_URI, 1, 0, "Clip", Clip::instance ());
     engine.addImageProvider("preview", new Thumbnailer());
 

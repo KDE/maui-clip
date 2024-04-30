@@ -14,7 +14,6 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
-set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
@@ -53,8 +52,6 @@ find_package(MauiKit4 REQUIRED COMPONENTS FileBrowsing)
 if(UNIX AND NOT APPLE AND NOT ANDROID)
     include(KDEInstallDirs)
     include(KDECMakeSettings)
-    include(ECMInstallIcons)
-    include(ECMAddAppIcon)
 endif()
 
 include(KDECompilerSettings NO_POLICY_SCOPE)
