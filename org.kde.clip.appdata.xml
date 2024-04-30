@@ -55,6 +55,10 @@
   <summary xml:lang="uk">Відеопрогравач</summary>
   <summary xml:lang="x-test">xxVideo Playerxx</summary>
   <summary xml:lang="zh-TW">影片播放器</summary>
+  <developer>
+    <name>maui</name>
+    <url>https://mauikit.org/</url>
+  </developer>
   <description>
     <p>Clip is a video player and collection manager.</p>
     <p xml:lang="ca">El Clip és un reproductor de vídeo i un gestor de col·leccions.</p>
@@ -84,6 +88,7 @@
   <url type="homepage">https://apps.kde.org/clip</url>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?product=clip</url>
   <url type="donation">https://kde.org/community/donations</url>
+  <url type="vcs-browser">https://invent.kde.org/maui/clip/</url>
   <screenshots>
     <screenshot type="default">
       <image type="source">https://cdn.kde.org/screenshots/clip/clip-stable.png</image>
@@ -113,6 +118,11 @@
       <caption xml:lang="zh-TW">正在播放影片的 Clip。</caption>
     </screenshot>
   </screenshots>
+  <categories>
+    <category>Qt</category>
+    <category>Video</category>
+    <category>Player</category>
+  </categories>
   <recommends>
     <control>pointing</control>
     <control>keyboard</control>
