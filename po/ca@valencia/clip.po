@@ -42,7 +42,7 @@ msgstr "Proveu-ho amb una altra consulta"
 #: src/controllers/YouTube.qml:249
 #, kde-format
 msgid "Search videos..."
-msgstr "Busca vídeos..."
+msgstr "Busca vídeos…"
 
 #: src/main.cpp:103
 #, kde-format
@@ -331,7 +331,7 @@ msgstr "Descendent"
 #: src/views/settings/SettingsDialog.qml:112
 #, kde-format
 msgid "Playback"
-msgstr "Reproducció"
+msgstr "Reproduïu"
 
 #: src/views/settings/SettingsDialog.qml:117
 #, kde-format
@@ -414,19 +414,4 @@ msgstr "Comença la busca de vídeos en línia."
 #: src/views/youtube/YouTubeView.qml:44
 #, kde-format
 msgid "Search..."
-msgstr "Busca..."
-
-#~ msgid "Dark Mode"
-#~ msgstr "Mode fosc"
-
-#~ msgid "Switch between light and dark colorscheme"
-#~ msgstr "Alterna entre els esquemes de color clar i fosc"
-
-#~ msgid "Clip"
-#~ msgstr "Clip"
-
-#~ msgid "© 2019-2023 Maui Development Team"
-#~ msgstr "© 2019-2023 L'equip de desenvolupament de Maui"
-
-#~ msgid "Camilo Higuita"
-#~ msgstr "Camilo Higuita"
+msgstr "Busca…"
