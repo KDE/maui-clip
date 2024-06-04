@@ -4,8 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef VIDEO_THUMBNAILER_H
-#define VIDEO_THUMBNAILER_H
+#pragma once
 
 #include <string>
 #include <vector>
@@ -67,5 +66,3 @@ private:
 };
 
 }
-
-#endif

@@ -1,9 +1,10 @@
 #include "videosmodel.h"
 #include <QFileSystemWatcher>
 #include <QDebug>
-#include <MauiKit3/FileBrowsing/tagging.h>
-#include <MauiKit3/FileBrowsing/fmstatic.h>
-#include <MauiKit3/FileBrowsing/fileloader.h>
+
+#include <MauiKit4/FileBrowsing/tagging.h>
+#include <MauiKit4/FileBrowsing/fmstatic.h>
+#include <MauiKit4/FileBrowsing/fileloader.h>
 
 static FMH::MODEL videoData(const QUrl &url)
 {

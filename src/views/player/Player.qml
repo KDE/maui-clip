@@ -1,5 +1,5 @@
-import QtMultimedia 5.8
-import QtQuick 2.15
+import QtMultimedia
+import QtQuick
 
 Video
 {
@@ -13,9 +13,9 @@ Video
 
     source: currentVideo.url
     autoPlay: true
-    autoLoad: true
+    // autoLoad: true
     fillMode: VideoOutput.PreserveAspectFit
-    flushMode: VideoOutput.LastFrame
-    audioRole: MediaPlayer.VideoRole
+    // flushMode: VideoOutput.LastFrame
+    // audioRole: MediaPlayer.VideoRole
 }
 

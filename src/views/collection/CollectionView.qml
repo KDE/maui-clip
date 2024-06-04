@@ -1,8 +1,8 @@
-import QtQuick.Controls 2.13
-import org.maui.clip 1.0 as Clip
+import QtQuick.Controls
+import org.maui.clip as Clip
 
-import org.mauikit.controls 1.3 as Maui
-import org.mauikit.filebrowsing 1.2 as FB
+import org.mauikit.controls as Maui
+import org.mauikit.filebrowsing as FB
 
 import ".."
 
@@ -25,7 +25,7 @@ Maui.SideBarView
         id: _browser
         anchors.fill: parent
         floatingFooter: true
-        showCSDControls: true
+        Maui.Controls.showCSD: true
 
         altHeader: Maui.Handy.isMobile
 

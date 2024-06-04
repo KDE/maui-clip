@@ -1,6 +1,6 @@
 #pragma once
 
-#include <MauiKit3/Core/mauilist.h>
+#include <MauiKit4/Core/mauilist.h>
 #include <QObject>
 
 class YouTube;
@@ -24,7 +24,7 @@ public:
 
     int limit() const;
 
-public slots:
+public Q_SLOTS:
     void setQuery(QString query);
 
     void setKey(QString key);

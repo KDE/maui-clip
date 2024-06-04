@@ -1,12 +1,12 @@
-import QtQuick 2.14
-import QtQml 2.14
+import QtQuick 
+import QtQml 
 
-import QtQuick.Controls 2.14
-import QtQuick.Layouts 1.3
+import QtQuick.Controls
+import QtQuick.Layouts 
 
-import org.mauikit.controls 1.3 as Maui
+import org.mauikit.controls as Maui
 
-import org.maui.clip 1.0 as Clip
+import org.maui.clip as Clip
 
 Maui.SettingsDialog
 {
@@ -17,7 +17,7 @@ Maui.SettingsDialog
         title: i18n("General")
 //        description: i18n("Configure the app behavior.")
 
-        Maui.SectionItem
+        Maui.FlexSectionItem
         {
             label1.text: i18n("Volume Step")
 
@@ -36,7 +36,7 @@ Maui.SettingsDialog
         title: i18n("Collection")
 //        description: i18n("Sorting order and behavior.")
 
-        Maui.SectionItem
+        Maui.FlexSectionItem
         {
             label1.text: i18n("Sorting by")
             label2.text: i18n("Change the sorting key.")
@@ -77,7 +77,7 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SectionItem
+        Maui.FlexSectionItem
         {
             label1.text: i18n("Sort order")
             label2.text: i18n("Change the sorting order.")
@@ -112,7 +112,7 @@ Maui.SettingsDialog
         title: i18n("Playback")
 //        description: i18n("Configure the player settings.")
         enabled: Clip.Clip.mpvAvailable
-        Maui.SectionItem
+        Maui.FlexSectionItem
         {
             label1.text: i18n("Hardware Decoding")
             label2.text: i18n("Use the sorting preferences globally for all the tabs and splits.")
@@ -136,7 +136,6 @@ Maui.SettingsDialog
         {
             label1.text: i18n("Preferred Language")
             label2.text: i18n("Preferred language if available.")
-            wide: false
 
             TextField
             {

@@ -7,12 +7,12 @@
 
 #include <QQmlApplicationEngine>
 
-#include <KI18n/KLocalizedString>
+#include <KLocalizedString>
 #include "controllers/lockmanager.h"
 
-#include <MauiKit3/Core/mauiapp.h>
-#include <MauiKit3/FileBrowsing/fmstatic.h>
-#include <MauiKit3/FileBrowsing/moduleinfo.h>
+#include <MauiKit4/Core/mauiapp.h>
+#include <MauiKit4/FileBrowsing/fmstatic.h>
+#include <MauiKit4/FileBrowsing/moduleinfo.h>
 
 #include <taglib/taglib.h>
 #include <libavutil/avutil.h>
@@ -23,7 +23,7 @@
 
 #include "models/videosmodel.h"
 #include "models/tagsmodel.h"
-#include "models/youtubemodel.h"
+// #include "models/youtubemodel.h"
 #include "utils/thumbnailer.h"
 
 #include "utils/clip.h"
@@ -75,9 +75,6 @@ static const QList<QUrl> openFiles(const QStringList &files)
 
 Q_DECL_EXPORT int main(int argc, char *argv[])
 {
-    QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
-    QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
-
 #ifdef Q_OS_ANDROID
     QGuiApplication app(argc, argv);
     if (!MAUIAndroid::checkRunTimePermissions({"android.permission.WRITE_EXTERNAL_STORAGE"}))
@@ -167,7 +164,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
     qmlRegisterType<VideosModel>(CLIP_URI, 1, 0, "Videos");
     qmlRegisterType<TagsModel>(CLIP_URI, 1, 0, "Tags");
-    qmlRegisterType<YouTubeModel>(CLIP_URI, 1, 0, "YouTube");
+    // qmlRegisterType<YouTubeModel>(CLIP_URI, 1, 0, "YouTube");
     qmlRegisterSingletonInstance<Clip>(CLIP_URI, 1, 0, "Clip", Clip::instance ());
     engine.addImageProvider("preview", new Thumbnailer());
 
