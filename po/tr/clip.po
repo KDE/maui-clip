@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-14 01:39+0000\n"
+"POT-Creation-Date: 2024-06-05 02:05+0000\n"
 "PO-Revision-Date: 2024-03-22 16:18+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -42,22 +42,22 @@ msgstr "Başka bir sorgu ile deneyin"
 msgid "Search videos..."
 msgstr "Videolar ara..."
 
-#: src/main.cpp:103
+#: src/main.cpp:100
 #, kde-format
 msgid "Browse and play your videos."
 msgstr "Videolarına göz atın ve onları oynatın."
 
-#: src/main.cpp:108
+#: src/main.cpp:105
 #, kde-format
 msgid "Developer"
 msgstr "Geliştirici"
 
-#: src/main.qml:87 src/views/collection/CollectionView.qml:39
+#: src/main.qml:86 src/views/collection/CollectionView.qml:39
 #, kde-format
 msgid "Open URL"
 msgstr "URL Aç"
 
-#: src/main.qml:89
+#: src/main.qml:88
 #, kde-format
 msgid ""
 "Enter any remote location, like YouTube video URLs, or from other services "
@@ -66,39 +66,39 @@ msgstr ""
 "MPV tarafından desteklenen herhangi bir uzak konumu (örneğin YouTube "
 "URL'leri veya diğer hizmetler) açın."
 
-#: src/main.qml:121
+#: src/main.qml:120
 #, kde-format
 msgid "Delete files?"
 msgstr "Dosyalar silinsin mi?"
 
-#: src/main.qml:123
+#: src/main.qml:122
 #, kde-format
 msgid "Are sure you want to delete %1 files"
 msgstr "Bu %1 dosyayı silmek istediğinizden emin misiniz?"
 
-#: src/main.qml:171
+#: src/main.qml:170
 #, kde-format
 msgid "Now playing"
 msgstr "Şimdi oynatılıyor"
 
-#: src/main.qml:279 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:278 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "Burada bir şey yok!"
 
-#: src/main.qml:280
+#: src/main.qml:279
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr "Koleksiyonunuzdan veya dosya sisteminizden yeni bir video açın."
 
 #. i18n("Screenshots")}};
-#: src/main.qml:300 src/models/tagsmodel.cpp:14
+#: src/main.qml:299 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Collection"
 msgstr "Koleksiyon"
 
-#: src/main.qml:466
+#: src/main.qml:465
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "Kenar Çubuğunu Aç/Kapat"
@@ -236,7 +236,7 @@ msgstr "Altyazılar"
 msgid "Audio Tracks"
 msgstr "Ses Parçaları"
 
-#: src/views/player/PlayerView.qml:31
+#: src/views/player/PlayerView.qml:30
 #, kde-format
 msgid "Playing mode"
 msgstr "Oynatma kipi"
@@ -357,22 +357,22 @@ msgstr "Yeğlenen Dil"
 msgid "Preferred language if available."
 msgstr "Mevcutsa yeğlenen dili değiştirin."
 
-#: src/views/settings/SettingsDialog.qml:243
+#: src/views/settings/SettingsDialog.qml:242
 #, kde-format
 msgid "Sources"
 msgstr "Kaynaklar"
 
-#: src/views/settings/SettingsDialog.qml:281
+#: src/views/settings/SettingsDialog.qml:280
 #, kde-format
 msgid "Add"
 msgstr "Ekle"
 
-#: src/views/settings/SettingsDialog.qml:303
+#: src/views/settings/SettingsDialog.qml:302
 #, kde-format
 msgid "Remove source"
 msgstr "Kaynağı Kaldır"
 
-#: src/views/settings/SettingsDialog.qml:304
+#: src/views/settings/SettingsDialog.qml:303
 #, kde-format
 msgid ""
 "Are you sure you want to remove the source: \n"
@@ -381,18 +381,18 @@ msgstr ""
 "%1 kaynağını \n"
 "kaldırmak istediğniize emin misiniz?"
 
-#: src/views/tags/TagsGrid.qml:22
+#: src/views/tags/TagsGrid.qml:21
 #, kde-format
 msgid "No Tags!"
 msgstr "Etiket Yok!"
 
-#: src/views/tags/TagsGrid.qml:23
+#: src/views/tags/TagsGrid.qml:22
 #, kde-format
 msgid "Add a new tag to start organizing your video collection."
 msgstr ""
 "Video koleksiyonunuzu organize etmeye başlamak için bir etiket ekleyin."
 
-#: src/views/tags/TagsGrid.qml:36
+#: src/views/tags/TagsGrid.qml:35
 #, kde-format
 msgid "Filter"
 msgstr "Süzgeç"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-14 01:39+0000\n"
+"POT-Creation-Date: 2024-06-05 02:05+0000\n"
 "PO-Revision-Date: 2023-11-14 14:19-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -42,22 +42,22 @@ msgstr "Tente com outra consulta"
 msgid "Search videos..."
 msgstr "Pesquisar vídeos..."
 
-#: src/main.cpp:103
+#: src/main.cpp:100
 #, kde-format
 msgid "Browse and play your videos."
 msgstr "Navegue e reproduza seus vídeos."
 
-#: src/main.cpp:108
+#: src/main.cpp:105
 #, kde-format
 msgid "Developer"
 msgstr "Desenvolvedor"
 
-#: src/main.qml:87 src/views/collection/CollectionView.qml:39
+#: src/main.qml:86 src/views/collection/CollectionView.qml:39
 #, kde-format
 msgid "Open URL"
 msgstr "Abrir URL"
 
-#: src/main.qml:89
+#: src/main.qml:88
 #, kde-format
 msgid ""
 "Enter any remote location, like YouTube video URLs, or from other services "
@@ -66,39 +66,39 @@ msgstr ""
 "Insira qualquer local remoto, como URLs de vídeos do YouTube ou de outros "
 "serviços suportados pelo MPV."
 
-#: src/main.qml:121
+#: src/main.qml:120
 #, kde-format
 msgid "Delete files?"
 msgstr "Excluir arquivos?"
 
-#: src/main.qml:123
+#: src/main.qml:122
 #, kde-format
 msgid "Are sure you want to delete %1 files"
 msgstr "Tem certeza que deseja excluir %1 arquivos"
 
-#: src/main.qml:171
+#: src/main.qml:170
 #, kde-format
 msgid "Now playing"
 msgstr "Reproduzindo agora"
 
-#: src/main.qml:279 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:278 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "Nada aqui!"
 
-#: src/main.qml:280
+#: src/main.qml:279
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr "Abra um novo vídeo da sua coleção ou sistema de arquivos."
 
 #. i18n("Screenshots")}};
-#: src/main.qml:300 src/models/tagsmodel.cpp:14
+#: src/main.qml:299 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Collection"
 msgstr "Coleção"
 
-#: src/main.qml:466
+#: src/main.qml:465
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "Alterar barra lateral"
@@ -236,7 +236,7 @@ msgstr "Legendas"
 msgid "Audio Tracks"
 msgstr "Faixas de áudio"
 
-#: src/views/player/PlayerView.qml:31
+#: src/views/player/PlayerView.qml:30
 #, kde-format
 msgid "Playing mode"
 msgstr "Modo de reprodução"
@@ -358,22 +358,22 @@ msgstr "Idioma preferido"
 msgid "Preferred language if available."
 msgstr "Idioma preferido, se disponível."
 
-#: src/views/settings/SettingsDialog.qml:243
+#: src/views/settings/SettingsDialog.qml:242
 #, kde-format
 msgid "Sources"
 msgstr "Fontes"
 
-#: src/views/settings/SettingsDialog.qml:281
+#: src/views/settings/SettingsDialog.qml:280
 #, kde-format
 msgid "Add"
 msgstr "Adicionar"
 
-#: src/views/settings/SettingsDialog.qml:303
+#: src/views/settings/SettingsDialog.qml:302
 #, kde-format
 msgid "Remove source"
 msgstr "Excluir fonte"
 
-#: src/views/settings/SettingsDialog.qml:304
+#: src/views/settings/SettingsDialog.qml:303
 #, kde-format
 msgid ""
 "Are you sure you want to remove the source: \n"
@@ -382,18 +382,18 @@ msgstr ""
 "Tem certeza de que deseja remover a fonte: \n"
 " %1"
 
-#: src/views/tags/TagsGrid.qml:22
+#: src/views/tags/TagsGrid.qml:21
 #, kde-format
 msgid "No Tags!"
 msgstr "Sem etiquetas!"
 
-#: src/views/tags/TagsGrid.qml:23
+#: src/views/tags/TagsGrid.qml:22
 #, kde-format
 msgid "Add a new tag to start organizing your video collection."
 msgstr ""
 "Adicione uma nova etiqueta para começar a organizar sua coleção de vídeos."
 
-#: src/views/tags/TagsGrid.qml:36
+#: src/views/tags/TagsGrid.qml:35
 #, kde-format
 msgid "Filter"
 msgstr "Filtro"

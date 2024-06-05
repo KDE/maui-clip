@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-14 01:39+0000\n"
+"POT-Creation-Date: 2024-06-05 02:05+0000\n"
 "PO-Revision-Date: 2024-02-10 00:18+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -42,22 +42,22 @@ msgstr "다른 검색어로 시도하십시오"
 msgid "Search videos..."
 msgstr "동영상 검색..."
 
-#: src/main.cpp:103
+#: src/main.cpp:100
 #, kde-format
 msgid "Browse and play your videos."
 msgstr "동영상을 탐색하고 재생합니다."
 
-#: src/main.cpp:108
+#: src/main.cpp:105
 #, kde-format
 msgid "Developer"
 msgstr "개발자"
 
-#: src/main.qml:87 src/views/collection/CollectionView.qml:39
+#: src/main.qml:86 src/views/collection/CollectionView.qml:39
 #, kde-format
 msgid "Open URL"
 msgstr "URL 열기"
 
-#: src/main.qml:89
+#: src/main.qml:88
 #, kde-format
 msgid ""
 "Enter any remote location, like YouTube video URLs, or from other services "
@@ -66,39 +66,39 @@ msgstr ""
 "YouTube 동영상 URL이나 mpv에서 지원하는 다른 서비스 등 원격 위치를 입력하십시"
 "오."
 
-#: src/main.qml:121
+#: src/main.qml:120
 #, kde-format
 msgid "Delete files?"
 msgstr "파일을 삭제하시겠습니까?"
 
-#: src/main.qml:123
+#: src/main.qml:122
 #, kde-format
 msgid "Are sure you want to delete %1 files"
 msgstr "파일 %1개를 삭제하시겠습니까"
 
-#: src/main.qml:171
+#: src/main.qml:170
 #, kde-format
 msgid "Now playing"
 msgstr "지금 재생 중"
 
-#: src/main.qml:279 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:278 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "아무것도 없습니다!"
 
-#: src/main.qml:280
+#: src/main.qml:279
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr "모음집이나 파일 시스템에서 새 동영상을 엽니다."
 
 #. i18n("Screenshots")}};
-#: src/main.qml:300 src/models/tagsmodel.cpp:14
+#: src/main.qml:299 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Collection"
 msgstr "모음집"
 
-#: src/main.qml:466
+#: src/main.qml:465
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "사이드바 전환"
@@ -235,7 +235,7 @@ msgstr "자막"
 msgid "Audio Tracks"
 msgstr "오디오 트랙"
 
-#: src/views/player/PlayerView.qml:31
+#: src/views/player/PlayerView.qml:30
 #, kde-format
 msgid "Playing mode"
 msgstr "재생 모드"
@@ -355,22 +355,22 @@ msgstr "선호하는 언어"
 msgid "Preferred language if available."
 msgstr "사용 가능한 경우 선호하는 언어입니다."
 
-#: src/views/settings/SettingsDialog.qml:243
+#: src/views/settings/SettingsDialog.qml:242
 #, kde-format
 msgid "Sources"
 msgstr "원본"
 
-#: src/views/settings/SettingsDialog.qml:281
+#: src/views/settings/SettingsDialog.qml:280
 #, kde-format
 msgid "Add"
 msgstr "추가"
 
-#: src/views/settings/SettingsDialog.qml:303
+#: src/views/settings/SettingsDialog.qml:302
 #, kde-format
 msgid "Remove source"
 msgstr "원본 삭제"
 
-#: src/views/settings/SettingsDialog.qml:304
+#: src/views/settings/SettingsDialog.qml:303
 #, kde-format
 msgid ""
 "Are you sure you want to remove the source: \n"
@@ -379,17 +379,17 @@ msgstr ""
 "다음 원본을 삭제하시겠습니까?\n"
 " %1"
 
-#: src/views/tags/TagsGrid.qml:22
+#: src/views/tags/TagsGrid.qml:21
 #, kde-format
 msgid "No Tags!"
 msgstr "태그 없음!"
 
-#: src/views/tags/TagsGrid.qml:23
+#: src/views/tags/TagsGrid.qml:22
 #, kde-format
 msgid "Add a new tag to start organizing your video collection."
 msgstr "동영상 모음집을 정리할 새 태그를 추가합니다."
 
-#: src/views/tags/TagsGrid.qml:36
+#: src/views/tags/TagsGrid.qml:35
 #, kde-format
 msgid "Filter"
 msgstr "필터"

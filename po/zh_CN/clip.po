@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-14 01:39+0000\n"
+"POT-Creation-Date: 2024-06-05 02:05+0000\n"
 "PO-Revision-Date: 2024-04-22 16:06\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -42,22 +42,22 @@ msgstr "尝试再次搜索"
 msgid "Search videos..."
 msgstr "搜索视频..."
 
-#: src/main.cpp:103
+#: src/main.cpp:100
 #, kde-format
 msgid "Browse and play your videos."
 msgstr "浏览并播放视频。"
 
-#: src/main.cpp:108
+#: src/main.cpp:105
 #, kde-format
 msgid "Developer"
 msgstr "开发人员"
 
-#: src/main.qml:87 src/views/collection/CollectionView.qml:39
+#: src/main.qml:86 src/views/collection/CollectionView.qml:39
 #, kde-format
 msgid "Open URL"
 msgstr "打开 URL"
 
-#: src/main.qml:89
+#: src/main.qml:88
 #, kde-format
 msgid ""
 "Enter any remote location, like YouTube video URLs, or from other services "
@@ -65,39 +65,39 @@ msgid ""
 msgstr ""
 "输入一个远程位置，例如 Youtube 视频 URL，或来自其他 MPV 支持的服务的位置。"
 
-#: src/main.qml:121
+#: src/main.qml:120
 #, kde-format
 msgid "Delete files?"
 msgstr "删除文件？"
 
-#: src/main.qml:123
+#: src/main.qml:122
 #, kde-format
 msgid "Are sure you want to delete %1 files"
 msgstr "您确定要删除 %1 个文件吗？"
 
-#: src/main.qml:171
+#: src/main.qml:170
 #, kde-format
 msgid "Now playing"
 msgstr "正在播放"
 
-#: src/main.qml:279 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:278 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "暂无内容"
 
-#: src/main.qml:280
+#: src/main.qml:279
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr "从您的收藏集合或文件系统中打开一个新视频。"
 
 #. i18n("Screenshots")}};
-#: src/main.qml:300 src/models/tagsmodel.cpp:14
+#: src/main.qml:299 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Collection"
 msgstr "视频集合"
 
-#: src/main.qml:466
+#: src/main.qml:465
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "显示/隐藏侧边栏"
@@ -234,7 +234,7 @@ msgstr "字幕"
 msgid "Audio Tracks"
 msgstr "音轨"
 
-#: src/views/player/PlayerView.qml:31
+#: src/views/player/PlayerView.qml:30
 #, kde-format
 msgid "Playing mode"
 msgstr "播放模式"
@@ -354,22 +354,22 @@ msgstr "首选语言"
 msgid "Preferred language if available."
 msgstr "首选语言 (如果可用)。"
 
-#: src/views/settings/SettingsDialog.qml:243
+#: src/views/settings/SettingsDialog.qml:242
 #, kde-format
 msgid "Sources"
 msgstr "视频来源"
 
-#: src/views/settings/SettingsDialog.qml:281
+#: src/views/settings/SettingsDialog.qml:280
 #, kde-format
 msgid "Add"
 msgstr "添加"
 
-#: src/views/settings/SettingsDialog.qml:303
+#: src/views/settings/SettingsDialog.qml:302
 #, kde-format
 msgid "Remove source"
 msgstr "移除来源"
 
-#: src/views/settings/SettingsDialog.qml:304
+#: src/views/settings/SettingsDialog.qml:303
 #, kde-format
 msgid ""
 "Are you sure you want to remove the source: \n"
@@ -378,17 +378,17 @@ msgstr ""
 "您确定要删除此来源吗： \n"
 " %1"
 
-#: src/views/tags/TagsGrid.qml:22
+#: src/views/tags/TagsGrid.qml:21
 #, kde-format
 msgid "No Tags!"
 msgstr "没有标签"
 
-#: src/views/tags/TagsGrid.qml:23
+#: src/views/tags/TagsGrid.qml:22
 #, kde-format
 msgid "Add a new tag to start organizing your video collection."
 msgstr "添加一个新标签，开始组织您的视频集合。"
 
-#: src/views/tags/TagsGrid.qml:36
+#: src/views/tags/TagsGrid.qml:35
 #, kde-format
 msgid "Filter"
 msgstr "过滤"

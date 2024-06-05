@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-14 01:39+0000\n"
+"POT-Creation-Date: 2024-06-05 02:05+0000\n"
 "PO-Revision-Date: 2021-09-15 21:44+0630\n"
 "Last-Translator: \n"
 "Language-Team: Burmese <kde-i18n-doc@kde.org>\n"
@@ -43,22 +43,22 @@ msgstr "အခြားဒေတာတောင်းဆိုမှု နှ�
 msgid "Search videos..."
 msgstr "ဗီဒီယိုများရှာမည်..."
 
-#: src/main.cpp:103
+#: src/main.cpp:100
 #, kde-format
 msgid "Browse and play your videos."
 msgstr "သင်၏ဗီဒီယိုများကို ရှောက်ကြည့်၍ ဖွင့်ပြမည်။"
 
-#: src/main.cpp:108
+#: src/main.cpp:105
 #, kde-format
 msgid "Developer"
 msgstr "ပရိုဂရမ်မာ"
 
-#: src/main.qml:87 src/views/collection/CollectionView.qml:39
+#: src/main.qml:86 src/views/collection/CollectionView.qml:39
 #, kde-format
 msgid "Open URL"
 msgstr "ယူအာအယ်လ် ဖွင့်မည်"
 
-#: src/main.qml:89
+#: src/main.qml:88
 #, kde-format
 msgid ""
 "Enter any remote location, like YouTube video URLs, or from other services "
@@ -67,40 +67,40 @@ msgstr ""
 "ယူကျူ့ဗီဒီယို ယူအာအယ်များ သို့မဟုတ် အမ်ပီဗီမှ ထောက်ပံ့ပေးထားသော အခြားဝန်ဆောင်မှုများမှ အဝေးနေရာများသို့ "
 "ဝင်ရောက်နိုင်သည်။"
 
-#: src/main.qml:121
+#: src/main.qml:120
 #, kde-format
 msgid "Delete files?"
 msgstr "ဖိုင်လ်များဖျက်မည်လား။"
 
-#: src/main.qml:123
+#: src/main.qml:122
 #, kde-format
 msgid "Are sure you want to delete %1 files"
 msgstr "ဖိုင်လ် %1ခု ကို သင်တကယ်ဖျက်တော့မည်လား"
 
-#: src/main.qml:171
+#: src/main.qml:170
 #, kde-format
 msgid "Now playing"
 msgstr "ယခုဖွင့်ပြနေသည်"
 
-#: src/main.qml:279 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:278 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "ဘာမှမရှိ။"
 
-#: src/main.qml:280
+#: src/main.qml:279
 #, fuzzy, kde-format
 #| msgid "Open a new video to start playing or add it to the playlist."
 msgid "Open a new video from your collection or file system."
 msgstr "ဖွင့်ပြရန် ဗီဒီယိုအသစ်တစ်ခု ဖွင့်ပါ သို့ ဖွင့်မည့်စာရင်းသို့ သွင်းပါ။"
 
 #. i18n("Screenshots")}};
-#: src/main.qml:300 src/models/tagsmodel.cpp:14
+#: src/main.qml:299 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Collection"
 msgstr "စုစည်းမှု"
 
-#: src/main.qml:466
+#: src/main.qml:465
 #, fuzzy, kde-format
 #| msgid "Toogle SideBar"
 msgid "Toggle SideBar"
@@ -244,7 +244,7 @@ msgstr "ဗီဒီယိုစာတန်းထိုး"
 msgid "Audio Tracks"
 msgstr "အော်ဒီယိုသံစဥ်များ"
 
-#: src/views/player/PlayerView.qml:31
+#: src/views/player/PlayerView.qml:30
 #, kde-format
 msgid "Playing mode"
 msgstr ""
@@ -364,22 +364,22 @@ msgstr "နှစ်သက်သော ဘာသာစကား"
 msgid "Preferred language if available."
 msgstr "ရရှိနိုင်လျှင် နှစ်သက်သော ဘာသာစကား။"
 
-#: src/views/settings/SettingsDialog.qml:243
+#: src/views/settings/SettingsDialog.qml:242
 #, kde-format
 msgid "Sources"
 msgstr "ဇစ်မြစ်များ"
 
-#: src/views/settings/SettingsDialog.qml:281
+#: src/views/settings/SettingsDialog.qml:280
 #, kde-format
 msgid "Add"
 msgstr "ထည့်သွင်းမည်"
 
-#: src/views/settings/SettingsDialog.qml:303
+#: src/views/settings/SettingsDialog.qml:302
 #, kde-format
 msgid "Remove source"
 msgstr "ဇစ်မြစ် ဖယ်ရှားမည်"
 
-#: src/views/settings/SettingsDialog.qml:304
+#: src/views/settings/SettingsDialog.qml:303
 #, kde-format
 msgid ""
 "Are you sure you want to remove the source: \n"
@@ -388,17 +388,17 @@ msgstr ""
 "ဇစ်မြစ်ကို သင်တကယ်ဖျက်တော့မည်လား။\n"
 "%1"
 
-#: src/views/tags/TagsGrid.qml:22
+#: src/views/tags/TagsGrid.qml:21
 #, kde-format
 msgid "No Tags!"
 msgstr "တပ်ဂ်များမရှိ။"
 
-#: src/views/tags/TagsGrid.qml:23
+#: src/views/tags/TagsGrid.qml:22
 #, kde-format
 msgid "Add a new tag to start organizing your video collection."
 msgstr "သင်၏ဗီဒီယိုစုစည်းမှုကို စီစဥ်ရန် တပ်ဂ်အသစ် ထည့်ပါ။"
 
-#: src/views/tags/TagsGrid.qml:36
+#: src/views/tags/TagsGrid.qml:35
 #, kde-format
 msgid "Filter"
 msgstr "စစ်ထုတ်မည်"
