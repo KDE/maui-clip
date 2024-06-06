@@ -1,15 +1,15 @@
 # translation of clip.pot to Esperanto
 # Copyright (C) 2024 Free Software Foundation, Inc.
 # This file is distributed under the same license as the maui-clip package.
-# Oliver Kellogg <okellogg@users.sourceforge.net>, 2024.
+# Oliver Kellogg <olivermkellogg@gmail.com>, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-05 02:05+0000\n"
-"PO-Revision-Date: 2024-03-24 10:34+0100\n"
-"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"PO-Revision-Date: 2024-06-05 23:54+0200\n"
+"Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -64,6 +64,8 @@ msgid ""
 "Enter any remote location, like YouTube video URLs, or from other services "
 "supported by MPV."
 msgstr ""
+"Enigu ajnan malproksiman lokon, kiel YouTube-filmetajn URL-ojn, aŭ tiujn de "
+"aliaj servoj subtenataj de MPV."
 
 #: src/main.qml:120
 #, kde-format
@@ -127,8 +129,8 @@ msgstr "Etikedoj"
 #, kde-format
 msgid "Search %1 video"
 msgid_plural "Search %1 videos"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Serĉi %1 filmeton"
+msgstr[1] "Serĉi %1 filmetojn"
 
 #: src/views/collection/CollectionView.qml:50
 #, kde-format
@@ -222,6 +224,8 @@ msgid ""
 "Are sure you want to delete \n"
 "%1"
 msgstr ""
+"Ĉu vi certas ke vi volas forigi \n"
+"%1"
 
 #: src/views/player/MPVPlayer.qml:29
 #, kde-format
@@ -374,6 +378,8 @@ msgid ""
 "Are you sure you want to remove the source: \n"
 " %1"
 msgstr ""
+"Ĉu vi certas ke vi volas forigi la fonton: \n"
+"%1"
 
 #: src/views/tags/TagsGrid.qml:21
 #, kde-format
