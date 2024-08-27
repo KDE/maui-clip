@@ -7,8 +7,8 @@
 #include "androidlockbackend.h"
 
 #include <QDebug>
-#include <QtAndroid>
-#include <QAndroidJniObject>
+#include <QJniEnvironment>
+#include <QJniObject>
 
 AndroidLockBackend::AndroidLockBackend(QObject *parent)
     : LockBackend(parent)
@@ -21,11 +21,15 @@ AndroidLockBackend::~AndroidLockBackend()
 
 void AndroidLockBackend::setInhibitionOff()
 {
-    QAndroidJniObject::callStaticMethod<void>("org.maui.clip.Solid", "setLockInhibitionOff", "(Landroid/app/Activity;)V", QtAndroid::androidActivity().object());
+    QJniObject activity = QJniObject::callStaticObjectMethod("org/qtproject/qt/android/QtNative", "activity", "()Landroid/app/Activity;"); // activity is valid
+
+    QJniObject::callStaticMethod<void>("org.maui.clip.Solid", "setLockInhibitionOff", "(Landroid/app/Activity;)V", activity.object<jobject>());
 }
 
 void AndroidLockBackend::setInhibitionOn(const QString &explanation)
 {
     Q_UNUSED(explanation)
-    QAndroidJniObject::callStaticMethod<void>("org.maui.clip.Solid", "setLockInhibitionOn", "(Landroid/app/Activity;)V", QtAndroid::androidActivity().object());
+    QJniObject activity = QJniObject::callStaticObjectMethod("org/qtproject/qt/android/QtNative", "activity", "()Landroid/app/Activity;"); // activity is valid
+
+    QJniObject::callStaticMethod<void>("org.maui.clip.Solid", "setLockInhibitionOn", "(Landroid/app/Activity;)V", activity.object<jobject>());
 }

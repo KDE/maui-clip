@@ -19,8 +19,10 @@ set(clipSRCS
     models/playlistmodel.cpp
     # models/youtubemodel.cpp
     utils/clip.cpp
-    controllers/lockmanager.cpp
-    #[[controllers/youtube.cpp]])
+    controllers/lockmanager.cpp)
+
+set(clip_ASSETS
+    assets.qrc)
 
 set(thumbnailerSRCS
     utils/thumbnailer.cpp
@@ -29,34 +31,71 @@ set(thumbnailerSRCS
     utils/ffmpegthumbs/imagewriter.cpp
     utils/ffmpegthumbs/videothumbnailer.cpp)
 
-qt_add_resources(clip_QML_QRC qml.qrc)
-
 if(ANDROID)
     list(APPEND clipSRCS
         controllers/android/androidlockbackend.cpp)
 
-    add_library(${PROJECT_NAME} SHARED
+    qt_add_executable(${PROJECT_NAME}
+        MANUAL_FINALIZATION
         ${clipSRCS}
-        ${thumbnailerSRCS}
-        ${clip_QML_QRC})
+        ${clip_ASSETS}
+        ${thumbnailerSRCS})
+
+    set_property(TARGET ${PROJECT_NAME} APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/android_files)
+    configure_file(${CMAKE_CURRENT_SOURCE_DIR}/android_files/version.gradle.in ${CMAKE_BINARY_DIR}/src/version.gradle)
+
 else()
     list(APPEND clipSRCS
         controllers/linux/solidlockbackend.cpp)
     qt_add_dbus_interface(clipSRCS controllers/linux/org.freedesktop.ScreenSaver.xml screensaverdbusinterface)
 
-    add_executable(${PROJECT_NAME}
+    qt_add_executable(${PROJECT_NAME}
         ${clipSRCS}
+         ${clip_ASSETS}
         ${thumbnailerSRCS}
-        ${clip_QML_QRC}
         ${mpvSRCS})
 endif()
 
+
+qt_add_qml_module(${PROJECT_NAME} URI app.maui.clip
+    NO_PLUGIN
+    QML_FILES
+    main.qml
+    views/player/PlayerView.qml
+    views/player/MPVPlayer.qml
+    views/collection/CollectionView.qml
+    views/SelectionBar.qml
+    views/tags/TagsView.qml
+    views/player/Playlist.qml
+    views/tags/TagsGrid.qml
+    views/BrowserLayout.qml
+    views/ItemMenu.qml
+    views/ListDelegate.qml
+    views/FloatingVideo.qml
+    views/settings/SettingsDialog.qml
+    views/youtube/YouTubeView.qml
+    views/player/Player.qml
+    views/collection/PlacesSidebar.qml)
+
 if (ANDROID)
+    find_package(OpenSSL REQUIRED)
+
     target_link_libraries(${PROJECT_NAME}
-        Qt6::AndroidExtras
-        Qt6::QuickControls2)
+        PRIVATE
+        Qt6::QuickControls2
+        OpenSSL::SSL)
+
+    message(${ANDROID_SDK_ROOT})
+
+    # include(${ANDROID_SDK_ROOT}/openssl/android_openssl.cmake)
+    # add_android_openssl_libraries(${PROJECT_NAME})
+
+    # set_property(TARGET ${PROJECT_NAME} PROPERTY QT_ANDROID_EXTRA_LIBS
+    #     ${ANDROID_SDK_ROOT}/openssl/ssl_3/arm64-v8a/libcrypto.so
+    #     ${ANDROID_SDK_ROOT}/openssl/ssl_3/arm64-v8a/libssl.so)
 else()
     target_link_libraries(${PROJECT_NAME}
+        PRIVATE
         Qt6::DBus
         Qt6::Widgets)
 endif()
@@ -72,9 +111,15 @@ if(MPV_AVAILABLE)
     target_compile_definitions(${PROJECT_NAME} PUBLIC MPV_AVAILABLE)
 endif()
 
+set(Taglib_LIBRARIES
+    TagLib::tag)
+
 target_link_libraries(${PROJECT_NAME}
+    PRIVATE
     MauiKit4
     MauiKit4::FileBrowsing
+    Qt6::Network
+    Qt6::Core
     Qt6::Quick
     Qt6::Qml
     Qt6::Multimedia
@@ -85,7 +130,7 @@ target_link_libraries(${PROJECT_NAME}
     ${AVFORMAT_LIBRARIES}
     ${AVCODEC_LIBRARIES}
     ${SWSCALE_LIBRARIES}
-    Taglib::Taglib)
+    ${Taglib_LIBRARIES})
 
 if(UNIX AND NOT APPLE AND NOT ANDROID)
     install (TARGETS ${PROJECT_NAME} ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
@@ -93,3 +138,5 @@ if(UNIX AND NOT APPLE AND NOT ANDROID)
     #TODO: port to ecm_install_icons()
     install(FILES assets/clip.svg DESTINATION ${KDE_INSTALL_ICONDIR}/hicolor/scalable/apps)
 endif()
+
+qt_finalize_target(${PROJECT_NAME})

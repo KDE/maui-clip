@@ -145,7 +145,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     }
 
     QQmlApplicationEngine engine;
-    const QUrl url(QStringLiteral("qrc:/main.qml"));
+    const QUrl url(QStringLiteral("qrc:/app/maui/clip/main.qml"));
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
                      &app, [url, &arguments](QObject *obj, const QUrl &objUrl)
     {
@@ -171,9 +171,9 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 #ifdef MPV_AVAILABLE
     qRegisterMetaType<TracksModel*>();
     qmlRegisterType<MpvObject>("mpv", 1, 0, "MpvObject");
-    qmlRegisterType(QUrl("qrc:/views/player/MPVPlayer.qml"), CLIP_URI, 1, 0, "Video");
+    qmlRegisterType(QUrl("qrc:/app/maui/clip/views/player/MPVPlayer.qml"), CLIP_URI, 1, 0, "Video");
 #else
-    qmlRegisterType(QUrl("qrc:/views/player/Player.qml"), CLIP_URI, 1, 0, "Video");
+    qmlRegisterType(QUrl("qrc:/app/maui/clip/views/player/Player.qml"), CLIP_URI, 1, 0, "Video");
 #endif
 
     qmlRegisterSingletonType<LockManager>(CLIP_URI, 1, 0, "LockManager", [](QQmlEngine*, QJSEngine*) -> QObject* {
