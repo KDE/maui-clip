@@ -85,7 +85,7 @@
     <p xml:lang="x-test">xxClip is a video player and collection manager.xx</p>
     <p xml:lang="zh-TW">Clip 是一個影片播放與收藏管理工具。</p>
   </description>
-  <url type="homepage">https://apps.kde.org/clip</url>
+  <url type="homepage">https://mauikit.org/apps/clip/</url>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?product=clip</url>
   <url type="donation">https://kde.org/community/donations</url>
   <url type="vcs-browser">https://invent.kde.org/maui/clip/</url>
