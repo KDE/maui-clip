@@ -112,7 +112,7 @@ if(MPV_AVAILABLE)
 endif()
 
 set(Taglib_LIBRARIES
-    TagLib::tag)
+    Taglib::Taglib)
 
 target_link_libraries(${PROJECT_NAME}
     PRIVATE
