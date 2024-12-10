@@ -1,9 +1,9 @@
 import QtQuick
 import QtCore
-import QtQuick.Controls 
-import QtQuick.Layouts 
+import QtQuick.Controls
+import QtQuick.Layouts
 
-import QtMultimedia 
+import QtMultimedia
 
 import org.mauikit.controls as Maui
 import org.mauikit.filebrowsing as FB
@@ -105,8 +105,7 @@ Maui.ApplicationWindow
         id: fmDialogComponent
         FB.FileDialog
         {
-            mode: modes.SAVE
-            browser.settings.filterType: FB.FMList.IMAGE
+            browser.settings.filterType: FB.FMList.VIDEO
             browser.settings.onlyDirs: false
         }
     }
@@ -227,11 +226,11 @@ Maui.ApplicationWindow
                     anchors.fill: parent
                 }
 
-                BusyIndicator
-                {
-                    anchors.centerIn: parent
-                    running: _playerView.status === MediaPlayer.Loading
-                }
+                // BusyIndicator
+                // {
+                //     anchors.centerIn: parent
+                //     running: _playerView.status === MediaPlayer.Loading
+                // }
 
                 Loader
                 {
@@ -392,6 +391,12 @@ Maui.ApplicationWindow
                 }
 
                 headBar.rightContent: [
+
+                    FB.FavButton
+                    {
+                        url: _playerView.url
+                    },
+
                     ToolButton
                     {
                         //                        text: i18n("Open")
@@ -605,14 +610,14 @@ Maui.ApplicationWindow
 
     function openFileDialog()
     {
-        dialogLoader.sourceComponent= fmDialogComponent
-        dialog.mode = dialog.modes.OPEN
-        dialog.settings.filterType= FB.FMList.VIDEO
-        dialog.settings.onlyDirs= false
+        dialogLoader.sourceComponent = fmDialogComponent
+        dialog.mode = FB.FileDialog.Modes.Open
+        dialog.browser.settings.filterType= FB.FMList.VIDEO
+        dialog.browser.settings.onlyDirs= false
         dialog.callback = function(paths)
         {
             Clip.Clip.openVideos(paths)
-        };
+        }
         dialog.open()
     }
 

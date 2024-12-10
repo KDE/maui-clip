@@ -9,7 +9,14 @@
 static FMH::MODEL videoData(const QUrl &url)
 {
     FMH::MODEL model;
+
+    if(!FMStatic::VIDEO_MIMETYPES.contains(FMStatic::getMime(url)))
+    {
+        return model;
+    }
+
     model= FMStatic::getFileInfoModel(url);
+
     model.insert(FMH::MODEL_KEY::PREVIEW, "image://preview/"+url.toString());
     return model;
 }
@@ -25,41 +32,7 @@ VideosModel::VideosModel(QObject *parent) : MauiList(parent)
     qDebug()<< "CREATING GALLERY LIST";
 
     m_fileLoader->informer = &videoData;
-    connect(m_fileLoader, &FMH::FileLoader::finished,[this](FMH::MODEL_LIST items)
-    {
-        qDebug() << "Items finished" << items.size();
-        Q_EMIT this->filesChanged();
-    });
 
-    connect(m_fileLoader, &FMH::FileLoader::itemsReady,[this](FMH::MODEL_LIST items)
-    {
-        Q_EMIT this->preListChanged();
-        this-> list << items;
-        Q_EMIT this->postListChanged();
-        Q_EMIT this->countChanged();
-    });
-
-    connect(m_fileLoader, &FMH::FileLoader::itemReady,[this](FMH::MODEL item)
-    {
-        this->insertFolder(item[FMH::MODEL_KEY::SOURCE]);
-    });
-
-    connect(m_watcher, &QFileSystemWatcher::directoryChanged, [this](QString dir)
-    {
-        qDebug()<< "Dir changed" << dir;
-        this->rescan();
-        //        this->scan({QUrl::fromLocalFile(dir)}, m_recursive);
-    });
-
-    connect(m_watcher, &QFileSystemWatcher::fileChanged, [](QString file)
-    {
-        qDebug()<< "File changed" << file;
-    });
-
-    connect(this, &VideosModel::urlsChanged, [this]()
-    {
-         this->scan(m_urls, m_recursive, m_limit);
-    });
 }
 
 const FMH::MODEL_LIST &VideosModel::items() const
@@ -69,7 +42,7 @@ const FMH::MODEL_LIST &VideosModel::items() const
 
 void VideosModel::setUrls(const QStringList &urls)
 {
-    qDebug()<< "setting urls"<< this->m_urls << urls;    
+    qDebug()<< "setting urls"<< this->m_urls << urls;
 
     if(this->m_urls == urls)
         return;
@@ -246,5 +219,40 @@ void VideosModel::classBegin()
 
 void VideosModel::componentComplete()
 {
+    connect(m_fileLoader, &FMH::FileLoader::finished,[this](FMH::MODEL_LIST items)
+    {
+        qDebug() << "Items finished" << items.size();
+        Q_EMIT this->filesChanged();
+    });
+
+    connect(m_fileLoader, &FMH::FileLoader::itemsReady,[this](FMH::MODEL_LIST items)
+    {
+        Q_EMIT this->preListChanged();
+        this-> list << items;
+        Q_EMIT this->postListChanged();
+        Q_EMIT this->countChanged();
+    });
+
+    connect(m_fileLoader, &FMH::FileLoader::itemReady,[this](FMH::MODEL item)
+    {
+        this->insertFolder(item[FMH::MODEL_KEY::SOURCE]);
+    });
+
+    connect(m_watcher, &QFileSystemWatcher::directoryChanged, [this](QString dir)
+    {
+        qDebug()<< "Dir changed" << dir;
+        this->rescan();
+        //        this->scan({QUrl::fromLocalFile(dir)}, m_recursive);
+    });
+
+    connect(m_watcher, &QFileSystemWatcher::fileChanged, [](QString file)
+    {
+        qDebug()<< "File changed" << file;
+    });
+
+    connect(this, &VideosModel::urlsChanged, [this]()
+    {
+        this->scan(m_urls, m_recursive, m_limit);
+    });
      this->scan(m_urls, m_recursive, m_limit);
 }

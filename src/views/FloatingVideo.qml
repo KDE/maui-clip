@@ -1,12 +1,12 @@
-import QtQuick 
-import QtQuick.Controls 
+import QtQuick
+import QtQuick.Controls
 
-import QtQuick.Layouts 
+import QtQuick.Layouts
 import Qt5Compat.GraphicalEffects
 
 import org.mauikit.controls as Maui
 
-Item
+Rectangle
 {
     id: control
     Maui.Theme.inherit: false
@@ -24,6 +24,9 @@ Item
     ToolTip.timeout: 5000
     ToolTip.visible: _mouseArea.containsMouse && !Maui.Handy.isMobile
     ToolTip.text: root.title
+
+    color: Maui.Theme.backgroundColor
+    radius: Maui.Style.radiusV
 
     MouseArea
     {

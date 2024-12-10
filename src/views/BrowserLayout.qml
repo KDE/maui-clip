@@ -198,7 +198,7 @@ Maui.AltBrowser
             padding: Maui.Style.space.tiny
             isCurrentItem: parent.isCurrentItem || checked
             tooltipText: model.url
-            checkable: root.selectionMode
+            checkable: root.selectionMode || checked
             checked: (selectionBar ? selectionBar.contains(model.url) : false)
             draggable: true
 
@@ -210,6 +210,7 @@ Maui.AltBrowser
 
         template.iconComponent: Loader
         {
+            asynchronous: true
             sourceComponent: preview && !Maui.Handy.isMobile ? videoComponent : imgComponent
 
             Component
@@ -236,6 +237,7 @@ Maui.AltBrowser
                     imageSource: model.preview
                     iconSource: model.icon
                     fillMode: Image.PreserveAspectFit
+                    image.cache: true
                 }
             }
         }
