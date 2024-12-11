@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-05 02:05+0000\n"
+"POT-Creation-Date: 2024-12-11 01:48+0000\n"
 "PO-Revision-Date: 2023-10-29 08:33+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -66,39 +66,39 @@ msgstr ""
 "Wpisz dowolne zdalne położenie, jak np. adres URL do filmu na YouTube lub do "
 "innych usług obsługiwanych przez MPV."
 
-#: src/main.qml:120
+#: src/main.qml:119
 #, kde-format
 msgid "Delete files?"
 msgstr "Czy usunąć pliki?"
 
-#: src/main.qml:122
+#: src/main.qml:121
 #, kde-format
 msgid "Are sure you want to delete %1 files"
 msgstr "Czy na pewno usunąć %1 plików"
 
-#: src/main.qml:170
+#: src/main.qml:169
 #, kde-format
 msgid "Now playing"
 msgstr "Teraz odtwarzany"
 
-#: src/main.qml:278 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:277 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "Nie ma tutaj niczego!"
 
-#: src/main.qml:279
+#: src/main.qml:278
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr "Otwórz nowy film z twojego zbioru lub systemu plików."
 
 #. i18n("Screenshots")}};
-#: src/main.qml:299 src/models/tagsmodel.cpp:14
+#: src/main.qml:298 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Collection"
 msgstr "Zbiór"
 
-#: src/main.qml:465
+#: src/main.qml:470
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "Przełącz pasek boczny"

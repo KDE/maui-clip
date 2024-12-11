@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-05 02:05+0000\n"
+"POT-Creation-Date: 2024-12-11 01:48+0000\n"
 "PO-Revision-Date: 2024-04-22 16:06\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -65,39 +65,39 @@ msgid ""
 msgstr ""
 "输入一个远程位置，例如 Youtube 视频 URL，或来自其他 MPV 支持的服务的位置。"
 
-#: src/main.qml:120
+#: src/main.qml:119
 #, kde-format
 msgid "Delete files?"
 msgstr "删除文件？"
 
-#: src/main.qml:122
+#: src/main.qml:121
 #, kde-format
 msgid "Are sure you want to delete %1 files"
 msgstr "您确定要删除 %1 个文件吗？"
 
-#: src/main.qml:170
+#: src/main.qml:169
 #, kde-format
 msgid "Now playing"
 msgstr "正在播放"
 
-#: src/main.qml:278 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:277 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "暂无内容"
 
-#: src/main.qml:279
+#: src/main.qml:278
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr "从您的收藏集合或文件系统中打开一个新视频。"
 
 #. i18n("Screenshots")}};
-#: src/main.qml:299 src/models/tagsmodel.cpp:14
+#: src/main.qml:298 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Collection"
 msgstr "视频集合"
 
-#: src/main.qml:465
+#: src/main.qml:470
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "显示/隐藏侧边栏"

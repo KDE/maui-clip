@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-05 02:05+0000\n"
+"POT-Creation-Date: 2024-12-11 01:48+0000\n"
 "PO-Revision-Date: 2023-11-01 07:35+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -66,39 +66,39 @@ msgstr ""
 "Ange vilken fjärrplats som helst, såsom YouTube videowebbadresser, eller "
 "från andra tjänster som stöds av MPV."
 
-#: src/main.qml:120
+#: src/main.qml:119
 #, kde-format
 msgid "Delete files?"
 msgstr "Ta bort filer?"
 
-#: src/main.qml:122
+#: src/main.qml:121
 #, kde-format
 msgid "Are sure you want to delete %1 files"
 msgstr "Är du säker på att du vill ta bort %1 filer"
 
-#: src/main.qml:170
+#: src/main.qml:169
 #, kde-format
 msgid "Now playing"
 msgstr "Spelar nu"
 
-#: src/main.qml:278 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:277 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "Ingenting här."
 
-#: src/main.qml:279
+#: src/main.qml:278
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr "Öppna en ny video från din samling eller filsystemet."
 
 #. i18n("Screenshots")}};
-#: src/main.qml:299 src/models/tagsmodel.cpp:14
+#: src/main.qml:298 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Collection"
 msgstr "Samling"
 
-#: src/main.qml:465
+#: src/main.qml:470
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "Visa eller dölj sidorad"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-05 02:05+0000\n"
+"POT-Creation-Date: 2024-12-11 01:48+0000\n"
 "PO-Revision-Date: 2023-03-12 17:07+0100\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -67,27 +67,27 @@ msgstr ""
 "Geben Sie einen beliebigen entfernten Ort ein, z. B. YouTube-Video-URLs oder "
 "von anderen Diensten, die von MPV unterstützt werden."
 
-#: src/main.qml:120
+#: src/main.qml:119
 #, kde-format
 msgid "Delete files?"
 msgstr "Dateien löschen?"
 
-#: src/main.qml:122
+#: src/main.qml:121
 #, kde-format
 msgid "Are sure you want to delete %1 files"
 msgstr "Möchten Sie wirklich %1 Dateien löschen?"
 
-#: src/main.qml:170
+#: src/main.qml:169
 #, kde-format
 msgid "Now playing"
 msgstr "Wiedergabe"
 
-#: src/main.qml:278 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:277 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "Nichts"
 
-#: src/main.qml:279
+#: src/main.qml:278
 #, fuzzy, kde-format
 #| msgid "Open a new video to start playing or add it to the playlist."
 msgid "Open a new video from your collection or file system."
@@ -96,13 +96,13 @@ msgstr ""
 "der Wiedergabeliste hinzu."
 
 #. i18n("Screenshots")}};
-#: src/main.qml:299 src/models/tagsmodel.cpp:14
+#: src/main.qml:298 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Collection"
 msgstr "Sammlung"
 
-#: src/main.qml:465
+#: src/main.qml:470
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "Seitenleiste umschalten"

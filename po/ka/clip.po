@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-05 02:05+0000\n"
+"POT-Creation-Date: 2024-12-11 01:48+0000\n"
 "PO-Revision-Date: 2023-10-30 05:27+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -67,39 +67,39 @@ msgstr ""
 "შეიყვანეთ დაშორებული მდებარეობა, მაგალითად YouTube-ის ვიდეოების ბმულები ან "
 "MPV-ის მიერ მხარდაჭერილი სხვა სერვისები."
 
-#: src/main.qml:120
+#: src/main.qml:119
 #, kde-format
 msgid "Delete files?"
 msgstr "წავშალო ფაილები?"
 
-#: src/main.qml:122
+#: src/main.qml:121
 #, kde-format
 msgid "Are sure you want to delete %1 files"
 msgstr "დარწმუნებული ბრძანდებით, რომ გნებავთ, წაშალოთ %1 ფაილი"
 
-#: src/main.qml:170
+#: src/main.qml:169
 #, kde-format
 msgid "Now playing"
 msgstr "მიმდინარეობს დაკვრა"
 
-#: src/main.qml:278 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:277 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "აქ არაფერია!"
 
-#: src/main.qml:279
+#: src/main.qml:278
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr "გახსენით ახალი ვიდეო თქვენი კოლექციიდან ან ფაილური სისტემიდან."
 
 #. i18n("Screenshots")}};
-#: src/main.qml:299 src/models/tagsmodel.cpp:14
+#: src/main.qml:298 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Collection"
 msgstr "კოლექცია"
 
-#: src/main.qml:465
+#: src/main.qml:470
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "გვერდითი პანელი ჩვენების ჩართ/გამორთ"
