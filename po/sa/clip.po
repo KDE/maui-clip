@@ -1,0 +1,409 @@
+# Sanskrit translations for maui-clip package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the maui-clip package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+# SPDX-FileCopyrightText: 2024 kali <shreekantkalwar@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: maui-clip\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-12-11 01:48+0000\n"
+"PO-Revision-Date: 2024-12-29 23:06+0530\n"
+"Last-Translator: kali <shreekantkalwar@gmail.com>\n"
+"Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
+"Language: sa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n>2);\n"
+"X-Generator: Lokalize 24.08.2\n"
+
+#: src/controllers/YouTube.qml:95
+#, kde-format
+msgid "Custom API Key"
+msgstr "कस्टम एपिआइ कुंजी"
+
+#: src/controllers/YouTube.qml:114
+#, kde-format
+msgid "Search results"
+msgstr "अन्वेषणफलम्"
+
+#: src/controllers/YouTube.qml:209
+#, kde-format
+msgid "No Results!"
+msgstr "न परिणामः!"
+
+#: src/controllers/YouTube.qml:210
+#, kde-format
+msgid "Try with another query"
+msgstr "अन्येन प्रश्नेन सह प्रयतस्व"
+
+#: src/controllers/YouTube.qml:249
+#, kde-format
+msgid "Search videos..."
+msgstr "विडियो अन्वेषणं कुर्वन्तु..."
+
+#: src/main.cpp:100
+#, kde-format
+msgid "Browse and play your videos."
+msgstr "ब्राउज् कृत्वा स्वस्य विडियो प्ले कुर्वन्तु।"
+
+#: src/main.cpp:105
+#, kde-format
+msgid "Developer"
+msgstr "विकासकः"
+
+#: src/main.qml:86 src/views/collection/CollectionView.qml:39
+#, kde-format
+msgid "Open URL"
+msgstr "URL उद्घाटयन्तु"
+
+#: src/main.qml:88
+#, kde-format
+msgid ""
+"Enter any remote location, like YouTube video URLs, or from other services "
+"supported by MPV."
+msgstr ""
+"किमपि दूरस्थं स्थानं प्रविशतु, यथा YouTube विडियो URLs, अथवा MPV द्वारा समर्थितेभ्यः "
+"अन्येभ्यः सेवाभ्यः ।"
+
+#: src/main.qml:119
+#, kde-format
+msgid "Delete files?"
+msgstr "सञ्चिकाः विलोपयन्तु ?"
+
+#: src/main.qml:121
+#, kde-format
+msgid "Are sure you want to delete %1 files"
+msgstr "%1 सञ्चिकाः विलोपयितुम् इच्छति इति निश्चितम्"
+
+#: src/main.qml:169
+#, kde-format
+msgid "Now playing"
+msgstr "अधुना क्रीडन्"
+
+#: src/main.qml:277 src/views/youtube/YouTubeView.qml:25
+#, kde-format
+msgid "Nothing Here!"
+msgstr "अत्र किमपि नास्ति !"
+
+#: src/main.qml:278
+#, kde-format
+msgid "Open a new video from your collection or file system."
+msgstr "स्वस्य संग्रहात् अथवा सञ्चिकातन्त्रात् नूतनं विडियो उद्घाटयन्तु।"
+
+#. i18n("Screenshots")}};
+#: src/main.qml:298 src/models/tagsmodel.cpp:14
+#: src/views/settings/SettingsDialog.qml:36
+#, kde-format
+msgid "Collection"
+msgstr "सङ्ग्रह"
+
+#: src/main.qml:470
+#, kde-format
+msgid "Toggle SideBar"
+msgstr "Toggle SideBar इति"
+
+#: src/models/tagsmodel.cpp:10
+#, kde-format
+msgid "Favorites"
+msgstr "प्रियाः"
+
+#: src/models/tagsmodel.cpp:11
+#, kde-format
+msgid "Downloads"
+msgstr "डाउनलोड्स्"
+
+#: src/models/tagsmodel.cpp:12
+#, kde-format
+msgid "Videos"
+msgstr "विडियो"
+
+#: src/models/tagsmodel.cpp:21 src/models/tagsmodel.cpp:59
+#: src/views/ItemMenu.qml:29
+#, kde-format
+msgid "Tags"
+msgstr "टैग्स"
+
+#: src/views/BrowserLayout.qml:69
+#, kde-format
+msgid "Search %1 video"
+msgid_plural "Search %1 videos"
+msgstr[0] "%1 चलच्चित्रं अन्वेष्टुम्"
+msgstr[1] "%1 चलच्चित्रेषु अन्वेषणं कुर्वन्तु"
+
+#: src/views/collection/CollectionView.qml:50
+#, kde-format
+msgid "Settings"
+msgstr "सेटिंग्स्"
+
+#: src/views/collection/CollectionView.qml:58
+#, kde-format
+msgid "About"
+msgstr "विषये"
+
+#: src/views/collection/CollectionView.qml:76
+#, kde-format
+msgid "Toggle sidebar"
+msgstr "पार्श्वपट्टिकां टॉगलं कुर्वन्तु"
+
+#: src/views/collection/CollectionView.qml:82 src/views/player/Playlist.qml:21
+#: src/views/tags/TagsView.qml:38
+#, kde-format
+msgid "No Videos!"
+msgstr "न विडियो!"
+
+#: src/views/collection/CollectionView.qml:83
+#, kde-format
+msgid "Add a new video source or open a file."
+msgstr "नूतनं विडियो स्रोतः योजयन्तु अथवा सञ्चिकां उद्घाटयन्तु।"
+
+#: src/views/collection/CollectionView.qml:88
+#, kde-format
+msgid "Open file"
+msgstr "सञ्चिकां उद्घाटयन्तु"
+
+#: src/views/collection/CollectionView.qml:94
+#, kde-format
+msgid "Add sources"
+msgstr "स्रोतांसि योजयतु"
+
+#: src/views/collection/PlacesSidebar.qml:52
+#, kde-format
+msgid "Tags!"
+msgstr "टैग्स !"
+
+#: src/views/collection/PlacesSidebar.qml:53
+#, kde-format
+msgid "Your tags will be listed here"
+msgstr "भवतः टैग् अत्र सूचीकृताः भविष्यन्ति"
+
+#: src/views/ItemMenu.qml:22
+#, kde-format
+msgid "UnFav it"
+msgstr "UnFav it"
+
+#: src/views/ItemMenu.qml:41
+#, kde-format
+msgid "Info"
+msgstr "Info"
+
+#: src/views/ItemMenu.qml:52 src/views/SelectionBar.qml:75
+#, kde-format
+msgid "Share"
+msgstr "संविभागः"
+
+#: src/views/ItemMenu.qml:63 src/views/SelectionBar.qml:45
+#, kde-format
+msgid "Queue"
+msgstr "पङ्क्ति"
+
+#: src/views/ItemMenu.qml:75
+#, kde-format
+msgid "Select"
+msgstr "विचि"
+
+#: src/views/ItemMenu.qml:89
+#, kde-format
+msgid "Show in folder"
+msgstr "फोल्डर् मध्ये दर्शयतु"
+
+#: src/views/ItemMenu.qml:102 src/views/SelectionBar.qml:101
+#, kde-format
+msgid "Remove"
+msgstr "अपाकरोति"
+
+#: src/views/ItemMenu.qml:118
+#, kde-format
+msgid "Delete file?"
+msgstr "सञ्चिकां विलोपयन्तु?"
+
+#: src/views/ItemMenu.qml:120
+#, kde-format
+msgid ""
+"Are sure you want to delete \n"
+"%1"
+msgstr "%1 विलोपयितुम् इच्छति इति निश्चितम्"
+
+#: src/views/player/MPVPlayer.qml:29
+#, kde-format
+msgid "Subtitles"
+msgstr "उपशीर्षक"
+
+#: src/views/player/MPVPlayer.qml:47
+#, kde-format
+msgid "Audio Tracks"
+msgstr "ऑडियो ट्रैक्स"
+
+#: src/views/player/PlayerView.qml:30
+#, kde-format
+msgid "Playing mode"
+msgstr "वादनविधिः"
+
+#: src/views/player/Playlist.qml:22
+#, kde-format
+msgid "Add videos to the playlist."
+msgstr "प्लेलिस्ट् मध्ये विडियो योजयन्तु।"
+
+#: src/views/SelectionBar.qml:34
+#, kde-format
+msgid "Play"
+msgstr "क्रीडतु"
+
+#: src/views/SelectionBar.qml:56
+#, kde-format
+msgid "Un/Fav"
+msgstr "Un/Fav"
+
+#: src/views/SelectionBar.qml:63
+#, kde-format
+msgid "Tag"
+msgstr "सूचकपत्त्र"
+
+#: src/views/SelectionBar.qml:85
+#, kde-format
+msgid "Export"
+msgstr "निर्यात"
+
+#: src/views/settings/SettingsDialog.qml:17
+#, kde-format
+msgid "General"
+msgstr "सामान्य"
+
+#: src/views/settings/SettingsDialog.qml:22
+#, kde-format
+msgid "Volume Step"
+msgstr "Volume Step"
+
+#: src/views/settings/SettingsDialog.qml:41
+#, kde-format
+msgid "Sorting by"
+msgstr "क्रमेण क्रमः"
+
+#: src/views/settings/SettingsDialog.qml:42
+#, kde-format
+msgid "Change the sorting key."
+msgstr "क्रमाङ्कनकुंजी परिवर्तयन्तु ।"
+
+#: src/views/settings/SettingsDialog.qml:52
+#, kde-format
+msgid "Title"
+msgstr "शीर्षक"
+
+#: src/views/settings/SettingsDialog.qml:59
+#, kde-format
+msgid "Date"
+msgstr "दिनाङ्कः"
+
+#: src/views/settings/SettingsDialog.qml:66
+#, kde-format
+msgid "Size"
+msgstr "आकृति"
+
+#: src/views/settings/SettingsDialog.qml:73
+#, kde-format
+msgid "Type"
+msgstr "प्रकारः"
+
+#: src/views/settings/SettingsDialog.qml:82
+#, kde-format
+msgid "Sort order"
+msgstr "क्रमाङ्कनम्"
+
+#: src/views/settings/SettingsDialog.qml:83
+#, kde-format
+msgid "Change the sorting order."
+msgstr "क्रमाङ्कनक्रमं परिवर्तयन्तु ।"
+
+#: src/views/settings/SettingsDialog.qml:93
+#, kde-format
+msgid "Ascending"
+msgstr "आरोहणम्"
+
+#: src/views/settings/SettingsDialog.qml:101
+#, kde-format
+msgid "Descending"
+msgstr "अवतरन्"
+
+#: src/views/settings/SettingsDialog.qml:112
+#, kde-format
+msgid "Playback"
+msgstr "प्लेबैक"
+
+#: src/views/settings/SettingsDialog.qml:117
+#, kde-format
+msgid "Hardware Decoding"
+msgstr "हार्डवेयर डिकोडिंग"
+
+#: src/views/settings/SettingsDialog.qml:118
+#, kde-format
+msgid "Use the sorting preferences globally for all the tabs and splits."
+msgstr "सर्वेषां ट्याब्-विभाजनानां कृते वैश्विकरूपेण क्रमाङ्कन-प्राथमिकतानां उपयोगं कुर्वन्तु ।"
+
+#: src/views/settings/SettingsDialog.qml:131
+#, kde-format
+msgid "Audio"
+msgstr "श्रव्यः"
+
+#: src/views/settings/SettingsDialog.qml:137
+#, kde-format
+msgid "Preferred Language"
+msgstr "प्राधान्य भाषा"
+
+#: src/views/settings/SettingsDialog.qml:138
+#, kde-format
+msgid "Preferred language if available."
+msgstr "यदि उपलब्धं भवति तर्हि प्राधान्यभाषा।"
+
+#: src/views/settings/SettingsDialog.qml:242
+#, kde-format
+msgid "Sources"
+msgstr "स्रोतः"
+
+#: src/views/settings/SettingsDialog.qml:280
+#, kde-format
+msgid "Add"
+msgstr "संयोजयति"
+
+#: src/views/settings/SettingsDialog.qml:302
+#, kde-format
+msgid "Remove source"
+msgstr "स्रोतः निष्कासयतु"
+
+#: src/views/settings/SettingsDialog.qml:303
+#, kde-format
+msgid ""
+"Are you sure you want to remove the source: \n"
+" %1"
+msgstr "किं भवान् निश्चितरूपेण स्रोतः हर्तुं इच्छति: %1"
+
+#: src/views/tags/TagsGrid.qml:21
+#, kde-format
+msgid "No Tags!"
+msgstr "No Tags!"
+
+#: src/views/tags/TagsGrid.qml:22
+#, kde-format
+msgid "Add a new tag to start organizing your video collection."
+msgstr "स्वस्य विडियो संग्रहस्य आयोजनं आरभ्य नूतनं टैग् योजयन्तु।"
+
+#: src/views/tags/TagsGrid.qml:35
+#, kde-format
+msgid "Filter"
+msgstr "फ़िल्टर"
+
+#: src/views/tags/TagsView.qml:39
+#, kde-format
+msgid "There's no videos associated with the tag"
+msgstr "टैग् इत्यनेन सह सम्बद्धाः कोऽपि विडियो नास्ति"
+
+#: src/views/youtube/YouTubeView.qml:26
+#, kde-format
+msgid "Start searching for online videos."
+msgstr "ऑनलाइन-वीडियो-अन्वेषणं आरभत।"
+
+#: src/views/youtube/YouTubeView.qml:44
+#, kde-format
+msgid "Search..."
+msgstr "अन्वेषण..."

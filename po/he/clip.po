@@ -1,0 +1,414 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the maui-clip package.
+#
+# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: maui-clip\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-12-11 01:48+0000\n"
+"PO-Revision-Date: 2024-12-29 18:26+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==2 ? 1 : n>10 && n%10==0 ? "
+"2 : 3);\n"
+"X-Generator: Lokalize 24.12.0\n"
+
+#: src/controllers/YouTube.qml:95
+#, kde-format
+msgid "Custom API Key"
+msgstr "מפתח API משלך"
+
+#: src/controllers/YouTube.qml:114
+#, kde-format
+msgid "Search results"
+msgstr "תוצאות חיפוש"
+
+#: src/controllers/YouTube.qml:209
+#, kde-format
+msgid "No Results!"
+msgstr "אין תוצאות!"
+
+#: src/controllers/YouTube.qml:210
+#, kde-format
+msgid "Try with another query"
+msgstr "לנסות עם שאילתה אחרת"
+
+#: src/controllers/YouTube.qml:249
+#, kde-format
+msgid "Search videos..."
+msgstr "חיפוש סרטונים…"
+
+#: src/main.cpp:100
+#, kde-format
+msgid "Browse and play your videos."
+msgstr "עיון ונגינת הסרטונים שלך."
+
+#: src/main.cpp:105
+#, kde-format
+msgid "Developer"
+msgstr "מפתח"
+
+#: src/main.qml:86 src/views/collection/CollectionView.qml:39
+#, kde-format
+msgid "Open URL"
+msgstr "פתיחת כתובת"
+
+#: src/main.qml:88
+#, kde-format
+msgid ""
+"Enter any remote location, like YouTube video URLs, or from other services "
+"supported by MPV."
+msgstr ""
+"נא למלא מקום מרוחק כלשהו, כגון כתובות של סרטוני YouTube או משירותים אחרים ש־"
+"MPV תומך בהם."
+
+#: src/main.qml:119
+#, kde-format
+msgid "Delete files?"
+msgstr "למחוק קבצים?"
+
+#: src/main.qml:121
+#, kde-format
+msgid "Are sure you want to delete %1 files"
+msgstr "למחוק %1 קבצים"
+
+#: src/main.qml:169
+#, kde-format
+msgid "Now playing"
+msgstr "מתנגן כעת"
+
+#: src/main.qml:277 src/views/youtube/YouTubeView.qml:25
+#, kde-format
+msgid "Nothing Here!"
+msgstr "אין כאן כלום!"
+
+#: src/main.qml:278
+#, kde-format
+msgid "Open a new video from your collection or file system."
+msgstr "פתיחת סרטון חדש מהאוסף או ממערכת הקבצים שלך."
+
+#. i18n("Screenshots")}};
+#: src/main.qml:298 src/models/tagsmodel.cpp:14
+#: src/views/settings/SettingsDialog.qml:36
+#, kde-format
+msgid "Collection"
+msgstr "אוסף"
+
+#: src/main.qml:470
+#, kde-format
+msgid "Toggle SideBar"
+msgstr "הצגת/הסתרת סרגל צד"
+
+#: src/models/tagsmodel.cpp:10
+#, kde-format
+msgid "Favorites"
+msgstr "מועדפים"
+
+#: src/models/tagsmodel.cpp:11
+#, kde-format
+msgid "Downloads"
+msgstr "הורדות"
+
+#: src/models/tagsmodel.cpp:12
+#, kde-format
+msgid "Videos"
+msgstr "סרטונים"
+
+#: src/models/tagsmodel.cpp:21 src/models/tagsmodel.cpp:59
+#: src/views/ItemMenu.qml:29
+#, kde-format
+msgid "Tags"
+msgstr "תגיות"
+
+#: src/views/BrowserLayout.qml:69
+#, kde-format
+msgid "Search %1 video"
+msgid_plural "Search %1 videos"
+msgstr[0] "חיפוש סרטון"
+msgstr[1] "חיפוש שני סרטונים"
+msgstr[2] "חיפוש %1 סרטונים"
+msgstr[3] "חיפוש %1 סרטונים"
+
+#: src/views/collection/CollectionView.qml:50
+#, kde-format
+msgid "Settings"
+msgstr "הגדרות"
+
+#: src/views/collection/CollectionView.qml:58
+#, kde-format
+msgid "About"
+msgstr "על אודות"
+
+#: src/views/collection/CollectionView.qml:76
+#, kde-format
+msgid "Toggle sidebar"
+msgstr "הצגת/הסתרת סרגל צד"
+
+#: src/views/collection/CollectionView.qml:82 src/views/player/Playlist.qml:21
+#: src/views/tags/TagsView.qml:38
+#, kde-format
+msgid "No Videos!"
+msgstr "אין סרטונים!"
+
+#: src/views/collection/CollectionView.qml:83
+#, kde-format
+msgid "Add a new video source or open a file."
+msgstr "הוספת מקור וידאו חדש או פתיחת קובץ."
+
+#: src/views/collection/CollectionView.qml:88
+#, kde-format
+msgid "Open file"
+msgstr "פתיחת קובץ"
+
+#: src/views/collection/CollectionView.qml:94
+#, kde-format
+msgid "Add sources"
+msgstr "הוספת מקורות"
+
+#: src/views/collection/PlacesSidebar.qml:52
+#, kde-format
+msgid "Tags!"
+msgstr "תגיות!"
+
+#: src/views/collection/PlacesSidebar.qml:53
+#, kde-format
+msgid "Your tags will be listed here"
+msgstr "התגיות שלך תופענה כאן"
+
+#: src/views/ItemMenu.qml:22
+#, kde-format
+msgid "UnFav it"
+msgstr "הוצאה מהמועדפים"
+
+#: src/views/ItemMenu.qml:41
+#, kde-format
+msgid "Info"
+msgstr "פרטים"
+
+#: src/views/ItemMenu.qml:52 src/views/SelectionBar.qml:75
+#, kde-format
+msgid "Share"
+msgstr "שיתוף"
+
+#: src/views/ItemMenu.qml:63 src/views/SelectionBar.qml:45
+#, kde-format
+msgid "Queue"
+msgstr "תור"
+
+#: src/views/ItemMenu.qml:75
+#, kde-format
+msgid "Select"
+msgstr "בחירה"
+
+#: src/views/ItemMenu.qml:89
+#, kde-format
+msgid "Show in folder"
+msgstr "הצגה בתיקייה"
+
+#: src/views/ItemMenu.qml:102 src/views/SelectionBar.qml:101
+#, kde-format
+msgid "Remove"
+msgstr "הסרה"
+
+#: src/views/ItemMenu.qml:118
+#, kde-format
+msgid "Delete file?"
+msgstr "למחוק קובץ?"
+
+#: src/views/ItemMenu.qml:120
+#, kde-format
+msgid ""
+"Are sure you want to delete \n"
+"%1"
+msgstr ""
+"למחוק את \n"
+"%1"
+
+#: src/views/player/MPVPlayer.qml:29
+#, kde-format
+msgid "Subtitles"
+msgstr "כתוביות"
+
+#: src/views/player/MPVPlayer.qml:47
+#, kde-format
+msgid "Audio Tracks"
+msgstr "רצועות שמע"
+
+#: src/views/player/PlayerView.qml:30
+#, kde-format
+msgid "Playing mode"
+msgstr "מצב ניגון"
+
+#: src/views/player/Playlist.qml:22
+#, kde-format
+msgid "Add videos to the playlist."
+msgstr "הוספת סרטונים לרשימת הנגינה."
+
+#: src/views/SelectionBar.qml:34
+#, kde-format
+msgid "Play"
+msgstr "נגינה"
+
+#: src/views/SelectionBar.qml:56
+#, kde-format
+msgid "Un/Fav"
+msgstr "הוספה/הוצאה מהמועדפים"
+
+#: src/views/SelectionBar.qml:63
+#, kde-format
+msgid "Tag"
+msgstr "תגית"
+
+#: src/views/SelectionBar.qml:85
+#, kde-format
+msgid "Export"
+msgstr "ייצוא"
+
+#: src/views/settings/SettingsDialog.qml:17
+#, kde-format
+msgid "General"
+msgstr "כללי"
+
+#: src/views/settings/SettingsDialog.qml:22
+#, kde-format
+msgid "Volume Step"
+msgstr "פסיעת עוצמת שמע"
+
+#: src/views/settings/SettingsDialog.qml:41
+#, kde-format
+msgid "Sorting by"
+msgstr "מיון לפי"
+
+#: src/views/settings/SettingsDialog.qml:42
+#, kde-format
+msgid "Change the sorting key."
+msgstr "החלפת מפתח המיון."
+
+#: src/views/settings/SettingsDialog.qml:52
+#, kde-format
+msgid "Title"
+msgstr "כותרת"
+
+#: src/views/settings/SettingsDialog.qml:59
+#, kde-format
+msgid "Date"
+msgstr "תאריך"
+
+#: src/views/settings/SettingsDialog.qml:66
+#, kde-format
+msgid "Size"
+msgstr "גודל"
+
+#: src/views/settings/SettingsDialog.qml:73
+#, kde-format
+msgid "Type"
+msgstr "סוג"
+
+#: src/views/settings/SettingsDialog.qml:82
+#, kde-format
+msgid "Sort order"
+msgstr "אופן מיון"
+
+#: src/views/settings/SettingsDialog.qml:83
+#, kde-format
+msgid "Change the sorting order."
+msgstr "החלפת אופן המיון."
+
+#: src/views/settings/SettingsDialog.qml:93
+#, kde-format
+msgid "Ascending"
+msgstr "עולה"
+
+#: src/views/settings/SettingsDialog.qml:101
+#, kde-format
+msgid "Descending"
+msgstr "יורד"
+
+#: src/views/settings/SettingsDialog.qml:112
+#, kde-format
+msgid "Playback"
+msgstr "נגינה"
+
+#: src/views/settings/SettingsDialog.qml:117
+#, kde-format
+msgid "Hardware Decoding"
+msgstr "פענוח חומרה"
+
+#: src/views/settings/SettingsDialog.qml:118
+#, kde-format
+msgid "Use the sorting preferences globally for all the tabs and splits."
+msgstr "להשתמש בהעדפות אופן המיון באופן כללי לכל הלשוניות והפיצולים."
+
+#: src/views/settings/SettingsDialog.qml:131
+#, kde-format
+msgid "Audio"
+msgstr "שמע"
+
+#: src/views/settings/SettingsDialog.qml:137
+#, kde-format
+msgid "Preferred Language"
+msgstr "שפה מועדפת"
+
+#: src/views/settings/SettingsDialog.qml:138
+#, kde-format
+msgid "Preferred language if available."
+msgstr "שפה מועדפת אם זמינה."
+
+#: src/views/settings/SettingsDialog.qml:242
+#, kde-format
+msgid "Sources"
+msgstr "מקורות"
+
+#: src/views/settings/SettingsDialog.qml:280
+#, kde-format
+msgid "Add"
+msgstr "הוספה"
+
+#: src/views/settings/SettingsDialog.qml:302
+#, kde-format
+msgid "Remove source"
+msgstr "הסרת מקור"
+
+#: src/views/settings/SettingsDialog.qml:303
+#, kde-format
+msgid ""
+"Are you sure you want to remove the source: \n"
+" %1"
+msgstr ""
+"להסיר את המקור: \n"
+" %1"
+
+#: src/views/tags/TagsGrid.qml:21
+#, kde-format
+msgid "No Tags!"
+msgstr "אין תגיות!"
+
+#: src/views/tags/TagsGrid.qml:22
+#, kde-format
+msgid "Add a new tag to start organizing your video collection."
+msgstr "נא להוסיף תגיות חדשות כדי להתחיל לארגן את אוסף הסרטונים שלך."
+
+#: src/views/tags/TagsGrid.qml:35
+#, kde-format
+msgid "Filter"
+msgstr "מסנן"
+
+#: src/views/tags/TagsView.qml:39
+#, kde-format
+msgid "There's no videos associated with the tag"
+msgstr "אין סרטונים שמשויכים לתגית"
+
+#: src/views/youtube/YouTubeView.qml:26
+#, kde-format
+msgid "Start searching for online videos."
+msgstr "התחלת חיפוש אחר סרטונים מקוונים."
+
+#: src/views/youtube/YouTubeView.qml:44
+#, kde-format
+msgid "Search..."
+msgstr "חיפוש…"
