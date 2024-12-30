@@ -14,6 +14,7 @@
   <name xml:lang="fi">Clip</name>
   <name xml:lang="fr">Clip</name>
   <name xml:lang="gl">Clip</name>
+  <name xml:lang="he">קליפ</name>
   <name xml:lang="id">Clip</name>
   <name xml:lang="it">Clip</name>
   <name xml:lang="ka">Clip</name>
@@ -22,6 +23,7 @@
   <name xml:lang="pl">Clip</name>
   <name xml:lang="pt">Clip</name>
   <name xml:lang="pt-BR">Clip</name>
+  <name xml:lang="sa">क्लिप्</name>
   <name xml:lang="sk">Clip</name>
   <name xml:lang="sl">Clip</name>
   <name xml:lang="sv">Klipp</name>
@@ -40,6 +42,7 @@
   <summary xml:lang="fi">Videosoitin</summary>
   <summary xml:lang="fr">Lecteur de vidéos</summary>
   <summary xml:lang="gl">Reprodutor de vídeo.</summary>
+  <summary xml:lang="he">נגן וידאו</summary>
   <summary xml:lang="id">Pemutar Video</summary>
   <summary xml:lang="it">Lettore video</summary>
   <summary xml:lang="ka">ვიდეო დამკვრელი</summary>
@@ -48,6 +51,7 @@
   <summary xml:lang="pl">Odtwarzacz filmów</summary>
   <summary xml:lang="pt">Reprodutor de Vídeo</summary>
   <summary xml:lang="pt-BR">Reprodutor de vídeo</summary>
+  <summary xml:lang="sa">विडियो प्लेयर</summary>
   <summary xml:lang="sk">Prehrávač videa</summary>
   <summary xml:lang="sl">Video predvajalnik</summary>
   <summary xml:lang="sv">Videospelare</summary>
@@ -70,6 +74,7 @@
     <p xml:lang="fi">Clip on videosoitin ja kokoelmanhallinta.</p>
     <p xml:lang="fr">Le logiciel « Clip » est un lecteur de vidéo et un gestionnaire de collections.</p>
     <p xml:lang="gl">Clip é un reprodutor de vídeo e xestor de coleccións.</p>
+    <p xml:lang="he">קליפ הוא נגן וידאו ומנהל אוספים.</p>
     <p xml:lang="id">Clip adalah sebuah pemutar video dan pengelola koleksi.</p>
     <p xml:lang="it">Clip è un lettore video e un gestore di raccolte.</p>
     <p xml:lang="ka">Clip ვიდეოების დამკვრელი და კოლექციების მმართველია.</p>
@@ -78,6 +83,7 @@
     <p xml:lang="pl">Clip jest odtwarzaczem filmów i zarządza ich zbiorami.</p>
     <p xml:lang="pt">O Clip é um leitor de vídeo e um gestor de colecções.</p>
     <p xml:lang="pt-BR">Clip é um reprodutor de vídeo e gerenciador de coleção.</p>
+    <p xml:lang="sa">क्लिप् एकः विडियो प्लेयरः संग्रहप्रबन्धकः च अस्ति ।</p>
     <p xml:lang="sl">Clip je video predvajalnik in upravljalnik zbirk.</p>
     <p xml:lang="sv">Klipp är en videospelare och samlingshanterare.</p>
     <p xml:lang="tr">Klip, bir video oynatıcısı ve koleksiyon yöneticisidir.</p>
@@ -103,6 +109,7 @@
       <caption xml:lang="fi">Clip toistamassa videota.</caption>
       <caption xml:lang="fr">Le logiciel « Clip » en cours de lecture de vidéos.</caption>
       <caption xml:lang="gl">Clip reproducindo vídeos.</caption>
+      <caption xml:lang="he">קליפ מנגן סרטונים.</caption>
       <caption xml:lang="id">Clip memutar video-video.</caption>
       <caption xml:lang="it">Clip che riproduce video.</caption>
       <caption xml:lang="ka">Clip ვიდეოებს უკრავს.</caption>
@@ -111,6 +118,7 @@
       <caption xml:lang="pl">Clip odtwarzający filmy.</caption>
       <caption xml:lang="pt">O Clip a reproduzir vídeos.</caption>
       <caption xml:lang="pt-BR">Clip reproduzindo vídeos</caption>
+      <caption xml:lang="sa">विडियो वादयन् क्लिप्।</caption>
       <caption xml:lang="sl">Clip predvaja videoposnetke.</caption>
       <caption xml:lang="sv">Klipp som spelar videor.</caption>
       <caption xml:lang="tr">Klip, video oynatırken.</caption>
