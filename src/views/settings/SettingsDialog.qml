@@ -281,9 +281,9 @@ Maui.SettingsDialog
 
                 onClicked:
                 {
+                    dialogLoader.sourceComponent = null
                     dialogLoader.sourceComponent = fmDialogComponent
-                    dialog.settings.onlyDirs = true
-                    dialog.mode = dialog.modes.OPEN
+                    dialog.browser.settings.onlyDirs = true
                     dialog.callback = function(urls)
                     {
                         Clip.Clip.addSources(urls)

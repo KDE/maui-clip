@@ -106,7 +106,6 @@ Maui.ApplicationWindow
         FB.FileDialog
         {
             browser.settings.filterType: FB.FMList.VIDEO
-            browser.settings.onlyDirs: false
         }
     }
 
@@ -610,10 +609,8 @@ Maui.ApplicationWindow
 
     function openFileDialog()
     {
+        dialogLoader.sourceComponent = null
         dialogLoader.sourceComponent = fmDialogComponent
-        dialog.mode = FB.FileDialog.Modes.Open
-        dialog.browser.settings.filterType= FB.FMList.VIDEO
-        dialog.browser.settings.onlyDirs= false
         dialog.callback = function(paths)
         {
             Clip.Clip.openVideos(paths)
