@@ -1,0 +1,414 @@
+# Copyright (C) 2025 This file is copyright:
+# This file is distributed under the same license as the maui-clip package.
+#
+# SPDX-FileCopyrightText: 2025 Toms Trasūns <toms.trasuns@posteo.net>
+msgid ""
+msgstr ""
+"Project-Id-Version: maui-clip\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-12-11 01:48+0000\n"
+"PO-Revision-Date: 2025-02-04 18:09+0200\n"
+"Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+"X-Generator: Lokalize 24.12.1\n"
+
+#: src/controllers/YouTube.qml:95
+#, kde-format
+msgid "Custom API Key"
+msgstr "Pielāgota API atslēga"
+
+#: src/controllers/YouTube.qml:114
+#, kde-format
+msgid "Search results"
+msgstr "Meklēšanas rezultāti"
+
+#: src/controllers/YouTube.qml:209
+#, kde-format
+msgid "No Results!"
+msgstr "Rezultātu nav!"
+
+#: src/controllers/YouTube.qml:210
+#, kde-format
+msgid "Try with another query"
+msgstr "Mēģiniet citu vaicājumu"
+
+#: src/controllers/YouTube.qml:249
+#, kde-format
+msgid "Search videos..."
+msgstr "Meklēt video..."
+
+#: src/main.cpp:100
+#, kde-format
+msgid "Browse and play your videos."
+msgstr "Pārlūkojiet un atskaņojiet video."
+
+#: src/main.cpp:105
+#, kde-format
+msgid "Developer"
+msgstr "Izstrādātājs"
+
+#: src/main.qml:86 src/views/collection/CollectionView.qml:39
+#, kde-format
+msgid "Open URL"
+msgstr "Atvērt URL"
+
+#: src/main.qml:88
+#, kde-format
+msgid ""
+"Enter any remote location, like YouTube video URLs, or from other services "
+"supported by MPV."
+msgstr ""
+"Ierakstiet jebkādu attālu atrašanās vietu, piemēram „YouTube“ vai cita "
+"pakalpojuma, ko atbalsta MPV, video adresi."
+
+#: src/main.qml:119
+#, kde-format
+msgid "Delete files?"
+msgstr "Vai dzēst datnes?"
+
+#: src/main.qml:121
+#, kde-format
+msgid "Are sure you want to delete %1 files"
+msgstr "Vai tiešām vēlaties dzēsta %1 datnes"
+
+#: src/main.qml:169
+#, kde-format
+msgid "Now playing"
+msgstr "Tagad atskaņo"
+
+#: src/main.qml:277 src/views/youtube/YouTubeView.qml:25
+#, kde-format
+msgid "Nothing Here!"
+msgstr "Te nekā nav!"
+
+#: src/main.qml:278
+#, kde-format
+msgid "Open a new video from your collection or file system."
+msgstr "Atvērt jaunu video no jūsu kolekcijas vai datņu sistēmas."
+
+#. i18n("Screenshots")}};
+#: src/main.qml:298 src/models/tagsmodel.cpp:14
+#: src/views/settings/SettingsDialog.qml:36
+#, kde-format
+msgid "Collection"
+msgstr "Kolekcija"
+
+#: src/main.qml:470
+#, kde-format
+msgid "Toggle SideBar"
+msgstr "Pārslēgt sānu joslu"
+
+#: src/models/tagsmodel.cpp:10
+#, kde-format
+msgid "Favorites"
+msgstr "Iecienītie"
+
+#: src/models/tagsmodel.cpp:11
+#, kde-format
+msgid "Downloads"
+msgstr "Lejupielādes"
+
+#: src/models/tagsmodel.cpp:12
+#, kde-format
+msgid "Videos"
+msgstr "Video"
+
+#: src/models/tagsmodel.cpp:21 src/models/tagsmodel.cpp:59
+#: src/views/ItemMenu.qml:29
+#, kde-format
+msgid "Tags"
+msgstr "Birkas"
+
+#: src/views/BrowserLayout.qml:69
+#, kde-format
+msgid "Search %1 video"
+msgid_plural "Search %1 videos"
+msgstr[0] "Meklēt %1 video"
+msgstr[1] "Meklēt %1 video"
+msgstr[2] "Meklēt %1 video"
+
+#: src/views/collection/CollectionView.qml:50
+#, kde-format
+msgid "Settings"
+msgstr "Iestatījumi"
+
+#: src/views/collection/CollectionView.qml:58
+#, kde-format
+msgid "About"
+msgstr "Par"
+
+#: src/views/collection/CollectionView.qml:76
+#, kde-format
+msgid "Toggle sidebar"
+msgstr "Pārslēgt sānu joslu"
+
+#: src/views/collection/CollectionView.qml:82 src/views/player/Playlist.qml:21
+#: src/views/tags/TagsView.qml:38
+#, kde-format
+msgid "No Videos!"
+msgstr "Nav video!"
+
+#: src/views/collection/CollectionView.qml:83
+#, kde-format
+msgid "Add a new video source or open a file."
+msgstr "Pievienot jaunu video avotu vai atvērt datni."
+
+#: src/views/collection/CollectionView.qml:88
+#, kde-format
+msgid "Open file"
+msgstr "Atvērt datni"
+
+#: src/views/collection/CollectionView.qml:94
+#, kde-format
+msgid "Add sources"
+msgstr "Pievienot avotus"
+
+#: src/views/collection/PlacesSidebar.qml:52
+#, kde-format
+msgid "Tags!"
+msgstr "Birkas!"
+
+#: src/views/collection/PlacesSidebar.qml:53
+#, kde-format
+msgid "Your tags will be listed here"
+msgstr "Te būs redzamas jūsu birkas"
+
+#: src/views/ItemMenu.qml:22
+#, kde-format
+msgid "UnFav it"
+msgstr "Noņemt no iecienītajiem"
+
+#: src/views/ItemMenu.qml:41
+#, kde-format
+msgid "Info"
+msgstr "Informācija"
+
+#: src/views/ItemMenu.qml:52 src/views/SelectionBar.qml:75
+#, kde-format
+msgid "Share"
+msgstr "Kopīgot"
+
+#: src/views/ItemMenu.qml:63 src/views/SelectionBar.qml:45
+#, kde-format
+msgid "Queue"
+msgstr "Rinda"
+
+#: src/views/ItemMenu.qml:75
+#, kde-format
+msgid "Select"
+msgstr "Atlasīt"
+
+#: src/views/ItemMenu.qml:89
+#, kde-format
+msgid "Show in folder"
+msgstr "Rādīt mapē"
+
+#: src/views/ItemMenu.qml:102 src/views/SelectionBar.qml:101
+#, kde-format
+msgid "Remove"
+msgstr "Noņemt"
+
+#: src/views/ItemMenu.qml:118
+#, kde-format
+msgid "Delete file?"
+msgstr "Vai dzēst datni?"
+
+#: src/views/ItemMenu.qml:120
+#, kde-format
+msgid ""
+"Are sure you want to delete \n"
+"%1"
+msgstr ""
+"Vai tiešām vēlaties dzēst \n"
+"%1"
+
+#: src/views/player/MPVPlayer.qml:29
+#, kde-format
+msgid "Subtitles"
+msgstr "Subtitri"
+
+#: src/views/player/MPVPlayer.qml:47
+#, kde-format
+msgid "Audio Tracks"
+msgstr "Audio celiņi"
+
+#: src/views/player/PlayerView.qml:30
+#, kde-format
+msgid "Playing mode"
+msgstr "Atskaņošanas režīms"
+
+#: src/views/player/Playlist.qml:22
+#, kde-format
+msgid "Add videos to the playlist."
+msgstr "Pievienot repertuāram video"
+
+#: src/views/SelectionBar.qml:34
+#, kde-format
+msgid "Play"
+msgstr "Atskaņot"
+
+#: src/views/SelectionBar.qml:56
+#, kde-format
+msgid "Un/Fav"
+msgstr "Ir/nav iecienīts"
+
+#: src/views/SelectionBar.qml:63
+#, kde-format
+msgid "Tag"
+msgstr "Birka"
+
+#: src/views/SelectionBar.qml:85
+#, kde-format
+msgid "Export"
+msgstr "Eksports"
+
+#: src/views/settings/SettingsDialog.qml:17
+#, kde-format
+msgid "General"
+msgstr "Pamata"
+
+#: src/views/settings/SettingsDialog.qml:22
+#, kde-format
+msgid "Volume Step"
+msgstr "Sējuma solis"
+
+#: src/views/settings/SettingsDialog.qml:41
+#, kde-format
+msgid "Sorting by"
+msgstr "Kārtot pēc"
+
+#: src/views/settings/SettingsDialog.qml:42
+#, kde-format
+msgid "Change the sorting key."
+msgstr "Mainīt kārtošanas atslēgu."
+
+#: src/views/settings/SettingsDialog.qml:52
+#, kde-format
+msgid "Title"
+msgstr "Nosaukums"
+
+#: src/views/settings/SettingsDialog.qml:59
+#, kde-format
+msgid "Date"
+msgstr "Datums"
+
+#: src/views/settings/SettingsDialog.qml:66
+#, kde-format
+msgid "Size"
+msgstr "Izmērs"
+
+#: src/views/settings/SettingsDialog.qml:73
+#, kde-format
+msgid "Type"
+msgstr "Tips"
+
+#: src/views/settings/SettingsDialog.qml:82
+#, kde-format
+msgid "Sort order"
+msgstr "Kārtošanas secība"
+
+#: src/views/settings/SettingsDialog.qml:83
+#, kde-format
+msgid "Change the sorting order."
+msgstr "Mainīt kārtošanas secību."
+
+#: src/views/settings/SettingsDialog.qml:93
+#, kde-format
+msgid "Ascending"
+msgstr "Augoši"
+
+#: src/views/settings/SettingsDialog.qml:101
+#, kde-format
+msgid "Descending"
+msgstr "Dilstoši"
+
+#: src/views/settings/SettingsDialog.qml:112
+#, kde-format
+msgid "Playback"
+msgstr "Atskaņošana"
+
+#: src/views/settings/SettingsDialog.qml:117
+#, kde-format
+msgid "Hardware Decoding"
+msgstr "Dekodēšana ar aparatūru"
+
+#: src/views/settings/SettingsDialog.qml:118
+#, kde-format
+msgid "Use the sorting preferences globally for all the tabs and splits."
+msgstr ""
+"Izmantot kārtošanas iestatījumu globāli visām cilnēm un dalītajiem skatiem."
+
+#: src/views/settings/SettingsDialog.qml:131
+#, kde-format
+msgid "Audio"
+msgstr "Audio"
+
+#: src/views/settings/SettingsDialog.qml:137
+#, kde-format
+msgid "Preferred Language"
+msgstr "Priekšrokas valoda"
+
+#: src/views/settings/SettingsDialog.qml:138
+#, kde-format
+msgid "Preferred language if available."
+msgstr "Priekšrokas valoda, ja pieejama."
+
+#: src/views/settings/SettingsDialog.qml:242
+#, kde-format
+msgid "Sources"
+msgstr "Avoti"
+
+#: src/views/settings/SettingsDialog.qml:280
+#, kde-format
+msgid "Add"
+msgstr "Pievienot"
+
+#: src/views/settings/SettingsDialog.qml:302
+#, kde-format
+msgid "Remove source"
+msgstr "Noņemt avotu"
+
+#: src/views/settings/SettingsDialog.qml:303
+#, kde-format
+msgid ""
+"Are you sure you want to remove the source: \n"
+" %1"
+msgstr ""
+"Vai tiešām vēlaties noņemt avotu: \n"
+" %1"
+
+#: src/views/tags/TagsGrid.qml:21
+#, kde-format
+msgid "No Tags!"
+msgstr "Nav birku!"
+
+#: src/views/tags/TagsGrid.qml:22
+#, kde-format
+msgid "Add a new tag to start organizing your video collection."
+msgstr "Pievienojiet jaunu birku, lai sāktu organizēt video kolekciju."
+
+#: src/views/tags/TagsGrid.qml:35
+#, kde-format
+msgid "Filter"
+msgstr "Filtrēt"
+
+#: src/views/tags/TagsView.qml:39
+#, kde-format
+msgid "There's no videos associated with the tag"
+msgstr "Ar šo birku nav saistīts neviens video"
+
+#: src/views/youtube/YouTubeView.qml:26
+#, kde-format
+msgid "Start searching for online videos."
+msgstr "Sākt meklēt tiešsaistes video."
+
+#: src/views/youtube/YouTubeView.qml:44
+#, kde-format
+msgid "Search..."
+msgstr "Meklēt..."
