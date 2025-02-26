@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-11 01:48+0000\n"
+"POT-Creation-Date: 2025-02-26 00:40+0000\n"
 "PO-Revision-Date: 2021-05-01 23:20-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -64,39 +64,39 @@ msgid ""
 "supported by MPV."
 msgstr ""
 
-#: src/main.qml:119
+#: src/main.qml:118
 #, kde-format
 msgid "Delete files?"
 msgstr "ਫਾਇਲਾਂ ਹਟਾਉਣੀਆਂ ਹਨ?"
 
-#: src/main.qml:121
+#: src/main.qml:120
 #, kde-format
 msgid "Are sure you want to delete %1 files"
 msgstr "ਕੀ ਤੁਸੀਂ %1 ਫਾਇਲਾਂ ਨੂੰ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ"
 
-#: src/main.qml:169
+#: src/main.qml:168
 #, kde-format
 msgid "Now playing"
 msgstr "ਹੁਣ ਚੱਲ ਰਿਹਾ ਹੈ"
 
-#: src/main.qml:277 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:276 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "ਇੱਥੇ ਕੁਝ ਨਹੀਂ ਹੈ!"
 
-#: src/main.qml:278
+#: src/main.qml:277
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr ""
 
 #. i18n("Screenshots")}};
-#: src/main.qml:298 src/models/tagsmodel.cpp:14
+#: src/main.qml:297 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Collection"
 msgstr "ਭੰਡਾਰ"
 
-#: src/main.qml:470
+#: src/main.qml:469
 #, fuzzy, kde-format
 #| msgid "Toogle SideBar"
 msgid "Toggle SideBar"
@@ -211,7 +211,7 @@ msgstr "ਚੁਣੋ"
 msgid "Show in folder"
 msgstr "ਫੋਲਡਰ ਵਿੱਚ ਵੇਖੋ"
 
-#: src/views/ItemMenu.qml:102 src/views/SelectionBar.qml:101
+#: src/views/ItemMenu.qml:102 src/views/SelectionBar.qml:104
 #, kde-format
 msgid "Remove"
 msgstr "ਹਟਾਓ"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-11 01:48+0000\n"
+"POT-Creation-Date: 2025-02-26 00:40+0000\n"
 "PO-Revision-Date: 2023-10-28 09:12+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -69,39 +69,39 @@ msgstr ""
 "Введіть будь-яку віддалену адресу, наприклад адресу відео YouTube або інших "
 "служб, підтримку яких передбачено у MPV."
 
-#: src/main.qml:119
+#: src/main.qml:118
 #, kde-format
 msgid "Delete files?"
 msgstr "Вилучити файли?"
 
-#: src/main.qml:121
+#: src/main.qml:120
 #, kde-format
 msgid "Are sure you want to delete %1 files"
 msgstr "Ви справді хочете вилучити %1 файлів"
 
-#: src/main.qml:169
+#: src/main.qml:168
 #, kde-format
 msgid "Now playing"
 msgstr "Зараз відтворюється"
 
-#: src/main.qml:277 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:276 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "Тут нічого немає!"
 
-#: src/main.qml:278
+#: src/main.qml:277
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr "Відкрийте нове відео з вашої збірки або файлової системи."
 
 #. i18n("Screenshots")}};
-#: src/main.qml:298 src/models/tagsmodel.cpp:14
+#: src/main.qml:297 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Collection"
 msgstr "Збірка"
 
-#: src/main.qml:470
+#: src/main.qml:469
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "Увімкнути чи вимкнути бічну панель"
@@ -212,7 +212,7 @@ msgstr "Вибрати"
 msgid "Show in folder"
 msgstr "Показати у теці"
 
-#: src/views/ItemMenu.qml:102 src/views/SelectionBar.qml:101
+#: src/views/ItemMenu.qml:102 src/views/SelectionBar.qml:104
 #, kde-format
 msgid "Remove"
 msgstr "Вилучити"

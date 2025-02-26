@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-11 01:48+0000\n"
+"POT-Creation-Date: 2025-02-26 00:40+0000\n"
 "PO-Revision-Date: 2025-02-15 21:38+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -66,39 +66,39 @@ msgstr ""
 "MPV tarafından desteklenen herhangi bir uzak konumu (örneğin YouTube "
 "URL’leri veya diğer hizmetler) açın."
 
-#: src/main.qml:119
+#: src/main.qml:118
 #, kde-format
 msgid "Delete files?"
 msgstr "Dosyalar silinsin mi?"
 
-#: src/main.qml:121
+#: src/main.qml:120
 #, kde-format
 msgid "Are sure you want to delete %1 files"
 msgstr "Bu %1 dosyayı silmek istediğinizden emin misiniz?"
 
-#: src/main.qml:169
+#: src/main.qml:168
 #, kde-format
 msgid "Now playing"
 msgstr "Şimdi oynatılıyor"
 
-#: src/main.qml:277 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:276 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "Burada bir şey yok!"
 
-#: src/main.qml:278
+#: src/main.qml:277
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr "Koleksiyonunuzdan veya dosya sisteminizden yeni bir video açın."
 
 #. i18n("Screenshots")}};
-#: src/main.qml:298 src/models/tagsmodel.cpp:14
+#: src/main.qml:297 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Collection"
 msgstr "Koleksiyon"
 
-#: src/main.qml:470
+#: src/main.qml:469
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "Kenar Çubuğunu Aç/Kapat"
@@ -207,7 +207,7 @@ msgstr "Seç"
 msgid "Show in folder"
 msgstr "Klasörde Göster"
 
-#: src/views/ItemMenu.qml:102 src/views/SelectionBar.qml:101
+#: src/views/ItemMenu.qml:102 src/views/SelectionBar.qml:104
 #, kde-format
 msgid "Remove"
 msgstr "Kaldır"

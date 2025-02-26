@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-cinema\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-11 01:48+0000\n"
+"POT-Creation-Date: 2025-02-26 00:40+0000\n"
 "PO-Revision-Date: 2023-10-30 15:10+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -64,27 +64,27 @@ msgstr ""
 "Saisir n'importe quel emplacement, comme des URL de vidéos YouTube ou à "
 "partir d'autres services pris en charge par MPV."
 
-#: src/main.qml:119
+#: src/main.qml:118
 #, kde-format
 msgid "Delete files?"
 msgstr "Supprimer les fichiers ?"
 
-#: src/main.qml:121
+#: src/main.qml:120
 #, kde-format
 msgid "Are sure you want to delete %1 files"
 msgstr "Voulez-vous vraiment supprimer les %1 fichiers ?"
 
-#: src/main.qml:169
+#: src/main.qml:168
 #, kde-format
 msgid "Now playing"
 msgstr "En cours de lecture"
 
-#: src/main.qml:277 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:276 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "Il n'y a rien ici !"
 
-#: src/main.qml:278
+#: src/main.qml:277
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr ""
@@ -92,13 +92,13 @@ msgstr ""
 "de fichiers."
 
 #. i18n("Screenshots")}};
-#: src/main.qml:298 src/models/tagsmodel.cpp:14
+#: src/main.qml:297 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Collection"
 msgstr "Collection"
 
-#: src/main.qml:470
+#: src/main.qml:469
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "Activer / Désactiver la barre latérale"
@@ -207,7 +207,7 @@ msgstr "Sélectionner"
 msgid "Show in folder"
 msgstr "Afficher dans un dossier"
 
-#: src/views/ItemMenu.qml:102 src/views/SelectionBar.qml:101
+#: src/views/ItemMenu.qml:102 src/views/SelectionBar.qml:104
 #, kde-format
 msgid "Remove"
 msgstr "Supprimer"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cinema\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-11 01:48+0000\n"
+"POT-Creation-Date: 2025-02-26 00:40+0000\n"
 "PO-Revision-Date: 2023-10-28 12:42+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -68,39 +68,39 @@ msgstr ""
 "Introduzca una ubicación remota, como la URL de un vídeo de YouTube o de "
 "otros servicios permitidos por MPV."
 
-#: src/main.qml:119
+#: src/main.qml:118
 #, kde-format
 msgid "Delete files?"
 msgstr "¿Borrar archivos?"
 
-#: src/main.qml:121
+#: src/main.qml:120
 #, kde-format
 msgid "Are sure you want to delete %1 files"
 msgstr "¿Seguro que quiere borrar %1 archivos?"
 
-#: src/main.qml:169
+#: src/main.qml:168
 #, kde-format
 msgid "Now playing"
 msgstr "Reproduciendo"
 
-#: src/main.qml:277 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:276 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "Aquí no hay nada"
 
-#: src/main.qml:278
+#: src/main.qml:277
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr "Abra un nuevo vídeo de la colección o del sistema de archivos."
 
 #. i18n("Screenshots")}};
-#: src/main.qml:298 src/models/tagsmodel.cpp:14
+#: src/main.qml:297 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Collection"
 msgstr "Colección"
 
-#: src/main.qml:470
+#: src/main.qml:469
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "Conmutar la barra lateral"
@@ -209,7 +209,7 @@ msgstr "Seleccionar"
 msgid "Show in folder"
 msgstr "Mostrar en la carpeta"
 
-#: src/views/ItemMenu.qml:102 src/views/SelectionBar.qml:101
+#: src/views/ItemMenu.qml:102 src/views/SelectionBar.qml:104
 #, kde-format
 msgid "Remove"
 msgstr "Eliminar"
