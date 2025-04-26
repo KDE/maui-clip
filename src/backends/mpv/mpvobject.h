@@ -13,7 +13,6 @@
 #include "qthelper.h"
 //#include "playlistmodel.h"
 #include "tracksmodel.h"
-
 #include <QMediaPlayer>
 
 class MpvRenderer;
@@ -35,7 +34,7 @@ class MpvObject : public QQuickFramebufferObject
                WRITE setAutoPlay
                NOTIFY autoPlayChanged)
 
-    Q_PROPERTY(QMediaPlayer::State playbackState
+    Q_PROPERTY(QMediaPlayer::PlaybackState playbackState
                READ getPlaybackState
                NOTIFY playbackStateChanged)
 
@@ -187,7 +186,7 @@ public:
 
     bool autoPlay() const;
 
-    QMediaPlayer::State getPlaybackState() const;
+    QMediaPlayer::PlaybackState getPlaybackState() const;
 
     QMediaPlayer::MediaStatus getStatus() const;
 
@@ -244,7 +243,7 @@ Q_SIGNALS:
 
     void autoPlayChanged(bool autoPlay);
     
-    void playbackStateChanged(QMediaPlayer::State playbackState);
+    void playbackStateChanged(QMediaPlayer::PlaybackState playbackState);
 
     void statusChanged(QMediaPlayer::MediaStatus  status);
 
@@ -264,12 +263,12 @@ private:
 
     void loadTracks();
     void playUrl();
-    void setPlaybackState(const QMediaPlayer::State &state);
+    void setPlaybackState(const QMediaPlayer::PlaybackState &state);
     void setStatus(const QMediaPlayer::MediaStatus  &status);
 
     QUrl m_source;
     bool m_autoPlay;
-    QMediaPlayer::State m_playbackState;
+    QMediaPlayer::PlaybackState m_playbackState;
     QMediaPlayer::MediaStatus  m_status = QMediaPlayer::NoMedia;
     bool m_hardwareDecoding = true;
 };

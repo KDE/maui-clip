@@ -50,6 +50,7 @@ else()
     qt_add_dbus_interface(clipSRCS controllers/linux/org.freedesktop.ScreenSaver.xml screensaverdbusinterface)
 
     qt_add_executable(${PROJECT_NAME}
+        MANUAL_FINALIZATION
         ${clipSRCS}
          ${clip_ASSETS}
         ${thumbnailerSRCS}
@@ -106,7 +107,7 @@ target_compile_definitions(${PROJECT_NAME}
 target_compile_options(${PROJECT_NAME} PRIVATE -fexceptions)
 
 if(MPV_AVAILABLE)
-    target_link_libraries(${PROJECT_NAME} mpv)
+    target_link_libraries(${PROJECT_NAME} PRIVATE mpv)
     add_definitions(-DMPV_AVAILABLE)
     target_compile_definitions(${PROJECT_NAME} PUBLIC MPV_AVAILABLE)
 endif()

@@ -26,19 +26,19 @@ Maui.ApplicationWindow
     property bool selectionMode : false
 
     readonly property alias dialog : dialogLoader.item
-    readonly property alias player: _playerView.player
+    readonly property alias player: _playerView
 
-//    onIsPortraitChanged:
-//    {
-//        if(!isPortrait)
-//        {
-//            root.showFullScreen()
-//        }
-//        else
-//        {
-//            root.showNormal()
-//        }
-//    }
+    //    onIsPortraitChanged:
+    //    {
+    //        if(!isPortrait)
+    //        {
+    //            root.showFullScreen()
+    //        }
+    //        else
+    //        {
+    //            root.showNormal()
+    //        }
+    //    }
 
     Settings
     {
@@ -144,14 +144,41 @@ Maui.ApplicationWindow
         {
             id: _appViewsComponent
 
-            CollectionView  {}
+            CollectionView
+            {
+                FloatingVideo
+                {
+                    id: _floatingViewer
+
+                    DragHandler
+                    {
+                        target: _floatingViewer
+                        xAxis.maximum: _floatingViewer.parent.width - _floatingViewer.width
+                        xAxis.minimum: 0
+
+                        yAxis.maximum : _floatingViewer.parent.height - _floatingViewer.height
+                        yAxis.minimum: 0
+
+                        onActiveChanged:
+                        {
+                            if(!active)
+                            {
+                                let newX = Math.abs(_floatingViewer.x - (_floatingViewer.parent.width - _floatingViewer.implicitWidth - 20))
+                                _floatingViewer.y = Qt.binding(()=> { return _floatingViewer.parent.height - _floatingViewer.implicitHeight - 20})
+                                _floatingViewer.x = Qt.binding(()=> { return (_floatingViewer.parent.width - _floatingViewer.implicitWidth - 20 - newX) < 0 ? 20 : _floatingViewer.parent.width - _floatingViewer.implicitWidth - 20 - newX})
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         Maui.SideBarView
         {
             id: _sideBarView
             focus: true
-
+            Maui.Theme.colorSet: Maui.Theme.Complementary
+            Maui.Theme.inherit: false
             visible: StackView.status === StackView.Active
 
             height: parent.height
@@ -203,8 +230,10 @@ Maui.ApplicationWindow
             Maui.Page
             {
                 id: _playerPage
+                Maui.Theme.colorSet: Maui.Theme.Complementary
+                Maui.Theme.inherit: false
                 anchors.fill: parent
-                autoHideHeader: _playerView.player.playbackState === MediaPlayer.PlayingState
+                autoHideHeader: _playerView.playbackState === MediaPlayer.PlayingState
                 //                autoHideFooter: _playerView.player.playbackState === MediaPlayer.PlayingState
 
                 floatingHeader: autoHideHeader
@@ -267,14 +296,14 @@ Maui.ApplicationWindow
                 {
                     id: _playerHolderLoader
                     anchors.fill: parent
-                    active: _playerView.stopped && _playerView.status === MediaPlayer.NoMedia
+                    active: _playerView.isStopped && _playerView.error !== MediaPlayer.NoError
                     asynchronous: true
                     visible: active
                     sourceComponent: Maui.Holder
                     {
                         emoji: "qrc:/img/assets/media-playback-start.svg"
                         title: i18n("Nothing Here!")
-                        body: i18n("Open a new video from your collection or file system.")
+                        body: _playerView.error !== MediaPlayer.NoError ? _playerView.erroString : i18n("Open a new video from your collection or file system.")
                         actions: [
 
                             Action
@@ -301,7 +330,7 @@ Maui.ApplicationWindow
 
                 footerColumn: Loader
                 {
-                    active: !player.stopped
+                    // active: !player.isStopped
                     width: parent.width
                     asynchronous: true
                     visible: active
@@ -313,12 +342,12 @@ Maui.ApplicationWindow
                         position: ToolBar.Footer
                         leftContent: Label
                         {
-                            text: Maui.Handy.formatTime(player.video.position/1000)
+                            text: Maui.Handy.formatTime(player.position/1000)
                         }
 
                         rightContent: Label
                         {
-                            text: Maui.Handy.formatTime(player.video.duration/1000)
+                            text: Maui.Handy.formatTime(player.duration/1000)
                         }
 
                         middleContent: Item
@@ -335,7 +364,6 @@ Maui.ApplicationWindow
                                 text: root.title
                                 elide: Text.ElideMiddle
                                 wrapMode: Text.NoWrap
-                                color: Maui.Theme.textColor
                             }
                         }
 
@@ -346,45 +374,45 @@ Maui.ApplicationWindow
                             padding: 0
                             orientation: Qt.Horizontal
                             from: 0
-                            to: player.video.duration
-                            value: player.video.position
+                            to: player.duration
+                            value: player.position
 
-                            onMoved: player.video.seek( _slider.value )
+                            onMoved: player.seek( _slider.value )
                             spacing: 0
                             focus: true
 
-                            Maui.Separator
-                            {
-                                anchors.top: parent.top
-                                width: parent.width
-                            }
+                            // Maui.Separator
+                            // {
+                            //     anchors.top: parent.top
+                            //     width: parent.width
+                            // }
 
-                            background: Rectangle
-                            {
-                                implicitWidth: _slider.width
-                                implicitHeight: _slider.height
-                                width: _slider.availableWidth
-                                height: implicitHeight
-                                color: "transparent"
-                                opacity: 0.4
+                            // background: Rectangle
+                            // {
+                            //     implicitWidth: _slider.width
+                            //     implicitHeight: _slider.height
+                            //     width: _slider.availableWidth
+                            //     height: implicitHeight
+                            //     color: "transparent"
+                            //     opacity: 0.4
 
-                                Rectangle
-                                {
-                                    width: _slider.visualPosition * parent.width
-                                    height: _slider.pressed ? _slider.height : 2
-                                    color: Maui.Theme.highlightColor
-                                }
-                            }
+                            //     Rectangle
+                            //     {
+                            //         width: _slider.visualPosition * parent.width
+                            //         height: _slider.pressed ? _slider.height : 2
+                            //         color: Maui.Theme.highlightColor
+                            //     }
+                            // }
 
-                            handle: Rectangle
-                            {
-                                x: _slider.leftPadding + _slider.visualPosition
-                                   * (_slider.availableWidth - width)
-                                y: 0
-                                implicitWidth: Maui.Style.iconSizes.medium
-                                implicitHeight: _slider.height
-                                color: _slider.pressed ? Qt.lighter(Maui.Theme.highlightColor, 1.2) : "transparent"
-                            }
+                            // handle: Rectangle
+                            // {
+                            //     x: _slider.leftPadding + _slider.visualPosition
+                            //        * (_slider.availableWidth - width)
+                            //     y: 0
+                            //     implicitWidth: Maui.Style.iconSizes.medium
+                            //     implicitHeight: _slider.height
+                            //     color: _slider.pressed ? Qt.lighter(Maui.Theme.highlightColor, 1.2) : "transparent"
+                            // }
                         }
                     }
                 }
@@ -393,7 +421,7 @@ Maui.ApplicationWindow
 
                     FB.FavButton
                     {
-                        url: _playerView.url
+                        url: _playerView.source
                     },
 
                     ToolButton
@@ -452,7 +480,7 @@ Maui.ApplicationWindow
                         }
                     }]
 
-                footBar.visible: _sideBarView.sideBar.enabled
+                // footBar.visible: _sideBarView.sideBar.enabled
                 footBar.farLeftContent: Loader
                 {
                     active: _sideBarView.sideBar.enabled
@@ -487,8 +515,8 @@ Maui.ApplicationWindow
 
                         Action
                         {
-                            icon.name: player.playing ? "media-playback-pause" : "media-playback-start"
-                            onTriggered: player.paused ? player.video.play() : player.video.pause()
+                            icon.name: player.isPlaying ? "media-playback-pause" : "media-playback-start"
+                            onTriggered: player.isPaused ? player.play() : player.pause()
                         }
 
                         Action
@@ -500,14 +528,6 @@ Maui.ApplicationWindow
                 ]
             }
         }
-    }
-
-    Loader
-    {
-        visible: active
-        active: !_sideBarView.visible && !_playerView.player.stopped
-        asynchronous: true
-        sourceComponent: FloatingVideo {}
     }
 
     Connections
@@ -581,6 +601,8 @@ Maui.ApplicationWindow
             {
                 toggleViewer()
             }
+
+            _playerView.play()
         }
     }
 

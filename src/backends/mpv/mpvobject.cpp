@@ -45,7 +45,7 @@ MpvRenderer::MpvRenderer(MpvObject *new_obj)
 
 void MpvRenderer::render()
 {
-    obj->window()->resetOpenGLState();
+    obj->window()->beginExternalCommands();
 
     QOpenGLFramebufferObject *fbo = framebufferObject();
     mpv_opengl_fbo mpfbo;
@@ -66,7 +66,7 @@ void MpvRenderer::render()
     // other API details.
     mpv_render_context_render(obj->mpv_gl, params);
 
-    obj->window()->resetOpenGLState();
+    obj->window()->endExternalCommands();
 }
 
 QOpenGLFramebufferObject * MpvRenderer::createFramebufferObject(const QSize &size)
@@ -380,7 +380,7 @@ void MpvObject::setHWDecoding(bool value)
 
 QQuickFramebufferObject::Renderer *MpvObject::createRenderer() const
 {
-    window()->setPersistentOpenGLContext(true);
+    // window()->setPersistentGraphics(true);
     window()->setPersistentSceneGraph(true);
     return new MpvRenderer(const_cast<MpvObject *>(this));
 }
@@ -697,7 +697,7 @@ bool MpvObject::autoPlay() const
     return m_autoPlay;
 }
 
-void MpvObject::setPlaybackState(const QMediaPlayer::State &state)
+void MpvObject::setPlaybackState(const QMediaPlayer::PlaybackState &state)
 {
     m_playbackState = state;
     Q_EMIT this->playbackStateChanged(m_playbackState);
@@ -709,7 +709,7 @@ void MpvObject::setStatus(const QMediaPlayer::MediaStatus  &status)
     Q_EMIT this->statusChanged(m_status);
 }
 
-QMediaPlayer::State MpvObject::getPlaybackState() const
+QMediaPlayer::PlaybackState MpvObject::getPlaybackState() const
 {
     return m_playbackState;
 }

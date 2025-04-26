@@ -1,118 +1,242 @@
 import QtQuick
 import QtQuick.Controls
-
 import QtQuick.Layouts
-import Qt5Compat.GraphicalEffects
+import QtQuick.Effects
 
 import org.mauikit.controls as Maui
 
-Rectangle
+Loader
 {
     id: control
-    Maui.Theme.inherit: false
-    Maui.Theme.colorSet: Maui.Theme.Complementary
+    active: !_sideBarView.visible && !_playerView.isStopped|| item
+    visible: !_sideBarView.visible && !_playerView.isStopped
 
-    implicitHeight: diskBg.height
-    implicitWidth: diskBg.width
+    asynchronous: true
+    z:  Overlay.overlay.z
+    x: parent.width - implicitWidth - 20
+    y: parent.height - implicitHeight - 20
 
-    x: root.footer.x + Maui.Style.space.medium
-    y: parent.height - height - Maui.Style.space.medium
-
-    parent: ApplicationWindow.overlay
-    z: parent.z + 1
-    ToolTip.delay: 1000
-    ToolTip.timeout: 5000
-    ToolTip.visible: _mouseArea.containsMouse && !Maui.Handy.isMobile
-    ToolTip.text: root.title
-
-    color: Maui.Theme.backgroundColor
-    radius: Maui.Style.radiusV
-
-    MouseArea
+    ScaleAnimator on scale
     {
-        id: _mouseArea
-        anchors.fill: parent
-        hoverEnabled: true
-
-        drag.target: parent
-        drag.axis: Drag.XAndYAxis
-        drag.minimumX: 0
-        drag.maximumX: root.width - control.width
-
-        drag.minimumY: 0
-        drag.maximumY: root.height - control.height
-        onClicked: toggleViewer()
-
-        ShaderEffectSource
-        {
-            id: diskBg
-            anchors.centerIn: parent
-            height: sourceItem.height * 0.35
-            width: sourceItem.width * 0.35
-            hideSource: visible
-            live: true
-            textureSize: Qt.size(width,height)
-            sourceItem: player.video
-
-        }
-
-        DropShadow
-        {
-            anchors.fill: diskBg
-            horizontalOffset: 0
-            verticalOffset: 0
-            radius: _mouseArea.containsPress ? 5.0 :8.0
-            samples: 17
-            color: "#80000000"
-            source: diskBg
-        }
+        from: 2
+        to: 1
+        duration: Maui.Style.units.longDuration
+        running: control.visible
+        easing.type: Easing.OutInQuad
     }
 
-    Slider
+    OpacityAnimator on opacity
     {
-        id: _slider
-        padding: 0
-        height: Maui.Style.iconSizes.small
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.bottom: parent.bottom
-        orientation: Qt.Horizontal
         from: 0
-        to: player.video.duration
-        value: player.video.position
+        to: 1
+        duration: Maui.Style.units.longDuration
+        running: control.status === Loader.Ready || control.visible
+    }
 
-        onMoved: player.video.seek( _slider.value )
+    sourceComponent: AbstractButton
+    {
+        id: _floatingViewer
+        Maui.Controls.badgeText:_playlist.count
 
-        //            onToChanged: value = player.video.position
+        padding: Maui.Style.defaultPadding
 
-        spacing: 0
-        focus: true
+        implicitHeight: miniArtwork.paintedHeight + topPadding + bottomPadding
+        implicitWidth: miniArtwork.paintedWidth + leftPadding + rightPadding
 
-        background: Rectangle
+        hoverEnabled: !Maui.Handy.isMobile
+
+        scale: hovered || pressed ? 1.2 : 1
+
+        Behavior on scale
         {
-            implicitWidth: _slider.width
-            implicitHeight: _slider.height
-            width: _slider.availableWidth
-            height: implicitHeight
-            color: "transparent"
-            opacity: 1
+            NumberAnimation { duration: 200; easing.type: Easing.OutCubic }
+        }
 
-            Rectangle
+        Behavior on implicitHeight
+        {
+            NumberAnimation
             {
-                width: _slider.visualPosition * parent.width
-                height: _slider.height
-                color: Maui.Theme.highlightColor
+                duration: Maui.Style.units.shortDuration
+                easing.type: Easing.InQuad
             }
         }
 
-        handle: Rectangle
+        onClicked:
         {
-            x: _slider.leftPadding + _slider.visualPosition
-               * (_slider.availableWidth - width)
-            y: 0
-            implicitWidth: Maui.Style.iconSizes.medium
-            implicitHeight: _slider.height
-            color: _slider.pressed ? Qt.lighter(Maui.Theme.highlightColor, 1.2) : "transparent"
+
+                toggleViewer()
+
         }
+
+        background: Rectangle
+        {
+            color: "white"
+
+            radius: Maui.Style.radiusV
+            // property color borderColor: Maui.Theme.textColor
+            // border.color: Maui.Style.trueBlack ? Qt.rgba(borderColor.r, borderColor.g, borderColor.b, 0.3) : undefined
+            layer.enabled: GraphicsInfo.api !== GraphicsInfo.Software
+            layer.effect: MultiEffect
+            {
+                autoPaddingEnabled: true
+                shadowEnabled: true
+                shadowColor: "#000000"
+            }
+        }
+
+        Loader
+        {
+            id: _badgeLoader
+
+            z: _floatingViewer.contentItem.z + 9999
+            asynchronous: true
+
+            active: _floatingViewer.Maui.Controls.badgeText && _floatingViewer.Maui.Controls.badgeText.length > 0 && _floatingViewer.visible
+            visible: active
+
+            anchors.horizontalCenter: parent.right
+            anchors.verticalCenter: parent.top
+            anchors.verticalCenterOffset: 10
+            anchors.horizontalCenterOffset: -5
+
+            sourceComponent: Maui.Badge
+            {
+                text: _floatingViewer.Maui.Controls.badgeText
+
+                padding: 2
+                font.pointSize: Maui.Style.fontSizes.tiny
+                Maui.Controls.status: Maui.Controls.Negative
+
+                OpacityAnimator on opacity
+                {
+                    from: 0
+                    to: 1
+                    duration: Maui.Style.units.longDuration
+                    running: parent.visible
+                }
+
+                ScaleAnimator on scale
+                {
+                    from: 0.5
+                    to: 1
+                    duration: Maui.Style.units.longDuration
+                    running: parent.visible
+                    easing.type: Easing.OutInQuad
+                }
+            }
+        }
+
+        contentItem: Item
+        {
+            Image
+            {
+                id: miniArtwork
+                source: player.currentVideo.preview
+                sourceSize.height: 160
+                sourceSize.width: 160
+
+                fillMode: Image.PreserveAspectFit
+
+                ShaderEffectSource
+                {
+                    id: diskBg
+                    anchors.centerIn: parent
+                    height:sourceItem.height * 0.30
+                    width: sourceItem.width * 0.30
+                    hideSource: visible
+                    live: true
+                    textureSize: Qt.size(width,height)
+                    sourceItem: player
+                }
+
+                Rectangle
+                {
+                    anchors.fill: parent
+                    color: Maui.Theme.backgroundColor
+                    opacity: 0.5
+                    visible: _floatingViewer.hovered
+                    Maui.Icon
+                    {
+                        anchors.centerIn: parent
+                        source: "quickview"
+                        height: 48
+                        width: 48
+                    }
+                }
+
+                layer.enabled: GraphicsInfo.api !== GraphicsInfo.Software
+
+                layer.effect: MultiEffect
+                {
+                    maskEnabled: true
+                    maskThresholdMin: 0.5
+                    maskSpreadAtMin: 1.0
+                    maskSpreadAtMax: 0.0
+                    maskThresholdMax: 1.0
+                    maskSource: ShaderEffectSource
+                    {
+                        sourceItem: Rectangle
+                        {
+                            width: miniArtwork.width
+                            height: miniArtwork.height
+                            radius:  Maui.Style.radiusV
+                        }
+                    }
+                }
+            }
+        }
+
+        // contentItem: Item
+        // {
+        //     id: miniArtwork
+        //     implicitHeight: diskBg.sourceItem.height * 0.25
+        //     implicitWidth: diskBg.sourceItem.width * 0.25
+
+        //     // ShaderEffectSource
+        //     // {
+        //     //     id: diskBg
+        //     //     anchors.fill: parent
+        //     //     hideSource: visible
+        //     //     live: true
+        //     //     textureSize: Qt.size(width,height)
+        //     //     sourceItem: player
+        //     // }
+
+        //     Rectangle
+        //     {
+        //         anchors.fill: parent
+        //         color: Maui.Theme.backgroundColor
+        //         opacity: 0.5
+        //         visible: _floatingViewer.hovered
+        //         Maui.Icon
+        //         {
+        //             anchors.centerIn: parent
+        //             source: "quickview"
+        //             height: 48
+        //             width: 48
+        //         }
+        //     }
+
+        //     layer.enabled: GraphicsInfo.api !== GraphicsInfo.Software
+
+        //     layer.effect: MultiEffect
+        //     {
+        //         maskEnabled: true
+        //         maskThresholdMin: 0.5
+        //         maskSpreadAtMin: 1.0
+        //         maskSpreadAtMax: 0.0
+        //         maskThresholdMax: 1.0
+        //         maskSource: ShaderEffectSource
+        //         {
+        //             sourceItem: Rectangle
+        //             {
+        //                 width: miniArtwork.width
+        //                 height: miniArtwork.height
+        //                 radius:  Maui.Style.radiusV
+        //             }
+        //         }
+        //     }
+
+        // }
     }
 }

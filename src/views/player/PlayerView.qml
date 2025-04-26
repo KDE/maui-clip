@@ -8,32 +8,37 @@ import org.mauikit.controls as Maui
 
 import org.maui.clip as Clip
 
-Clip.Video
+Player
 {
     id: control
-    url: currentVideo.url
-
-    property alias player : control
-
+    // source: currentVideo.url
+    readonly property alias player : control
+    url: currentVideo.url ? currentVideo.url : ""
     property var currentVideo : ({})
     property int currentVideoIndex : -1
+    // orientation : 90
+    // autoLoad: true
 
-    Connections
-    {
-        target: control.player
 
-        function onPlaybackStateChanged()
-        {
+    // readonly property bool isPlaying : control.playbackState === MediaPlayer.PlayingState
+    // readonly property bool isPaused : control.playbackState === MediaPlayer.PausedState
+    // readonly property bool isStopped : control.playbackState === MediaPlayer.StoppedState
 
-            if(control.playing)
-            {
-                Clip.LockManager.setInhibitionOn(i18n("Playing mode"));
+    // Connections
+    // {
+    //     target: control.player
 
-            }else
-            {
-                Clip.LockManager.setInhibitionOff();
-            }
-        }
-    }
+    //     function onPlaybackStateChanged()
+    //     {
+    //         if(control.playing)
+    //         {
+    //             Clip.LockManager.setInhibitionOn(i18n("Playing mode"));
+
+    //         }else
+    //         {
+    //             Clip.LockManager.setInhibitionOff();
+    //         }
+    //     }
+    // }
 }
 

@@ -14,14 +14,13 @@ MpvObject
     property alias url : control.source
     property alias video : control
 
-    readonly property bool playing : control.playbackState === MediaPlayer.PlayingState
-    readonly property bool paused : control.playbackState === MediaPlayer.PausedState
-    readonly property bool stopped :  control.playbackState === MediaPlayer.StoppedState
+    readonly property bool isPlaying : control.playbackState === MediaPlayer.PlayingState
+    readonly property bool isPaused : control.playbackState === MediaPlayer.PausedState
+    readonly property bool isStopped :  control.playbackState === MediaPlayer.StoppedState
 
     autoPlay: true
     hardwareDecoding: settings.hardwareDecoding
     onEndOfFile: playNext()
-
 
     Maui.InfoDialog
     {
