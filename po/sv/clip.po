@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:40+0000\n"
+"POT-Creation-Date: 2025-04-27 00:41+0000\n"
 "PO-Revision-Date: 2023-11-01 07:35+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -76,29 +76,29 @@ msgstr "Ta bort filer?"
 msgid "Are sure you want to delete %1 files"
 msgstr "Är du säker på att du vill ta bort %1 filer"
 
-#: src/main.qml:168
+#: src/main.qml:195
 #, kde-format
 msgid "Now playing"
 msgstr "Spelar nu"
 
-#: src/main.qml:276 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:305 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "Ingenting här."
 
-#: src/main.qml:277
+#: src/main.qml:306
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr "Öppna en ny video från din samling eller filsystemet."
 
 #. i18n("Screenshots")}};
-#: src/main.qml:297 src/models/tagsmodel.cpp:14
+#: src/main.qml:326 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Collection"
 msgstr "Samling"
 
-#: src/main.qml:469
+#: src/main.qml:497
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "Visa eller dölj sidorad"
@@ -226,20 +226,15 @@ msgstr ""
 "Är du säker på att du vill ta bort\n"
 "%1"
 
-#: src/views/player/MPVPlayer.qml:29
+#: src/views/player/MPVPlayer.qml:28
 #, kde-format
 msgid "Subtitles"
 msgstr "Textning"
 
-#: src/views/player/MPVPlayer.qml:47
+#: src/views/player/MPVPlayer.qml:46
 #, kde-format
 msgid "Audio Tracks"
 msgstr "Ljudspår"
-
-#: src/views/player/PlayerView.qml:30
-#, kde-format
-msgid "Playing mode"
-msgstr "Uppspelningsmetod"
 
 #: src/views/player/Playlist.qml:22
 #, kde-format
@@ -410,6 +405,9 @@ msgstr "Börja söka efter videor på nätet."
 #, kde-format
 msgid "Search..."
 msgstr "Sök..."
+
+#~ msgid "Playing mode"
+#~ msgstr "Uppspelningsmetod"
 
 #~ msgid "Dark Mode"
 #~ msgstr "Mörkt läge"

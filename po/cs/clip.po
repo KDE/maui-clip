@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:40+0000\n"
+"POT-Creation-Date: 2025-04-27 00:41+0000\n"
 "PO-Revision-Date: 2023-10-31 16:14+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -74,29 +74,29 @@ msgstr "Smazat soubory?"
 msgid "Are sure you want to delete %1 files"
 msgstr ""
 
-#: src/main.qml:168
+#: src/main.qml:195
 #, kde-format
 msgid "Now playing"
 msgstr "Nyní přehrávám"
 
-#: src/main.qml:276 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:305 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "Zde nic není!"
 
-#: src/main.qml:277
+#: src/main.qml:306
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr "Otevřít nové video z vaší sbírky nebo souborového systému."
 
 #. i18n("Screenshots")}};
-#: src/main.qml:297 src/models/tagsmodel.cpp:14
+#: src/main.qml:326 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Collection"
 msgstr "Sbírka"
 
-#: src/main.qml:469
+#: src/main.qml:497
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "Přepnout postranní panel"
@@ -224,20 +224,15 @@ msgstr ""
 "Opravdu si přejete smazat \n"
 "%1?"
 
-#: src/views/player/MPVPlayer.qml:29
+#: src/views/player/MPVPlayer.qml:28
 #, kde-format
 msgid "Subtitles"
 msgstr "Titulky"
 
-#: src/views/player/MPVPlayer.qml:47
+#: src/views/player/MPVPlayer.qml:46
 #, kde-format
 msgid "Audio Tracks"
 msgstr "Audio stopy"
-
-#: src/views/player/PlayerView.qml:30
-#, kde-format
-msgid "Playing mode"
-msgstr "Režim přehrávání:"
 
 #: src/views/player/Playlist.qml:22
 #, kde-format
@@ -405,3 +400,6 @@ msgstr ""
 #, kde-format
 msgid "Search..."
 msgstr "Hledat..."
+
+#~ msgid "Playing mode"
+#~ msgstr "Režim přehrávání:"

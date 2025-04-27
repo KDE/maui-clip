@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:40+0000\n"
+"POT-Creation-Date: 2025-04-27 00:41+0000\n"
 "PO-Revision-Date: 2023-11-14 14:19-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -76,29 +76,29 @@ msgstr "Excluir arquivos?"
 msgid "Are sure you want to delete %1 files"
 msgstr "Tem certeza que deseja excluir %1 arquivos"
 
-#: src/main.qml:168
+#: src/main.qml:195
 #, kde-format
 msgid "Now playing"
 msgstr "Reproduzindo agora"
 
-#: src/main.qml:276 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:305 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "Nada aqui!"
 
-#: src/main.qml:277
+#: src/main.qml:306
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr "Abra um novo vídeo da sua coleção ou sistema de arquivos."
 
 #. i18n("Screenshots")}};
-#: src/main.qml:297 src/models/tagsmodel.cpp:14
+#: src/main.qml:326 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Collection"
 msgstr "Coleção"
 
-#: src/main.qml:469
+#: src/main.qml:497
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "Alterar barra lateral"
@@ -226,20 +226,15 @@ msgstr ""
 "Tem certeza de que deseja excluir \n"
 "%1"
 
-#: src/views/player/MPVPlayer.qml:29
+#: src/views/player/MPVPlayer.qml:28
 #, kde-format
 msgid "Subtitles"
 msgstr "Legendas"
 
-#: src/views/player/MPVPlayer.qml:47
+#: src/views/player/MPVPlayer.qml:46
 #, kde-format
 msgid "Audio Tracks"
 msgstr "Faixas de áudio"
-
-#: src/views/player/PlayerView.qml:30
-#, kde-format
-msgid "Playing mode"
-msgstr "Modo de reprodução"
 
 #: src/views/player/Playlist.qml:22
 #, kde-format
@@ -412,6 +407,9 @@ msgstr "Comece a pesquisar vídeos online."
 #, kde-format
 msgid "Search..."
 msgstr "Pesquisar..."
+
+#~ msgid "Playing mode"
+#~ msgstr "Modo de reprodução"
 
 #~ msgid "Dark Mode"
 #~ msgstr "Modo escuro"

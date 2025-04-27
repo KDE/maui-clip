@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-cinema\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:40+0000\n"
+"POT-Creation-Date: 2025-04-27 00:41+0000\n"
 "PO-Revision-Date: 2020-11-12 20:21-0800\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -71,29 +71,29 @@ msgstr ""
 msgid "Are sure you want to delete %1 files"
 msgstr ""
 
-#: src/main.qml:168
+#: src/main.qml:195
 #, kde-format
 msgid "Now playing"
 msgstr ""
 
-#: src/main.qml:276 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:305 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr ""
 
-#: src/main.qml:277
+#: src/main.qml:306
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr ""
 
 #. i18n("Screenshots")}};
-#: src/main.qml:297 src/models/tagsmodel.cpp:14
+#: src/main.qml:326 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Collection"
 msgstr ""
 
-#: src/main.qml:469
+#: src/main.qml:497
 #, kde-format
 msgid "Toggle SideBar"
 msgstr ""
@@ -218,19 +218,14 @@ msgid ""
 "%1"
 msgstr ""
 
-#: src/views/player/MPVPlayer.qml:29
+#: src/views/player/MPVPlayer.qml:28
 #, kde-format
 msgid "Subtitles"
 msgstr ""
 
-#: src/views/player/MPVPlayer.qml:47
+#: src/views/player/MPVPlayer.qml:46
 #, kde-format
 msgid "Audio Tracks"
-msgstr ""
-
-#: src/views/player/PlayerView.qml:30
-#, kde-format
-msgid "Playing mode"
 msgstr ""
 
 #: src/views/player/Playlist.qml:22

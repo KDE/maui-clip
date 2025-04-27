@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:40+0000\n"
+"POT-Creation-Date: 2025-04-27 00:41+0000\n"
 "PO-Revision-Date: 2023-10-28 11:45+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -79,29 +79,29 @@ msgstr "Fitxategik ezabatu?"
 msgid "Are sure you want to delete %1 files"
 msgstr "Ziur zaude %1 fitxategi ezabatu nahi dituzula?"
 
-#: src/main.qml:168
+#: src/main.qml:195
 #, kde-format
 msgid "Now playing"
 msgstr "Orain jotzen"
 
-#: src/main.qml:276 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:305 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "Hemen ez dago ezer!"
 
-#: src/main.qml:277
+#: src/main.qml:306
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr "Ireki bideo berri bat zure bildumatik edo fitxategi-sistematik."
 
 #. i18n("Screenshots")}};
-#: src/main.qml:297 src/models/tagsmodel.cpp:14
+#: src/main.qml:326 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Collection"
 msgstr "Bilduma"
 
-#: src/main.qml:469
+#: src/main.qml:497
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "Txandakatu alboko-barra"
@@ -229,20 +229,15 @@ msgstr ""
 "Ziur zaude\n"
 "%1 ezabatu nahi duzula?"
 
-#: src/views/player/MPVPlayer.qml:29
+#: src/views/player/MPVPlayer.qml:28
 #, kde-format
 msgid "Subtitles"
 msgstr "Azpidatziak"
 
-#: src/views/player/MPVPlayer.qml:47
+#: src/views/player/MPVPlayer.qml:46
 #, kde-format
 msgid "Audio Tracks"
 msgstr "Audio pistak"
-
-#: src/views/player/PlayerView.qml:30
-#, kde-format
-msgid "Playing mode"
-msgstr "Jotzeko modua"
 
 #: src/views/player/Playlist.qml:22
 #, kde-format
@@ -413,6 +408,9 @@ msgstr "Hasi lerroko bideoak bilatzen."
 #, kde-format
 msgid "Search..."
 msgstr "Bilatu..."
+
+#~ msgid "Playing mode"
+#~ msgstr "Jotzeko modua"
 
 #~ msgid "Dark Mode"
 #~ msgstr "Modu iluna"

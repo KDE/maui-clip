@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:40+0000\n"
+"POT-Creation-Date: 2025-04-27 00:41+0000\n"
 "PO-Revision-Date: 2023-10-28 11:41+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -76,29 +76,29 @@ msgstr "Bestanden verwijderen?"
 msgid "Are sure you want to delete %1 files"
 msgstr "Wilt u %1 bestanden verwijderen"
 
-#: src/main.qml:168
+#: src/main.qml:195
 #, kde-format
 msgid "Now playing"
 msgstr "Nu aan het afspelen"
 
-#: src/main.qml:276 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:305 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "Er is hier niets!"
 
-#: src/main.qml:277
+#: src/main.qml:306
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr "Een nieuwe video openen uit uw verzameling of bestandssysteem."
 
 #. i18n("Screenshots")}};
-#: src/main.qml:297 src/models/tagsmodel.cpp:14
+#: src/main.qml:326 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Collection"
 msgstr "Verzameling"
 
-#: src/main.qml:469
+#: src/main.qml:497
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "Zijbalk omschakelen"
@@ -226,20 +226,15 @@ msgstr ""
 "Wilt u echt verwijderen \n"
 "%1"
 
-#: src/views/player/MPVPlayer.qml:29
+#: src/views/player/MPVPlayer.qml:28
 #, kde-format
 msgid "Subtitles"
 msgstr "Ondertiteling"
 
-#: src/views/player/MPVPlayer.qml:47
+#: src/views/player/MPVPlayer.qml:46
 #, kde-format
 msgid "Audio Tracks"
 msgstr "Audiotracks"
-
-#: src/views/player/PlayerView.qml:30
-#, kde-format
-msgid "Playing mode"
-msgstr "Modus afspelen"
 
 #: src/views/player/Playlist.qml:22
 #, kde-format
@@ -412,6 +407,9 @@ msgstr "Start met zoeken naar online video's."
 #, kde-format
 msgid "Search..."
 msgstr "Zoeken..."
+
+#~ msgid "Playing mode"
+#~ msgstr "Modus afspelen"
 
 #~ msgid "Dark Mode"
 #~ msgstr "Donkere modus"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:40+0000\n"
+"POT-Creation-Date: 2025-04-27 00:41+0000\n"
 "PO-Revision-Date: 2023-10-28 09:12+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -79,29 +79,29 @@ msgstr "Вилучити файли?"
 msgid "Are sure you want to delete %1 files"
 msgstr "Ви справді хочете вилучити %1 файлів"
 
-#: src/main.qml:168
+#: src/main.qml:195
 #, kde-format
 msgid "Now playing"
 msgstr "Зараз відтворюється"
 
-#: src/main.qml:276 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:305 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "Тут нічого немає!"
 
-#: src/main.qml:277
+#: src/main.qml:306
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr "Відкрийте нове відео з вашої збірки або файлової системи."
 
 #. i18n("Screenshots")}};
-#: src/main.qml:297 src/models/tagsmodel.cpp:14
+#: src/main.qml:326 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Collection"
 msgstr "Збірка"
 
-#: src/main.qml:469
+#: src/main.qml:497
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "Увімкнути чи вимкнути бічну панель"
@@ -231,20 +231,15 @@ msgstr ""
 "Ви справді хочете вилучити \n"
 "%1"
 
-#: src/views/player/MPVPlayer.qml:29
+#: src/views/player/MPVPlayer.qml:28
 #, kde-format
 msgid "Subtitles"
 msgstr "Субтитри"
 
-#: src/views/player/MPVPlayer.qml:47
+#: src/views/player/MPVPlayer.qml:46
 #, kde-format
 msgid "Audio Tracks"
 msgstr "Звукові доріжки"
-
-#: src/views/player/PlayerView.qml:30
-#, kde-format
-msgid "Playing mode"
-msgstr "Режим відтворення"
 
 #: src/views/player/Playlist.qml:22
 #, kde-format
@@ -416,6 +411,9 @@ msgstr "Почніть пошук відео в інтернеті."
 #, kde-format
 msgid "Search..."
 msgstr "Шукати…"
+
+#~ msgid "Playing mode"
+#~ msgstr "Режим відтворення"
 
 #~ msgid "Dark Mode"
 #~ msgstr "Темний режим"

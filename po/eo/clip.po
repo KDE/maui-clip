@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:40+0000\n"
+"POT-Creation-Date: 2025-04-27 00:41+0000\n"
 "PO-Revision-Date: 2024-06-05 23:54+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -77,29 +77,29 @@ msgstr "Ĉu forigi dosierojn?"
 msgid "Are sure you want to delete %1 files"
 msgstr "Ĉu certas, ke vi volas forigi %1 dosierojn"
 
-#: src/main.qml:168
+#: src/main.qml:195
 #, kde-format
 msgid "Now playing"
 msgstr "Nun ludas"
 
-#: src/main.qml:276 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:305 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "Nenio Ĉi tie!"
 
-#: src/main.qml:277
+#: src/main.qml:306
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr "Malfermu novan videon el via kolekto aŭ dosiersistemo."
 
 #. i18n("Screenshots")}};
-#: src/main.qml:297 src/models/tagsmodel.cpp:14
+#: src/main.qml:326 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Collection"
 msgstr "Kolekto"
 
-#: src/main.qml:469
+#: src/main.qml:497
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "Baskuligi Flankbaron"
@@ -227,20 +227,15 @@ msgstr ""
 "Ĉu vi certas ke vi volas forigi \n"
 "%1"
 
-#: src/views/player/MPVPlayer.qml:29
+#: src/views/player/MPVPlayer.qml:28
 #, kde-format
 msgid "Subtitles"
 msgstr "Subtekstoj"
 
-#: src/views/player/MPVPlayer.qml:47
+#: src/views/player/MPVPlayer.qml:46
 #, kde-format
 msgid "Audio Tracks"
 msgstr "Sonaj trakoj"
-
-#: src/views/player/PlayerView.qml:30
-#, kde-format
-msgid "Playing mode"
-msgstr "Ludanta reĝimo"
 
 #: src/views/player/Playlist.qml:22
 #, kde-format
@@ -410,3 +405,6 @@ msgstr "Komenci serĉi interretajn filmetojn."
 #, kde-format
 msgid "Search..."
 msgstr "Serĉi..."
+
+#~ msgid "Playing mode"
+#~ msgstr "Ludanta reĝimo"

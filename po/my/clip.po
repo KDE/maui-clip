@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:40+0000\n"
+"POT-Creation-Date: 2025-04-27 00:41+0000\n"
 "PO-Revision-Date: 2021-09-15 21:44+0630\n"
 "Last-Translator: \n"
 "Language-Team: Burmese <kde-i18n-doc@kde.org>\n"
@@ -77,30 +77,30 @@ msgstr "ဖိုင်လ်များဖျက်မည်လား။"
 msgid "Are sure you want to delete %1 files"
 msgstr "ဖိုင်လ် %1ခု ကို သင်တကယ်ဖျက်တော့မည်လား"
 
-#: src/main.qml:168
+#: src/main.qml:195
 #, kde-format
 msgid "Now playing"
 msgstr "ယခုဖွင့်ပြနေသည်"
 
-#: src/main.qml:276 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:305 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "ဘာမှမရှိ။"
 
-#: src/main.qml:277
+#: src/main.qml:306
 #, fuzzy, kde-format
 #| msgid "Open a new video to start playing or add it to the playlist."
 msgid "Open a new video from your collection or file system."
 msgstr "ဖွင့်ပြရန် ဗီဒီယိုအသစ်တစ်ခု ဖွင့်ပါ သို့ ဖွင့်မည့်စာရင်းသို့ သွင်းပါ။"
 
 #. i18n("Screenshots")}};
-#: src/main.qml:297 src/models/tagsmodel.cpp:14
+#: src/main.qml:326 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Collection"
 msgstr "စုစည်းမှု"
 
-#: src/main.qml:469
+#: src/main.qml:497
 #, fuzzy, kde-format
 #| msgid "Toogle SideBar"
 msgid "Toggle SideBar"
@@ -234,20 +234,15 @@ msgstr ""
 "သင်တကယ်ဖျက်တော့မည်လား\n"
 "%1"
 
-#: src/views/player/MPVPlayer.qml:29
+#: src/views/player/MPVPlayer.qml:28
 #, kde-format
 msgid "Subtitles"
 msgstr "ဗီဒီယိုစာတန်းထိုး"
 
-#: src/views/player/MPVPlayer.qml:47
+#: src/views/player/MPVPlayer.qml:46
 #, kde-format
 msgid "Audio Tracks"
 msgstr "အော်ဒီယိုသံစဥ်များ"
-
-#: src/views/player/PlayerView.qml:30
-#, kde-format
-msgid "Playing mode"
-msgstr ""
 
 #: src/views/player/Playlist.qml:22
 #, kde-format

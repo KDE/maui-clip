@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:40+0000\n"
+"POT-Creation-Date: 2025-04-27 00:41+0000\n"
 "PO-Revision-Date: 2024-12-29 23:06+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -78,29 +78,29 @@ msgstr "सञ्चिकाः विलोपयन्तु ?"
 msgid "Are sure you want to delete %1 files"
 msgstr "%1 सञ्चिकाः विलोपयितुम् इच्छति इति निश्चितम्"
 
-#: src/main.qml:168
+#: src/main.qml:195
 #, kde-format
 msgid "Now playing"
 msgstr "अधुना क्रीडन्"
 
-#: src/main.qml:276 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:305 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "अत्र किमपि नास्ति !"
 
-#: src/main.qml:277
+#: src/main.qml:306
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr "स्वस्य संग्रहात् अथवा सञ्चिकातन्त्रात् नूतनं विडियो उद्घाटयन्तु।"
 
 #. i18n("Screenshots")}};
-#: src/main.qml:297 src/models/tagsmodel.cpp:14
+#: src/main.qml:326 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Collection"
 msgstr "सङ्ग्रह"
 
-#: src/main.qml:469
+#: src/main.qml:497
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "Toggle SideBar इति"
@@ -226,20 +226,15 @@ msgid ""
 "%1"
 msgstr "%1 विलोपयितुम् इच्छति इति निश्चितम्"
 
-#: src/views/player/MPVPlayer.qml:29
+#: src/views/player/MPVPlayer.qml:28
 #, kde-format
 msgid "Subtitles"
 msgstr "उपशीर्षक"
 
-#: src/views/player/MPVPlayer.qml:47
+#: src/views/player/MPVPlayer.qml:46
 #, kde-format
 msgid "Audio Tracks"
 msgstr "ऑडियो ट्रैक्स"
-
-#: src/views/player/PlayerView.qml:30
-#, kde-format
-msgid "Playing mode"
-msgstr "वादनविधिः"
 
 #: src/views/player/Playlist.qml:22
 #, kde-format
@@ -407,3 +402,6 @@ msgstr "ऑनलाइन-वीडियो-अन्वेषणं आरभ
 #, kde-format
 msgid "Search..."
 msgstr "अन्वेषण..."
+
+#~ msgid "Playing mode"
+#~ msgstr "वादनविधिः"

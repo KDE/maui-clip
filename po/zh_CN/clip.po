@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:40+0000\n"
+"POT-Creation-Date: 2025-04-27 00:41+0000\n"
 "PO-Revision-Date: 2024-04-22 16:06\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -75,29 +75,29 @@ msgstr "删除文件？"
 msgid "Are sure you want to delete %1 files"
 msgstr "您确定要删除 %1 个文件吗？"
 
-#: src/main.qml:168
+#: src/main.qml:195
 #, kde-format
 msgid "Now playing"
 msgstr "正在播放"
 
-#: src/main.qml:276 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:305 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "暂无内容"
 
-#: src/main.qml:277
+#: src/main.qml:306
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr "从您的收藏集合或文件系统中打开一个新视频。"
 
 #. i18n("Screenshots")}};
-#: src/main.qml:297 src/models/tagsmodel.cpp:14
+#: src/main.qml:326 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Collection"
 msgstr "视频集合"
 
-#: src/main.qml:469
+#: src/main.qml:497
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "显示/隐藏侧边栏"
@@ -224,20 +224,15 @@ msgstr ""
 "您确定要删除 \n"
 "%1 吗？"
 
-#: src/views/player/MPVPlayer.qml:29
+#: src/views/player/MPVPlayer.qml:28
 #, kde-format
 msgid "Subtitles"
 msgstr "字幕"
 
-#: src/views/player/MPVPlayer.qml:47
+#: src/views/player/MPVPlayer.qml:46
 #, kde-format
 msgid "Audio Tracks"
 msgstr "音轨"
-
-#: src/views/player/PlayerView.qml:30
-#, kde-format
-msgid "Playing mode"
-msgstr "播放模式"
 
 #: src/views/player/Playlist.qml:22
 #, kde-format
@@ -407,3 +402,6 @@ msgstr "开始搜索在线视频。"
 #, kde-format
 msgid "Search..."
 msgstr "搜索..."
+
+#~ msgid "Playing mode"
+#~ msgstr "播放模式"

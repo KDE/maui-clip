@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-cinema\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:40+0000\n"
+"POT-Creation-Date: 2025-04-27 00:41+0000\n"
 "PO-Revision-Date: 2023-11-04 14:03+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -77,29 +77,29 @@ msgstr "Brišem datoteke?"
 msgid "Are sure you want to delete %1 files"
 msgstr "Ali ste prepričani, da želite izbrisati %1 datotek"
 
-#: src/main.qml:168
+#: src/main.qml:195
 #, kde-format
 msgid "Now playing"
 msgstr "Zdaj se predvaja"
 
-#: src/main.qml:276 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:305 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "Ničesar ni tu!"
 
-#: src/main.qml:277
+#: src/main.qml:306
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr "Odpri nov video iz vaše zbirke ali sistema datotek."
 
 #. i18n("Screenshots")}};
-#: src/main.qml:297 src/models/tagsmodel.cpp:14
+#: src/main.qml:326 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Collection"
 msgstr "Zbirka"
 
-#: src/main.qml:469
+#: src/main.qml:497
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "Preklopi stransko vrstico"
@@ -229,20 +229,15 @@ msgstr ""
 "Ali ste prepričani, da želite zbrisati\n"
 "%1"
 
-#: src/views/player/MPVPlayer.qml:29
+#: src/views/player/MPVPlayer.qml:28
 #, kde-format
 msgid "Subtitles"
 msgstr "Podnapisi"
 
-#: src/views/player/MPVPlayer.qml:47
+#: src/views/player/MPVPlayer.qml:46
 #, kde-format
 msgid "Audio Tracks"
 msgstr "Avdio sledi"
-
-#: src/views/player/PlayerView.qml:30
-#, kde-format
-msgid "Playing mode"
-msgstr "Predvajalni način"
 
 #: src/views/player/Playlist.qml:22
 #, kde-format
@@ -413,6 +408,9 @@ msgstr "Začni iskati spletne videoposnetke."
 #, kde-format
 msgid "Search..."
 msgstr "Iskanje..."
+
+#~ msgid "Playing mode"
+#~ msgstr "Predvajalni način"
 
 #~ msgid "Dark Mode"
 #~ msgstr "Temni način"
