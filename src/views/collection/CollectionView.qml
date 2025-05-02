@@ -28,6 +28,8 @@ Maui.SideBarView
         Maui.Controls.showCSD: true
 
         altHeader: Maui.Handy.isMobile
+        headerMargins: Maui.Style.defaultPadding
+        // floatingHeader: true
 
         headBar.leftContent: [Maui.ToolButtonMenu
         {
