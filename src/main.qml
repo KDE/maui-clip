@@ -236,7 +236,8 @@ Maui.ApplicationWindow
                 autoHideHeader: _playerView.playbackState === MediaPlayer.PlayingState
                 //                autoHideFooter: _playerView.player.playbackState === MediaPlayer.PlayingState
 
-                floatingHeader: autoHideHeader
+                headerMargins: Maui.Style.defaultPadding
+                floatingHeader: true
                 headBar.visible: !_playerHolderLoader.active
 
                 Maui.Controls.showCSD: true
@@ -328,95 +329,6 @@ Maui.ApplicationWindow
                     onClicked: toggleViewer()
                 }
 
-                footerColumn: Loader
-                {
-                    // active: !player.isStopped
-                    width: parent.width
-                    asynchronous: true
-                    visible: active
-
-                    sourceComponent: Maui.ToolBar
-                    {
-                        preferredHeight: Maui.Style.rowHeightAlt
-
-                        position: ToolBar.Footer
-                        leftContent: Label
-                        {
-                            text: Maui.Handy.formatTime(player.position/1000)
-                        }
-
-                        rightContent: Label
-                        {
-                            text: Maui.Handy.formatTime(player.duration/1000)
-                        }
-
-                        middleContent: Item
-                        {
-                            Layout.fillHeight: true
-                            Layout.fillWidth: true
-
-                            Label
-                            {
-                                anchors.fill: parent
-                                visible: text.length
-                                verticalAlignment: Qt.AlignVCenter
-                                horizontalAlignment: Qt.AlignHCenter
-                                text: root.title
-                                elide: Text.ElideMiddle
-                                wrapMode: Text.NoWrap
-                            }
-                        }
-
-                        background: Slider
-                        {
-                            id: _slider
-                            z: parent.z+1
-                            padding: 0
-                            orientation: Qt.Horizontal
-                            from: 0
-                            to: player.duration
-                            value: player.position
-
-                            onMoved: player.seek( _slider.value )
-                            spacing: 0
-                            focus: true
-
-                            // Maui.Separator
-                            // {
-                            //     anchors.top: parent.top
-                            //     width: parent.width
-                            // }
-
-                            // background: Rectangle
-                            // {
-                            //     implicitWidth: _slider.width
-                            //     implicitHeight: _slider.height
-                            //     width: _slider.availableWidth
-                            //     height: implicitHeight
-                            //     color: "transparent"
-                            //     opacity: 0.4
-
-                            //     Rectangle
-                            //     {
-                            //         width: _slider.visualPosition * parent.width
-                            //         height: _slider.pressed ? _slider.height : 2
-                            //         color: Maui.Theme.highlightColor
-                            //     }
-                            // }
-
-                            // handle: Rectangle
-                            // {
-                            //     x: _slider.leftPadding + _slider.visualPosition
-                            //        * (_slider.availableWidth - width)
-                            //     y: 0
-                            //     implicitWidth: Maui.Style.iconSizes.medium
-                            //     implicitHeight: _slider.height
-                            //     color: _slider.pressed ? Qt.lighter(Maui.Theme.highlightColor, 1.2) : "transparent"
-                            // }
-                        }
-                    }
-                }
-
                 headBar.rightContent: [
 
                     FB.FavButton
@@ -498,34 +410,76 @@ Maui.ApplicationWindow
                     }
                 }
 
-                footBar.middleContent: [
+                // footBar.background: Rectangle
+                // {
+                //     color: Maui.Theme.backgroundColor
+                //     opacity: 0.88
+                //     radius: Maui.Style.radiusV
+                // }
 
-                    Maui.ToolActions
+                floatingFooter: true
+                footerMargins: Maui.Style.defaultPadding
+                footBar.middleContent: Slider
+                {
+                    id: _slider
+                    Layout.fillWidth: true
+                    padding: 0
+                    orientation: Qt.Horizontal
+                    from: 0
+                    to: player.duration
+                    value: player.position
+                    Layout.preferredHeight: 22
+                    onMoved: player.seek( _slider.value )
+                    spacing: 0
+                    focus: true
+                }
+
+                footBar.rightContent: [Label
+                {
+                    text: Maui.Handy.formatTime(player.duration/1000) + " / " +Maui.Handy.formatTime(player.position/1000)
+                },
+
+                ToolButton
+                {
+                    icon.name: "zoom-fit-width"
+                    checkable: true
+                    checked: player.fillMode == VideoOutput.PreserveAspectFit
+                    onClicked:
                     {
-                        Layout.alignment: Qt.AlignCenter
-                        expanded: true
-                        checkable: false
-                        autoExclusive: false
-
-                        Action
-                        {
-                            icon.name: "media-skip-backward"
-                            onTriggered: playPrevious()
-                        }
-
-                        Action
-                        {
-                            icon.name: player.isPlaying ? "media-playback-pause" : "media-playback-start"
-                            onTriggered: player.isPaused ? player.play() : player.pause()
-                        }
-
-                        Action
-                        {
-                            icon.name: "media-skip-forward"
-                            onTriggered: playNext()
-                        }
+                        if(!checked)
+                            player.fillMode = VideoOutput.PreserveAspectCrop
+                        else
+                            player.fillMode = VideoOutput.PreserveAspectFit
                     }
+                }
+
                 ]
+
+                footBar.leftContent: Maui.ToolActions
+                {
+                    expanded: true
+                    checkable: false
+                    autoExclusive: false
+
+                    Action
+                    {
+                        icon.name: "media-skip-backward"
+                        onTriggered: playPrevious()
+                    }
+
+                    Action
+                    {
+                        icon.name: player.isPlaying ? "media-playback-pause" : "media-playback-start"
+                        onTriggered: player.isPaused ? player.play() : player.pause()
+                    }
+
+                    Action
+                    {
+                        icon.name: "media-skip-forward"
+                        onTriggered: playNext()
+                    }
+                }
+
             }
         }
     }
