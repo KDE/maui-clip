@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-27 00:41+0000\n"
+"POT-Creation-Date: 2025-05-03 00:41+0000\n"
 "PO-Revision-Date: 2024-02-10 00:18+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -52,7 +52,7 @@ msgstr "동영상을 탐색하고 재생합니다."
 msgid "Developer"
 msgstr "개발자"
 
-#: src/main.qml:86 src/views/collection/CollectionView.qml:39
+#: src/main.qml:86 src/views/collection/CollectionView.qml:41
 #, kde-format
 msgid "Open URL"
 msgstr "URL 열기"
@@ -81,24 +81,24 @@ msgstr "파일 %1개를 삭제하시겠습니까"
 msgid "Now playing"
 msgstr "지금 재생 중"
 
-#: src/main.qml:305 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:306 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "아무것도 없습니다!"
 
-#: src/main.qml:306
+#: src/main.qml:307
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr "모음집이나 파일 시스템에서 새 동영상을 엽니다."
 
 #. i18n("Screenshots")}};
-#: src/main.qml:326 src/models/tagsmodel.cpp:14
+#: src/main.qml:327 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Collection"
 msgstr "모음집"
 
-#: src/main.qml:497
+#: src/main.qml:409
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "사이드바 전환"
@@ -130,38 +130,38 @@ msgid "Search %1 video"
 msgid_plural "Search %1 videos"
 msgstr[0] "동영상 %1개 검색"
 
-#: src/views/collection/CollectionView.qml:50
+#: src/views/collection/CollectionView.qml:52
 #, kde-format
 msgid "Settings"
 msgstr "설정"
 
-#: src/views/collection/CollectionView.qml:58
+#: src/views/collection/CollectionView.qml:60
 #, kde-format
 msgid "About"
 msgstr "정보"
 
-#: src/views/collection/CollectionView.qml:76
+#: src/views/collection/CollectionView.qml:78
 #, kde-format
 msgid "Toggle sidebar"
 msgstr "사이드바 전환"
 
-#: src/views/collection/CollectionView.qml:82 src/views/player/Playlist.qml:21
+#: src/views/collection/CollectionView.qml:84 src/views/player/Playlist.qml:21
 #: src/views/tags/TagsView.qml:38
 #, kde-format
 msgid "No Videos!"
 msgstr "동영상이 없습니다!"
 
-#: src/views/collection/CollectionView.qml:83
+#: src/views/collection/CollectionView.qml:85
 #, kde-format
 msgid "Add a new video source or open a file."
 msgstr "새 동영상 원본을 추가하거나 파일을 엽니다."
 
-#: src/views/collection/CollectionView.qml:88
+#: src/views/collection/CollectionView.qml:90
 #, kde-format
 msgid "Open file"
 msgstr "파일 열기"
 
-#: src/views/collection/CollectionView.qml:94
+#: src/views/collection/CollectionView.qml:96
 #, kde-format
 msgid "Add sources"
 msgstr "원본 추가"

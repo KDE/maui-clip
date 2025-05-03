@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-27 00:41+0000\n"
+"POT-Creation-Date: 2025-05-03 00:41+0000\n"
 "PO-Revision-Date: 2023-10-28 11:45+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -55,7 +55,7 @@ msgstr "Zure bideoak arakatu eta jo."
 msgid "Developer"
 msgstr "Garatzailea"
 
-#: src/main.qml:86 src/views/collection/CollectionView.qml:39
+#: src/main.qml:86 src/views/collection/CollectionView.qml:41
 #, kde-format
 msgid "Open URL"
 msgstr "Ireki URLa"
@@ -84,24 +84,24 @@ msgstr "Ziur zaude %1 fitxategi ezabatu nahi dituzula?"
 msgid "Now playing"
 msgstr "Orain jotzen"
 
-#: src/main.qml:305 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:306 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "Hemen ez dago ezer!"
 
-#: src/main.qml:306
+#: src/main.qml:307
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr "Ireki bideo berri bat zure bildumatik edo fitxategi-sistematik."
 
 #. i18n("Screenshots")}};
-#: src/main.qml:326 src/models/tagsmodel.cpp:14
+#: src/main.qml:327 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Collection"
 msgstr "Bilduma"
 
-#: src/main.qml:497
+#: src/main.qml:409
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "Txandakatu alboko-barra"
@@ -134,38 +134,38 @@ msgid_plural "Search %1 videos"
 msgstr[0] "Bilatu bideo %1"
 msgstr[1] "Bilatu %1 bideo"
 
-#: src/views/collection/CollectionView.qml:50
+#: src/views/collection/CollectionView.qml:52
 #, kde-format
 msgid "Settings"
 msgstr "Ezarpenak"
 
-#: src/views/collection/CollectionView.qml:58
+#: src/views/collection/CollectionView.qml:60
 #, kde-format
 msgid "About"
 msgstr "Honi buruz"
 
-#: src/views/collection/CollectionView.qml:76
+#: src/views/collection/CollectionView.qml:78
 #, kde-format
 msgid "Toggle sidebar"
 msgstr "Txandakatu alboko-barra"
 
-#: src/views/collection/CollectionView.qml:82 src/views/player/Playlist.qml:21
+#: src/views/collection/CollectionView.qml:84 src/views/player/Playlist.qml:21
 #: src/views/tags/TagsView.qml:38
 #, kde-format
 msgid "No Videos!"
 msgstr "Bideorik ez!"
 
-#: src/views/collection/CollectionView.qml:83
+#: src/views/collection/CollectionView.qml:85
 #, kde-format
 msgid "Add a new video source or open a file."
 msgstr "Gehitu bideo sorburu berri bat edo ireki fitxategi bat."
 
-#: src/views/collection/CollectionView.qml:88
+#: src/views/collection/CollectionView.qml:90
 #, kde-format
 msgid "Open file"
 msgstr "Ireki fitxategia"
 
-#: src/views/collection/CollectionView.qml:94
+#: src/views/collection/CollectionView.qml:96
 #, kde-format
 msgid "Add sources"
 msgstr "Gehitu sorburuak"

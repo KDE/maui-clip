@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-27 00:41+0000\n"
+"POT-Creation-Date: 2025-05-03 00:41+0000\n"
 "PO-Revision-Date: 2021-05-01 23:20-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -52,7 +52,7 @@ msgstr ""
 msgid "Developer"
 msgstr "ਡਿਵੈਲਪਰ"
 
-#: src/main.qml:86 src/views/collection/CollectionView.qml:39
+#: src/main.qml:86 src/views/collection/CollectionView.qml:41
 #, kde-format
 msgid "Open URL"
 msgstr "URL ਨੂੰ ਖੋਲ੍ਹੋ"
@@ -79,24 +79,24 @@ msgstr "ਕੀ ਤੁਸੀਂ %1 ਫਾਇਲਾਂ ਨੂੰ ਹਟਾਉਣ�
 msgid "Now playing"
 msgstr "ਹੁਣ ਚੱਲ ਰਿਹਾ ਹੈ"
 
-#: src/main.qml:305 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:306 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "ਇੱਥੇ ਕੁਝ ਨਹੀਂ ਹੈ!"
 
-#: src/main.qml:306
+#: src/main.qml:307
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr ""
 
 #. i18n("Screenshots")}};
-#: src/main.qml:326 src/models/tagsmodel.cpp:14
+#: src/main.qml:327 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Collection"
 msgstr "ਭੰਡਾਰ"
 
-#: src/main.qml:497
+#: src/main.qml:409
 #, fuzzy, kde-format
 #| msgid "Toogle SideBar"
 msgid "Toggle SideBar"
@@ -131,40 +131,40 @@ msgid_plural "Search %1 videos"
 msgstr[0] "%1 ਵੀਡੀਓ ਲੱਭੋ"
 msgstr[1] "%1 ਵੀਡੀਓ ਲੱਭੋ"
 
-#: src/views/collection/CollectionView.qml:50
+#: src/views/collection/CollectionView.qml:52
 #, kde-format
 msgid "Settings"
 msgstr "ਸੈਟਿੰਗਾਂ"
 
-#: src/views/collection/CollectionView.qml:58
+#: src/views/collection/CollectionView.qml:60
 #, kde-format
 msgid "About"
 msgstr ""
 
-#: src/views/collection/CollectionView.qml:76
+#: src/views/collection/CollectionView.qml:78
 #, fuzzy, kde-format
 #| msgid "Toogle SideBar"
 msgid "Toggle sidebar"
 msgstr "ਬਾਹੀ ਨੂੰ ਬਦਲੋ"
 
-#: src/views/collection/CollectionView.qml:82 src/views/player/Playlist.qml:21
+#: src/views/collection/CollectionView.qml:84 src/views/player/Playlist.qml:21
 #: src/views/tags/TagsView.qml:38
 #, kde-format
 msgid "No Videos!"
 msgstr "ਕੋਈ ਵੀਡੀਓ ਨਹੀਂ ਹੈ!"
 
-#: src/views/collection/CollectionView.qml:83
+#: src/views/collection/CollectionView.qml:85
 #, kde-format
 msgid "Add a new video source or open a file."
 msgstr ""
 
-#: src/views/collection/CollectionView.qml:88
+#: src/views/collection/CollectionView.qml:90
 #, fuzzy, kde-format
 #| msgid "Open"
 msgid "Open file"
 msgstr "ਖੋਲ੍ਹੋ"
 
-#: src/views/collection/CollectionView.qml:94
+#: src/views/collection/CollectionView.qml:96
 #, fuzzy, kde-format
 #| msgid "Sources"
 msgid "Add sources"

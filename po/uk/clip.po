@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-27 00:41+0000\n"
+"POT-Creation-Date: 2025-05-03 00:41+0000\n"
 "PO-Revision-Date: 2023-10-28 09:12+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -55,7 +55,7 @@ msgstr "Навігація збіркою відео та відтворення
 msgid "Developer"
 msgstr "Розробник"
 
-#: src/main.qml:86 src/views/collection/CollectionView.qml:39
+#: src/main.qml:86 src/views/collection/CollectionView.qml:41
 #, kde-format
 msgid "Open URL"
 msgstr "Відкрити адресу"
@@ -84,24 +84,24 @@ msgstr "Ви справді хочете вилучити %1 файлів"
 msgid "Now playing"
 msgstr "Зараз відтворюється"
 
-#: src/main.qml:305 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:306 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "Тут нічого немає!"
 
-#: src/main.qml:306
+#: src/main.qml:307
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr "Відкрийте нове відео з вашої збірки або файлової системи."
 
 #. i18n("Screenshots")}};
-#: src/main.qml:326 src/models/tagsmodel.cpp:14
+#: src/main.qml:327 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Collection"
 msgstr "Збірка"
 
-#: src/main.qml:497
+#: src/main.qml:409
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "Увімкнути чи вимкнути бічну панель"
@@ -136,38 +136,38 @@ msgstr[1] "Шукати у %1 відео"
 msgstr[2] "Шукати у %1 відео"
 msgstr[3] "Шукати у %1 відео"
 
-#: src/views/collection/CollectionView.qml:50
+#: src/views/collection/CollectionView.qml:52
 #, kde-format
 msgid "Settings"
 msgstr "Параметри"
 
-#: src/views/collection/CollectionView.qml:58
+#: src/views/collection/CollectionView.qml:60
 #, kde-format
 msgid "About"
 msgstr "Про програму"
 
-#: src/views/collection/CollectionView.qml:76
+#: src/views/collection/CollectionView.qml:78
 #, kde-format
 msgid "Toggle sidebar"
 msgstr "Увімкнути/Вимкнути бічну панель"
 
-#: src/views/collection/CollectionView.qml:82 src/views/player/Playlist.qml:21
+#: src/views/collection/CollectionView.qml:84 src/views/player/Playlist.qml:21
 #: src/views/tags/TagsView.qml:38
 #, kde-format
 msgid "No Videos!"
 msgstr "Немає відео!"
 
-#: src/views/collection/CollectionView.qml:83
+#: src/views/collection/CollectionView.qml:85
 #, kde-format
 msgid "Add a new video source or open a file."
 msgstr "Додайте нове джерело відео або відкрийте файл."
 
-#: src/views/collection/CollectionView.qml:88
+#: src/views/collection/CollectionView.qml:90
 #, kde-format
 msgid "Open file"
 msgstr "Відкрити файл"
 
-#: src/views/collection/CollectionView.qml:94
+#: src/views/collection/CollectionView.qml:96
 #, kde-format
 msgid "Add sources"
 msgstr "Додати джерела"
