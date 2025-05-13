@@ -400,6 +400,3 @@ msgstr ""
 #, kde-format
 msgid "Search..."
 msgstr "Hledat..."
-
-#~ msgid "Playing mode"
-#~ msgstr "Režim přehrávání:"

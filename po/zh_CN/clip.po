@@ -402,6 +402,3 @@ msgstr "开始搜索在线视频。"
 #, kde-format
 msgid "Search..."
 msgstr "搜索..."
-
-#~ msgid "Playing mode"
-#~ msgstr "播放模式"
