@@ -4,6 +4,7 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>LGPL-3.0</project_license>
   <name>Clip</name>
+  <name xml:lang="ar">كليب</name>
   <name xml:lang="ca">Clip</name>
   <name xml:lang="ca-valencia">Clip</name>
   <name xml:lang="cs">Klip</name>
@@ -33,6 +34,7 @@
   <name xml:lang="x-test">xxClipxx</name>
   <name xml:lang="zh-TW">Clip</name>
   <summary>Video Player</summary>
+  <summary xml:lang="ar">مشغّل فيديوهات</summary>
   <summary xml:lang="ca">Reproductor de vídeo</summary>
   <summary xml:lang="ca-valencia">Reproductor de vídeo</summary>
   <summary xml:lang="cs">Přehrávač videa</summary>
@@ -67,6 +69,7 @@
   </developer>
   <description>
     <p>Clip is a video player and collection manager.</p>
+    <p xml:lang="ar">كليب هو مشغل فيديو ومدير تجميع.</p>
     <p xml:lang="ca">El Clip és un reproductor de vídeo i un gestor de col·leccions.</p>
     <p xml:lang="ca-valencia">Clip és un reproductor de vídeo i un gestor de col·leccions.</p>
     <p xml:lang="en-GB">Clip is a video player and collection manager.</p>
@@ -102,6 +105,7 @@
     <screenshot type="default">
       <image type="source">https://cdn.kde.org/screenshots/clip/clip-stable.png</image>
       <caption>Clip playing videos.</caption>
+      <caption xml:lang="ar">كليب يشغل فيديو</caption>
       <caption xml:lang="ca">El Clip reproduint vídeos.</caption>
       <caption xml:lang="ca-valencia">Clip reproduint vídeos.</caption>
       <caption xml:lang="cs">Clip přehrávající videa.</caption>
