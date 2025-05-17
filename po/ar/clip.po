@@ -1,0 +1,411 @@
+# Copyright (C) 2025 This file is copyright:
+# This file is distributed under the same license as the maui-clip package.
+# SPDX-FileCopyrightText: 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: maui-clip\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-05-03 00:41+0000\n"
+"PO-Revision-Date: 2025-05-16 13:33+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: ar\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
+
+#: src/controllers/YouTube.qml:95
+#, kde-format
+msgid "Custom API Key"
+msgstr "مفتاح API مخصص"
+
+#: src/controllers/YouTube.qml:114
+#, kde-format
+msgid "Search results"
+msgstr "نتائج البحث"
+
+#: src/controllers/YouTube.qml:209
+#, kde-format
+msgid "No Results!"
+msgstr "لا توجد نتائج!"
+
+#: src/controllers/YouTube.qml:210
+#, kde-format
+msgid "Try with another query"
+msgstr "حاول باستخدام استعلام آخر"
+
+#: src/controllers/YouTube.qml:249
+#, kde-format
+msgid "Search videos..."
+msgstr "ابحث عن فيديوهات…"
+
+#: src/main.cpp:100
+#, kde-format
+msgid "Browse and play your videos."
+msgstr "تصفح وشغل فيدوهاتك"
+
+#: src/main.cpp:105
+#, kde-format
+msgid "Developer"
+msgstr "المطور"
+
+#: src/main.qml:86 src/views/collection/CollectionView.qml:41
+#, kde-format
+msgid "Open URL"
+msgstr "افتح الرابط"
+
+#: src/main.qml:88
+#, kde-format
+msgid ""
+"Enter any remote location, like YouTube video URLs, or from other services "
+"supported by MPV."
+msgstr ""
+"أدخل أي موقع بعيد، مثل عناوين لفيديوهات يوتيوب، أو من الخدمات الأخرى التي "
+"تدعمها MPV."
+
+#: src/main.qml:118
+#, kde-format
+msgid "Delete files?"
+msgstr "احذف الملفات؟"
+
+#: src/main.qml:120
+#, kde-format
+msgid "Are sure you want to delete %1 files"
+msgstr "هل تريد فعلاً حذف %1 من الملفات"
+
+#: src/main.qml:195
+#, kde-format
+msgid "Now playing"
+msgstr "يشغّل الآن"
+
+#: src/main.qml:306 src/views/youtube/YouTubeView.qml:25
+#, kde-format
+msgid "Nothing Here!"
+msgstr "لا يوجد شيء هنا!"
+
+#: src/main.qml:307
+#, kde-format
+msgid "Open a new video from your collection or file system."
+msgstr "افتح فيديو جديد من مجموعتك أو نظام الملفات."
+
+#. i18n("Screenshots")}};
+#: src/main.qml:327 src/models/tagsmodel.cpp:14
+#: src/views/settings/SettingsDialog.qml:36
+#, kde-format
+msgid "Collection"
+msgstr "المجموعة"
+
+#: src/main.qml:409
+#, kde-format
+msgid "Toggle SideBar"
+msgstr "تبديل الشريط الجانبي"
+
+#: src/models/tagsmodel.cpp:10
+#, kde-format
+msgid "Favorites"
+msgstr "المفضّلة"
+
+#: src/models/tagsmodel.cpp:11
+#, kde-format
+msgid "Downloads"
+msgstr "التنزيلات"
+
+#: src/models/tagsmodel.cpp:12
+#, kde-format
+msgid "Videos"
+msgstr "الفيديوهات"
+
+#: src/models/tagsmodel.cpp:21 src/models/tagsmodel.cpp:59
+#: src/views/ItemMenu.qml:29
+#, kde-format
+msgid "Tags"
+msgstr "الوسوم"
+
+#: src/views/BrowserLayout.qml:69
+#, kde-format
+msgid "Search %1 video"
+msgid_plural "Search %1 videos"
+msgstr[0] "ابحث عن فيديو"
+msgstr[1] "ابحث عن فيديو واحد"
+msgstr[2] "ابحث عن فيديوين"
+msgstr[3] "ابحث عن %1 فيدوهات"
+msgstr[4] "ابحث عن %1 فيدوهات"
+msgstr[5] "ابحث عن %1 فيدوهات"
+
+#: src/views/collection/CollectionView.qml:52
+#, kde-format
+msgid "Settings"
+msgstr "إعدادات"
+
+#: src/views/collection/CollectionView.qml:60
+#, kde-format
+msgid "About"
+msgstr "عن"
+
+#: src/views/collection/CollectionView.qml:78
+#, kde-format
+msgid "Toggle sidebar"
+msgstr "تبديل الشريط الجانبي"
+
+#: src/views/collection/CollectionView.qml:84 src/views/player/Playlist.qml:21
+#: src/views/tags/TagsView.qml:38
+#, kde-format
+msgid "No Videos!"
+msgstr "لا يوجد شيء!"
+
+#: src/views/collection/CollectionView.qml:85
+#, kde-format
+msgid "Add a new video source or open a file."
+msgstr "أضف مصدر فيديو جديد أو افتح ملفاً."
+
+#: src/views/collection/CollectionView.qml:90
+#, kde-format
+msgid "Open file"
+msgstr "افتح ملفًا"
+
+#: src/views/collection/CollectionView.qml:96
+#, kde-format
+msgid "Add sources"
+msgstr "أضف مصادر"
+
+#: src/views/collection/PlacesSidebar.qml:52
+#, kde-format
+msgid "Tags!"
+msgstr "الوسوم!"
+
+#: src/views/collection/PlacesSidebar.qml:53
+#, kde-format
+msgid "Your tags will be listed here"
+msgstr "ستدرج وسومك هنا"
+
+#: src/views/ItemMenu.qml:22
+#, kde-format
+msgid "UnFav it"
+msgstr "أزل التفضيل"
+
+#: src/views/ItemMenu.qml:41
+#, kde-format
+msgid "Info"
+msgstr "معلومات"
+
+#: src/views/ItemMenu.qml:52 src/views/SelectionBar.qml:75
+#, kde-format
+msgid "Share"
+msgstr "شارك"
+
+#: src/views/ItemMenu.qml:63 src/views/SelectionBar.qml:45
+#, kde-format
+msgid "Queue"
+msgstr "الطابور"
+
+#: src/views/ItemMenu.qml:75
+#, kde-format
+msgid "Select"
+msgstr "اختر"
+
+#: src/views/ItemMenu.qml:89
+#, kde-format
+msgid "Show in folder"
+msgstr "أعرض في مجلد"
+
+#: src/views/ItemMenu.qml:102 src/views/SelectionBar.qml:104
+#, kde-format
+msgid "Remove"
+msgstr "أزل"
+
+#: src/views/ItemMenu.qml:118
+#, kde-format
+msgid "Delete file?"
+msgstr "احذف الملفّ؟"
+
+#: src/views/ItemMenu.qml:120
+#, kde-format
+msgid ""
+"Are sure you want to delete \n"
+"%1"
+msgstr ""
+"هل تريد فعلاً حذف\n"
+"%1"
+
+#: src/views/player/MPVPlayer.qml:28
+#, kde-format
+msgid "Subtitles"
+msgstr "الترجمة"
+
+#: src/views/player/MPVPlayer.qml:46
+#, kde-format
+msgid "Audio Tracks"
+msgstr "مسارات الصّوت"
+
+#: src/views/player/Playlist.qml:22
+#, kde-format
+msgid "Add videos to the playlist."
+msgstr "أضف مقاطع فيديو إلى قائمة التشغيل."
+
+#: src/views/SelectionBar.qml:34
+#, kde-format
+msgid "Play"
+msgstr "شغّل"
+
+#: src/views/SelectionBar.qml:56
+#, kde-format
+msgid "Un/Fav"
+msgstr "فضّل/لا تفضل"
+
+#: src/views/SelectionBar.qml:63
+#, kde-format
+msgid "Tag"
+msgstr "الوسم"
+
+#: src/views/SelectionBar.qml:85
+#, kde-format
+msgid "Export"
+msgstr "صدّر"
+
+#: src/views/settings/SettingsDialog.qml:17
+#, kde-format
+msgid "General"
+msgstr "عامّ"
+
+#: src/views/settings/SettingsDialog.qml:22
+#, kde-format
+msgid "Volume Step"
+msgstr "عتبة المستوى"
+
+#: src/views/settings/SettingsDialog.qml:41
+#, kde-format
+msgid "Sorting by"
+msgstr "افرز بواسطة"
+
+#: src/views/settings/SettingsDialog.qml:42
+#, kde-format
+msgid "Change the sorting key."
+msgstr "غيّر مفتاح الفرز."
+
+#: src/views/settings/SettingsDialog.qml:52
+#, kde-format
+msgid "Title"
+msgstr "العنوان"
+
+#: src/views/settings/SettingsDialog.qml:59
+#, kde-format
+msgid "Date"
+msgstr "التاريخ"
+
+#: src/views/settings/SettingsDialog.qml:66
+#, kde-format
+msgid "Size"
+msgstr "الحجم"
+
+#: src/views/settings/SettingsDialog.qml:73
+#, kde-format
+msgid "Type"
+msgstr "النوع"
+
+#: src/views/settings/SettingsDialog.qml:82
+#, kde-format
+msgid "Sort order"
+msgstr "ترتيب الفرز"
+
+#: src/views/settings/SettingsDialog.qml:83
+#, kde-format
+msgid "Change the sorting order."
+msgstr "غيّر نوع الفرز."
+
+#: src/views/settings/SettingsDialog.qml:93
+#, kde-format
+msgid "Ascending"
+msgstr "تصاعديًّا"
+
+#: src/views/settings/SettingsDialog.qml:101
+#, kde-format
+msgid "Descending"
+msgstr "تنازليًّا"
+
+#: src/views/settings/SettingsDialog.qml:112
+#, kde-format
+msgid "Playback"
+msgstr "تشغيل"
+
+#: src/views/settings/SettingsDialog.qml:117
+#, kde-format
+msgid "Hardware Decoding"
+msgstr "فك الترميز بالعتاد"
+
+#: src/views/settings/SettingsDialog.qml:118
+#, kde-format
+msgid "Use the sorting preferences globally for all the tabs and splits."
+msgstr "استخدم تفضيلات الفرز بشكل عام لجميع علامات التبويب والتقسيمات."
+
+#: src/views/settings/SettingsDialog.qml:131
+#, kde-format
+msgid "Audio"
+msgstr "الصوت"
+
+#: src/views/settings/SettingsDialog.qml:137
+#, kde-format
+msgid "Preferred Language"
+msgstr "اللغة المفضلة"
+
+#: src/views/settings/SettingsDialog.qml:138
+#, kde-format
+msgid "Preferred language if available."
+msgstr "اللغة المفضلة إن توفرت."
+
+#: src/views/settings/SettingsDialog.qml:242
+#, kde-format
+msgid "Sources"
+msgstr "المصادر"
+
+#: src/views/settings/SettingsDialog.qml:280
+#, kde-format
+msgid "Add"
+msgstr "أضف"
+
+#: src/views/settings/SettingsDialog.qml:302
+#, kde-format
+msgid "Remove source"
+msgstr "إزالة مصدر"
+
+#: src/views/settings/SettingsDialog.qml:303
+#, kde-format
+msgid ""
+"Are you sure you want to remove the source: \n"
+" %1"
+msgstr ""
+"هل تريد بالتأكيد إزالة المصدر: \n"
+" %1"
+
+#: src/views/tags/TagsGrid.qml:21
+#, kde-format
+msgid "No Tags!"
+msgstr "لا يوجد وسوم!"
+
+#: src/views/tags/TagsGrid.qml:22
+#, kde-format
+msgid "Add a new tag to start organizing your video collection."
+msgstr "أضف وسمًا جديدًا لبدء تنظيم مجموعة مقاطع الفيديو الخاصة بك."
+
+#: src/views/tags/TagsGrid.qml:35
+#, kde-format
+msgid "Filter"
+msgstr "المرشّح"
+
+#: src/views/tags/TagsView.qml:39
+#, kde-format
+msgid "There's no videos associated with the tag"
+msgstr "لا توجد مقاطع فيديو مرتبطة بالوسم"
+
+#: src/views/youtube/YouTubeView.qml:26
+#, kde-format
+msgid "Start searching for online videos."
+msgstr "ابدأ البحث عن مقاطع الفيديو عبر الإنترنت."
+
+#: src/views/youtube/YouTubeView.qml:44
+#, kde-format
+msgid "Search..."
+msgstr "ابحث…"
