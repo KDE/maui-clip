@@ -15,7 +15,7 @@ Maui.SettingsDialog
     Maui.SectionGroup
     {
         title: i18n("General")
-//        description: i18n("Configure the app behavior.")
+        //        description: i18n("Configure the app behavior.")
 
         Maui.FlexSectionItem
         {
@@ -34,7 +34,7 @@ Maui.SettingsDialog
     Maui.SectionGroup
     {
         title: i18n("Collection")
-//        description: i18n("Sorting order and behavior.")
+        //        description: i18n("Sorting order and behavior.")
 
         Maui.FlexSectionItem
         {
@@ -110,7 +110,7 @@ Maui.SettingsDialog
     Maui.SectionGroup
     {
         title: i18n("Playback")
-//        description: i18n("Configure the player settings.")
+        //        description: i18n("Configure the player settings.")
         enabled: Clip.Clip.mpvAvailable
         Maui.FlexSectionItem
         {
@@ -129,7 +129,7 @@ Maui.SettingsDialog
     Maui.SectionGroup
     {
         title: i18n("Audio")
-//        description: i18n("Configure the player audio behaviour.")
+        //        description: i18n("Configure the player audio behaviour.")
         enabled: Clip.Clip.mpvAvailable
 
         Maui.SectionItem
@@ -146,101 +146,101 @@ Maui.SettingsDialog
         }
     }
 
-//    Maui.SectionGroup
-//    {
-//        title: i18n("Subtitles")
-//        description: i18n("Configure the app UI.")
-//        enabled: Clip.Clip.mpvAvailable
+    //    Maui.SectionGroup
+    //    {
+    //        title: i18n("Subtitles")
+    //        description: i18n("Configure the app UI.")
+    //        enabled: Clip.Clip.mpvAvailable
 
-//        Maui.SectionItem
-//        {
-//            label1.text: i18n("Directory")
-//            label2.text: i18n("Folder path containing the subtitle files.")
-//            wide: false
+    //        Maui.SectionItem
+    //        {
+    //            label1.text: i18n("Directory")
+    //            label2.text: i18n("Folder path containing the subtitle files.")
+    //            wide: false
 
-//            Maui.TextField
-//            {
-//                Layout.fillWidth: true
-//                text: settings.subtitlesPath
-//                onAccepted: settins.subtitlesPath = text
+    //            Maui.TextField
+    //            {
+    //                Layout.fillWidth: true
+    //                text: settings.subtitlesPath
+    //                onAccepted: settins.subtitlesPath = text
 
-//                Action
-//                {
-//                    icon.name: "folder-open"
-//                    onTriggered:
-//                    {
-//                        dialogLoader.sourceComponent = fmDialogComponent
-//                        dialog.mode = dialog.modes.OPEN
-//                        dialog.settings.onlyDirs = true
-//                        dialog.callback = function(paths)
-//                        {
-//                            settings.subtitlesPath = paths[0]
-//                        }
+    //                Action
+    //                {
+    //                    icon.name: "folder-open"
+    //                    onTriggered:
+    //                    {
+    //                        dialogLoader.sourceComponent = fmDialogComponent
+    //                        dialog.mode = dialog.modes.OPEN
+    //                        dialog.settings.onlyDirs = true
+    //                        dialog.callback = function(paths)
+    //                        {
+    //                            settings.subtitlesPath = paths[0]
+    //                        }
 
-//                        dialog.open()
-//                    }
-//                }
-//            }
-//        }
+    //                        dialog.open()
+    //                    }
+    //                }
+    //            }
+    //        }
 
-//        Maui.SectionItem
-//        {
-//            label1.text: i18n("Font Family")
+    //        Maui.SectionItem
+    //        {
+    //            label1.text: i18n("Font Family")
 
-//            Maui.ComboBox
-//            {
-//                Layout.fillWidth: true
-//                model: Qt.fontFamilies()
-//                Component.onCompleted: currentIndex = find(settings.font.family, Qt.MatchExactly)
-//                onActivated: settings.font.family = currentText
-//            }
-//        }
+    //            Maui.ComboBox
+    //            {
+    //                Layout.fillWidth: true
+    //                model: Qt.fontFamilies()
+    //                Component.onCompleted: currentIndex = find(settings.font.family, Qt.MatchExactly)
+    //                onActivated: settings.font.family = currentText
+    //            }
+    //        }
 
-//        Maui.SectionItem
-//        {
-//            label1.text: i18n("Font Size")
+    //        Maui.SectionItem
+    //        {
+    //            label1.text: i18n("Font Size")
 
-//            SpinBox
-//            {
-//                from: 0; to : 500
-//                value: settings.font.pointSize
-//                onValueChanged: settings.font.pointSize = value
-//            }
-//        }
-//    }
+    //            SpinBox
+    //            {
+    //                from: 0; to : 500
+    //                value: settings.font.pointSize
+    //                onValueChanged: settings.font.pointSize = value
+    //            }
+    //        }
+    //    }
 
-//    Maui.SectionGroup
-//    {
-//        title: i18n("YouTube")
-//        description: i18n("Configure YouTube details.")
+    //    Maui.SectionGroup
+    //    {
+    //        title: i18n("YouTube")
+    //        description: i18n("Configure YouTube details.")
 
-//        Maui.SectionItem
-//        {
-//            label1.text: i18n("Key")
-//            label2.text: i18n("Personal key for limitless browsing.")
-//            wide: false
+    //        Maui.SectionItem
+    //        {
+    //            label1.text: i18n("Key")
+    //            label2.text: i18n("Personal key for limitless browsing.")
+    //            wide: false
 
-//            Maui.TextField
-//            {
-//                Layout.fillWidth: true
-//                text: settings.youtubeKey
-//                onAccepted: settings.youtubeKey = text
-//            }
+    //            Maui.TextField
+    //            {
+    //                Layout.fillWidth: true
+    //                text: settings.youtubeKey
+    //                onAccepted: settings.youtubeKey = text
+    //            }
 
-//            template.leftLabels.data: Label
-//            {
-//                Layout.fillWidth: true
-//                text: i18n("<a href='https://console.developers.google.com/apis/credentials'>Get your personal key.</a>")
+    //            template.leftLabels.data: Label
+    //            {
+    //                Layout.fillWidth: true
+    //                text: i18n("<a href='https://console.developers.google.com/apis/credentials'>Get your personal key.</a>")
 
-//                onLinkActivated: Qt.openUrlExternally(link)
-//            }
-//        }
-//    }
+    //                onLinkActivated: Qt.openUrlExternally(link)
+    //            }
+    //        }
+    //    }
 
     Maui.SectionGroup
     {
         title: i18n("Sources")
-//        description: i18n("Add new sources to manage and browse your video collection")
+        //        description: i18n("Add new sources to manage and browse your video collection")
 
         ColumnLayout
         {
@@ -281,13 +281,12 @@ Maui.SettingsDialog
 
                 onClicked:
                 {
-                    dialogLoader.sourceComponent = null
-                    dialogLoader.sourceComponent = fmDialogComponent
-                    dialog.browser.settings.onlyDirs = true
-                    dialog.callback = function(urls)
-                    {
-                        Clip.Clip.addSources(urls)
-                    }
+                    var props = ({'browser.settings.onlyDirs' : true,
+                                     'callback' : function(urls)
+                                     {
+                                         Clip.Clip.addSources(urls)
+                                     }})
+                    var dialog = fmDialogComponent.createObject(root, props)
                     dialog.open()
                 }
             }

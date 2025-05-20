@@ -28,12 +28,7 @@ Maui.ContextualMenu
         {
             text: i18n("Tags")
             icon.name: "tag"
-            onTriggered:
-            {
-                dialogLoader.sourceComponent = tagsDialogComponent
-                dialog.composerList.urls = [control.model.get(index).url]
-                dialog.open()
-            }
+            onTriggered: tagFiles([control.model.get(index).url])
         }
 
         Action
@@ -101,32 +96,29 @@ Maui.ContextualMenu
     {
         text: i18n("Remove")
         icon.name: "edit-delete"
-        Maui.Theme.textColor: Maui.Theme.negativeTextColor
-        onTriggered:
-        {
-            dialogLoader.sourceComponent = removeDialogComponent
-            dialog.open()
-        }
+        Maui.Controls.status: Maui.Controls.Negative
+        onTriggered: removeFiles([model.get(index).url])
 
         Component
         {
             id: removeDialogComponent
 
-        Maui.InfoDialog
-        {
-
-            title: i18n("Delete file?")
-
-            message: i18n("Are sure you want to delete \n%1", control.model.get(index).url)
-            template.iconSource: "emblem-warning"
-
-            onRejected: close()
-            onAccepted:
+            Maui.InfoDialog
             {
-                control.model.list.deleteAt(model.mappedToSource(control.index))
-                close()
+
+                title: i18n("Delete file?")
+
+                message: i18n("Are sure you want to delete \n%1", control.model.get(index).url)
+                template.iconSource: "emblem-warning"
+
+                onRejected: close()
+                onAccepted:
+                {
+                    control.model.list.deleteAt(model.mappedToSource(control.index))
+                    close()
+                }
+                onClosed: destroy()
             }
-        }
         }
     }
 }

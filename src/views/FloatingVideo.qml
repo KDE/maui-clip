@@ -8,8 +8,8 @@ import org.mauikit.controls as Maui
 Loader
 {
     id: control
-    active: !_sideBarView.visible && !_playerView.isStopped|| item
-    visible: !_sideBarView.visible && !_playerView.isStopped
+    active: !_sideBarView.active && !_playerView.isStopped|| item
+    visible: !_sideBarView.active && !_playerView.isStopped
 
     asynchronous: true
     z:  Overlay.overlay.z

@@ -62,12 +62,7 @@ Maui.SelectionBar
     {
         text: i18n("Tag")
         icon.name: "tag"
-        onTriggered:
-        {
-            dialogLoader.sourceComponent = tagsDialogComponent
-            dialog.composerList.urls = control.uris
-            dialog.open()
-        }
+        onTriggered: tagFiles(control.uris)
     }
 
     Action
@@ -76,7 +71,7 @@ Maui.SelectionBar
         icon.name: "document-share"
         onTriggered:
         {
-             Maui.Platform.shareFiles(control.uris)
+            Maui.Platform.shareFiles(control.uris)
         }
     }
 
@@ -84,19 +79,7 @@ Maui.SelectionBar
     {
         text: i18n("Export")
         icon.name: "document-export"
-        onTriggered:
-        {
-            const pics = control.uris
-            dialogLoader.sourceComponent = null
-            dialogLoader.sourceComponent = fmDialogComponent
-            dialog.browser.settings.onlyDirs = true
-            dialog.singleSelection = true
-            dialog.callback = function(paths)
-            {
-                FB.FM.copy(pics, paths[0])
-            }
-            dialog.open()
-        }
+        onTriggered: saveFiles( control.uris)
     }
 
     Action
@@ -106,8 +89,8 @@ Maui.SelectionBar
         Maui.Theme.textColor: Maui.Theme.negativeTextColor
         onTriggered:
         {
-            dialogLoader.sourceComponent = removeDialogComponent
-            dialog.open()
+            removeFiles(control.uris)
+            control.clear()
         }
     }
 

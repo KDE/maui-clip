@@ -21,11 +21,12 @@ Maui.ApplicationWindow
 {
     id: root
 
+    Maui.Style.styleType: _sideBarView.active ? Maui.Style.Dark : undefined
+
     title: _playerView.currentVideo.label
 
     property bool selectionMode : false
 
-    readonly property alias dialog : dialogLoader.item
     readonly property alias player: _playerView
 
     //    onIsPortraitChanged:
@@ -74,8 +75,47 @@ Maui.ApplicationWindow
 
     Component
     {
+        id: removeDialogComponent
+
+        FB.FileListingDialog
+        {
+            title: i18n("Delete files?")
+            message: i18n("Are sure you want to delete %1 files", urls.length)
+            template.iconSource: "emblem-warning"
+            onClosed: destroy()
+
+            actions: [
+
+                Action
+                {
+                    text: i18n("Delete")
+                    Maui.Controls.status: Maui.Controls.Negative
+                    onTriggered:
+                    {
+                        for(var url of urls)
+                            FB.FM.removeFile(url)
+
+                        close()
+                    }
+                },
+
+                Action
+                {
+                    text: i18n("Cancel")
+                    onTriggered: close()
+                }
+            ]
+
+        }
+    }
+
+    Component
+    {
         id: _settingsDialogComponent
-        SettingsDialog {}
+        SettingsDialog
+        {
+            onClosed: destroy()
+        }
     }
 
     Component
@@ -87,9 +127,11 @@ Maui.ApplicationWindow
             textEntry.placeholderText: "URL"
             message: i18n("Enter any remote location, like YouTube video URLs, or from other services supported by MPV.")
             onAccepted: player.url = textEntry.text
+            onClosed: destroy()
         }
     }
 
+    property QtObject tagsDialog : null
     Component
     {
         id: tagsDialogComponent
@@ -106,39 +148,16 @@ Maui.ApplicationWindow
         FB.FileDialog
         {
             browser.settings.filterType: FB.FMList.VIDEO
+            onClosed: destroy()
         }
     }
-
-    Component
-    {
-        id: removeDialogComponent
-
-        Maui.InfoDialog
-        {
-            title: i18n("Delete files?")
-
-            message: i18n("Are sure you want to delete %1 files", String(selectionBar.count))
-            standardButtons: Dialog.Ok | Dialog.Cancel
-            template.iconSource: "emblem-warning"
-
-            onRejected: close()
-            onAccepted:
-            {
-                for(var url of selectionBox.uris)
-                    FB.FM.removeFile(url)
-                selectionBox.clear()
-                close()
-            }
-        }
-    }
-
-    Loader { id: dialogLoader }
 
     StackView
     {
         id: _stackView
         anchors.fill: parent
         initialItem: initModule === "viewer" ? _sideBarView : _appViewsComponent
+        Maui.Theme.colorSet: Maui.Theme.View
 
         Component
         {
@@ -177,61 +196,63 @@ Maui.ApplicationWindow
         {
             id: _sideBarView
             focus: true
-            Maui.Theme.colorSet: Maui.Theme.Complementary
-            Maui.Theme.inherit: false
-            visible: StackView.status === StackView.Active
+            readonly property bool active: StackView.status === StackView.Active
 
-            height: parent.height
-            width: parent.width
-
+            sideBar.collapsed: true
+            sideBar.floats: sideBar.collapsed
             sideBar.enabled: _playlist.count > 1
             sideBar.autoHide: true
             sideBar.autoShow: false
-            sideBar.preferredWidth: Maui.Style.units.gridUnit * 16
-
-            sideBarContent: Maui.Page
+            sideBar.preferredWidth: 200
+            sideBar.minimumWidth: 200
+            background:  null
+            sideBarContent: Item
             {
                 anchors.fill: parent
-                title: i18n("Now playing")
-                showTitle: true
+                anchors.margins: Maui.Style.contentMargins
 
-                headBar.visible: _playlist.count > 0
-                headBar.background: null
-
-                background: Rectangle
+                Maui.Page
                 {
-                    color: Maui.Theme.backgroundColor
-                    opacity: 0.2
-                }
-
-                headBar.rightContent: ToolButton
-                {
-                    icon.name: "edit-delete"
-                    onClicked:
-                    {
-                        player.stop()
-                        _playlist.list.clear()
-                    }
-                }
-
-                headBar.leftContent: ToolButton
-                {
-                    icon.name: "document-save"
-                    onClicked: saveList()
-                }
-
-                Playlist
-                {
-                    id: _playlist
+                    title: i18n("Now playing")
+                    showTitle: true
                     anchors.fill: parent
+
+                    headBar.visible: _playlist.count > 0
+                    headBar.background: null
+
+                    background: Rectangle
+                    {
+                        color: Maui.Theme.alternateBackgroundColor
+                        radius: Maui.Style.radiusV
+                    }
+
+                    headBar.rightContent: ToolButton
+                    {
+                        icon.name: "edit-delete"
+                        onClicked:
+                        {
+                            player.stop()
+                            _playlist.list.clear()
+                        }
+                    }
+
+                    headBar.leftContent: ToolButton
+                    {
+                        icon.name: "document-save"
+                        onClicked: saveList()
+                    }
+
+                    Playlist
+                    {
+                        id: _playlist
+                        anchors.fill: parent
+                    }
                 }
             }
 
             Maui.Page
             {
                 id: _playerPage
-                Maui.Theme.colorSet: Maui.Theme.Complementary
-                Maui.Theme.inherit: false
                 anchors.fill: parent
                 autoHideHeader: _playerView.playbackState === MediaPlayer.PlayingState
                 //                autoHideFooter: _playerView.player.playbackState === MediaPlayer.PlayingState
@@ -435,23 +456,23 @@ Maui.ApplicationWindow
                 }
 
                 footBar.rightContent: [Label
-                {
-                    text: Maui.Handy.formatTime(player.duration/1000) + " / " +Maui.Handy.formatTime(player.position/1000)
-                },
-
-                ToolButton
-                {
-                    icon.name: "zoom-fit-width"
-                    checkable: true
-                    checked: player.fillMode == VideoOutput.PreserveAspectFit
-                    onClicked:
                     {
-                        if(!checked)
-                            player.fillMode = VideoOutput.PreserveAspectCrop
-                        else
-                            player.fillMode = VideoOutput.PreserveAspectFit
+                        text: Maui.Handy.formatTime(player.duration/1000) + " / " +Maui.Handy.formatTime(player.position/1000)
+                    },
+
+                    ToolButton
+                    {
+                        icon.name: "zoom-fit-width"
+                        checkable: true
+                        checked: player.fillMode == VideoOutput.PreserveAspectFit
+                        onClicked:
+                        {
+                            if(!checked)
+                                player.fillMode = VideoOutput.PreserveAspectCrop
+                            else
+                                player.fillMode = VideoOutput.PreserveAspectFit
+                        }
                     }
-                }
 
                 ]
 
@@ -498,7 +519,7 @@ Maui.ApplicationWindow
 
     function toggleViewer()
     {
-        if(_sideBarView.visible)
+        if(_sideBarView.active)
         {
             if(_stackView.depth === 1)
             {
@@ -551,7 +572,7 @@ Maui.ApplicationWindow
             _playerView.currentVideoIndex = index
             _playerView.currentVideo = _playlist.model.get(index)
 
-            if(!_playerView.visible)
+            if(!_sideBarView.active)
             {
                 toggleViewer()
             }
@@ -585,19 +606,46 @@ Maui.ApplicationWindow
 
     function openFileDialog()
     {
-        dialogLoader.sourceComponent = null
-        dialogLoader.sourceComponent = fmDialogComponent
-        dialog.callback = function(paths)
+        var props = ({'callback' : function(paths)
         {
             Clip.Clip.openVideos(paths)
-        }
+        }})
+
+        var dialog = fmDialogComponent.createObject(root, props)
         dialog.open()
     }
 
     function openSettingsDialog()
     {
-        dialogLoader.sourceComponent = _settingsDialogComponent
+        var dialog = _settingsDialogComponent.createObject(root)
         dialog.open()
     }
 
+    function tagFiles(urls)
+    {
+        if(!tagsDialog)
+        {
+            tagsDialog = tagsDialogComponent.createObject(root)
+        }
+        tagsDialog.composerList.urls = urls
+        tagsDialog.open()
+    }
+
+    function saveFiles(urls)
+    {
+        var props = ({  'browser.settings.onlyDirs' : true,
+                         'singleSelection' : true,
+                         'callback' : function(paths)
+                         {
+                             FB.FM.copy(urls, paths[0])
+                         }})
+        var dialog = fmDialogComponent.createObject(root, props)
+        dialog.open()
+    }
+
+    function removeFiles(urls)
+    {
+        var dialog = removeDialogComponent.createObject(root, ({'urls':urls}))
+        dialog.open()
+    }
 }

@@ -10,14 +10,15 @@ Maui.SideBarView
 {
     id: control
     property alias urls : _browser.urls
+    background: null
 
     sideBar.preferredWidth: 200
-
     sideBar.minimumWidth: 200
     sideBar.resizeable: false
     sideBar.content: PlacesSidebar
     {
         anchors.fill: parent
+        anchors.margins: Maui.Style.contentMargins
     }
 
     BrowserLayout
@@ -26,7 +27,7 @@ Maui.SideBarView
         anchors.fill: parent
         floatingFooter: true
         Maui.Controls.showCSD: true
-
+        background: null
         altHeader: Maui.Handy.isMobile
         headerMargins: Maui.Style.defaultPadding
         // floatingHeader: true
