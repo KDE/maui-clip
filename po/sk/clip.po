@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cinema\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-03 00:41+0000\n"
+"POT-Creation-Date: 2025-05-21 00:41+0000\n"
 "PO-Revision-Date: 2023-03-12 10:22+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -52,51 +52,62 @@ msgstr ""
 msgid "Developer"
 msgstr "Vývojár"
 
-#: src/main.qml:86 src/views/collection/CollectionView.qml:41
+#: src/main.qml:82
+#, kde-format
+msgid "Delete files?"
+msgstr "Vymazať súbory?"
+
+#: src/main.qml:83
+#, kde-format
+msgid "Are sure you want to delete %1 files"
+msgstr ""
+
+#: src/main.qml:91
+#, fuzzy, kde-format
+#| msgid "Delete file?"
+msgid "Delete"
+msgstr "Vymazať súbor?"
+
+#: src/main.qml:104
+#, kde-format
+msgid "Cancel"
+msgstr "Zrušiť"
+
+#: src/main.qml:126 src/views/collection/CollectionView.qml:42
 #, kde-format
 msgid "Open URL"
 msgstr "Otvoriť URL"
 
-#: src/main.qml:88
+#: src/main.qml:128
 #, kde-format
 msgid ""
 "Enter any remote location, like YouTube video URLs, or from other services "
 "supported by MPV."
 msgstr ""
 
-#: src/main.qml:118
-#, kde-format
-msgid "Delete files?"
-msgstr "Vymazať súbory?"
-
-#: src/main.qml:120
-#, kde-format
-msgid "Are sure you want to delete %1 files"
-msgstr ""
-
-#: src/main.qml:195
+#: src/main.qml:216
 #, kde-format
 msgid "Now playing"
 msgstr "Práve prehrávam"
 
-#: src/main.qml:306 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:327 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr ""
 
-#: src/main.qml:307
+#: src/main.qml:328
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr ""
 
 #. i18n("Screenshots")}};
-#: src/main.qml:327 src/models/tagsmodel.cpp:14
+#: src/main.qml:348 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Collection"
 msgstr "Kolekcia"
 
-#: src/main.qml:409
+#: src/main.qml:430
 #, fuzzy, kde-format
 msgid "Toggle SideBar"
 msgstr "Prepnúť bočný panel"
@@ -130,49 +141,49 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: src/views/collection/CollectionView.qml:52
+#: src/views/collection/CollectionView.qml:53
 #, fuzzy, kde-format
 msgid "Settings"
 msgstr "Nastavenia"
 
-#: src/views/collection/CollectionView.qml:60
+#: src/views/collection/CollectionView.qml:61
 #, fuzzy, kde-format
 msgid "About"
 msgstr "O aplikácii"
 
-#: src/views/collection/CollectionView.qml:78
+#: src/views/collection/CollectionView.qml:79
 #, fuzzy, kde-format
 msgid "Toggle sidebar"
 msgstr "Prepnúť bočný panel"
 
-#: src/views/collection/CollectionView.qml:84 src/views/player/Playlist.qml:21
+#: src/views/collection/CollectionView.qml:85 src/views/player/Playlist.qml:21
 #: src/views/tags/TagsView.qml:38
 #, kde-format
 msgid "No Videos!"
 msgstr ""
 
-#: src/views/collection/CollectionView.qml:85
+#: src/views/collection/CollectionView.qml:86
 #, kde-format
 msgid "Add a new video source or open a file."
 msgstr ""
 
-#: src/views/collection/CollectionView.qml:90
+#: src/views/collection/CollectionView.qml:91
 #, kde-format
 msgid "Open file"
 msgstr "Otvoriť súbor"
 
-#: src/views/collection/CollectionView.qml:96
+#: src/views/collection/CollectionView.qml:97
 #, kde-format
 msgid "Add sources"
 msgstr ""
 
-#: src/views/collection/PlacesSidebar.qml:52
+#: src/views/collection/PlacesSidebar.qml:60
 #, fuzzy, kde-format
 #| msgid "Tags"
 msgid "Tags!"
 msgstr "Značky"
 
-#: src/views/collection/PlacesSidebar.qml:53
+#: src/views/collection/PlacesSidebar.qml:61
 #, kde-format
 msgid "Your tags will be listed here"
 msgstr ""
@@ -182,42 +193,42 @@ msgstr ""
 msgid "UnFav it"
 msgstr ""
 
-#: src/views/ItemMenu.qml:41
+#: src/views/ItemMenu.qml:36
 #, kde-format
 msgid "Info"
 msgstr "Info"
 
-#: src/views/ItemMenu.qml:52 src/views/SelectionBar.qml:75
+#: src/views/ItemMenu.qml:47 src/views/SelectionBar.qml:70
 #, kde-format
 msgid "Share"
 msgstr "Zdieľať"
 
-#: src/views/ItemMenu.qml:63 src/views/SelectionBar.qml:45
+#: src/views/ItemMenu.qml:58 src/views/SelectionBar.qml:45
 #, kde-format
 msgid "Queue"
 msgstr "Fronta"
 
-#: src/views/ItemMenu.qml:75
+#: src/views/ItemMenu.qml:70
 #, kde-format
 msgid "Select"
 msgstr "Vybrať"
 
-#: src/views/ItemMenu.qml:89
+#: src/views/ItemMenu.qml:84
 #, kde-format
 msgid "Show in folder"
 msgstr "Zobraziť v priečinku"
 
-#: src/views/ItemMenu.qml:102 src/views/SelectionBar.qml:104
+#: src/views/ItemMenu.qml:97 src/views/SelectionBar.qml:87
 #, kde-format
 msgid "Remove"
 msgstr "Odstrániť"
 
-#: src/views/ItemMenu.qml:118
+#: src/views/ItemMenu.qml:109
 #, kde-format
 msgid "Delete file?"
 msgstr "Vymazať súbor?"
 
-#: src/views/ItemMenu.qml:120
+#: src/views/ItemMenu.qml:111
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
@@ -254,7 +265,7 @@ msgstr ""
 msgid "Tag"
 msgstr "Značka"
 
-#: src/views/SelectionBar.qml:85
+#: src/views/SelectionBar.qml:80
 #, kde-format
 msgid "Export"
 msgstr "Exportovať"
@@ -359,12 +370,12 @@ msgstr "Zdroje"
 msgid "Add"
 msgstr "Pridať"
 
-#: src/views/settings/SettingsDialog.qml:302
+#: src/views/settings/SettingsDialog.qml:301
 #, kde-format
 msgid "Remove source"
 msgstr "Odstrániť zdroj"
 
-#: src/views/settings/SettingsDialog.qml:303
+#: src/views/settings/SettingsDialog.qml:302
 #, kde-format
 msgid ""
 "Are you sure you want to remove the source: \n"
@@ -421,9 +432,6 @@ msgstr "Hľadať..."
 
 #~ msgid "Accept"
 #~ msgstr "Prijať"
-
-#~ msgid "Cancel"
-#~ msgstr "Zrušiť"
 
 #~ msgid "Open"
 #~ msgstr "Otvoriť"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-03 00:41+0000\n"
+"POT-Creation-Date: 2025-05-21 00:41+0000\n"
 "PO-Revision-Date: 2024-12-29 18:26+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -53,12 +53,33 @@ msgstr "עיון ונגינת הסרטונים שלך."
 msgid "Developer"
 msgstr "מפתח"
 
-#: src/main.qml:86 src/views/collection/CollectionView.qml:41
+#: src/main.qml:82
+#, kde-format
+msgid "Delete files?"
+msgstr "למחוק קבצים?"
+
+#: src/main.qml:83
+#, kde-format
+msgid "Are sure you want to delete %1 files"
+msgstr "למחוק %1 קבצים"
+
+#: src/main.qml:91
+#, fuzzy, kde-format
+#| msgid "Delete file?"
+msgid "Delete"
+msgstr "למחוק קובץ?"
+
+#: src/main.qml:104
+#, kde-format
+msgid "Cancel"
+msgstr ""
+
+#: src/main.qml:126 src/views/collection/CollectionView.qml:42
 #, kde-format
 msgid "Open URL"
 msgstr "פתיחת כתובת"
 
-#: src/main.qml:88
+#: src/main.qml:128
 #, kde-format
 msgid ""
 "Enter any remote location, like YouTube video URLs, or from other services "
@@ -67,39 +88,29 @@ msgstr ""
 "נא למלא מקום מרוחק כלשהו, כגון כתובות של סרטוני YouTube או משירותים אחרים ש־"
 "MPV תומך בהם."
 
-#: src/main.qml:118
-#, kde-format
-msgid "Delete files?"
-msgstr "למחוק קבצים?"
-
-#: src/main.qml:120
-#, kde-format
-msgid "Are sure you want to delete %1 files"
-msgstr "למחוק %1 קבצים"
-
-#: src/main.qml:195
+#: src/main.qml:216
 #, kde-format
 msgid "Now playing"
 msgstr "מתנגן כעת"
 
-#: src/main.qml:306 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:327 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "אין כאן כלום!"
 
-#: src/main.qml:307
+#: src/main.qml:328
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr "פתיחת סרטון חדש מהאוסף או ממערכת הקבצים שלך."
 
 #. i18n("Screenshots")}};
-#: src/main.qml:327 src/models/tagsmodel.cpp:14
+#: src/main.qml:348 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Collection"
 msgstr "אוסף"
 
-#: src/main.qml:409
+#: src/main.qml:430
 #, kde-format
 msgid "Toggle SideBar"
 msgstr "הצגת/הסתרת סרגל צד"
@@ -134,48 +145,48 @@ msgstr[1] "חיפוש שני סרטונים"
 msgstr[2] "חיפוש %1 סרטונים"
 msgstr[3] "חיפוש %1 סרטונים"
 
-#: src/views/collection/CollectionView.qml:52
+#: src/views/collection/CollectionView.qml:53
 #, kde-format
 msgid "Settings"
 msgstr "הגדרות"
 
-#: src/views/collection/CollectionView.qml:60
+#: src/views/collection/CollectionView.qml:61
 #, kde-format
 msgid "About"
 msgstr "על אודות"
 
-#: src/views/collection/CollectionView.qml:78
+#: src/views/collection/CollectionView.qml:79
 #, kde-format
 msgid "Toggle sidebar"
 msgstr "הצגת/הסתרת סרגל צד"
 
-#: src/views/collection/CollectionView.qml:84 src/views/player/Playlist.qml:21
+#: src/views/collection/CollectionView.qml:85 src/views/player/Playlist.qml:21
 #: src/views/tags/TagsView.qml:38
 #, kde-format
 msgid "No Videos!"
 msgstr "אין סרטונים!"
 
-#: src/views/collection/CollectionView.qml:85
+#: src/views/collection/CollectionView.qml:86
 #, kde-format
 msgid "Add a new video source or open a file."
 msgstr "הוספת מקור וידאו חדש או פתיחת קובץ."
 
-#: src/views/collection/CollectionView.qml:90
+#: src/views/collection/CollectionView.qml:91
 #, kde-format
 msgid "Open file"
 msgstr "פתיחת קובץ"
 
-#: src/views/collection/CollectionView.qml:96
+#: src/views/collection/CollectionView.qml:97
 #, kde-format
 msgid "Add sources"
 msgstr "הוספת מקורות"
 
-#: src/views/collection/PlacesSidebar.qml:52
+#: src/views/collection/PlacesSidebar.qml:60
 #, kde-format
 msgid "Tags!"
 msgstr "תגיות!"
 
-#: src/views/collection/PlacesSidebar.qml:53
+#: src/views/collection/PlacesSidebar.qml:61
 #, kde-format
 msgid "Your tags will be listed here"
 msgstr "התגיות שלך תופענה כאן"
@@ -185,42 +196,42 @@ msgstr "התגיות שלך תופענה כאן"
 msgid "UnFav it"
 msgstr "הוצאה מהמועדפים"
 
-#: src/views/ItemMenu.qml:41
+#: src/views/ItemMenu.qml:36
 #, kde-format
 msgid "Info"
 msgstr "פרטים"
 
-#: src/views/ItemMenu.qml:52 src/views/SelectionBar.qml:75
+#: src/views/ItemMenu.qml:47 src/views/SelectionBar.qml:70
 #, kde-format
 msgid "Share"
 msgstr "שיתוף"
 
-#: src/views/ItemMenu.qml:63 src/views/SelectionBar.qml:45
+#: src/views/ItemMenu.qml:58 src/views/SelectionBar.qml:45
 #, kde-format
 msgid "Queue"
 msgstr "תור"
 
-#: src/views/ItemMenu.qml:75
+#: src/views/ItemMenu.qml:70
 #, kde-format
 msgid "Select"
 msgstr "בחירה"
 
-#: src/views/ItemMenu.qml:89
+#: src/views/ItemMenu.qml:84
 #, kde-format
 msgid "Show in folder"
 msgstr "הצגה בתיקייה"
 
-#: src/views/ItemMenu.qml:102 src/views/SelectionBar.qml:104
+#: src/views/ItemMenu.qml:97 src/views/SelectionBar.qml:87
 #, kde-format
 msgid "Remove"
 msgstr "הסרה"
 
-#: src/views/ItemMenu.qml:118
+#: src/views/ItemMenu.qml:109
 #, kde-format
 msgid "Delete file?"
 msgstr "למחוק קובץ?"
 
-#: src/views/ItemMenu.qml:120
+#: src/views/ItemMenu.qml:111
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
@@ -259,7 +270,7 @@ msgstr "הוספה/הוצאה מהמועדפים"
 msgid "Tag"
 msgstr "תגית"
 
-#: src/views/SelectionBar.qml:85
+#: src/views/SelectionBar.qml:80
 #, kde-format
 msgid "Export"
 msgstr "ייצוא"
@@ -364,12 +375,12 @@ msgstr "מקורות"
 msgid "Add"
 msgstr "הוספה"
 
-#: src/views/settings/SettingsDialog.qml:302
+#: src/views/settings/SettingsDialog.qml:301
 #, kde-format
 msgid "Remove source"
 msgstr "הסרת מקור"
 
-#: src/views/settings/SettingsDialog.qml:303
+#: src/views/settings/SettingsDialog.qml:302
 #, kde-format
 msgid ""
 "Are you sure you want to remove the source: \n"

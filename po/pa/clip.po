@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-03 00:41+0000\n"
+"POT-Creation-Date: 2025-05-21 00:41+0000\n"
 "PO-Revision-Date: 2021-05-01 23:20-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -52,51 +52,62 @@ msgstr ""
 msgid "Developer"
 msgstr "ਡਿਵੈਲਪਰ"
 
-#: src/main.qml:86 src/views/collection/CollectionView.qml:41
+#: src/main.qml:82
+#, kde-format
+msgid "Delete files?"
+msgstr "ਫਾਇਲਾਂ ਹਟਾਉਣੀਆਂ ਹਨ?"
+
+#: src/main.qml:83
+#, kde-format
+msgid "Are sure you want to delete %1 files"
+msgstr "ਕੀ ਤੁਸੀਂ %1 ਫਾਇਲਾਂ ਨੂੰ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ"
+
+#: src/main.qml:91
+#, fuzzy, kde-format
+#| msgid "Delete file?"
+msgid "Delete"
+msgstr "ਫਾਇਲ ਹਟਾਉਣੀ ਹੈ?"
+
+#: src/main.qml:104
+#, kde-format
+msgid "Cancel"
+msgstr "ਰੱਦ ਕਰੋ"
+
+#: src/main.qml:126 src/views/collection/CollectionView.qml:42
 #, kde-format
 msgid "Open URL"
 msgstr "URL ਨੂੰ ਖੋਲ੍ਹੋ"
 
-#: src/main.qml:88
+#: src/main.qml:128
 #, kde-format
 msgid ""
 "Enter any remote location, like YouTube video URLs, or from other services "
 "supported by MPV."
 msgstr ""
 
-#: src/main.qml:118
-#, kde-format
-msgid "Delete files?"
-msgstr "ਫਾਇਲਾਂ ਹਟਾਉਣੀਆਂ ਹਨ?"
-
-#: src/main.qml:120
-#, kde-format
-msgid "Are sure you want to delete %1 files"
-msgstr "ਕੀ ਤੁਸੀਂ %1 ਫਾਇਲਾਂ ਨੂੰ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ"
-
-#: src/main.qml:195
+#: src/main.qml:216
 #, kde-format
 msgid "Now playing"
 msgstr "ਹੁਣ ਚੱਲ ਰਿਹਾ ਹੈ"
 
-#: src/main.qml:306 src/views/youtube/YouTubeView.qml:25
+#: src/main.qml:327 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
 msgstr "ਇੱਥੇ ਕੁਝ ਨਹੀਂ ਹੈ!"
 
-#: src/main.qml:307
+#: src/main.qml:328
 #, kde-format
 msgid "Open a new video from your collection or file system."
 msgstr ""
 
 #. i18n("Screenshots")}};
-#: src/main.qml:327 src/models/tagsmodel.cpp:14
+#: src/main.qml:348 src/models/tagsmodel.cpp:14
 #: src/views/settings/SettingsDialog.qml:36
 #, kde-format
 msgid "Collection"
 msgstr "ਭੰਡਾਰ"
 
-#: src/main.qml:409
+#: src/main.qml:430
 #, fuzzy, kde-format
 #| msgid "Toogle SideBar"
 msgid "Toggle SideBar"
@@ -131,52 +142,52 @@ msgid_plural "Search %1 videos"
 msgstr[0] "%1 ਵੀਡੀਓ ਲੱਭੋ"
 msgstr[1] "%1 ਵੀਡੀਓ ਲੱਭੋ"
 
-#: src/views/collection/CollectionView.qml:52
+#: src/views/collection/CollectionView.qml:53
 #, kde-format
 msgid "Settings"
 msgstr "ਸੈਟਿੰਗਾਂ"
 
-#: src/views/collection/CollectionView.qml:60
+#: src/views/collection/CollectionView.qml:61
 #, kde-format
 msgid "About"
 msgstr ""
 
-#: src/views/collection/CollectionView.qml:78
+#: src/views/collection/CollectionView.qml:79
 #, fuzzy, kde-format
 #| msgid "Toogle SideBar"
 msgid "Toggle sidebar"
 msgstr "ਬਾਹੀ ਨੂੰ ਬਦਲੋ"
 
-#: src/views/collection/CollectionView.qml:84 src/views/player/Playlist.qml:21
+#: src/views/collection/CollectionView.qml:85 src/views/player/Playlist.qml:21
 #: src/views/tags/TagsView.qml:38
 #, kde-format
 msgid "No Videos!"
 msgstr "ਕੋਈ ਵੀਡੀਓ ਨਹੀਂ ਹੈ!"
 
-#: src/views/collection/CollectionView.qml:85
+#: src/views/collection/CollectionView.qml:86
 #, kde-format
 msgid "Add a new video source or open a file."
 msgstr ""
 
-#: src/views/collection/CollectionView.qml:90
+#: src/views/collection/CollectionView.qml:91
 #, fuzzy, kde-format
 #| msgid "Open"
 msgid "Open file"
 msgstr "ਖੋਲ੍ਹੋ"
 
-#: src/views/collection/CollectionView.qml:96
+#: src/views/collection/CollectionView.qml:97
 #, fuzzy, kde-format
 #| msgid "Sources"
 msgid "Add sources"
 msgstr "ਸਰੋਤ"
 
-#: src/views/collection/PlacesSidebar.qml:52
+#: src/views/collection/PlacesSidebar.qml:60
 #, fuzzy, kde-format
 #| msgid "Tags"
 msgid "Tags!"
 msgstr "ਟੈਗ"
 
-#: src/views/collection/PlacesSidebar.qml:53
+#: src/views/collection/PlacesSidebar.qml:61
 #, kde-format
 msgid "Your tags will be listed here"
 msgstr ""
@@ -186,42 +197,42 @@ msgstr ""
 msgid "UnFav it"
 msgstr "ਇਹ ਨਾ-ਪਸੰਦ"
 
-#: src/views/ItemMenu.qml:41
+#: src/views/ItemMenu.qml:36
 #, kde-format
 msgid "Info"
 msgstr "ਜਾਣਕਾਰੀ"
 
-#: src/views/ItemMenu.qml:52 src/views/SelectionBar.qml:75
+#: src/views/ItemMenu.qml:47 src/views/SelectionBar.qml:70
 #, kde-format
 msgid "Share"
 msgstr "ਸਾਂਝਾ ਕਰੋ"
 
-#: src/views/ItemMenu.qml:63 src/views/SelectionBar.qml:45
+#: src/views/ItemMenu.qml:58 src/views/SelectionBar.qml:45
 #, kde-format
 msgid "Queue"
 msgstr "ਕਤਾਰ"
 
-#: src/views/ItemMenu.qml:75
+#: src/views/ItemMenu.qml:70
 #, kde-format
 msgid "Select"
 msgstr "ਚੁਣੋ"
 
-#: src/views/ItemMenu.qml:89
+#: src/views/ItemMenu.qml:84
 #, kde-format
 msgid "Show in folder"
 msgstr "ਫੋਲਡਰ ਵਿੱਚ ਵੇਖੋ"
 
-#: src/views/ItemMenu.qml:102 src/views/SelectionBar.qml:104
+#: src/views/ItemMenu.qml:97 src/views/SelectionBar.qml:87
 #, kde-format
 msgid "Remove"
 msgstr "ਹਟਾਓ"
 
-#: src/views/ItemMenu.qml:118
+#: src/views/ItemMenu.qml:109
 #, kde-format
 msgid "Delete file?"
 msgstr "ਫਾਇਲ ਹਟਾਉਣੀ ਹੈ?"
 
-#: src/views/ItemMenu.qml:120
+#: src/views/ItemMenu.qml:111
 #, kde-format
 msgid ""
 "Are sure you want to delete \n"
@@ -258,7 +269,7 @@ msgstr "ਨਾ-ਪਸੰਦ/ਮਨਪਸੰਦ"
 msgid "Tag"
 msgstr "ਟੈਗ"
 
-#: src/views/SelectionBar.qml:85
+#: src/views/SelectionBar.qml:80
 #, kde-format
 msgid "Export"
 msgstr "ਐਕਸਪੋਰਟ"
@@ -363,12 +374,12 @@ msgstr "ਸਰੋਤ"
 msgid "Add"
 msgstr "ਜੋੜੋ"
 
-#: src/views/settings/SettingsDialog.qml:302
+#: src/views/settings/SettingsDialog.qml:301
 #, kde-format
 msgid "Remove source"
 msgstr "ਸਰੋਤ ਨੂੰ ਹਟਾਓ"
 
-#: src/views/settings/SettingsDialog.qml:303
+#: src/views/settings/SettingsDialog.qml:302
 #, kde-format
 msgid ""
 "Are you sure you want to remove the source: \n"
@@ -422,9 +433,6 @@ msgstr "...ਖੋਜੋ"
 
 #~ msgid "Accept"
 #~ msgstr "ਮਨਜ਼ੂਰ ਕਰੋ"
-
-#~ msgid "Cancel"
-#~ msgstr "ਰੱਦ ਕਰੋ"
 
 #~ msgid "Open"
 #~ msgstr "ਖੋਲ੍ਹੋ"
