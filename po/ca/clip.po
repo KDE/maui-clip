@@ -1,15 +1,15 @@
 # Translation of clip.po to Catalan
-# Copyright (C) 2020-2023 This_file_is_part_of_KDE
+# Copyright (C) 2020-2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2020, 2021, 2022, 2023.
+# Josep M. Ferrer <txemaq@gmail.com>, 2020, 2021, 2022, 2023, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-21 00:41+0000\n"
-"PO-Revision-Date: 2023-10-28 10:33+0200\n"
+"PO-Revision-Date: 2025-05-21 11:43+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -65,15 +65,14 @@ msgid "Are sure you want to delete %1 files"
 msgstr "Esteu segur que voleu suprimir %1 fitxers?"
 
 #: src/main.qml:91
-#, fuzzy, kde-format
-#| msgid "Delete file?"
+#, kde-format
 msgid "Delete"
-msgstr "Suprimeixo el fitxer?"
+msgstr "Suprimeix"
 
 #: src/main.qml:104
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Cancel·la"
 
 #: src/main.qml:126 src/views/collection/CollectionView.qml:42
 #, kde-format
@@ -421,21 +420,3 @@ msgstr "Comença la cerca de vídeos en línia."
 #, kde-format
 msgid "Search..."
 msgstr "Cerca..."
-
-#~ msgid "Playing mode"
-#~ msgstr "Mode de reproducció"
-
-#~ msgid "Dark Mode"
-#~ msgstr "Mode fosc"
-
-#~ msgid "Switch between light and dark colorscheme"
-#~ msgstr "Alterna entre els esquemes de color clar i fosc"
-
-#~ msgid "Clip"
-#~ msgstr "Clip"
-
-#~ msgid "© 2019-2023 Maui Development Team"
-#~ msgstr "© 2019-2023 Maui Development Team"
-
-#~ msgid "Camilo Higuita"
-#~ msgstr "Camilo Higuita"

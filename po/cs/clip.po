@@ -63,15 +63,14 @@ msgid "Are sure you want to delete %1 files"
 msgstr ""
 
 #: src/main.qml:91
-#, fuzzy, kde-format
-#| msgid "Delete file?"
+#, kde-format
 msgid "Delete"
-msgstr "Smazat soubor?"
+msgstr "Smazat"
 
 #: src/main.qml:104
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Zrušit"
 
 #: src/main.qml:126 src/views/collection/CollectionView.qml:42
 #, kde-format

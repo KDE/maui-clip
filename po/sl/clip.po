@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: maui-cinema\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-21 00:41+0000\n"
-"PO-Revision-Date: 2023-11-04 14:03+0100\n"
+"PO-Revision-Date: 2025-05-21 07:13+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Poedit 3.6\n"
 
 #: src/controllers/YouTube.qml:95
 #, kde-format
@@ -64,10 +64,9 @@ msgid "Are sure you want to delete %1 files"
 msgstr "Ali ste prepričani, da želite izbrisati %1 datotek"
 
 #: src/main.qml:91
-#, fuzzy, kde-format
-#| msgid "Delete file?"
+#, kde-format
 msgid "Delete"
-msgstr "Zbrišem datoteko?"
+msgstr "Zbriši"
 
 #: src/main.qml:104
 #, kde-format
