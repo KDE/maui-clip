@@ -67,8 +67,7 @@ msgid "Delete"
 msgstr "Supprimer le fichier ?"
 
 #: src/main.qml:104
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgid "Cancel"
 msgstr "Annuler"
 
