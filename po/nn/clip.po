@@ -73,7 +73,7 @@ msgstr "Sletta fil?"
 #: src/main.qml:104
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Avbryt"
 
 #: src/main.qml:126 src/views/collection/CollectionView.qml:42
 #, kde-format
