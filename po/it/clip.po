@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the maui-cinema package.
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 Paolo Zamponi <feus73@gmail.com>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2025 Paolo Zamponi <feus73@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: maui-cinema\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-21 00:41+0000\n"
-"PO-Revision-Date: 2023-11-08 16:33+0100\n"
+"PO-Revision-Date: 2025-05-22 17:00+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: src/controllers/YouTube.qml:95
 #, kde-format
@@ -63,10 +63,9 @@ msgid "Are sure you want to delete %1 files"
 msgstr "Sei sicuro di voler eliminare %1 file?"
 
 #: src/main.qml:91
-#, fuzzy, kde-format
-#| msgid "Delete file?"
+#, kde-format
 msgid "Delete"
-msgstr "Eliminare il file?"
+msgstr "Elimina"
 
 #: src/main.qml:104
 #, kde-format
