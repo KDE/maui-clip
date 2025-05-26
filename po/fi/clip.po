@@ -68,7 +68,8 @@ msgid "Delete"
 msgstr "Poistetaanko tiedosto?"
 
 #: src/main.qml:104
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cancel"
 msgid "Cancel"
 msgstr "Peru"
 
