@@ -1,7 +1,7 @@
 # Translation for clip.po to Euskara/Basque (eu).
 # Copyright (C) 2021-2025 This file is copyright:
 # This file is distributed under the same license as the maui-clip package.
-# SPDX-FileCopyrightText: 2023, 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>.
+# SPDX-FileCopyrightText: 2023, 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Iñigo Salvador Azurmendi <xalba@ni.eus>, 2021, 2022, 2023, 2025.
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-21 00:41+0000\n"
-"PO-Revision-Date: 2025-05-25 22:34+0200\n"
+"PO-Revision-Date: 2025-07-13 15:32+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: src/controllers/YouTube.qml:95
 #, kde-format
@@ -327,12 +327,12 @@ msgstr "Aldatu sailkatzeko ordena."
 #: src/views/settings/SettingsDialog.qml:93
 #, kde-format
 msgid "Ascending"
-msgstr "Gorakorra"
+msgstr "Goranzkoa"
 
 #: src/views/settings/SettingsDialog.qml:101
 #, kde-format
 msgid "Descending"
-msgstr "Beherakorra"
+msgstr "Beheranzkoa"
 
 #: src/views/settings/SettingsDialog.qml:112
 #, kde-format
