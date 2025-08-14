@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-21 00:41+0000\n"
-"PO-Revision-Date: 2025-05-21 17:46+0400\n"
+"PO-Revision-Date: 2025-08-13 18:35+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -349,7 +349,7 @@ msgstr "فك الترميز بالعتاد"
 #: src/views/settings/SettingsDialog.qml:118
 #, kde-format
 msgid "Use the sorting preferences globally for all the tabs and splits."
-msgstr "استخدم تفضيلات الفرز بشكل عام لجميع علامات التبويب والتقسيمات."
+msgstr "استخدم تفضيلات الفرز بشكل عام لجميع الألسنة والتقسيمات."
 
 #: src/views/settings/SettingsDialog.qml:131
 #, kde-format
