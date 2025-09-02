@@ -212,7 +212,7 @@ msgstr "A la cua"
 #: src/views/ItemMenu.qml:70
 #, kde-format
 msgid "Select"
-msgstr "Selecciona"
+msgstr "Tria"
 
 #: src/views/ItemMenu.qml:84
 #, kde-format
