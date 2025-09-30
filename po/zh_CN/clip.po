@@ -65,12 +65,12 @@ msgstr "您确定要删除 %1 个文件吗？"
 #: src/main.qml:91
 #, kde-format
 msgid "Delete"
-msgstr ""
+msgstr "删除"
 
 #: src/main.qml:104
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #: src/main.qml:126 src/views/collection/CollectionView.qml:42
 #, kde-format
