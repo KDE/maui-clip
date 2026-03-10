@@ -1,21 +1,21 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the maui-clip package.
 #
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025, 2026 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: maui-clip\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:51+0000\n"
-"PO-Revision-Date: 2025-05-21 20:22+0300\n"
-"Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
+"PO-Revision-Date: 2026-03-09 21:56+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: src/controllers/YouTube.qml:95
 #, kde-format
@@ -132,7 +132,7 @@ msgstr "Videolar"
 #: src/views/ItemMenu.qml:29
 #, kde-format
 msgid "Tags"
-msgstr "Etiketler"
+msgstr "Künyeler"
 
 #: src/views/BrowserLayout.qml:69
 #, kde-format
@@ -180,12 +180,12 @@ msgstr "Kaynaklar Ekle"
 #: src/views/collection/PlacesSidebar.qml:60
 #, kde-format
 msgid "Tags!"
-msgstr "Etiketler!"
+msgstr "Künyeler!"
 
 #: src/views/collection/PlacesSidebar.qml:61
 #, kde-format
 msgid "Your tags will be listed here"
-msgstr "Etiketleriniz burada listelenecek"
+msgstr "Künyeleriniz burada listelenecek"
 
 #: src/views/ItemMenu.qml:22
 #, kde-format
@@ -264,7 +264,7 @@ msgstr "Yer İmlerine Ekle/Kaldır"
 #: src/views/SelectionBar.qml:63
 #, kde-format
 msgid "Tag"
-msgstr "Etiketle"
+msgstr "Künyele"
 
 #: src/views/SelectionBar.qml:80
 #, kde-format
@@ -360,7 +360,7 @@ msgstr "Yeğlenen Dil"
 #: src/views/settings/SettingsDialog.qml:138
 #, kde-format
 msgid "Preferred language if available."
-msgstr "Mevcutsa yeğlenen dili değiştirin."
+msgstr "Kullanılabilir yeğlenen dili değiştirin."
 
 #: src/views/settings/SettingsDialog.qml:242
 #, kde-format
@@ -389,13 +389,12 @@ msgstr ""
 #: src/views/tags/TagsGrid.qml:21
 #, kde-format
 msgid "No Tags!"
-msgstr "Etiket Yok!"
+msgstr "Künye yok!"
 
 #: src/views/tags/TagsGrid.qml:22
 #, kde-format
 msgid "Add a new tag to start organizing your video collection."
-msgstr ""
-"Video koleksiyonunuzu organize etmeye başlamak için bir etiket ekleyin."
+msgstr "Video koleksiyonunuzu organize etmeye başlamak için bir künye ekleyin."
 
 #: src/views/tags/TagsGrid.qml:35
 #, kde-format
@@ -405,12 +404,12 @@ msgstr "Süzgeç"
 #: src/views/tags/TagsView.qml:39
 #, kde-format
 msgid "There's no videos associated with the tag"
-msgstr "Bu video ile ilişkilendirilmiş bir etiket yok"
+msgstr "Bu video ile ilişkilendirilmiş bir künye yok"
 
 #: src/views/youtube/YouTubeView.qml:26
 #, kde-format
 msgid "Start searching for online videos."
-msgstr "Çevrimiçi videoları aramayı başlat."
+msgstr "Çevrim içi videoları aramayı başlatın."
 
 #: src/views/youtube/YouTubeView.qml:44
 #, kde-format
