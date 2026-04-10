@@ -18,7 +18,7 @@ msgstr ""
 #: src/controllers/YouTube.qml:95
 #, kde-format
 msgid "Custom API Key"
-msgstr ""
+msgstr "Vlastný API kľúč"
 
 #: src/controllers/YouTube.qml:114
 #, kde-format
@@ -33,7 +33,7 @@ msgstr "Žiadne výsledky"
 #: src/controllers/YouTube.qml:210
 #, kde-format
 msgid "Try with another query"
-msgstr ""
+msgstr "Skúste iný dotaz"
 
 #: src/controllers/YouTube.qml:249
 #, kde-format
@@ -43,7 +43,7 @@ msgstr "Hľadať"
 #: src/main.cpp:100
 #, kde-format
 msgid "Browse and play your videos."
-msgstr ""
+msgstr "Prechádzajte a prehrávajte vaše videá."
 
 #: src/main.cpp:105
 #, kde-format
@@ -58,7 +58,7 @@ msgstr "Vymazať súbory?"
 #: src/main.qml:83
 #, kde-format
 msgid "Are sure you want to delete %1 files"
-msgstr ""
+msgstr "Naozaj chcete odstrániť %1 súborov"
 
 #: src/main.qml:91
 #, kde-format
@@ -81,6 +81,8 @@ msgid ""
 "Enter any remote location, like YouTube video URLs, or from other services "
 "supported by MPV."
 msgstr ""
+"Zadajte ľubovoľné vzdialené umiestnenie, ako URL videí z YouTube, alebo z "
+"iných služieb podporovaných enginom MPV."
 
 #: src/main.qml:216
 #, kde-format
@@ -90,12 +92,12 @@ msgstr "Práve prehrávam"
 #: src/main.qml:327 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
-msgstr ""
+msgstr "Nič tu nie je!"
 
 #: src/main.qml:328
 #, kde-format
 msgid "Open a new video from your collection or file system."
-msgstr ""
+msgstr "Otvorte nové video z vašej zbierky alebo súborového systému."
 
 #. i18n("Screenshots")}};
 #: src/main.qml:348 src/models/tagsmodel.cpp:14
@@ -134,9 +136,9 @@ msgstr "Značky"
 #, kde-format
 msgid "Search %1 video"
 msgid_plural "Search %1 videos"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Hľadať %1 video"
+msgstr[1] "Hľadať %1 videá"
+msgstr[2] "Hľadať %1 videí"
 
 #: src/views/collection/CollectionView.qml:53
 #, kde-format
@@ -162,7 +164,7 @@ msgstr "Žiadne Videá!"
 #: src/views/collection/CollectionView.qml:86
 #, kde-format
 msgid "Add a new video source or open a file."
-msgstr ""
+msgstr "Pridajte nový zdroj videa alebo otvorte súbor."
 
 #: src/views/collection/CollectionView.qml:91
 #, kde-format
@@ -182,12 +184,12 @@ msgstr "Značky"
 #: src/views/collection/PlacesSidebar.qml:61
 #, kde-format
 msgid "Your tags will be listed here"
-msgstr ""
+msgstr "Vaše značky budú zobrazené tu"
 
 #: src/views/ItemMenu.qml:22
 #, kde-format
 msgid "UnFav it"
-msgstr ""
+msgstr "Odstrániť z obľúbených"
 
 #: src/views/ItemMenu.qml:36
 #, kde-format
@@ -230,6 +232,8 @@ msgid ""
 "Are sure you want to delete \n"
 "%1"
 msgstr ""
+"Naozaj chcete odstrániť \n"
+"%1"
 
 #: src/views/player/MPVPlayer.qml:28
 #, kde-format
@@ -244,7 +248,7 @@ msgstr "Zvukové stopy"
 #: src/views/player/Playlist.qml:22
 #, kde-format
 msgid "Add videos to the playlist."
-msgstr ""
+msgstr "Pridať videá do zoznamu skladieb."
 
 #: src/views/SelectionBar.qml:34
 #, kde-format
@@ -254,7 +258,7 @@ msgstr "Prehrať"
 #: src/views/SelectionBar.qml:56
 #, kde-format
 msgid "Un/Fav"
-msgstr ""
+msgstr "Obľúbené/Neobľúbené"
 
 #: src/views/SelectionBar.qml:63
 #, kde-format
@@ -339,7 +343,7 @@ msgstr "Hardware Decoding"
 #: src/views/settings/SettingsDialog.qml:118
 #, kde-format
 msgid "Use the sorting preferences globally for all the tabs and splits."
-msgstr ""
+msgstr "Použiť predvoľby triedenia globálne pre všetky karty a rozdelenia."
 
 #: src/views/settings/SettingsDialog.qml:131
 #, kde-format
@@ -354,7 +358,7 @@ msgstr "Preferovaný jazyk"
 #: src/views/settings/SettingsDialog.qml:138
 #, kde-format
 msgid "Preferred language if available."
-msgstr ""
+msgstr "Uprednostnený jazyk, ak je dostupný."
 
 #: src/views/settings/SettingsDialog.qml:242
 #, kde-format
@@ -377,6 +381,8 @@ msgid ""
 "Are you sure you want to remove the source: \n"
 " %1"
 msgstr ""
+"Naozaj chcete odstrániť zdroj: \n"
+" %1"
 
 #: src/views/tags/TagsGrid.qml:21
 #, kde-format
@@ -386,7 +392,7 @@ msgstr "Žiadne značky!"
 #: src/views/tags/TagsGrid.qml:22
 #, kde-format
 msgid "Add a new tag to start organizing your video collection."
-msgstr ""
+msgstr "Pridajte novú značku na organizáciu vašej zbierky videí."
 
 #: src/views/tags/TagsGrid.qml:35
 #, kde-format
@@ -396,12 +402,12 @@ msgstr "Filter"
 #: src/views/tags/TagsView.qml:39
 #, kde-format
 msgid "There's no videos associated with the tag"
-msgstr ""
+msgstr "K tejto značke nie sú priradené žiadne videá"
 
 #: src/views/youtube/YouTubeView.qml:26
 #, kde-format
 msgid "Start searching for online videos."
-msgstr ""
+msgstr "Začnite hľadať videá online."
 
 #: src/views/youtube/YouTubeView.qml:44
 #, kde-format
