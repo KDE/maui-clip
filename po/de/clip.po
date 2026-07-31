@@ -84,7 +84,7 @@ msgid ""
 "Enter any remote location, like YouTube video URLs, or from other services "
 "supported by MPV."
 msgstr ""
-"Geben Sie einen beliebigen entfernten Ort ein, z. B. YouTube-Video-URLs oder "
+"Geben Sie einen beliebigen entfernten Ort ein, z. B. YouTube-Video-URLs oder "
 "von anderen Diensten, die von MPV unterstützt werden."
 
 #: src/main.qml:216
