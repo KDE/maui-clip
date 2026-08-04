@@ -1,12 +1,12 @@
 # Translation of clip to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2020, 2021.
+# Karl Ove Hufthammer <karl@huftis.org>, 2020, 2021, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: maui-cinema\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:51+0000\n"
-"PO-Revision-Date: 2021-10-18 20:24+0200\n"
+"PO-Revision-Date: 2026-08-03 20:03+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.08.2\n"
+"X-Generator: Lokalize 26.11.70\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -42,12 +42,12 @@ msgstr "Prøv eit anna søk"
 #: src/controllers/YouTube.qml:249
 #, kde-format
 msgid "Search videos..."
-msgstr ""
+msgstr "Søk etter videoar …"
 
 #: src/main.cpp:100
 #, kde-format
 msgid "Browse and play your videos."
-msgstr ""
+msgstr "Bla gjennom og spel av videoar."
 
 #: src/main.cpp:105
 #, kde-format
@@ -65,10 +65,9 @@ msgid "Are sure you want to delete %1 files"
 msgstr "Er du sikker på at du vil sletta %1 filer?"
 
 #: src/main.qml:91
-#, fuzzy, kde-format
-#| msgid "Delete file?"
+#, kde-format
 msgid "Delete"
-msgstr "Sletta fil?"
+msgstr "Slett"
 
 #: src/main.qml:104
 #, kde-format
@@ -78,7 +77,7 @@ msgstr "Avbryt"
 #: src/main.qml:126 src/views/collection/CollectionView.qml:42
 #, kde-format
 msgid "Open URL"
-msgstr ""
+msgstr "Opna adresse"
 
 #: src/main.qml:128
 #, kde-format
@@ -90,12 +89,12 @@ msgstr ""
 #: src/main.qml:216
 #, kde-format
 msgid "Now playing"
-msgstr ""
+msgstr "Spelar no"
 
 #: src/main.qml:327 src/views/youtube/YouTubeView.qml:25
 #, kde-format
 msgid "Nothing Here!"
-msgstr ""
+msgstr "Ingenting her!"
 
 #: src/main.qml:328
 #, kde-format
@@ -112,22 +111,22 @@ msgstr "Samling"
 #: src/main.qml:430
 #, kde-format
 msgid "Toggle SideBar"
-msgstr ""
+msgstr "Vis/gøym sidestolpe"
 
 #: src/models/tagsmodel.cpp:10
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "Favorittar"
 
 #: src/models/tagsmodel.cpp:11
 #, kde-format
 msgid "Downloads"
-msgstr ""
+msgstr "Nedlastingar"
 
 #: src/models/tagsmodel.cpp:12
 #, kde-format
 msgid "Videos"
-msgstr ""
+msgstr "Videoar"
 
 #: src/models/tagsmodel.cpp:21 src/models/tagsmodel.cpp:59
 #: src/views/ItemMenu.qml:29
@@ -145,17 +144,17 @@ msgstr[1] ""
 #: src/views/collection/CollectionView.qml:53
 #, kde-format
 msgid "Settings"
-msgstr ""
+msgstr "Innstillingar"
 
 #: src/views/collection/CollectionView.qml:61
 #, kde-format
 msgid "About"
-msgstr ""
+msgstr "Om"
 
 #: src/views/collection/CollectionView.qml:79
 #, kde-format
 msgid "Toggle sidebar"
-msgstr ""
+msgstr "Vis/gøym sidestolpe"
 
 #: src/views/collection/CollectionView.qml:85 src/views/player/Playlist.qml:21
 #: src/views/tags/TagsView.qml:38
@@ -171,17 +170,17 @@ msgstr ""
 #: src/views/collection/CollectionView.qml:91
 #, kde-format
 msgid "Open file"
-msgstr ""
+msgstr "Opna fil"
 
 #: src/views/collection/CollectionView.qml:97
 #, kde-format
 msgid "Add sources"
-msgstr ""
+msgstr "Legg til kjelder"
 
 #: src/views/collection/PlacesSidebar.qml:60
 #, kde-format
 msgid "Tags!"
-msgstr ""
+msgstr "Merkelappar!"
 
 #: src/views/collection/PlacesSidebar.qml:61
 #, kde-format
@@ -240,12 +239,12 @@ msgstr ""
 #: src/views/player/MPVPlayer.qml:28
 #, kde-format
 msgid "Subtitles"
-msgstr ""
+msgstr "Teksting"
 
 #: src/views/player/MPVPlayer.qml:46
 #, kde-format
 msgid "Audio Tracks"
-msgstr ""
+msgstr "Lydspor"
 
 #: src/views/player/Playlist.qml:22
 #, kde-format
@@ -275,17 +274,17 @@ msgstr "Eksporter"
 #: src/views/settings/SettingsDialog.qml:17
 #, kde-format
 msgid "General"
-msgstr ""
+msgstr "Generelt"
 
 #: src/views/settings/SettingsDialog.qml:22
 #, kde-format
 msgid "Volume Step"
-msgstr ""
+msgstr "Lydstyrke-steg"
 
 #: src/views/settings/SettingsDialog.qml:41
 #, kde-format
 msgid "Sorting by"
-msgstr ""
+msgstr "Sortering etter"
 
 #: src/views/settings/SettingsDialog.qml:42
 #, kde-format
@@ -295,52 +294,52 @@ msgstr ""
 #: src/views/settings/SettingsDialog.qml:52
 #, kde-format
 msgid "Title"
-msgstr ""
+msgstr "Tittel"
 
 #: src/views/settings/SettingsDialog.qml:59
 #, kde-format
 msgid "Date"
-msgstr ""
+msgstr "Dato"
 
 #: src/views/settings/SettingsDialog.qml:66
 #, kde-format
 msgid "Size"
-msgstr ""
+msgstr "Storleik"
 
 #: src/views/settings/SettingsDialog.qml:73
 #, kde-format
 msgid "Type"
-msgstr ""
+msgstr "Type"
 
 #: src/views/settings/SettingsDialog.qml:82
 #, kde-format
 msgid "Sort order"
-msgstr ""
+msgstr "Sorteringsrekkjefølgje"
 
 #: src/views/settings/SettingsDialog.qml:83
 #, kde-format
 msgid "Change the sorting order."
-msgstr ""
+msgstr "Endra sorteringsrekkjefølgje."
 
 #: src/views/settings/SettingsDialog.qml:93
 #, kde-format
 msgid "Ascending"
-msgstr ""
+msgstr "Stigande"
 
 #: src/views/settings/SettingsDialog.qml:101
 #, kde-format
 msgid "Descending"
-msgstr ""
+msgstr "Synkande"
 
 #: src/views/settings/SettingsDialog.qml:112
 #, kde-format
 msgid "Playback"
-msgstr ""
+msgstr "Avspeling"
 
 #: src/views/settings/SettingsDialog.qml:117
 #, kde-format
 msgid "Hardware Decoding"
-msgstr ""
+msgstr "Maskinvaredekoding"
 
 #: src/views/settings/SettingsDialog.qml:118
 #, kde-format
@@ -350,22 +349,22 @@ msgstr ""
 #: src/views/settings/SettingsDialog.qml:131
 #, kde-format
 msgid "Audio"
-msgstr ""
+msgstr "Lyd"
 
 #: src/views/settings/SettingsDialog.qml:137
 #, kde-format
 msgid "Preferred Language"
-msgstr ""
+msgstr "Føretrekt språk"
 
 #: src/views/settings/SettingsDialog.qml:138
 #, kde-format
 msgid "Preferred language if available."
-msgstr ""
+msgstr "Føretrekt språk viss tilgjengeleg."
 
 #: src/views/settings/SettingsDialog.qml:242
 #, kde-format
 msgid "Sources"
-msgstr ""
+msgstr "Kjelder"
 
 #: src/views/settings/SettingsDialog.qml:280
 #, kde-format
@@ -375,7 +374,7 @@ msgstr "Legg til"
 #: src/views/settings/SettingsDialog.qml:301
 #, kde-format
 msgid "Remove source"
-msgstr ""
+msgstr "Fjern kjelda"
 
 #: src/views/settings/SettingsDialog.qml:302
 #, kde-format
@@ -383,6 +382,8 @@ msgid ""
 "Are you sure you want to remove the source: \n"
 " %1"
 msgstr ""
+"Er du sikker på at du vil fjerna kjelda: \n"
+" %1"
 
 #: src/views/tags/TagsGrid.qml:21
 #, kde-format
