@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: maui-cinema\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:51+0000\n"
-"PO-Revision-Date: 2026-08-03 20:03+0200\n"
+"PO-Revision-Date: 2026-08-04 20:23+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -22,7 +22,7 @@ msgstr ""
 #: src/controllers/YouTube.qml:95
 #, kde-format
 msgid "Custom API Key"
-msgstr ""
+msgstr "Eigen API-nøkkel"
 
 #: src/controllers/YouTube.qml:114
 #, kde-format
@@ -85,6 +85,8 @@ msgid ""
 "Enter any remote location, like YouTube video URLs, or from other services "
 "supported by MPV."
 msgstr ""
+"Skriv inn ei ekstern adresse, for eksempel adressa til ein YouTube-video "
+"eller andre tenester som MPV-støttar."
 
 #: src/main.qml:216
 #, kde-format
@@ -99,7 +101,7 @@ msgstr "Ingenting her!"
 #: src/main.qml:328
 #, kde-format
 msgid "Open a new video from your collection or file system."
-msgstr ""
+msgstr "Opna ein ny video frå samlinga eller filsystemet."
 
 #. i18n("Screenshots")}};
 #: src/main.qml:348 src/models/tagsmodel.cpp:14
@@ -138,8 +140,8 @@ msgstr "Merkelappar"
 #, kde-format
 msgid "Search %1 video"
 msgid_plural "Search %1 videos"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Søk etter %1 video"
+msgstr[1] "Søk etter %1 videoar"
 
 #: src/views/collection/CollectionView.qml:53
 #, kde-format
@@ -165,7 +167,7 @@ msgstr "Ingen videoar"
 #: src/views/collection/CollectionView.qml:86
 #, kde-format
 msgid "Add a new video source or open a file."
-msgstr ""
+msgstr "Legg til ny videokjelde eller opna ei fil."
 
 #: src/views/collection/CollectionView.qml:91
 #, kde-format
@@ -185,7 +187,7 @@ msgstr "Merkelappar!"
 #: src/views/collection/PlacesSidebar.qml:61
 #, kde-format
 msgid "Your tags will be listed here"
-msgstr ""
+msgstr "Merkelappane dine vert viste her"
 
 #: src/views/ItemMenu.qml:22
 #, kde-format
@@ -289,7 +291,7 @@ msgstr "Sortering etter"
 #: src/views/settings/SettingsDialog.qml:42
 #, kde-format
 msgid "Change the sorting key."
-msgstr ""
+msgstr "Endra sorteringsnøkkel."
 
 #: src/views/settings/SettingsDialog.qml:52
 #, kde-format
@@ -344,7 +346,7 @@ msgstr "Maskinvaredekoding"
 #: src/views/settings/SettingsDialog.qml:118
 #, kde-format
 msgid "Use the sorting preferences globally for all the tabs and splits."
-msgstr ""
+msgstr "Bruk sorteringsrekkjefølgja globalt for alle faner og delte visingar."
 
 #: src/views/settings/SettingsDialog.qml:131
 #, kde-format
@@ -398,7 +400,7 @@ msgstr "Legg til ny merkelapp for organisering av videosamlinga."
 #: src/views/tags/TagsGrid.qml:35
 #, kde-format
 msgid "Filter"
-msgstr ""
+msgstr "Filtrer"
 
 #: src/views/tags/TagsView.qml:39
 #, kde-format
@@ -408,7 +410,7 @@ msgstr "Ingen videoar er tilordna merkelappen"
 #: src/views/youtube/YouTubeView.qml:26
 #, kde-format
 msgid "Start searching for online videos."
-msgstr ""
+msgstr "Start søk etter nettvideoar."
 
 #: src/views/youtube/YouTubeView.qml:44
 #, kde-format
