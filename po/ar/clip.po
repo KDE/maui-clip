@@ -61,7 +61,7 @@ msgstr "احذف الملفات؟"
 #: src/main.qml:83
 #, kde-format
 msgid "Are sure you want to delete %1 files"
-msgstr "هل تريد فعلاً حذف %1 من الملفات"
+msgstr "هل تريد فعلًا حذف %1 من الملفات"
 
 #: src/main.qml:91
 #, kde-format
@@ -170,7 +170,7 @@ msgstr "لا يوجد شيء!"
 #: src/views/collection/CollectionView.qml:86
 #, kde-format
 msgid "Add a new video source or open a file."
-msgstr "أضف مصدر فيديو جديد أو افتح ملفاً."
+msgstr "أضف مصدر فيديو جديد أو افتح ملفًا."
 
 #: src/views/collection/CollectionView.qml:91
 #, kde-format
@@ -238,7 +238,7 @@ msgid ""
 "Are sure you want to delete \n"
 "%1"
 msgstr ""
-"هل تريد فعلاً حذف\n"
+"هل تريد فعلًا حذف\n"
 "%1"
 
 #: src/views/player/MPVPlayer.qml:28
